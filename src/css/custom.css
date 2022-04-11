@@ -1,0 +1,167 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+@import url('https://fonts.cdnfonts.com/css/harabara');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+/* You can override the default Infima variables here. */
+:root {
+  /* COLORS */
+  --ifm-color-primary: #6f2277;
+  --ifm-color-primary-dark: #591b5f;
+  --ifm-color-primary-darker: #4e1853;
+  --ifm-color-primary-darkest: #431447;
+  --ifm-color-primary-light: #8c4e92;
+  --ifm-color-primary-lighter: #9a64a0;
+  --ifm-color-primary-lightest: #a97aad;
+
+  --ifm-color-secondary: #ed1163;
+  --ifm-color-secondary-dark: #be0e4f;
+  --ifm-color-secondary-darker: #a60c45;
+  --ifm-color-secondary-darkest: #8e0a3b;
+  --ifm-color-secondary-light: #f14182;
+  --ifm-color-secondary-lighter: #f25892;
+  --ifm-color-secondary-lightest: #f470a1;
+
+  /* BACKGROUND */
+  --ifm-background-color: #fffff2;
+  --ifm-heading-color: var(--ifm-color-primary);
+  --ifm-link-color: var(--ifm-color-secondary);
+
+  /* LOOK AND FEEL */
+  --ifm-button-border-radius: 24px;
+  --ifm-link-hover-decoration: none;
+
+  /* FONT */
+  --ifm-font-family-base: 'Lato', sans-serif;
+  --ifm-font-size-base: 90%;
+  --ifm-font-weight-semibold: 500;
+  --ifm-code-font-size: 95%;
+  --ifm-heading-font-family: 'harabara', sans-serif;
+
+  /* NAVBAR */
+  --ifm-navbar-background-color: var(--ifm-background-color);
+  --ifm-navbar-link-color: #212529S;
+  --ifm-navbar-link-hover-color: var(--ifm-color-secondary);
+  --ifm-navbar-item-padding-vertical: 0.5rem;
+
+  /* HERO */
+  --ifm-hero-background-color: var(--ifm-background-color);
+
+  /* FOOTER */
+  --ifm-footer-background-color: var(--ifm-background-color);
+  --ifm-footer-link-hover-color: var(--ifm-link-color);
+
+  /* FOOTER
+  --ifm-footer-color: var(--ifm-color-white);
+  --ifm-footer-link-color: var(--ifm-color-white);
+  --ifm-footer-link-hover-color: var(--ifm-color-primary);
+  */
+}
+
+/**
+ */
+h1, h2, h3, h4, h5 {
+  letter-spacing: 1.4px;
+}
+
+.markdown h2, .markdown h3 {
+  color: var(--ifm-color-primary-light);
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+/* ****************************************** */
+/* NAVBAR                                     */
+/* ****************************************** */
+
+.navbar__logo {
+  height: 2.5rem;
+}
+
+@media (min-width: 1440px) {
+    .navbar__inner {
+      max-width: var(--ifm-container-width-xl);
+      margin: 0 auto;
+      padding: 0 var(--ifm-spacing-horizontal);
+    }
+}
+
+/**
+ HOME PAGE OVERRIDES
+ */
+.button.button--secondary {
+  color: var(--ifm-button-color);
+}
+
+.button.button--secondary.button--outline:not(.button--active):not(:hover) {
+  color: var(--ifm-button-color);
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgb(72, 77, 91);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+.menu__list-item {
+  font-weight: var(--ifm-font-weight-normal);
+  font-size:
+}
+
+.menu__link--active {
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+/* ****************************************** */
+/* FOOTER                                     */
+/* ****************************************** */
+.footer {
+  padding: calc(var(--ifm-footer-padding-vertical) * 2) var(--ifm-footer-padding-horizontal) var(--ifm-footer-padding-vertical);
+}
+
+.footer__logo {
+  margin-top: 0;
+}
+
+/* ****************************************** */
+/* DOC PAGES                                  */
+/* ****************************************** */
+
+.markdown {
+  padding-bottom: 50px;
+}
+
+.markdown .alert .admonition-heading h5 {
+  margin-bottom: 0px;
+}
+
+.markdown .alert h5 {
+  color: var(--ifm-alert-color);
+}
+
+.markdown img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 0 auto;
+  display: block;
+  max-width: 92%;
+}
+
+.markdown .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.markdown .card img {
+  box-shadow: unset;
+  max-height: 145px;
+}
+
+
+
+/* show redocusaurus categories menu*/
+.redocusaurus .menu-content div.scrollbar-container {
+  display: block !important;
+}
