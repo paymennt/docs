@@ -10,8 +10,9 @@ module.exports = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'paymennt',
   projectName: 'docs',
+  organizationName: 'paymennt',
+  trailingSlash: false,
   themeConfig: {
     navbar: {
       logo: {
