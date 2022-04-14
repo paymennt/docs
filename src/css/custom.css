@@ -165,3 +165,16 @@ h1, h2, h3, h4, h5 {
 .redocusaurus .menu-content div.scrollbar-container {
   display: block !important;
 }
+
+/* redocusaurus side menu background */
+.redocusaurus .menu-content.ednbLy {
+  background-color: #f1f1ce;
+}
+
+.redocusaurus .menu-content.ednbLy li > label.active {
+  background-color: #e1e1b7;
+}
+
+.redocusaurus .menu-content.ednbLy li>label:hover {
+  background-color: #e1e1b7;
+}

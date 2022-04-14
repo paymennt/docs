@@ -1,6 +1,7 @@
 ---
 title: Android SDK
 ---
+
 <a className="button button--primary button--large" href="http://www.github.com/pointcheckout/android-sdk">
   View on GitHub
 </a>
@@ -8,7 +9,7 @@ title: Android SDK
 <br/>
 <br/>
 
-This documentation highlights the requirements for using the PointCheckout Android SDK. Throughout this document, we aassume that you are using Android Studio for your Android development.
+This documentation highlights the requirements for using the **paymennt** Android SDK. Throughout this document, we aassume that you are using Android Studio for your Android development.
 
 :::caution MINIMUM REQUIREMENTS
 The minimum supported Android API level for the SDK is **16 (KitKat)**, however, setting the minimum Android API level to **26 (Pie)** is recommended.
@@ -36,9 +37,9 @@ allprojects {
 }
 ```
 
-### PointCheckout SDK Dependency
+### paymennt SDK Dependency
 
-Include the PointCheckout Android SDK dependency to your project in `your_project_home/app/build.gradle`
+Include the **paymennt** Android SDK dependency to your project in `your_project_home/app/build.gradle`
 
 ```jsx
 dependencies {
@@ -48,7 +49,7 @@ dependencies {
 
 ### Required Permissions
 
-The PointCheckout SDK requires the following permissions. Please add them to your AndroidManifest.xml file if they are not already present:
+The **paymennt** SDK requires the following permissions. Please add them to your AndroidManifest.xml file if they are not already present:
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET"/>
@@ -60,13 +61,13 @@ You must add Google's SafetyNet API to your `app/build.gradle`. For details on h
 
 ## SDK Flow
 
-The PointCheckout Android SDK requires three distinct steps for you to accept card payments:
+The **paymennt** Android SDK requires three distinct steps for you to accept card payments:
 
 1. Create a new mobile Checkout
 2. Initiate the PointCheckoutClient from the SDK using the provided checkout key
 3. Query the API for the payment status
 
-This diagram shows the overall payment and data flow in order to accept payments using the PointCheckout
+This diagram shows the overall payment and data flow in order to accept payments using the **paymennt**
 mobile SDK
 
 ![Sequence Diagram](/img/docs/integrate/sdks/sdk-flow.png)
@@ -78,7 +79,7 @@ mobile SDK
 Send new checkout request to [Create mobile checkout](/api/#operation/create-mobile-checkout) API. Check [mobile payment integration guide](/docs/integrate/merchant-api/mobile-payment) for more details.
 
 :::danger SERVER API CALL
-API calls made to the PointCheckout API endpoints should be made from your server. You should **NEVER** include your API keys in your mobile application. A malicious user can gain access to your account if those keys are exposed.
+API calls made to the **paymennt** API endpoints should be made from your server. You should **NEVER** include your API keys in your mobile application. A malicious user can gain access to your account if those keys are exposed.
 :::
 
 ### Create a new the PointCheckoutClient
@@ -89,10 +90,10 @@ Create an object of PointCheckoutClient pointing to the required environment.
 PointCheckoutClient pcoClient = new PointCheckoutClient(environment);
 ```
 
-|Environment|Description|
-|-|-|
-|`Enviornment.PRODUCTION`|Use this for accepting customer payments|
-|`Enviornment.TEST`|Use this during integration testing|
+| Environment              | Description                              |
+| ------------------------ | ---------------------------------------- |
+| `Enviornment.PRODUCTION` | Use this for accepting customer payments |
+| `Enviornment.TEST`       | Use this during integration testing      |
 
 :::tip
 Keep a reference of the created client to reuse the same instance
@@ -114,9 +115,9 @@ Invoke the `initialize` method when the app starts as it requires 2-3 seconds to
 
 To commence the payment process, you must call the static `pay` method of the `PointCheckoutClient`. This method accepts 3 parameters:
 
-* **`context`** which refers to the current activity context
-* **`checkoutKey`** received in the  [Create mobile checkout](/api/#operation/create-mobile-checkout) API call.
-* **`listener`** that will be called on payment update or cancellation
+- **`context`** which refers to the current activity context
+- **`checkoutKey`** received in the [Create mobile checkout](/api/#operation/create-mobile-checkout) API call.
+- **`listener`** that will be called on payment update or cancellation
 
 ```jsx
 pcClient.pay(context, checkoutKey, new PointCheckoutEventListener() {
@@ -138,15 +139,15 @@ Calling the `pay` function will open a modal where the user will be able to comp
 
 The `PointCheckoutEventListener` event listener has two callbacks:
 
-1. `onUpdate` which is called the checkout status is updated (paid, cancelled, failed .etc). You **MUST** call PointCheckout API to fetch the new status of the checkout to verify that its been successfully paid.
+1. `onUpdate` which is called the checkout status is updated (paid, cancelled, failed .etc). You **MUST** call **paymennt** API to fetch the new status of the checkout to verify that its been successfully paid.
 2. `onDismiss` which is called if the user closes the modal by clicking on close button.
 
 ### Retrieve Checkout Status
 
-Retrieve checkout status and details using the  [Get checkout](/api/#operation/get-checkout) API call. Check [mobile payment integration guide](/docs/integrate/merchant-api/mobile-payment) for more details.
+Retrieve checkout status and details using the [Get checkout](/api/#operation/get-checkout) API call. Check [mobile payment integration guide](/docs/integrate/merchant-api/mobile-payment) for more details.
 
 :::danger SERVER API CALL
-API calls made to the PointCheckout API endpoints should be made from your server. You should **NEVER** include your API keys in your mobile application. A malicious user can gain access to your account if those keys are exposed.
+API calls made to the **paymennt** API endpoints should be made from your server. You should **NEVER** include your API keys in your mobile application. A malicious user can gain access to your account if those keys are exposed.
 :::
 
 ## API References

@@ -1,153 +1,152 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  title: 'paymennt documentation',
-  tagline: 'build amazing payment experiences with the paymennt platform',
-  url: 'https://docs.paymennt.com',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  projectName: 'docs',
-  organizationName: 'paymennt',
+  title: "paymennt documentation",
+  tagline: "build amazing payment experiences with the paymennt platform",
+  url: "https://docs.paymennt.com",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
+  projectName: "docs",
+  organizationName: "paymennt",
   trailingSlash: false,
   themeConfig: {
     navbar: {
       logo: {
-        alt: 'paymennt logo',
-        src: 'img/paymennt-logo.svg',
+        alt: "paymennt logo",
+        src: "img/paymennt-logo.svg",
       },
       items: [
         {
-          to: 'guides/',
-          activeBasePath: 'guides',
-          label: 'GUIDES',
-          position: 'left',
+          to: "guides/",
+          activeBasePath: "guides",
+          label: "GUIDES",
+          position: "left",
         },
         {
-          to: 'docs/',
-          activeBasePath: 'docs',
-          label: 'DEVELOPER',
-          position: 'left',
+          to: "docs/",
+          activeBasePath: "docs",
+          label: "DEVELOPER",
+          position: "left",
         },
         {
-          to: 'api/',
-          activeBasePath: 'api',
-          label: 'API SPECS',
-          position: 'left',
+          to: "api/",
+          activeBasePath: "api",
+          label: "API SPECS",
+          position: "left",
         },
       ],
     },
     footer: {
-      style: 'light',
+      style: "light",
       links: [
         {
           items: [
             {
               html: `
-                <a href="https://www.paymennt.com.com" target="_blank">
+                <a href="https://www.paymennt.com" target="_blank">
                   <img src="/img/paymennt-logo.svg" alt="paymennt logo" width="114" height="51" />
                 </a>
                 <p style="font-size: smaller;">Copyright © ${new Date().getFullYear()} PointCheckout, Ltd</p>
               `,
-            }
-          ]
+            },
+          ],
         },
+        {},
         {
-        },
-        {
-          title: 'GUIDES',
+          title: "GUIDES",
           items: [
             {
-              label: 'account opening',
-              to: '/guides/registration/requirements',
+              label: "account opening",
+              to: "/guides/registration/requirements",
             },
             {
-              label: 'desktop access',
-              to: '/guides/portal/login',
+              label: "desktop access",
+              to: "/guides/portal/login",
             },
           ],
         },
         {
-          title: 'ACCOUNT MANAGEMENT',
+          title: "ACCOUNT MANAGEMENT",
           items: [
             {
-              label: 'payout bank account',
-              to: '/guides/account/finance/payout-bank-account',
+              label: "payout bank account",
+              to: "/guides/account/finance/payout-bank-account",
             },
           ],
         },
         {
-          title: 'ECOMMERCE PLUGINS',
+          title: "ECOMMERCE PLUGINS",
           items: [
             {
-              label: 'opencart',
-              href: '/docs/integrate/ecomm/opencart',
+              label: "opencart",
+              href: "/docs/integrate/ecomm/opencart",
             },
             {
-              label: 'woocommerce',
-              href: '/docs/integrate/ecomm/woocommerce',
+              label: "woocommerce",
+              href: "/docs/integrate/ecomm/woocommerce",
             },
             {
-              label: 'shopify',
-              href: '/docs/integrate/ecomm/shopify',
+              label: "shopify",
+              href: "/docs/integrate/ecomm/shopify",
             },
           ],
         },
       ],
     },
     colorMode: {
-      defaultMode: 'light',
+      defaultMode: "light",
       disableSwitch: true,
     },
     prism: {
-      additionalLanguages: ['swift'],
+      additionalLanguages: ["swift"],
     },
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.docs.js'),
+          sidebarPath: require.resolve("./sidebars.docs.js"),
         },
         blog: false,
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       },
     ],
     [
-      'redocusaurus',
+      "redocusaurus",
       {
         specs: [
           {
-            spec: 'api/pointcheckout.yaml',
-            route: '/api'
-          }
+            spec: "api/paymennt.yml",
+            route: "/api",
+          },
         ],
         theme: {
-          primaryColor: '#25405d',
+          primaryColor: "#25405d",
           redocOptions: {
             disableSearch: true,
-            hideDownloadButton: true
+            hideDownloadButton: true,
           },
         },
-      }
+      },
     ],
   ],
   plugins: [
     [
-      '@docusaurus/plugin-content-docs',
+      "@docusaurus/plugin-content-docs",
       {
-        id: 'guides',
-        path: 'community',
-        routeBasePath: 'guides',
-        sidebarPath: require.resolve('./sidebars.guides.js'),
+        id: "guides",
+        path: "community",
+        routeBasePath: "guides",
+        sidebarPath: require.resolve("./sidebars.guides.js"),
       },
     ],
-    path.resolve(__dirname, 'plugins/webpack'),
+    path.resolve(__dirname, "plugins/webpack"),
   ],
 };

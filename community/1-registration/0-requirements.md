@@ -1,21 +1,21 @@
 ---
-title: Required information to open a PointCheckout Merchant Account
+title: Required information to open a paymennt Merchant Account
 sidebar_label: Account Requirements
 ---
 
 :::note BEFORE PROCEEDING
-A PointCheckout Merchant Account will only be issued to registered businesses in the jurisdictions listed below.
+A **paymennt** Merchant Account will only be issued to registered businesses in the jurisdictions listed below.
 :::
 
 ## Supported Countries
 
 We can only open merchant accounts for registered businesses in the following countries:
-* 🇦🇪 United Arab Emirates
 
+- 🇦🇪 United Arab Emirates
 
 ## Required information
 
-In order register and open a PointCheckout Merchant Account, you will need to provide the following information:
+In order register and open a **paymennt** Merchant Account, you will need to provide the following information:
 
 - **Website**: If you do not have a website, you can use your app store link or social media profile.
 - **Business address**: This should be your business address as listed on your company registration.

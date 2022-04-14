@@ -3,7 +3,7 @@ title: Managing your payout bank accounts
 sidebar_label: Payout bank account
 ---
 
-Managing your payout bank account details is easy using the PayLink by PointCheckout mobile application.
+Managing your payout bank account details is easy using the **paymennt** mobile application.
 
 :::caution Before you start
 Your user account must have Administrator permission to view and update the payout bank account
@@ -11,9 +11,9 @@ Your user account must have Administrator permission to view and update the payo
 
 ## View payout bank account
 
-You can view your current payout bank account details directly from the PayLink by PointCheckout application. To view, follow the next steps:
+You can view your current payout bank account details directly from the **paymennt** application. To view, follow the next steps:
 
-1. Launch the PayLink by PointCheckout mobile application
+1. Launch the **paymennt** mobile application
 2. Open the side menu (Accessed by tapping at the top left corner)
 3. From the side-menu, select `Settings` (See image below)
 4. From the `Settings` menu, select `Account Settings`
@@ -23,7 +23,7 @@ You can view your current payout bank account details directly from the PayLink 
 
 ## Change payout bank account
 
-You are able to change your payout bank account details directly from the PayLink by PointCheckout application. To change, follow the next steps:
+You are able to change your payout bank account details directly from the **paymennt** application. To change, follow the next steps:
 
 1. Go to the `Account Settings` view described under [**View payout bank account**](#view-payout-bank-account)
 2. Select `Edit` in top right corner
@@ -38,6 +38,5 @@ You are able to change your payout bank account details directly from the PayLin
 :::note Manual review
 The new bank account details will be manually reviewed and updated within 24 hours. Additional documents may be requested depending on the type and name of bank account specified.
 :::
-
 
 ![change payout bank account details](/img/guides/account/bank-account/bank-account-change.png)

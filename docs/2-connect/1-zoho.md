@@ -1,19 +1,19 @@
 ---
-title: Painless payments with Zoho and PointCheckout
+title: Painless payments with Zoho and paymennt
 sidebar_label: Zoho Books
 ---
 
-Make getting paid faster and easier than ever! PointCheckout is now integrated with Zoho Books. Zoho Books is online accounting software that manages your finances, automates business workflows, and helps you work collectively across departments.
+Make getting paid faster and easier than ever! **paymennt** is now integrated with Zoho Books. Zoho Books is online accounting software that manages your finances, automates business workflows, and helps you work collectively across departments.
 
-This integration will make it easier for your customers to pay your Zoho Books invoices online using PointCheckout.
+This integration will make it easier for your customers to pay your Zoho Books invoices online using **paymennt**.
 
 :::caution Before you start
 Your user account must have Administrator permission to access this service
 :::
 
-## Log in to the PointCheckout Web Console
+## Log in to the paymennt Web Console
 
-To complete this integration, you must first login to the [PointCheckout Web Console](/guides/portal/login)
+To complete this integration, you must first login to the [paymennt Web Console](/guides/portal/login)
 
 ## Access Zoho Integration configuration
 
@@ -27,21 +27,21 @@ From the side menu, Select **"Integrations"** -> **"Zoho Books"** as shown in th
 
 ![admin zoho connect](/img/docs/integrate/3rd-party/zoho/connect.png)
 
-2. Select the Xero **Organization** you would like to link to this PointCheckout account.
+2. Select the Xero **Organization** you would like to link to this **paymennt** account.
 
-| PointCheckout supports connecting 1 single Zoho Organization per PointCheckout account. If you manage multiple PointCheckout clients and have multiple Organizations available to your Zoho account, make sure all of them are selected. You can specify which organization is linked to this specific PointCheckout account in the next step.
+| **paymennt** supports connecting 1 single Zoho Organization per **paymennt** account. If you manage multiple **paymennt** clients and have multiple Organizations available to your Zoho account, make sure all of them are selected. You can specify which organization is linked to this specific **paymennt** account in the next step.
 
 ![zoho authorize](/img/docs/integrate/3rd-party/zoho/authorize.png)
 
-3. (Multiple Organizations Only) Selecting organization to link to your PointCheckout Account
+3. (Multiple Organizations Only) Selecting organization to link to your **paymennt** Account
 
-If you have multiple organizations selected in _Step 2_ above, you will be prompted to select which one you want to link to your PointCheckout account. If you have only one selected Organization, you will not see a prompt.
+If you have multiple organizations selected in _Step 2_ above, you will be prompted to select which one you want to link to your **paymennt** account. If you have only one selected Organization, you will not see a prompt.
 
 ## Adding a Payment Link to your Zoho Invoices
 
 The next steps explain how to add a **"Pay Now"** link to your Zoho PDF invoices
 
-1. Copy **Custom payment URL** from the **"Zoho Books"** screen on your PointCheckout account.
+1. Copy **Custom payment URL** from the **"Zoho Books"** screen on your **paymennt** account.
 
 ![admin zoho connected](/img/docs/integrate/3rd-party/zoho/connected.png)
 
