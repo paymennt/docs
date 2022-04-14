@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: Merchant API
   description: >-
-    PointCheckout provides a collection of APIs that enable you to process and
+    **paymennt** provides a collection of APIs that enable you to process and
     manage payments. Our APIs accept and return JSON in the HTTP body, and
     return standard HTTP response codes. You can consume the APIs directly using
 
@@ -19,7 +19,7 @@ info:
     ### API Basics
 
 
-    The PointCheckout API gives you access to pretty much all the features you
+    The **paymennt** API gives you access to pretty much all the features you
     can use on our dashboard and lets you extend them for use in your
     application. It strives to be RESTful and is organized around the main
     resources you would be interacting with - with a few notable exceptions.
@@ -33,7 +33,7 @@ info:
     will be in the following format:
 
 
-    ```js title="/src/components/HelloCodeTitle.js"
+    ```js 
 
     {
       "success": [boolean], // true indicates a successful operation
@@ -45,16 +45,18 @@ info:
     ```
   version: '2.0'
 servers:
-  - url: https://api.pointcheckout.com/mer/v2.0/
-    description: PointCheckout live environment
-  - url: https://api.test.pointcheckout.com/mer/v2.0/
-    description: PointCheckout test environment
+  - url: https://api.paymennt.com/mer/v2.0/
+    description: paymennt live environment
+  - url: https://api.test.paymennt.com/mer/v2.0/
+    description: paymennt test environment
 security:
   - ApiKey: []
     ApiSecret: []
 tags:
   - name: Checkout
     description: API endpoints for checkout management.
+  - name: Payment
+    description: API endpoints for payment management.
   - name: Branches
     description: API endpoints for branch management.
   - name: Webhooks
@@ -62,6 +64,36 @@ tags:
   - name: Customer subscription
     description: API endpoints for Customer subscription management.
 paths:
+  /payment/token:
+    post:
+      tags:
+        - Payment
+      summary: Create token payment
+      operationId: create-token-payment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TokenPaymentRequest'
+            exampleSetFlag: false
+        required: true
+      responses:
+        '200':
+          description: Payment details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenPaymentRedirectResponseWrapper'
+              exampleSetFlag: false
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateTokenPaymentErrorResponse'
+              exampleSetFlag: false
+      x-sort:
+        sort: '110'
   /checkout/web:
     post:
       tags:
@@ -73,6 +105,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/CheckoutWebPaymentRequest'
+            exampleSetFlag: false
         required: true
       responses:
         '200':
@@ -81,14 +114,46 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CheckoutWebPaymentResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '110'
+  /payment/{paymentId}/capture:
+    post:
+      tags:
+        - Payment
+      summary: Capture authorized payment
+      operationId: capture-payment
+      parameters:
+        - name: paymentId
+          in: path
+          description: Payment Id retrieved from Paymennt.com API.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Payment details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentResponseWrapper'
+              exampleSetFlag: false
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetPaymentErrorResponse'
+              exampleSetFlag: false
+      x-sort:
+        sort: '120'
   /checkout/link:
     post:
       tags:
@@ -100,6 +165,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/CheckoutPaymentLinkRequest'
+            exampleSetFlag: false
         required: true
       responses:
         '200':
@@ -108,12 +174,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CheckoutLinkResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '120'
   /checkout/qr:
@@ -127,6 +195,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/CheckoutQRRequest'
+            exampleSetFlag: false
         required: true
       responses:
         '200':
@@ -135,12 +204,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CheckoutQRResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '130'
   /checkout/mobile:
@@ -154,6 +225,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/CheckoutMobilePaymentRequest'
+            exampleSetFlag: false
         required: true
       responses:
         '200':
@@ -162,12 +234,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CheckoutMobilePaymentResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '140'
   /checkout:
@@ -211,6 +285,7 @@ paths:
               enum:
                 - PENDING
                 - AUTHORIZED
+                - PENDING_CONFIRMATION
                 - PAID
                 - FAILED
                 - CANCELLED
@@ -270,14 +345,46 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PageResponseCheckoutResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetListErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '200'
+  /payment/{paymentId}:
+    get:
+      tags:
+        - Payment
+      summary: Get payment by Id
+      operationId: get-payment
+      parameters:
+        - name: paymentId
+          in: path
+          description: Payment Id retrieved from Paymennt.com API.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Get Payment by ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentResponseWrapper'
+              exampleSetFlag: false
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetPaymentErrorResponse'
+              exampleSetFlag: false
+      x-sort:
+        sort: '210'
   /checkout/{checkoutId}:
     get:
       tags:
@@ -287,7 +394,7 @@ paths:
       parameters:
         - name: checkoutId
           in: path
-          description: Checkout Id retrieved from PointCheckout API.
+          description: Checkout Id retrieved from paymennt API.
           required: true
           schema:
             type: string
@@ -298,12 +405,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CheckoutResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '210'
   /checkout/{checkoutId}/cancel:
@@ -326,12 +435,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CheckoutResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '300'
   /checkout/{checkoutId}/refund:
@@ -343,7 +454,7 @@ paths:
       parameters:
         - name: checkoutId
           in: path
-          description: Checkout Id retrieved from PointCheckout API.
+          description: Checkout Id retrieved from paymennt API.
           required: true
           schema:
             type: string
@@ -379,12 +490,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CheckoutResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '310'
   /subscription:
@@ -460,12 +573,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PageResponseSubscriptionResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetListErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '1130'
     post:
@@ -478,6 +593,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/SubscriptionRequest'
+            exampleSetFlag: false
         required: true
       responses:
         '200':
@@ -486,12 +602,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SubscriptionResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetSubscriptionErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '1110'
   /subscription/{subscriptionId}:
@@ -503,7 +621,7 @@ paths:
       parameters:
         - name: subscriptionId
           in: path
-          description: Subscription Id retrieved from PointCheckout API.
+          description: Subscription Id retrieved from paymennt API.
           required: true
           schema:
             type: string
@@ -514,12 +632,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SubscriptionResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetSubscriptionErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '1120'
   /subscription/{subscriptionId}/pause:
@@ -531,7 +651,7 @@ paths:
       parameters:
         - name: subscriptionId
           in: path
-          description: Subscription Id retrieved from PointCheckout API.
+          description: Subscription Id retrieved from paymennt API.
           required: true
           schema:
             type: string
@@ -542,12 +662,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SubscriptionResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetSubscriptionErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '1140'
   /subscription/{subscriptionId}/resume:
@@ -559,7 +681,7 @@ paths:
       parameters:
         - name: subscriptionId
           in: path
-          description: Subscription Id retrieved from PointCheckout API.
+          description: Subscription Id retrieved from paymennt API.
           required: true
           schema:
             type: string
@@ -570,12 +692,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SubscriptionResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetSubscriptionErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '1150'
   /subscription/{subscriptionId}/payment:
@@ -587,7 +711,7 @@ paths:
       parameters:
         - name: subscriptionId
           in: path
-          description: Subscription Id retrieved from PointCheckout API.
+          description: Subscription Id retrieved from paymennt API.
           required: true
           schema:
             type: string
@@ -613,12 +737,14 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/PageResponseSubscriptionPaymentResponseWrapper
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetListErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '1170'
   /branches/{branchId}:
@@ -641,12 +767,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BranchResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetBranchErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10010'
   /branches:
@@ -680,12 +808,14 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/BranchResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetListErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10000'
     post:
@@ -698,6 +828,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/BranchRequest'
+            exampleSetFlag: false
         required: true
       responses:
         '200':
@@ -706,12 +837,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BranchResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/PostBranchErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10020'
   /branches/{branchId}/disable:
@@ -734,12 +867,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BranchResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetBranchErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10030'
   /branches/{branchId}/enable:
@@ -762,12 +897,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BranchResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetBranchErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10040'
   /webhooks/{webhookId}:
@@ -790,12 +927,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/WebhookResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetWebhookErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10060'
   /webhooks:
@@ -829,12 +968,14 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/WebhookResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetListErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10050'
     post:
@@ -847,6 +988,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/WebhookRequest'
+            exampleSetFlag: false
         required: true
       responses:
         '200':
@@ -855,6 +997,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/WebhookResponseWrapper'
+              exampleSetFlag: false
       x-sort:
         sort: '10070'
   /webhooks/{webhookId}/test:
@@ -878,12 +1021,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/WebhookResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetWebhookErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10080'
   /webhooks/{webhookId}/disable:
@@ -906,12 +1051,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/WebhookResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetWebhookErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10090'
   /webhooks/{webhookId}/enable:
@@ -934,12 +1081,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/WebhookResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetWebhookErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10100'
   /webhooks/{webhookId}/delete:
@@ -962,12 +1111,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/WebhookResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetWebhookErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10110'
 components:
@@ -1023,6 +1174,7 @@ components:
     CheckoutAddress:
       required:
         - address1
+        - city
         - country
         - name
       type: object
@@ -1054,7 +1206,7 @@ components:
         country:
           type: string
           description: Address country (ISO 3166-1 alpha-3 or alpha-2 country code)
-          example: UAE
+          example: AE
       description: Delivery address
     CheckoutCustomer:
       required:
@@ -1094,7 +1246,7 @@ components:
       properties:
         id:
           type: string
-          description: Checkout ID at PointCheckout database
+          description: Checkout ID at paymennt database.
           example: '1653241101733169556'
         displayId:
           type: string
@@ -1106,7 +1258,7 @@ components:
           type: string
           description: >-
             Checkout key, serves as a unique identifier for the checkout. Used
-            to generate the payment payge redirect URL
+            to generate the payment page redirect URL
           example: 90ed4298f15d46df994fd1cfbbec5aa24390e811295cf8b5
         requestId:
           type: string
@@ -1121,13 +1273,13 @@ components:
           description: >-
             ISO 4217 Currency Code (3 letter currency code) associated with this
             checkout.
-          example: USD
+          example: AED
         amount:
           type: number
           description: >-
             The grand total of the whole order. This is the amount the customer
             must pay.
-          example: 1499.99
+          example: 100
         cashAmount:
           type: number
           description: Cash amount to be collected from Shopper
@@ -1139,6 +1291,7 @@ components:
           enum:
             - Pending
             - Authorized
+            - Pending confirmation
             - Paid
             - Failed
             - Cancelled
@@ -1153,7 +1306,7 @@ components:
           type: string
           description: 'URL for the customer payment redirect. '
           example: >-
-            https://pay.test.pointcheckout.com/checkout/7a3ce540effe3c9a568a577d1f717e5267e73dc503663d4f
+            https://pay.test.paymennt.com/checkout/7a3ce540effe3c9a568a577d1f717e5267e73dc503663d4f
         usedPaymentMethod:
           type: string
           description: Payment method used while processing the payment.
@@ -1162,14 +1315,15 @@ components:
             - PointCheckout
             - Card
             - Cash
+            - Crypto
             - ZainCash
         customer:
           $ref: '#/components/schemas/CheckoutCustomerResponse'
         subscriptionId:
           type: string
           description: >-
-            The Id of the subscription at PointCheckout database that the
-            checkout was issued for
+            The Id of the subscription at paymennt database that the checkout
+            was issued for
           example: '1619465605181100275'
         billingAddress:
           $ref: '#/components/schemas/CheckoutAddress'
@@ -1194,16 +1348,16 @@ components:
         timestamp:
           type: string
           description: >-
-            The date time of creating the payment in ISO8601 format
+            The date time of creating the checkout in ISO8601 format
             (yyyy-MM-ddTHH:mm:ss.SSSZZ).
           format: date-time
         branchId:
           type: string
-          description: The PointCheckout branch ID associated with this checkout.
+          description: The paymennt branch ID associated with this checkout.
           example: '1601731695315563241'
         branchName:
           type: string
-          description: The PointCheckout branch name associated with this checkout.
+          description: The paymennt branch name associated with this checkout.
           example: Test store
       description: >-
         Checkout associated with the payment, this can be null if the payment
@@ -1238,14 +1392,14 @@ components:
           description: >-
             A unique Identifier for this request, can be used later to query the
             status on the checkout.
-          example: CHK-100000214-r1
+          example: ORD-1234-r1
         orderId:
           type: string
           description: >-
             A merchant unique transaction ID for this checkout. This can be the
             order ID. Must match any reference shown to the user during checkout
             / order history.
-          example: CHK-100000214
+          example: ORD-1234
         currency:
           type: string
           description: ISO 4217 Currency Code (3 letter currency code).
@@ -1271,7 +1425,7 @@ components:
           $ref: '#/components/schemas/CheckoutAddress'
         branchId:
           type: integer
-          description: The PointCheckout branch ID associated with this checkout.
+          description: The paymennt branch ID associated with this checkout.
           format: int64
         allowedPaymentMethods:
           type: array
@@ -1288,17 +1442,15 @@ components:
               provided the payment methods order in the payment page will follow
               the same order passed in this parameter. 
             enum:
-              - CARD
-              - POINTCHECKOUT
+              - CARD,POINTCHECKOUT
         defaultPaymentMethod:
           type: string
           description: >-
             Active payment method when opening the payment page. When left empty
-            the default for your account at PointCheckout will be used.
+            the default for your account at paymennt will be used.
           example: CARD
           enum:
-            - CARD
-            - POINTCHECKOUT
+            - CARD,POINTCHECKOUT
         language:
           maxLength: 3
           minLength: 2
@@ -1336,14 +1488,14 @@ components:
           description: >-
             A unique Identifier for this request, can be used later to query the
             status on the checkout.
-          example: CHK-100000214-r1
+          example: ORD-1234-r1
         orderId:
           type: string
           description: >-
             A merchant unique transaction ID for this checkout. This can be the
             order ID. Must match any reference shown to the user during checkout
             / order history.
-          example: CHK-100000214
+          example: ORD-1234
         description:
           type: string
           description: Description of the order.
@@ -1382,7 +1534,7 @@ components:
           $ref: '#/components/schemas/CheckoutAddress'
         branchId:
           type: integer
-          description: The PointCheckout branch ID associated with this checkout.
+          description: The paymennt branch ID associated with this checkout.
           format: int64
         allowedPaymentMethods:
           type: array
@@ -1399,17 +1551,15 @@ components:
               provided the payment methods order in the payment page will follow
               the same order passed in this parameter. 
             enum:
-              - CARD
-              - POINTCHECKOUT
+              - CARD,POINTCHECKOUT
         defaultPaymentMethod:
           type: string
           description: >-
             Active payment method when opening the payment page. When left empty
-            the default for your account at PointCheckout will be used.
+            the default for your account at paymennt will be used.
           example: CARD
           enum:
-            - CARD
-            - POINTCHECKOUT
+            - CARD,POINTCHECKOUT
         expiresIn:
           maximum: 10080
           minimum: 15
@@ -1441,14 +1591,14 @@ components:
           description: >-
             A unique Identifier for this request, can be used later to query the
             status on the checkout.
-          example: CHK-100000214-r1
+          example: ORD-1234-r1
         orderId:
           type: string
           description: >-
             A merchant unique transaction ID for this checkout. This can be the
             order ID. Must match any reference shown to the user during checkout
             / order history.
-          example: CHK-100000214
+          example: ORD-1234
         description:
           type: string
           description: Description of the order.
@@ -1467,7 +1617,7 @@ components:
           description: >-
             Merchant device reference, to be used by the merchant to indicate
             the source device of the checkout if more than one device is used to
-            submit checkouts to PointCheckout.
+            submit checkouts to **paymennt**.
         qrSize:
           maximum: 1024
           minimum: 64
@@ -1489,7 +1639,7 @@ components:
           $ref: '#/components/schemas/CheckoutAddress'
         branchId:
           type: integer
-          description: The PointCheckout branch ID associated with this checkout.
+          description: The paymennt branch ID associated with this checkout.
           format: int64
         allowedPaymentMethods:
           type: array
@@ -1506,17 +1656,15 @@ components:
               provided the payment methods order in the payment page will follow
               the same order passed in this parameter. 
             enum:
-              - CARD
-              - POINTCHECKOUT
+              - CARD,POINTCHECKOUT
         defaultPaymentMethod:
           type: string
           description: >-
             Active payment method when opening the payment page. When left empty
-            the default for your account at PointCheckout will be used.
+            the default for your account at paymennt will be used.
           example: CARD
           enum:
-            - CARD
-            - POINTCHECKOUT
+            - CARD,POINTCHECKOUT
         language:
           maxLength: 3
           minLength: 2
@@ -1540,7 +1688,7 @@ components:
       properties:
         id:
           type: string
-          description: Checkout ID at PointCheckout database
+          description: Checkout ID at paymennt database.
           example: '1653241101733169556'
         displayId:
           type: string
@@ -1552,7 +1700,7 @@ components:
           type: string
           description: >-
             Checkout key, serves as a unique identifier for the checkout. Used
-            to generate the payment payge redirect URL
+            to generate the payment page redirect URL
           example: 90ed4298f15d46df994fd1cfbbec5aa24390e811295cf8b5
         requestId:
           type: string
@@ -1567,13 +1715,13 @@ components:
           description: >-
             ISO 4217 Currency Code (3 letter currency code) associated with this
             checkout.
-          example: USD
+          example: AED
         amount:
           type: number
           description: >-
             The grand total of the whole order. This is the amount the customer
             must pay.
-          example: 1499.99
+          example: 100
         cashAmount:
           type: number
           description: Cash amount to be collected from Shopper
@@ -1585,6 +1733,7 @@ components:
           enum:
             - Pending
             - Authorized
+            - Pending confirmation
             - Paid
             - Failed
             - Cancelled
@@ -1599,7 +1748,7 @@ components:
           type: string
           description: 'URL for the customer payment redirect. '
           example: >-
-            https://pay.test.pointcheckout.com/checkout/7a3ce540effe3c9a568a577d1f717e5267e73dc503663d4f
+            https://pay.test.paymennt.com/checkout/7a3ce540effe3c9a568a577d1f717e5267e73dc503663d4f
         usedPaymentMethod:
           type: string
           description: Payment method used while processing the payment.
@@ -1608,6 +1757,7 @@ components:
             - PointCheckout
             - Card
             - Cash
+            - Crypto
             - ZainCash
         base64QR:
           type: string
@@ -1639,16 +1789,16 @@ components:
         timestamp:
           type: string
           description: >-
-            The date time of creating the payment in ISO8601 format
+            The date time of creating the checkout in ISO8601 format
             (yyyy-MM-ddTHH:mm:ss.SSSZZ).
           format: date-time
         branchId:
           type: string
-          description: The PointCheckout branch ID associated with this checkout.
+          description: The paymennt branch ID associated with this checkout.
           example: '1601731695315563241'
         branchName:
           type: string
-          description: The PointCheckout branch name associated with this checkout.
+          description: The paymennt branch name associated with this checkout.
           example: Test store
       description: Result Object.
     CheckoutQRResponseWrapper:
@@ -1681,8 +1831,6 @@ components:
           description: Merchant item SKU.
           example: '1116521'
         unitprice:
-          minimum: 0
-          exclusiveMinimum: false
           type: number
           description: Product unit price.
           example: 50
@@ -1693,8 +1841,6 @@ components:
           description: Quantity of item being bought by the user.
           example: 2
         linetotal:
-          minimum: 0
-          exclusiveMinimum: false
           type: number
           description: Total selling price for quantity of this item.
           example: 100
@@ -1741,14 +1887,14 @@ components:
           type: boolean
           description: Disable totals validation.
           example: false
-          default: false
+          default: true
       description: Order totals
     CheckoutResponse:
       type: object
       properties:
         id:
           type: string
-          description: Checkout ID at PointCheckout database
+          description: Checkout ID at paymennt database.
           example: '1653241101733169556'
         displayId:
           type: string
@@ -1769,24 +1915,24 @@ components:
           description: >-
             ISO 4217 Currency Code (3 letter currency code) associated with this
             checkout.
-          example: USD
+          example: AED
         amount:
           type: number
           description: >-
             The grand total of the whole order. This is the amount the customer
             must pay.
-          example: 1499.99
+          example: 100
         cashAmount:
           type: number
           description: Cash amount to be collected from Shopper
           example: 0
         branchId:
           type: string
-          description: The PointCheckout branch ID associated with this checkout.
+          description: The paymennt branch ID associated with this checkout.
           example: '1601731695315563241'
         branchName:
           type: string
-          description: The PointCheckout branch name associated with this checkout.
+          description: The paymennt branch name associated with this checkout.
           example: Test store
         status:
           type: string
@@ -1795,6 +1941,7 @@ components:
           enum:
             - Pending
             - Authorized
+            - Pending confirmation
             - Paid
             - Failed
             - Cancelled
@@ -1809,7 +1956,7 @@ components:
           type: string
           description: 'URL for the customer payment redirect. '
           example: >-
-            https://pay.test.pointcheckout.com/checkout/7a3ce540effe3c9a568a577d1f717e5267e73dc503663d4f
+            https://pay.test.paymennt.com/checkout/7a3ce540effe3c9a568a577d1f717e5267e73dc503663d4f
         usedPaymentMethod:
           type: string
           description: Payment method used while processing the payment.
@@ -1818,6 +1965,7 @@ components:
             - PointCheckout
             - Card
             - Cash
+            - Crypto
             - ZainCash
         customer:
           $ref: '#/components/schemas/CheckoutCustomerResponse'
@@ -1844,14 +1992,14 @@ components:
         timestamp:
           type: string
           description: >-
-            The date time of creating the payment in ISO8601 format
+            The date time of creating the checkout in ISO8601 format
             (yyyy-MM-ddTHH:mm:ss.SSSZZ).
           format: date-time
         checkoutKey:
           type: string
           description: >-
             Checkout key, serves as a unique identifier for the checkout. Used
-            to generate the payment payge redirect URL
+            to generate the payment page redirect URL
           example: 90ed4298f15d46df994fd1cfbbec5aa24390e811295cf8b5
       description: Result Object.
     CheckoutResponseWrapper:
@@ -1885,14 +2033,14 @@ components:
           description: >-
             A unique Identifier for this request, can be used later to query the
             status on the checkout.
-          example: CHK-100000214-r1
+          example: ORD-1234-r1
         orderId:
           type: string
           description: >-
             A merchant unique transaction ID for this checkout. This can be the
             order ID. Must match any reference shown to the user during checkout
             / order history.
-          example: CHK-100000214
+          example: ORD-1234
         currency:
           type: string
           description: ISO 4217 Currency Code (3 letter currency code).
@@ -1922,7 +2070,7 @@ components:
           example: https://shop.example.com/payment-redirect/
         branchId:
           type: integer
-          description: The PointCheckout branch ID associated with this checkout.
+          description: The paymennt branch ID associated with this checkout.
           format: int64
         allowedPaymentMethods:
           type: array
@@ -1939,17 +2087,15 @@ components:
               provided the payment methods order in the payment page will follow
               the same order passed in this parameter. 
             enum:
-              - CARD
-              - POINTCHECKOUT
+              - CARD,POINTCHECKOUT
         defaultPaymentMethod:
           type: string
           description: >-
             Active payment method when opening the payment page. When left empty
-            the default for your account at PointCheckout will be used.
+            the default for your account at paymennt will be used.
           example: CARD
           enum:
-            - CARD
-            - POINTCHECKOUT
+            - CARD,POINTCHECKOUT
         language:
           maxLength: 3
           minLength: 2
@@ -1959,6 +2105,7 @@ components:
             the language is not supported, the system will revert to the
             default.
           example: EN
+      description: Checkout details, required if checkoutId is not provided.
     CheckoutWebPaymentResponseWrapper:
       type: object
       properties:
@@ -1973,12 +2120,30 @@ components:
           example: 12
         result:
           $ref: '#/components/schemas/ECommerceCheckoutResponse'
+    CreateTokenPaymentErrorResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Whether or not this operation completed successfully.
+          example: false
+        elapsed:
+          type: integer
+          description: Time in milliseconds elapsed at server processing this request.
+          format: int64
+          example: 3
+        error:
+          type: string
+          description: Error message
+          example: >-
+            Invalid checkout ID, cant use the same Token for different checkout
+            objects.
     DeviceCheckoutResponse:
       type: object
       properties:
         id:
           type: string
-          description: Checkout ID at PointCheckout database
+          description: Checkout ID at paymennt database.
           example: '1653241101733169556'
         displayId:
           type: string
@@ -1990,7 +2155,7 @@ components:
           type: string
           description: >-
             Checkout key, serves as a unique identifier for the checkout. Used
-            to generate the payment payge redirect URL
+            to generate the payment page redirect URL
           example: 90ed4298f15d46df994fd1cfbbec5aa24390e811295cf8b5
         requestId:
           type: string
@@ -2005,13 +2170,13 @@ components:
           description: >-
             ISO 4217 Currency Code (3 letter currency code) associated with this
             checkout.
-          example: USD
+          example: AED
         amount:
           type: number
           description: >-
             The grand total of the whole order. This is the amount the customer
             must pay.
-          example: 1499.99
+          example: 100
         cashAmount:
           type: number
           description: Cash amount to be collected from Shopper
@@ -2023,6 +2188,7 @@ components:
           enum:
             - Pending
             - Authorized
+            - Pending confirmation
             - Paid
             - Failed
             - Cancelled
@@ -2037,7 +2203,7 @@ components:
           type: string
           description: 'URL for the customer payment redirect. '
           example: >-
-            https://pay.test.pointcheckout.com/checkout/7a3ce540effe3c9a568a577d1f717e5267e73dc503663d4f
+            https://pay.test.paymennt.com/checkout/7a3ce540effe3c9a568a577d1f717e5267e73dc503663d4f
         usedPaymentMethod:
           type: string
           description: Payment method used while processing the payment.
@@ -2046,6 +2212,7 @@ components:
             - PointCheckout
             - Card
             - Cash
+            - Crypto
             - ZainCash
         customer:
           $ref: '#/components/schemas/CheckoutCustomerResponse'
@@ -2072,16 +2239,16 @@ components:
         timestamp:
           type: string
           description: >-
-            The date time of creating the payment in ISO8601 format
+            The date time of creating the checkout in ISO8601 format
             (yyyy-MM-ddTHH:mm:ss.SSSZZ).
           format: date-time
         branchId:
           type: string
-          description: The PointCheckout branch ID associated with this checkout.
+          description: The paymennt branch ID associated with this checkout.
           example: '1601731695315563241'
         branchName:
           type: string
-          description: The PointCheckout branch name associated with this checkout.
+          description: The paymennt branch name associated with this checkout.
           example: Test store
       description: Result Object.
     ECommerceCheckoutResponse:
@@ -2089,7 +2256,7 @@ components:
       properties:
         id:
           type: string
-          description: Checkout ID at PointCheckout database
+          description: Checkout ID at paymennt database.
           example: '1653241101733169556'
         displayId:
           type: string
@@ -2101,7 +2268,7 @@ components:
           type: string
           description: >-
             Checkout key, serves as a unique identifier for the checkout. Used
-            to generate the payment payge redirect URL
+            to generate the payment page redirect URL
           example: 90ed4298f15d46df994fd1cfbbec5aa24390e811295cf8b5
         requestId:
           type: string
@@ -2116,13 +2283,13 @@ components:
           description: >-
             ISO 4217 Currency Code (3 letter currency code) associated with this
             checkout.
-          example: USD
+          example: AED
         amount:
           type: number
           description: >-
             The grand total of the whole order. This is the amount the customer
             must pay.
-          example: 1499.99
+          example: 100
         cashAmount:
           type: number
           description: Cash amount to be collected from Shopper
@@ -2134,6 +2301,7 @@ components:
           enum:
             - Pending
             - Authorized
+            - Pending confirmation
             - Paid
             - Failed
             - Cancelled
@@ -2148,7 +2316,7 @@ components:
           type: string
           description: 'URL for the customer payment redirect. '
           example: >-
-            https://pay.test.pointcheckout.com/checkout/7a3ce540effe3c9a568a577d1f717e5267e73dc503663d4f
+            https://pay.test.paymennt.com/checkout/7a3ce540effe3c9a568a577d1f717e5267e73dc503663d4f
         usedPaymentMethod:
           type: string
           description: Payment method used while processing the payment.
@@ -2157,6 +2325,7 @@ components:
             - PointCheckout
             - Card
             - Cash
+            - Crypto
             - ZainCash
         customer:
           $ref: '#/components/schemas/CheckoutCustomerResponse'
@@ -2183,18 +2352,18 @@ components:
         timestamp:
           type: string
           description: >-
-            The date time of creating the payment in ISO8601 format
+            The date time of creating the checkout in ISO8601 format
             (yyyy-MM-ddTHH:mm:ss.SSSZZ).
           format: date-time
         branchId:
           type: string
-          description: The PointCheckout branch ID associated with this checkout.
+          description: The paymennt branch ID associated with this checkout.
           example: '1601731695315563241'
         branchName:
           type: string
-          description: The PointCheckout branch name associated with this checkout.
+          description: The paymennt branch name associated with this checkout.
           example: Test store
-      description: Result Object.
+      description: Checkout associated with the payment.
     GetBranchErrorResponse:
       type: object
       properties:
@@ -2243,6 +2412,22 @@ components:
           type: string
           description: Error message.
           example: page size parameter must be a positive integer
+    GetPaymentErrorResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Whether or not this operation completed successfully.
+          example: false
+        elapsed:
+          type: integer
+          description: Time in milliseconds elapsed at server processing this request.
+          format: int64
+          example: 3
+        error:
+          type: string
+          description: Error message
+          example: Payment not found for API merchant
     GetSubscriptionErrorResponse:
       type: object
       properties:
@@ -2404,6 +2589,59 @@ components:
           example: 12
         result:
           $ref: '#/components/schemas/PageResponseSubscriptionResponse'
+    PaymentResponseSample:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Payment ID at Paymennt.com database
+          example: '1712345678901234567'
+        currency:
+          type: string
+          description: >-
+            ISO 4217 Currency Code (3 letter currency code) associated with this
+            checkout.
+          example: AED
+        amount:
+          type: number
+          description: Payment amount
+          example: 100
+        status:
+          type: string
+          description: Current payment status.
+          example: CAPTURED
+          enum:
+            - REDIRECT
+            - VOIDED
+            - FAILED
+            - REJECTED
+            - REVERSED
+            - PARTIALLY_REVERSED
+            - AUTHORIZED
+            - CAPTURED
+        checkoutDetails:
+          $ref: '#/components/schemas/ECommerceCheckoutResponse'
+        timestamp:
+          type: string
+          description: >-
+            The date time of creating the payment in ISO8601 format
+            (yyyy-MM-ddTHH:mm:ss.SSSZZ).
+          format: date-time
+      description: Result Object.
+    PaymentResponseWrapper:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Whether or not this operation completed successfully.
+          example: true
+        elapsed:
+          type: integer
+          description: Time in milliseconds elapsed at server processing this request.
+          format: int64
+          example: 12
+        result:
+          $ref: '#/components/schemas/PaymentResponseSample'
     PostBranchErrorResponse:
       type: object
       properties:
@@ -2425,7 +2663,7 @@ components:
       properties:
         id:
           type: string
-          description: Subscription payment ID at PointCheckout database
+          description: Subscription payment ID at paymennt database.
           example: '1653241101733169556'
         displayId:
           type: string
@@ -2475,7 +2713,7 @@ components:
           $ref: '#/components/schemas/CheckoutCustomer'
         customerId:
           type: integer
-          description: 'Customer id at PointCheckout database '
+          description: Customer id at paymennt database.
           format: int64
         startDate:
           type: string
@@ -2518,7 +2756,7 @@ components:
       properties:
         id:
           type: string
-          description: Subscription ID at PointCheckout database
+          description: Subscription ID at paymennt database.
           example: '1653241101733169556'
         displayId:
           type: string
@@ -2594,6 +2832,79 @@ components:
           example: 12
         result:
           $ref: '#/components/schemas/SubscriptionResponse'
+    TokenPaymentRedirectResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Payment ID at Paymennt.com database
+          example: '1712345678901234567'
+        amount:
+          type: number
+          description: Payment amount
+          example: 100
+        currency:
+          type: string
+          description: >-
+            ISO 4217 Currency Code (3 letter currency code) associated with this
+            checkout.
+          example: AED
+        status:
+          type: string
+          description: Current payment status.
+          example: REDIRECT
+          enum:
+            - REDIRECT
+            - VOIDED
+            - FAILED
+            - REJECTED
+            - REVERSED
+            - PARTIALLY_REVERSED
+            - AUTHORIZED
+            - CAPTURED
+        redirectUrl:
+          type: string
+          description: 3D-Secure page URL
+          example: >-
+            https://pay.test.paymennt.com/frames/redirect/payment/1730071450154705954
+        timestamp:
+          type: string
+          description: >-
+            The date time of creating the payment in ISO8601 format
+            (yyyy-MM-ddTHH:mm:ss.SSSZZ).
+          format: date-time
+        checkoutDetails:
+          $ref: '#/components/schemas/ECommerceCheckoutResponse'
+      description: Result Object.
+    TokenPaymentRedirectResponseWrapper:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Whether or not this operation completed successfully.
+          example: true
+        elapsed:
+          type: integer
+          description: Time in milliseconds elapsed at server processing this request.
+          format: int64
+          example: 12
+        result:
+          $ref: '#/components/schemas/TokenPaymentRedirectResponse'
+    TokenPaymentRequest:
+      required:
+        - paymentToken
+      type: object
+      properties:
+        paymentToken:
+          type: string
+          description: Payment token received from the frame integration JavaScript.
+          example: >-
+            ptk_live_8ec6db2767482df5f748c14424be9ef325f0f9d609b2e4c64cd3b3938d2d269b
+        checkoutId:
+          type: string
+          description: Checkout Identifier on Paymennt.com database.
+        checkoutDetails:
+          $ref: '#/components/schemas/CheckoutWebPaymentRequest'
     WebhookRequest:
       required:
         - address
@@ -2601,7 +2912,7 @@ components:
       properties:
         address:
           type: string
-          description: Webhook endpoint that PointCheckout server will push messages to.
+          description: Webhook endpoint that paymennt server will push messages to.
     WebhookResponse:
       type: object
       properties:
