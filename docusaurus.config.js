@@ -83,15 +83,15 @@ module.exports = {
           items: [
             {
               label: "opencart",
-              href: "/docs/integrate/ecomm/opencart",
+              href: "/docs/payment/ecomm/opencart",
             },
             {
               label: "woocommerce",
-              href: "/docs/integrate/ecomm/woocommerce",
+              href: "/docs/payment/ecomm/woocommerce",
             },
             {
               label: "shopify",
-              href: "/docs/integrate/ecomm/shopify",
+              href: "/docs/payment/ecomm/shopify",
             },
           ],
         },
@@ -110,6 +110,7 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
+          breadcrumbs: false,
           sidebarPath: require.resolve("./sidebars.docs.js"),
         },
         blog: false,

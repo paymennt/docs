@@ -1,5 +1,5 @@
 ---
 title: Getting started with paymennt
-sidebar_label: paymennt
+sidebar_label: Getting started
 slug: /
 ---
