@@ -1,5 +1,5 @@
 ---
-title: WooCommerce
+title: woocommerce
 ---
 
 <a className="button button--primary button--large" href="http://www.github.com/pointcheckout/woocommerce">
@@ -15,9 +15,9 @@ From downloading the plugin to requesting your first test payment, learn how to 
 This guide assumes that you have already [set up WooCommerce on your WordPress instance](https://docs.woocommerce.com/document/installing-uninstalling-woocommerce/).
 :::
 
-## Before you start
+## before you start
 
-### Remove older plugin
+### remove older plugin
 
 1. Log in to WordPress as an administrator.
 2. In the left menu, click Plugins > Installed Plugins.
@@ -25,9 +25,9 @@ This guide assumes that you have already [set up WooCommerce on your WordPress i
 
 ![](/img/docs/integrate/ecomm/woocommerce/woocommerce-1.png)
 
-## Install the plugin
+## install the plugin
 
-### Using plugin .zip file
+### using plugin .zip file
 
 1. Download the latest `pointcheckout-woocommerce-card-vX.X.X.zip` file [from Github](https://github.com/pointcheckout/woocommerce/releases/latest).
 2. Log in to WordPress as an administrator.
@@ -37,7 +37,7 @@ This guide assumes that you have already [set up WooCommerce on your WordPress i
 6. Click Activate Plugin.
 7. Once the plugin is activated, you are taken to the Installed Plugins screen. You can now configure WooCommerce.
 
-## Configure the plugin
+## configure the plugin
 
 1. Log in to WordPress as an administrator.
 2. In the left menu, click _WooCommerce_ > _Settings_ > _Payments_.
@@ -53,7 +53,7 @@ This guide assumes that you have already [set up WooCommerce on your WordPress i
 
 That's it! You're ready to start testing.
 
-## Test the plugin
+## test the plugin
 
 1. Go to your shop's public URL and add a product to your cart.
 2. Go to your cart then proceed

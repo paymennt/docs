@@ -1,5 +1,5 @@
 ---
-title: Shopify
+title: shopify
 ---
 
 The following document guides you through accepting **paymennt** payments through [Shopify](https://www.shopify.com).

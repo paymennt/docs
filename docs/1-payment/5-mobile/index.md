@@ -1,6 +1,6 @@
 ---
-title: mobile apps
-sidebar_label: Mobile apps
+title: in-app payments
+sidebar_label: mobile apps
 hide_title: false
 hide_table_of_contents: false
 ---
@@ -8,7 +8,7 @@ import Card from '@site/src/components/Card';
 
 On this page we describe the steps required to initiate and verify a payment via the **paymennt** payment gateway for mobile based applications using the **paymennt** mobile SDKs.
 
-## How it works
+## how it works
 
 Three steps are required to accept payments via the **paymennt** payment gateway for mobile-based applications using the **paymennt** SDKs:
 
@@ -21,7 +21,7 @@ web integration
 
 ![Website integration flow](/img/docs/build/initiate/sdk-flow.png)
 
-## Step 1: Create a new checkout
+## step 1: create a new checkout
 
 :::danger SERVER API CALL
 API calls made to the **paymennt** API endpoints should be made from your server. You should NEVER include your API keys in your mobile application. A mallicious user can gain access to your account if those keys are exposed.
@@ -63,7 +63,7 @@ curl -L -X POST "https://api.test.paymennt.com/mer/v2.0/checkout/mobile" \
 If a payment fails or customer cancels the the payment, you cannot reuse the same `requestId`. You can however use the same `orderId` to create a new checkout.
 :::
 
-## Step 2: Initiate the PointCheckoutClient
+## step 2: initiate the PointCheckoutClient
 
 The response from **Step 1** above will result in a new checkout being succesffully created for your merchant account. Once received, use the `checkoutKey` to initiate the client
 
@@ -105,7 +105,7 @@ To learn more about the specific mechanism to use our SDKs, you can view the ins
   </div>
 </div>
 
-## Step 3: Verifying payment status
+## step 3: verify payment status
 
 Once the payment process has completed (regardless of status), the SDK will excute the callback function passed to the SDK during the client initialization in **Step 2**.
 
@@ -124,7 +124,7 @@ curl -L -X GET "https://api.test.paymennt.com/mer/v2.0/checkout/1653241101733169
 A paid checkout will have the status of `PAID`. If the checkout has a status other than paid, you should either display and error or take the user back to the checkout flow.
 :::
 
-### Checkout status values
+### checkout status values
 
 Below is a list of available status codes that may be provided via the **paymennt** API to describe the status of a checkout:
 
@@ -139,7 +139,7 @@ Below is a list of available status codes that may be provided via the **paymenn
 | **`REFUNDED`**           | Checkout has been fully refunded to customer                                                                   |
 | **`PARTIALLY_REFUNDED`** | Checkout have been partially refunded to customer                                                              |
 
-## Step 4: Test the Integration
+## step 4: test the integration
 
 Once your integration is ready, you can use the below test card details to verify your integration
 

@@ -1,5 +1,6 @@
 ---
-title: Get checkout details
+title: checkout details
+sidebar_label: checkout details
 slug: details
 ---
 

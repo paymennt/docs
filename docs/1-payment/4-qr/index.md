@@ -1,6 +1,6 @@
 ---
-title: Integrate your system with paymennt
-sidebar_label: QR codes
+title: using qr codes to accept payments
+sidebar_label: qr codes
 ---
 
 Make getting paid faster and easier than ever! **paymennt** APIs provide an easy way to let your customers pay for their orders easily and securely.

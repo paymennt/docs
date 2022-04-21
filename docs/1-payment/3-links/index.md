@@ -1,6 +1,6 @@
 ---
-title: Integrate your system with paymennt
-sidebar_label: Payment links
+title: payment links
+sidebar_label: payment links
 ---
 
 Make getting paid faster and easier than ever! **paymennt** APIs provide an easy way to let your customers pay for their orders easily and securely.

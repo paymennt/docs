@@ -1,6 +1,6 @@
 ---
-title: Website Checklist
-sidebar_label: Website Checklist
+title: website go-live checklist
+sidebar_label: website checklist
 ---
 
 Use this checklist to make sure your website conforms with card network standards and best practices for internet commerce.

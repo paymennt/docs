@@ -1,4 +1,4 @@
 ---
-title: Using webhooks
+title: using webhooks
 slug: webhooks
 ---

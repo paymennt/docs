@@ -1,5 +1,5 @@
 ---
-title: iOS SDK
+title: ios sdk
 ---
 
 <a className="button button--primary button--large" href="http://www.github.com/pointcheckout/ios-sdk">

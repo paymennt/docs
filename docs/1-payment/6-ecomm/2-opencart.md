@@ -1,5 +1,5 @@
 ---
-title: OpenCart
+title: opencart
 ---
 
 <a className="button button--primary button--large" href="http://www.github.com/pointcheckout/opencart"> View on GitHub </a>
@@ -13,16 +13,16 @@ From downloading the plugin to requesting your first test payment, learn how to 
 This guide assumes that you have already [set up OpenCart](https://docs.opencart.com/installation/).
 :::
 
-## Install/Update the plugin
+## install/Update the plugin
 
-### Using plugin .zip file
+### using plugin .zip file
 
 1. Log in to your OpenCart administrator panel.
 2. Download the latest release **pointcheckout-opencart-x.x.x.ocmod.zip** file from the [releases section](https://github.com/pointcheckout/opencart/releases)
 3. In the admin page of your store, go to extensions->installer->upload
 4. Choose the downloaded **pointcheckout-opencart-x.x.x.ocmod.zip** file
 
-## Configure the plugin
+## configure the plugin
 
 1. Log in to OpenCart administrator panel.
 2. From the side menu, choose **Extensions** and from the Extension type select, choose **Payments** .
@@ -37,7 +37,7 @@ This guide assumes that you have already [set up OpenCart](https://docs.opencart
 
 That's it! You're ready to start testing.
 
-## Test the plugin
+## test the plugin
 
 1. Go to your shop's public URL and add a product to your cart.
 2. Go to your cart then proceed

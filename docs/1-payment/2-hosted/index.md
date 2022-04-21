@@ -1,6 +1,6 @@
 ---
-title: Hosted checkout
-sidebar_label: Hosted checkout
+title: hosted checkout
+sidebar_label: hosted checkout
 ---
 
 Make getting paid faster and easier than ever! **paymennt** APIs provide an easy way to let your customers pay for their orders easily and securely.

@@ -1,6 +1,6 @@
 ---
-title: Painless payments with Xero and paymennt
-sidebar_label: Xero
+title: painless payments with xero and paymennt
+sidebar_label: xero
 ---
 
 Make getting paid faster and easier than ever! **paymennt** is now integrated with Xero. Xero is the best accounting software for growing companies. Its service plans and features easily accommodate the different stages (and needs) of small businesses.

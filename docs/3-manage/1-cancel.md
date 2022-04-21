@@ -1,4 +1,5 @@
 ---
-title: Cancel unpaid checkout
+title: cancel an unpaid checkout
+sidebar_label: cancel checkout
 slug: cancel
 ---

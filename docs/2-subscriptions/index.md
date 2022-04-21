@@ -1,16 +1,16 @@
 ---
-title: Subscriptions
-sidebar_label: Subscriptions
+title: subscriptions
+sidebar_label: subscriptions
 slug: /subscriptions
 hide_title: false
 hide_table_of_contents: false
 ---
 
-## How it works
+## how it works
 
 On this page we describe the steps required to manage customer subscriptions, a customer subscription is a recurring payment link that is sent to a customer based on a specific schedule.
 
-## Create a new subscription
+## create a new subscription
 
 When your customer subscribes for a recurring payment option, create a new subscription by making a call from your server to <a href="/api/#operation/create-subscription" target="_blank">`POST /subscription`</a>. In your request, you must include the following required parameters:
 

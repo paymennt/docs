@@ -1,6 +1,6 @@
 ---
-title: Painless payments with Zoho and paymennt
-sidebar_label: Zoho Books
+title: painless payments with zoho books and paymennt
+sidebar_label: zoho books
 ---
 
 Make getting paid faster and easier than ever! **paymennt** is now integrated with Zoho Books. Zoho Books is online accounting software that manages your finances, automates business workflows, and helps you work collectively across departments.

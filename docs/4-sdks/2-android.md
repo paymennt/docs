@@ -1,5 +1,5 @@
 ---
-title: Android SDK
+title: android sdk
 ---
 
 <a className="button button--primary button--large" href="http://www.github.com/pointcheckout/android-sdk">

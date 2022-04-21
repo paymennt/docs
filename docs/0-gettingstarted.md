@@ -1,4 +1,4 @@
 ---
-title: Getting started
+title: getting started
 slug: /
 ---
