@@ -33,7 +33,7 @@ const features = [
   },
   {
     title: "e-commerce plugins",
-    target: "/docs/integrate/ecomm",
+    target: "/docs/payment/ecomm",
     imageUrl: "img/home/plugins.svg",
     description: (
       <>
@@ -46,7 +46,7 @@ const features = [
   },
   {
     title: "software kits",
-    target: "/docs/integrate/sdks",
+    target: "/docs/sdks",
     imageUrl: "img/home/sdks.svg",
     description: (
       <>

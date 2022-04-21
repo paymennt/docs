@@ -5,7 +5,7 @@
  * work well for content-centric websites.
  */
 @import url('https://fonts.cdnfonts.com/css/harabara');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 /* You can override the default Infima variables here. */
 :root {
@@ -36,8 +36,8 @@
   --ifm-link-hover-decoration: none;
 
   /* FONT */
-  --ifm-font-family-base: 'Lato', sans-serif;
-  --ifm-font-size-base: 90%;
+  --ifm-font-family-base: 'Poppins', sans-serif;
+  --ifm-font-size-base: 100%;
   --ifm-font-weight-semibold: 500;
   --ifm-code-font-size: 95%;
   --ifm-heading-font-family: 'harabara', sans-serif;
@@ -54,6 +54,10 @@
   /* FOOTER */
   --ifm-footer-background-color: var(--ifm-background-color);
   --ifm-footer-link-hover-color: var(--ifm-link-color);
+
+  /* TABS */
+  --ifm-tabs-padding-vertical: 1.2rem;
+  --ifm-tabs-padding-horizontal: 2.4rem;
 
   /* FOOTER
   --ifm-footer-color: var(--ifm-color-white);
@@ -150,6 +154,27 @@ h1, h2, h3, h4, h5 {
   max-width: 92%;
 }
 
+/* ****************************************** */
+/* TABS OVERRIDES                             */
+/* ****************************************** */
+
+.tabs__item {
+    line-height: 16px;
+    margin-right: 8px;
+}
+
+.tabs__item--active {
+    background-color: var(--ifm-tabs-color-active) !important;
+    border: 0;
+    border-radius: var(--ifm-global-radius);
+    color: #fff !important;
+}
+
+/* ****************************************** */
+/* COMPONENTS                                 */
+/* ****************************************** */
+
+/* CARD */
 .markdown .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -159,7 +184,24 @@ h1, h2, h3, h4, h5 {
   max-height: 145px;
 }
 
+/* VIDEO */
+.video__wrapper {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+}
 
+.video__wrapper .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ****************************************** */
+/* REDOCUSAURUS                               */
+/* ****************************************** */
 
 /* show redocusaurus categories menu*/
 .redocusaurus .menu-content div.scrollbar-container {
