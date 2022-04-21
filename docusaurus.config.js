@@ -61,11 +61,11 @@ module.exports = {
           items: [
             {
               label: "account opening",
-              to: "/guides/registration/requirements",
+              to: "/guides/account/requirements",
             },
             {
               label: "desktop access",
-              to: "/guides/portal/login",
+              to: "/guides/account/desktop",
             },
           ],
         },
@@ -74,7 +74,7 @@ module.exports = {
           items: [
             {
               label: "payout bank account",
-              to: "/guides/account/finance/payout-bank-account",
+              to: "/guides/management/payouts/payout-account",
             },
           ],
         },

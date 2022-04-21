@@ -13,7 +13,7 @@ Your user account must have Administrator permission to access this service
 
 ## Log in to the paymennt Web Console
 
-To complete this integration, you must first login to the [paymennt Web Console](/guides/portal/login)
+To complete this integration, you must first login to the [paymennt Web Console](/guides/account/desktop)
 
 ## Access Zoho Integration configuration
 
