@@ -1,6 +1,6 @@
 ---
-title: Registering for a paymennt merchant account
-sidebar_label: "Registration Process"
+title: registering for a paymennt merchant account
+sidebar_label: registration process
 ---
 
 This guide will walk you through the process of registering for a **paymennt** merchant account.

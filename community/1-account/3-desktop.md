@@ -1,21 +1,21 @@
 ---
-title: Accessing the merchant web portal
-sidebar_label: Access and login
+title: accessing the desktop portal
+sidebar_label: desktop portal
 ---
 
-The **paymennt** Admin Console provides users with unique functionality to manage and administer their **paymennt** account.
+your **paymennt** desktop portal gives you unique functionality to manage and administer your **paymennt** account
 
-## Login Page
+### desktop portal webpage
 
-Our Web Console login page can be accessed at:
+you can access the paymennt **desktop portal** here:
 
-:::note
-[https://admin.paymennt.com](https://admin.paymennt.com)
-:::
+[**https://admin.paymennt.com**](https://admin.paymennt.com)
+
+once you open the link, you can use your mobile app app to scan the QR code shown on the screen to login
 
 ![QR Code](/img/guides/portal/login/qr.png)
 
-## Web Console Login
+### desktop portal login
 
 In order to login to your Web Console account, you will need to open the PayLink mobile application.
 

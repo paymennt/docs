@@ -1,6 +1,6 @@
 ---
-title: Required information to open a paymennt Merchant Account
-sidebar_label: Account Requirements
+title: required information to open a paymennt merchant account
+sidebar_label: requirements
 ---
 
 :::note BEFORE PROCEEDING

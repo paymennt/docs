@@ -1,8 +1,2 @@
 label: 'Website Go-Live'
 collapsed: true
-link:
-  type: generated-index
-  title: Tutorial overview
-  description: Learn about the most important Docusaurus concepts!
-customProps:
-  description: This description can be used in the swizzled DocCard
