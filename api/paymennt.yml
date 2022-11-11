@@ -38,17 +38,17 @@ tags:
 - name: Customer subscription
   description: API endpoints for Customer subscription management.
 paths:
-  /payment/token:
+  /payment/debit:
     post:
       tags:
       - Payment
-      summary: Create token payment
-      operationId: create-token-payment
+      summary: Create payment
+      operationId: create-payment
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/TokenPaymentRequest'
+              $ref: '#/components/schemas/PaymentRequest'
             exampleSetFlag: false
         required: true
       responses:
@@ -57,7 +57,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TokenPaymentRedirectResponseWrapper'
+                $ref: '#/components/schemas/PaymentRedirectResponseWrapper'
               exampleSetFlag: false
         "400":
           description: Bad Request
@@ -312,19 +312,19 @@ paths:
           minimum: 1
           type: number
       responses:
-        "200":
-          description: List of checkouts.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PageResponseCheckoutResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetListErrorResponse'
+              exampleSetFlag: false
+        "200":
+          description: List of checkouts.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PageResponseCheckoutResponseWrapper'
               exampleSetFlag: false
       x-sort:
         sort: "200"
@@ -539,19 +539,19 @@ paths:
           minimum: 1
           type: number
       responses:
-        "200":
-          description: List of subscriptions.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PageResponseSubscriptionResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetListErrorResponse'
+              exampleSetFlag: false
+        "200":
+          description: List of subscriptions.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PageResponseSubscriptionResponseWrapper'
               exampleSetFlag: false
       x-sort:
         sort: "1130"
@@ -598,19 +598,19 @@ paths:
         schema:
           type: string
       responses:
-        "200":
-          description: Get subscription by ID
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SubscriptionResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetSubscriptionErrorResponse'
+              exampleSetFlag: false
+        "200":
+          description: Get subscription by ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SubscriptionResponseWrapper'
               exampleSetFlag: false
       x-sort:
         sort: "1120"
@@ -628,19 +628,19 @@ paths:
         schema:
           type: string
       responses:
-        "400":
-          description: Bad Request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GetSubscriptionErrorResponse'
-              exampleSetFlag: false
         "200":
           description: OK
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/SubscriptionResponseWrapper'
+              exampleSetFlag: false
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetSubscriptionErrorResponse'
               exampleSetFlag: false
       x-sort:
         sort: "1140"
@@ -658,19 +658,19 @@ paths:
         schema:
           type: string
       responses:
-        "400":
-          description: Bad Request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GetSubscriptionErrorResponse'
-              exampleSetFlag: false
         "200":
           description: OK
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/SubscriptionResponseWrapper'
+              exampleSetFlag: false
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetSubscriptionErrorResponse'
               exampleSetFlag: false
       x-sort:
         sort: "1150"
@@ -702,19 +702,19 @@ paths:
           minimum: 1
           type: number
       responses:
-        "200":
-          description: Get subscription payments
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PageResponseSubscriptionPaymentResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetListErrorResponse'
+              exampleSetFlag: false
+        "200":
+          description: Get subscription payments
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PageResponseSubscriptionPaymentResponseWrapper'
               exampleSetFlag: false
       x-sort:
         sort: "1170"
@@ -771,6 +771,13 @@ paths:
           minimum: 1
           type: number
       responses:
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetListErrorResponse'
+              exampleSetFlag: false
         "200":
           description: List of all branches.
           content:
@@ -779,13 +786,6 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/BranchResponseWrapper'
-              exampleSetFlag: false
-        "400":
-          description: Bad Request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GetListErrorResponse'
               exampleSetFlag: false
       x-sort:
         sort: "10000"
@@ -802,19 +802,19 @@ paths:
             exampleSetFlag: false
         required: true
       responses:
-        "400":
-          description: Bad Request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PostBranchErrorResponse'
-              exampleSetFlag: false
         "200":
           description: Branch details.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/BranchResponseWrapper'
+              exampleSetFlag: false
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostBranchErrorResponse'
               exampleSetFlag: false
       x-sort:
         sort: "10020"
@@ -892,19 +892,19 @@ paths:
         schema:
           type: string
       responses:
-        "200":
-          description: Webhook details.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/WebhookResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetWebhookErrorResponse'
+              exampleSetFlag: false
+        "200":
+          description: Webhook details.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WebhookResponseWrapper'
               exampleSetFlag: false
       x-sort:
         sort: "10060"
@@ -986,19 +986,19 @@ paths:
         schema:
           type: string
       responses:
-        "200":
-          description: Webhook details.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/WebhookResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetWebhookErrorResponse'
+              exampleSetFlag: false
+        "200":
+          description: Webhook details.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WebhookResponseWrapper'
               exampleSetFlag: false
       x-sort:
         sort: "10080"
@@ -1016,19 +1016,19 @@ paths:
         schema:
           type: string
       responses:
-        "200":
-          description: Webhook details.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/WebhookResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetWebhookErrorResponse'
+              exampleSetFlag: false
+        "200":
+          description: Webhook details.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WebhookResponseWrapper'
               exampleSetFlag: false
       x-sort:
         sort: "10090"
@@ -1046,19 +1046,19 @@ paths:
         schema:
           type: string
       responses:
-        "200":
-          description: Webhook details.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/WebhookResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetWebhookErrorResponse'
+              exampleSetFlag: false
+        "200":
+          description: Webhook details.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WebhookResponseWrapper'
               exampleSetFlag: false
       x-sort:
         sort: "10100"
@@ -1076,19 +1076,19 @@ paths:
         schema:
           type: string
       responses:
-        "200":
-          description: Webhook details.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/WebhookResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetWebhookErrorResponse'
+              exampleSetFlag: false
+        "200":
+          description: Webhook details.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WebhookResponseWrapper'
               exampleSetFlag: false
       x-sort:
         sort: "10110"
@@ -1208,7 +1208,37 @@ components:
           example: "[CUSTOMER PHONE]"
       description: Customer associated with this subscription
     CheckoutCustomerResponse:
+      required:
+      - email
+      - firstName
+      - lastName
       type: object
+      properties:
+        id:
+          type: string
+          description: Customer identifier at the merchant PointCheckout system.
+          example: "1702445293135146054"
+        reference:
+          type: string
+          description: Customer identifier at the merchant system.
+          example: "0123456789"
+        firstName:
+          type: string
+          description: Customer first name.
+          example: "[First name]"
+        lastName:
+          type: string
+          description: Customer last name.
+          example: "[Last name]"
+        email:
+          type: string
+          description: Customer email address.
+          example: "[CUSTOMER EMAIL]"
+        phone:
+          type: string
+          description: Customer phone number with international calling code (Ex.
+            971567xxxxxx)..
+          example: "[CUSTOMER PHONE]"
       description: Customer associated with this checkout
     CheckoutLinkResponse:
       type: object
@@ -1280,6 +1310,7 @@ components:
           - Card
           - Cash
           - Crypto
+          - Solana pay
           - ZainCash
         customer:
           $ref: '#/components/schemas/CheckoutCustomerResponse'
@@ -1689,6 +1720,7 @@ components:
           - Card
           - Cash
           - Crypto
+          - Solana pay
           - ZainCash
         base64QR:
           type: string
@@ -1886,6 +1918,7 @@ components:
           - Card
           - Cash
           - Crypto
+          - Solana pay
           - ZainCash
         customer:
           $ref: '#/components/schemas/CheckoutCustomerResponse'
@@ -2115,6 +2148,7 @@ components:
           - Card
           - Cash
           - Crypto
+          - Solana pay
           - ZainCash
         customer:
           $ref: '#/components/schemas/CheckoutCustomerResponse'
@@ -2218,6 +2252,7 @@ components:
           - Card
           - Cash
           - Crypto
+          - Solana pay
           - ZainCash
         customer:
           $ref: '#/components/schemas/CheckoutCustomerResponse'
@@ -2476,6 +2511,72 @@ components:
           example: 12
         result:
           $ref: '#/components/schemas/PageResponseSubscriptionResponse'
+    PaymentRedirectResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Payment ID at Paymennt.com database
+          example: "1712345678901234567"
+        amount:
+          type: number
+          description: Payment amount
+          example: 100
+        currency:
+          type: string
+          description: ISO 4217 Currency Code (3 letter currency code) associated
+            with this checkout.
+          example: AED
+        status:
+          type: string
+          description: Current payment status.
+          example: REDIRECT
+          enum:
+          - REDIRECT
+          - VOIDED
+          - FAILED
+          - REJECTED
+          - REVERSED
+          - PARTIALLY_REVERSED
+          - AUTHORIZED
+          - CAPTURED
+        redirectUrl:
+          type: string
+          description: 3D-Secure page URL
+          example: https://pay.test.paymennt.com/frames/redirect/payment/1730071450154705954
+        timestamp:
+          type: string
+          description: The date time of creating the payment in ISO8601 format (yyyy-MM-ddTHH:mm:ss.SSSZZ).
+          format: date-time
+        checkoutDetails:
+          $ref: '#/components/schemas/ECommerceCheckoutResponse'
+      description: Result Object.
+    PaymentRedirectResponseWrapper:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Whether or not this operation completed successfully.
+          example: true
+        elapsed:
+          type: integer
+          description: Time in milliseconds elapsed at server processing this request.
+          format: int64
+          example: 12
+        result:
+          $ref: '#/components/schemas/PaymentRedirectResponse'
+    PaymentRequest:
+      required:
+      - source
+      type: object
+      properties:
+        source:
+          $ref: '#/components/schemas/TokenPaymentSource'
+        checkoutId:
+          type: string
+          description: Checkout Identifier on Paymennt.com database.
+        checkoutDetails:
+          $ref: '#/components/schemas/CheckoutWebPaymentRequest'
     PaymentResponseSample:
       type: object
       properties:
@@ -2706,74 +2807,23 @@ components:
           example: 12
         result:
           $ref: '#/components/schemas/SubscriptionResponse'
-    TokenPaymentRedirectResponse:
-      type: object
-      properties:
-        id:
-          type: string
-          description: Payment ID at Paymennt.com database
-          example: "1712345678901234567"
-        amount:
-          type: number
-          description: Payment amount
-          example: 100
-        currency:
-          type: string
-          description: ISO 4217 Currency Code (3 letter currency code) associated
-            with this checkout.
-          example: AED
-        status:
-          type: string
-          description: Current payment status.
-          example: REDIRECT
-          enum:
-          - REDIRECT
-          - VOIDED
-          - FAILED
-          - REJECTED
-          - REVERSED
-          - PARTIALLY_REVERSED
-          - AUTHORIZED
-          - CAPTURED
-        redirectUrl:
-          type: string
-          description: 3D-Secure page URL
-          example: https://pay.test.paymennt.com/frames/redirect/payment/1730071450154705954
-        timestamp:
-          type: string
-          description: The date time of creating the payment in ISO8601 format (yyyy-MM-ddTHH:mm:ss.SSSZZ).
-          format: date-time
-        checkoutDetails:
-          $ref: '#/components/schemas/ECommerceCheckoutResponse'
-      description: Result Object.
-    TokenPaymentRedirectResponseWrapper:
-      type: object
-      properties:
-        success:
-          type: boolean
-          description: Whether or not this operation completed successfully.
-          example: true
-        elapsed:
-          type: integer
-          description: Time in milliseconds elapsed at server processing this request.
-          format: int64
-          example: 12
-        result:
-          $ref: '#/components/schemas/TokenPaymentRedirectResponse'
-    TokenPaymentRequest:
+    TokenPaymentSource:
       required:
-      - paymentToken
+      - token
+      - type
       type: object
       properties:
-        paymentToken:
+        type:
+          type: string
+          description: Payment source type.
+          example: TOKEN
+          enum:
+          - TOKEN
+        token:
           type: string
           description: Payment token received from the frame integration JavaScript.
           example: ptk_live_8ec6db2767482df5f748c14424be9ef325f0f9d609b2e4c64cd3b3938d2d269b
-        checkoutId:
-          type: string
-          description: Checkout Identifier on Paymennt.com database.
-        checkoutDetails:
-          $ref: '#/components/schemas/CheckoutWebPaymentRequest'
+      description: Source of funds for the payment.
     WebhookRequest:
       required:
       - address

@@ -3,25 +3,44 @@ title: drop-in frames integration
 sidebar_label: drop-in frames
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-make getting paid faster and easier than ever! **paymennt** APIs provide an easy way to let your customers pay for their orders easily and securely.
+make getting paid faster and easier than ever! **paymennt** APIs provide an easy way to let
+your customers pay for their orders easily and securely.
 
-frames is an iframe solution that handles payment information. Your customer inputs their card details directly into our iframes, then we send you a token representing of the card details, so you can request a payment.
+frames is an iframe solution that handles payment information. Your customer inputs their
+card details directly into our iframes, then we send you a token representing of the card details,
+so you can request a payment.
 
 ## Integration flow
 
 1. You embed the Frames payment form in your website.
-2. Your customer enters payment details directly on your checkout page.
-3. We process your customer's sensitive information and return a token representing those details. This process is called tokenization.
-4. Your site backend system processes the order and makes the [Create token payment](/api/#operation/create-token-payment) API call to **paymennt** and obtains a checkout ID and a redirect URL.
-5. Redirect the customer to the 3D-Secure redirect URL from the [Create token payment](/api/#operation/create-token-payment) API call.
-6. In any of the cases in the previous step, the customer is finally redirected back to your website using the parameter `returnUrl` specified in the [Create token payment](/api/#operation/create-token-payment) API call.
-7. Once the customer has been redirected back to your website, make the [Get payment](/api/#operation/get-payment) API call to retrieve the status.
-8. Based on the status of payment retrieved from the [Get payment](/api/#operation/get-payment) API call, you should update your order status on your backend system.
+2. When the customer checkouts, they can enter payment details directly on the checkout page.
+3. We process the customer's sensitive information and return a token representing those details.
+   This process is called tokenization.
+4. Your site backend system gathers the **order details** and the received ** payment token** in a request
+   to make the [Create token payment](/api#tag/Payment/operation/create-payment) API call to **paymennt**
+   and obtains the payment response with status and payment ID. Depending on the status-
 
-![Website integration flow](/img/docs/integrate/merchant-api/web-payment-frames-flow.png)
+   - **CAPTURED**: the payment has been successfully processed (without 3D-Secure redirect).
+     You should update your order status on your backend system.
+   - **REDIRECT**: the payment needs 3D-Secure to be processed, for this the customer should be
+     redirected to the `redirectUrl` present in the response of [Create token payment](/api#tag/Payment/operation/create-payment)
+     API call.
+
+   - **any other status**: they imply that the payment could not be processed. You may ask the customer
+     to checkout again.
+
+5. For **CAPTURED** status, you should update order status on your backend system and lead the customer
+   to desired confirmation page.
+6. For **REDIRECT** status, once the customer has been redirected back to your website, make the
+   [Get payment](/api/#operation/get-payment) API call using the payment ID received in step 4,
+   to retrieve the status. If status is **CAPTURED** the payment has succeeded, you should confirm order status on your backend system,
+   for other statuses the payment has failed and you may follow checkout flow again.
+7. For any other status, the customer is finally redirected back to your website using the parameter `returnUrl` specified in the [Create token payment](/api/#operation/create-token-payment) API call.
+
+   ![Website integration flow](/img/docs/integrate/merchant-api/web-payment-frames-flow.png)
 
 - Make sure to check the [Website Checklist](/docs/golive/checklist) before going live.
 
@@ -210,27 +229,13 @@ body {
 
 ## Test the Integration
 
-1. Go to your website's add a products to your cart.
+1. Go to your website, and add products to your cart.
 2. Go to your cart then proceed to the checkout, Enter the required customer and billing details ... .
 3. Select the **paymennt.com payment method**.
 4. Enter the following card details:
-   - Number: `4242 4242 4242 4242`
+   - Number: `4012 8888 8888 1881` (to demonstrate payment without 3D-Secure)
+   - Number: `4242 4242 4242 4242` (to demonstrate payment requiring 3D-Secure redirect)
    - Expiry date: `12/25`
    - CVV: `100`
    - Name: `TEST USER`
 5. Check the status of the payment on your backend administration panel.
-
-## Checkout Statuses
-
-A checkout can have multiple statuses that describe the current state that the checkout is in.
-
-| STATUS                 | DETAILS                                                                                                                   |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| **PENDING**            | New Checkout. User has not completed the payment.                                                                         |
-| **AUTHORIZED**         | The payment has been authorized, a subsequent Capture or Cancel payment API call is expected before the checkout Expires. |
-| **PAID**               | This status is effective when a customer has successfully completed the payment associated with this checkout.            |
-| **FAILED**             | Payment failed due to payment failure. **paymennt** failed to recover such a checkout process.                            |
-| **CANCELLED**          | User cancelled the checkout process and returned to the merchant page.                                                    |
-| **EXPIRED**            | Checkout has expired without being processed                                                                              |
-| **REFUNDED**           | Checkout has been fully refunded to the Shopper                                                                           |
-| **PARTIALLY_REFUNDED** | Checkout have been partially refunded to the shopper                                                                      |
