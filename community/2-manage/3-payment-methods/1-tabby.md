@@ -1,7 +1,7 @@
 ---
 title: tabby
 sidebar_label: tabby
-slug: /payment-methods/tabby
+slug: /manage/payment-methods/tabby
 ---
 
 Tabby lets your customers shop now and split their purchases into 4 interest-free payments while you get paid in full-upfront.
