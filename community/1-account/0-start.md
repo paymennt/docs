@@ -1,6 +1,6 @@
 ---
 title: registering for a paymennt merchant account
-sidebar_label: registration process
+sidebar_label: account registration
 ---
 
 This guide will walk you through the process of registering for a **paymennt** merchant account.
@@ -8,16 +8,16 @@ This guide will walk you through the process of registering for a **paymennt** m
 Once you’ve submitted your application, you’ll join a short queue. Our team will review your application and may reach out to you to confirm a few details or, most probably, will leave you a message on your application, guiding you through the still required information/ documentation. The onboarding process timeframe depends on the complexity of your company and the documents uploaded.
 
 :::info APPLICATION DOWNLOAD
-Before starting, you must have downloaded the **paymennt** mobile application. [Learn more](/guides/account/install)
+Before starting, you must have downloaded the **paymennt** mobile application. [Learn more](/guides/account/mobile)
 :::
 
 :::caution AUTHORIZED SIGNATORY
-The user setting up the account must be an authorized signatory of the entity forwhich the **paymennt** merchant account is being created.
+The user setting up the account must be an authorized signatory of the entity for which the **paymennt** merchant account is being created.
 :::
 
-## Account requirements
+## Account verification
 
-Before beginning the registration process, familiarize yourself with our [Account Opening Requirements](/guides/account/requirements)
+Before beginning the registration process, familiarize yourself with our [Account Verification Requirements](/guides/account/verification)
 
 ## Required Documents
 

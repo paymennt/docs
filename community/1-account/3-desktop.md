@@ -1,6 +1,6 @@
 ---
 title: accessing the desktop portal
-sidebar_label: desktop portal
+sidebar_label: desktop access
 ---
 
 your **paymennt** desktop portal gives you unique functionality to manage and administer your **paymennt** account
