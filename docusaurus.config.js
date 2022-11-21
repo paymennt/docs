@@ -60,8 +60,8 @@ module.exports = {
           title: "GUIDES",
           items: [
             {
-              label: "account opening",
-              to: "/guides/account/requirements",
+              label: "account registration",
+              to: "/guides/account/start",
             },
             {
               label: "desktop access",
@@ -74,7 +74,7 @@ module.exports = {
           items: [
             {
               label: "payout bank account",
-              to: "/guides/management/payouts/payout-account",
+              to: "/guides/manage/payouts/payout-account",
             },
           ],
         },
