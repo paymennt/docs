@@ -3,15 +3,17 @@ title: fast funds settlement
 sidebar_label: fast settlement
 ---
 
-Paymennt supports processing payments in a number of currencies. This allows you to present prices in a customer's native currency and avoid conversion costs and confusion in paying with an unfamiliar currency for your customers.
-
-We support a number of currencies including AED, USD, GBP, EUR, and all GCC currencies.
+The **fast funds settlement** add-on makes it easy for businesses and merchants to access their payment funds faster. Cash-flow is a big concern for small-businesses, and with this add-on, we have made it easier than ever to give businesses the flexibility of making their payment funds available faster.
 
 :::info REQUIRES FAST FUNDS SETTLEMENT ADD-ON
 To benefit from fast settlement, you must have an active Fast Funds Settlement add-on subscription. [Learn more](/guides/manage/add-ons/manage)
 :::
 
-### multi-currency terms and conditions
+:::danger BUSINESS RISK-LEVEL
+Paymennt reserves the right to not extend this service to businesses that may have a higher risk profile. Things that contribute to the risk profile of a business include relationship history, transaction amount, source of funds, etc.
+:::
+
+### fast fund settlement terms and conditions
 
 1. Subscription automatically renewes every month
 2. Applicble to Visa and MasterCard payments only
