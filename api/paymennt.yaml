@@ -29,14 +29,30 @@ security:
 tags:
 - name: Checkout
   description: API endpoints for checkout management.
+  x-sort:
+    sort: "100"
 - name: Payment
   description: API endpoints for payment management.
+  x-sort:
+    sort: "200"
 - name: Branches
   description: API endpoints for branch management.
+  x-sort:
+    sort: "300"
 - name: Webhooks
   description: API endpoints for webhook management.
+  x-sort:
+    sort: "400"
+- name: Stored Cards
+  description: API endpoints for managing stored cards.
+  x-sort:
+    sort: "700"
 - name: Customer subscription
   description: API endpoints for Customer subscription management.
+  x-sort:
+    sort: "900"
+- name: Webhooks
+  description: API endpoints for webhook management.
 paths:
   /payment/debit:
     post:
@@ -49,23 +65,20 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PaymentRequest'
-            exampleSetFlag: false
         required: true
       responses:
-        "200":
-          description: Payment details
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PaymentRedirectResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/CreateTokenPaymentErrorResponse'
-              exampleSetFlag: false
+        "200":
+          description: Payment details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentRedirectResponseWrapper'
       x-sort:
         sort: "110"
   /checkout/web:
@@ -79,23 +92,20 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/CheckoutWebPaymentRequest'
-            exampleSetFlag: false
         required: true
       responses:
-        "200":
-          description: Checkout details
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/CheckoutWebPaymentResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
-              exampleSetFlag: false
+        "200":
+          description: Checkout details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CheckoutWebPaymentResponseWrapper'
       x-sort:
         sort: "110"
   /payment/{paymentId}/capture:
@@ -112,20 +122,18 @@ paths:
         schema:
           type: string
       responses:
-        "200":
-          description: Payment details
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PaymentResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetPaymentErrorResponse'
-              exampleSetFlag: false
+        "200":
+          description: Payment details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentResponseWrapper'
       x-sort:
         sort: "120"
   /checkout/link:
@@ -139,23 +147,20 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/CheckoutPaymentLinkRequest'
-            exampleSetFlag: false
         required: true
       responses:
-        "200":
-          description: Checkout details
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/CheckoutLinkResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
-              exampleSetFlag: false
+        "200":
+          description: Checkout details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CheckoutLinkResponseWrapper'
       x-sort:
         sort: "120"
   /checkout/qr:
@@ -169,23 +174,20 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/CheckoutQRRequest'
-            exampleSetFlag: false
         required: true
       responses:
-        "200":
-          description: Checkout details
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/CheckoutQRResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
-              exampleSetFlag: false
+        "200":
+          description: Checkout details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CheckoutQRResponseWrapper'
       x-sort:
         sort: "130"
   /checkout/mobile:
@@ -199,23 +201,20 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/CheckoutMobilePaymentRequest'
-            exampleSetFlag: false
         required: true
       responses:
-        "200":
-          description: Checkout details
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/CheckoutMobilePaymentResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
-              exampleSetFlag: false
+        "200":
+          description: Checkout details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CheckoutMobilePaymentResponseWrapper'
       x-sort:
         sort: "140"
   /checkout:
@@ -266,6 +265,7 @@ paths:
             - EXPIRED
             - REFUNDED
             - PARTIALLY_REFUNDED
+            - CHARGEBACK
       - name: customer.reference
         in: query
         description: query by customer reference Id
@@ -318,16 +318,84 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetListErrorResponse'
-              exampleSetFlag: false
         "200":
           description: List of checkouts.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/PageResponseCheckoutResponseWrapper'
-              exampleSetFlag: false
       x-sort:
         sort: "200"
+  /card/list:
+    get:
+      tags:
+      - Stored Cards
+      summary: List customer stored cards
+      operationId: list-customer-stored-cards
+      parameters:
+      - name: customerReferenceId
+        in: query
+        description: Customer ID at merchant suystem (Customer reference ID)
+        required: true
+        schema:
+          type: string
+      - name: page
+        in: query
+        description: "page number, default is 0"
+        required: false
+        schema:
+          minimum: 0
+          type: number
+      - name: size
+        in: query
+        description: "page size, default is 20"
+        required: false
+        schema:
+          minimum: 1
+          type: number
+      responses:
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetListErrorResponse'
+        "200":
+          description: List customer stored cards.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PageResponseStoredCardResponseWrapper'
+      x-sort:
+        sort: "200"
+  /card/delete:
+    post:
+      tags:
+      - Stored Cards
+      summary: Delete stored card by token
+      operationId: delete-stored-card
+      parameters:
+      - name: cardToken
+        in: query
+        description: Stored card token
+        required: true
+        schema:
+          type: string
+      responses:
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetStoredCardErrorResponse'
+        "200":
+          description: Delete stored card by token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StoredCardResponseWrapper'
+      x-sort:
+        sort: "210"
   /payment/{paymentId}:
     get:
       tags:
@@ -342,20 +410,18 @@ paths:
         schema:
           type: string
       responses:
-        "200":
-          description: Get Payment by ID
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PaymentResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetPaymentErrorResponse'
-              exampleSetFlag: false
+        "200":
+          description: Get Payment by ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentResponseWrapper'
       x-sort:
         sort: "210"
   /checkout/{checkoutId}:
@@ -372,20 +438,46 @@ paths:
         schema:
           type: string
       responses:
-        "200":
-          description: Get Checkout by ID
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/CheckoutResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
-              exampleSetFlag: false
+        "200":
+          description: Get Checkout by ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CheckoutResponseWrapper'
+      x-sort:
+        sort: "210"
+  /card:
+    get:
+      tags:
+      - Stored Cards
+      summary: Get stored card by token
+      operationId: get-stored-card
+      parameters:
+      - name: cardToken
+        in: query
+        description: Stored card token
+        required: true
+        schema:
+          type: string
+      responses:
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetStoredCardErrorResponse'
+        "200":
+          description: Get stored card by token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StoredCardResponseWrapper'
       x-sort:
         sort: "210"
   /checkout/{checkoutId}/cancel:
@@ -402,20 +494,18 @@ paths:
         schema:
           type: string
       responses:
-        "200":
-          description: Checkout was cancelled successfully
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/CheckoutResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
-              exampleSetFlag: false
+        "200":
+          description: Checkout was cancelled successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CheckoutResponseWrapper'
       x-sort:
         sort: "300"
   /checkout/{checkoutId}/refund:
@@ -457,20 +547,18 @@ paths:
           type: string
         example: Out of stock
       responses:
-        "200":
-          description: Get Checkout by ID
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/CheckoutResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
-              exampleSetFlag: false
+        "200":
+          description: Get Checkout by ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CheckoutResponseWrapper'
       x-sort:
         sort: "310"
   /subscription:
@@ -545,14 +633,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetListErrorResponse'
-              exampleSetFlag: false
         "200":
           description: List of subscriptions.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/PageResponseSubscriptionResponseWrapper'
-              exampleSetFlag: false
       x-sort:
         sort: "1130"
     post:
@@ -565,23 +651,20 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/SubscriptionRequest'
-            exampleSetFlag: false
         required: true
       responses:
-        "200":
-          description: Subscription details
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SubscriptionResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetSubscriptionErrorResponse'
-              exampleSetFlag: false
+        "200":
+          description: Subscription details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SubscriptionResponseWrapper'
       x-sort:
         sort: "1110"
   /subscription/{subscriptionId}:
@@ -604,14 +687,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetSubscriptionErrorResponse'
-              exampleSetFlag: false
         "200":
           description: Get subscription by ID
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/SubscriptionResponseWrapper'
-              exampleSetFlag: false
       x-sort:
         sort: "1120"
   /subscription/{subscriptionId}/pause:
@@ -628,20 +709,18 @@ paths:
         schema:
           type: string
       responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SubscriptionResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetSubscriptionErrorResponse'
-              exampleSetFlag: false
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SubscriptionResponseWrapper'
       x-sort:
         sort: "1140"
   /subscription/{subscriptionId}/resume:
@@ -658,20 +737,18 @@ paths:
         schema:
           type: string
       responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SubscriptionResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetSubscriptionErrorResponse'
-              exampleSetFlag: false
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SubscriptionResponseWrapper'
       x-sort:
         sort: "1150"
   /subscription/{subscriptionId}/payment:
@@ -708,14 +785,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetListErrorResponse'
-              exampleSetFlag: false
         "200":
           description: Get subscription payments
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/PageResponseSubscriptionPaymentResponseWrapper'
-              exampleSetFlag: false
       x-sort:
         sort: "1170"
   /branches/{branchId}:
@@ -738,14 +813,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetBranchErrorResponse'
-              exampleSetFlag: false
         "200":
           description: Branch details.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/BranchResponseWrapper'
-              exampleSetFlag: false
+                $ref: '#/components/schemas/LocationResponseWrapper'
       x-sort:
         sort: "10010"
   /branches:
@@ -777,7 +850,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetListErrorResponse'
-              exampleSetFlag: false
         "200":
           description: List of all branches.
           content:
@@ -785,8 +857,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/BranchResponseWrapper'
-              exampleSetFlag: false
+                  $ref: '#/components/schemas/LocationResponseWrapper'
       x-sort:
         sort: "10000"
     post:
@@ -798,24 +869,21 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/BranchRequest'
-            exampleSetFlag: false
+              $ref: '#/components/schemas/LocationRequest'
         required: true
       responses:
-        "200":
-          description: Branch details.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/BranchResponseWrapper'
-              exampleSetFlag: false
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/PostBranchErrorResponse'
-              exampleSetFlag: false
+        "200":
+          description: Branch details.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LocationResponseWrapper'
       x-sort:
         sort: "10020"
   /branches/{branchId}/disable:
@@ -838,14 +906,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetBranchErrorResponse'
-              exampleSetFlag: false
         "200":
           description: Branch details.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/BranchResponseWrapper'
-              exampleSetFlag: false
+                $ref: '#/components/schemas/LocationResponseWrapper'
       x-sort:
         sort: "10030"
   /branches/{branchId}/enable:
@@ -868,14 +934,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetBranchErrorResponse'
-              exampleSetFlag: false
         "200":
           description: Branch details.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/BranchResponseWrapper'
-              exampleSetFlag: false
+                $ref: '#/components/schemas/LocationResponseWrapper'
       x-sort:
         sort: "10040"
   /webhooks/{webhookId}:
@@ -898,14 +962,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetWebhookErrorResponse'
-              exampleSetFlag: false
         "200":
           description: Webhook details.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/WebhookResponseWrapper'
-              exampleSetFlag: false
       x-sort:
         sort: "10060"
   /webhooks:
@@ -937,7 +999,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetListErrorResponse'
-              exampleSetFlag: false
         "200":
           description: List of all webhooks.
           content:
@@ -946,7 +1007,6 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/WebhookResponseWrapper'
-              exampleSetFlag: false
       x-sort:
         sort: "10050"
     post:
@@ -959,16 +1019,20 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/WebhookRequest'
-            exampleSetFlag: false
         required: true
       responses:
+        "400":
+          description: Bad Request
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ModelAndView'
         "200":
           description: Webhook details.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/WebhookResponseWrapper'
-              exampleSetFlag: false
       x-sort:
         sort: "10070"
   /webhooks/{webhookId}/test:
@@ -992,14 +1056,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetWebhookErrorResponse'
-              exampleSetFlag: false
         "200":
           description: Webhook details.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/WebhookResponseWrapper'
-              exampleSetFlag: false
       x-sort:
         sort: "10080"
   /webhooks/{webhookId}/disable:
@@ -1022,14 +1084,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetWebhookErrorResponse'
-              exampleSetFlag: false
         "200":
           description: Webhook details.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/WebhookResponseWrapper'
-              exampleSetFlag: false
       x-sort:
         sort: "10090"
   /webhooks/{webhookId}/enable:
@@ -1052,14 +1112,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetWebhookErrorResponse'
-              exampleSetFlag: false
         "200":
           description: Webhook details.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/WebhookResponseWrapper'
-              exampleSetFlag: false
       x-sort:
         sort: "10100"
   /webhooks/{webhookId}/delete:
@@ -1082,65 +1140,16 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetWebhookErrorResponse'
-              exampleSetFlag: false
         "200":
           description: Webhook details.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/WebhookResponseWrapper'
-              exampleSetFlag: false
       x-sort:
         sort: "10110"
 components:
   schemas:
-    BranchRequest:
-      required:
-      - currency
-      - name
-      type: object
-      properties:
-        name:
-          type: string
-          description: Branch name.
-          example: Main branch
-        currency:
-          type: string
-          description: "Branch currency code, ISO 4217 Currency Code (3 letter currency\
-            \ code)."
-          example: Main branch
-        description:
-          type: string
-          description: Short description of the branch.
-          example: Main branch
-    BranchResponse:
-      type: object
-      properties:
-        id:
-          type: string
-        name:
-          type: string
-        currency:
-          type: string
-        description:
-          type: string
-        enabled:
-          type: boolean
-      description: Result Object.
-    BranchResponseWrapper:
-      type: object
-      properties:
-        success:
-          type: boolean
-          description: Whether or not this operation completed successfully.
-          example: true
-        elapsed:
-          type: integer
-          description: Time in milliseconds elapsed at server processing this request.
-          format: int64
-          example: 12
-        result:
-          $ref: '#/components/schemas/BranchResponse'
     CheckoutAddress:
       required:
       - address1
@@ -1177,7 +1186,62 @@ components:
           type: string
           description: Address country (ISO 3166-1 alpha-3 or alpha-2 country code)
           example: AE
+        set:
+          type: boolean
       description: Delivery address
+    CheckoutBrowserInfo:
+      required:
+      - acceptHeader
+      - colorDepth
+      - screenHeight
+      - screenWidth
+      - timeZoneOffset
+      - userAgent
+      type: object
+      properties:
+        screenWidth:
+          minimum: 1
+          type: integer
+          description: Customer browser screen width (JavaScript `window.screen.width`)
+          format: int32
+          example: 1024
+        screenHeight:
+          minimum: 1
+          type: integer
+          description: Customer browser screen height (JavaScript `window.screen.height`)
+          format: int32
+          example: 786
+        colorDepth:
+          minimum: 1
+          type: integer
+          description: Customer browser screen color depth (JavaScript `window.screen.colorDepth`)
+          format: int32
+          example: 24
+        userAgent:
+          type: string
+          description: Customer browser user agent(JavaScript `window.navigator.userAgent`)
+          example: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36\
+            \ (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+        timeZoneOffset:
+          type: integer
+          description: Customer browser timezone offset (JavaScript `(new Date()).getTimezoneOffset()`)
+          format: int32
+          example: -240
+        language:
+          type: string
+          description: "Customer browser language (JavaScript `window.navigator.language\
+            \ ? window.navigator.language : window.navigator.browserLanguage`)"
+          example: en-US
+        javaEnabled:
+          type: boolean
+          description: Customer browser supports Java (JavaScript  `window.navigator.javaEnabled()`)
+          example: false
+        acceptHeader:
+          type: string
+          description: "Cusomer browser Accept header, as received in the HTTP Request\
+            \ to tbe backend server"
+          example: "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+      description: Customer device browser info
     CheckoutCustomer:
       required:
       - email
@@ -1293,6 +1357,7 @@ components:
           - Expired
           - Refunded
           - Partially refunded
+          - Chargeback
         totalRefunded:
           type: number
           description: The total amount refunded from the checkout in checkout currency.
@@ -1308,10 +1373,11 @@ components:
           enum:
           - PointCheckout
           - Card
+          - Tabby
+          - Careem pay
           - Cash
           - Crypto
           - Solana pay
-          - ZainCash
         customer:
           $ref: '#/components/schemas/CheckoutCustomerResponse'
         subscriptionId:
@@ -1426,14 +1492,28 @@ components:
               provided the payment methods order in the payment page will follow the
               same order passed in this parameter. '
             enum:
-            - "CARD,POINTCHECKOUT"
+            - CARD
+            - VISA
+            - MASTERCARD
+            - AMEX
+            - UNIONPAY
+            - TABBY
+            - CAREEM_PAY
+            - POINTCHECKOUT
         defaultPaymentMethod:
           type: string
           description: Active payment method when opening the payment page. When left
             empty the default for your account at paymennt will be used.
           example: CARD
           enum:
-          - "CARD,POINTCHECKOUT"
+          - CARD
+          - VISA
+          - MASTERCARD
+          - AMEX
+          - UNIONPAY
+          - TABBY
+          - CAREEM_PAY
+          - POINTCHECKOUT
         language:
           maxLength: 3
           minLength: 2
@@ -1529,14 +1609,28 @@ components:
               provided the payment methods order in the payment page will follow the
               same order passed in this parameter. '
             enum:
-            - "CARD,POINTCHECKOUT"
+            - CARD
+            - VISA
+            - MASTERCARD
+            - AMEX
+            - UNIONPAY
+            - TABBY
+            - CAREEM_PAY
+            - POINTCHECKOUT
         defaultPaymentMethod:
           type: string
           description: Active payment method when opening the payment page. When left
             empty the default for your account at paymennt will be used.
           example: CARD
           enum:
-          - "CARD,POINTCHECKOUT"
+          - CARD
+          - VISA
+          - MASTERCARD
+          - AMEX
+          - UNIONPAY
+          - TABBY
+          - CAREEM_PAY
+          - POINTCHECKOUT
         expiresIn:
           maximum: 10080
           minimum: 15
@@ -1553,6 +1647,102 @@ components:
             \ page. When the language is not supported, the system will revert to\
             \ the default."
           example: EN
+    CheckoutPaymentRequest:
+      required:
+      - amount
+      - currency
+      - customer
+      - items
+      - orderId
+      - requestId
+      type: object
+      properties:
+        requestId:
+          type: string
+          description: "A unique Identifier for this request, can be used later to\
+            \ query the status on the checkout."
+          example: ORD-1234-r1
+        orderId:
+          type: string
+          description: A merchant unique transaction ID for this checkout. This can
+            be the order ID. Must match any reference shown to the user during checkout
+            / order history.
+          example: ORD-1234
+        currency:
+          type: string
+          description: ISO 4217 Currency Code (3 letter currency code).
+          example: AED
+        amount:
+          minimum: 0
+          exclusiveMinimum: true
+          type: number
+          description: The amount customers must pay.
+          example: 100.0
+        totals:
+          $ref: '#/components/schemas/CheckoutRequestTotals'
+        items:
+          type: array
+          description: An array of the items associated with this order.
+          items:
+            $ref: '#/components/schemas/CheckoutRequestItem'
+        customer:
+          $ref: '#/components/schemas/CheckoutCustomer'
+        billingAddress:
+          $ref: '#/components/schemas/CheckoutAddress'
+        deliveryAddress:
+          $ref: '#/components/schemas/CheckoutAddress'
+        returnUrl:
+          type: string
+          description: URL to redirect user to after a successful or failed payment.
+          example: https://shop.example.com/payment-redirect/
+        branchId:
+          type: integer
+          description: The paymennt branch ID associated with this checkout.
+          format: int64
+        allowedPaymentMethods:
+          type: array
+          description: 'Array containing payment methods to be available at the payment
+            page. When left empty all available options will show. When provided the
+            payment methods order in the payment page will follow the same order passed
+            in this parameter. '
+          items:
+            type: string
+            description: 'Array containing payment methods to be available at the
+              payment page. When left empty all available options will show. When
+              provided the payment methods order in the payment page will follow the
+              same order passed in this parameter. '
+            enum:
+            - CARD
+            - VISA
+            - MASTERCARD
+            - AMEX
+            - UNIONPAY
+            - TABBY
+            - CAREEM_PAY
+            - POINTCHECKOUT
+        defaultPaymentMethod:
+          type: string
+          description: Active payment method when opening the payment page. When left
+            empty the default for your account at paymennt will be used.
+          example: CARD
+          enum:
+          - CARD
+          - VISA
+          - MASTERCARD
+          - AMEX
+          - UNIONPAY
+          - TABBY
+          - CAREEM_PAY
+          - POINTCHECKOUT
+        language:
+          maxLength: 3
+          minLength: 2
+          type: string
+          description: "2 Letter ISO 639-1 language code, for viewing the payment\
+            \ page. When the language is not supported, the system will revert to\
+            \ the default."
+          example: EN
+      description: "Checkout details, required if checkoutId is not provided."
     CheckoutQRRequest:
       required:
       - amount
@@ -1626,14 +1816,28 @@ components:
               provided the payment methods order in the payment page will follow the
               same order passed in this parameter. '
             enum:
-            - "CARD,POINTCHECKOUT"
+            - CARD
+            - VISA
+            - MASTERCARD
+            - AMEX
+            - UNIONPAY
+            - TABBY
+            - CAREEM_PAY
+            - POINTCHECKOUT
         defaultPaymentMethod:
           type: string
           description: Active payment method when opening the payment page. When left
             empty the default for your account at paymennt will be used.
           example: CARD
           enum:
-          - "CARD,POINTCHECKOUT"
+          - CARD
+          - VISA
+          - MASTERCARD
+          - AMEX
+          - UNIONPAY
+          - TABBY
+          - CAREEM_PAY
+          - POINTCHECKOUT
         language:
           maxLength: 3
           minLength: 2
@@ -1703,6 +1907,7 @@ components:
           - Expired
           - Refunded
           - Partially refunded
+          - Chargeback
         totalRefunded:
           type: number
           description: The total amount refunded from the checkout in checkout currency.
@@ -1718,10 +1923,11 @@ components:
           enum:
           - PointCheckout
           - Card
+          - Tabby
+          - Careem pay
           - Cash
           - Crypto
           - Solana pay
-          - ZainCash
         base64QR:
           type: string
           description: Base64 encoded QR code PNG image.
@@ -1901,6 +2107,7 @@ components:
           - Expired
           - Refunded
           - Partially refunded
+          - Chargeback
         totalRefunded:
           type: number
           description: The total amount refunded from the checkout in checkout currency.
@@ -1916,10 +2123,11 @@ components:
           enum:
           - PointCheckout
           - Card
+          - Tabby
+          - Careem pay
           - Cash
           - Crypto
           - Solana pay
-          - ZainCash
         customer:
           $ref: '#/components/schemas/CheckoutCustomerResponse'
         billingAddress:
@@ -2030,14 +2238,28 @@ components:
               provided the payment methods order in the payment page will follow the
               same order passed in this parameter. '
             enum:
-            - "CARD,POINTCHECKOUT"
+            - CARD
+            - VISA
+            - MASTERCARD
+            - AMEX
+            - UNIONPAY
+            - TABBY
+            - CAREEM_PAY
+            - POINTCHECKOUT
         defaultPaymentMethod:
           type: string
           description: Active payment method when opening the payment page. When left
             empty the default for your account at paymennt will be used.
           example: CARD
           enum:
-          - "CARD,POINTCHECKOUT"
+          - CARD
+          - VISA
+          - MASTERCARD
+          - AMEX
+          - UNIONPAY
+          - TABBY
+          - CAREEM_PAY
+          - POINTCHECKOUT
         language:
           maxLength: 3
           minLength: 2
@@ -2046,7 +2268,6 @@ components:
             \ page. When the language is not supported, the system will revert to\
             \ the default."
           example: EN
-      description: "Checkout details, required if checkoutId is not provided."
     CheckoutWebPaymentResponseWrapper:
       type: object
       properties:
@@ -2131,6 +2352,7 @@ components:
           - Expired
           - Refunded
           - Partially refunded
+          - Chargeback
         totalRefunded:
           type: number
           description: The total amount refunded from the checkout in checkout currency.
@@ -2146,10 +2368,11 @@ components:
           enum:
           - PointCheckout
           - Card
+          - Tabby
+          - Careem pay
           - Cash
           - Crypto
           - Solana pay
-          - ZainCash
         customer:
           $ref: '#/components/schemas/CheckoutCustomerResponse'
         billingAddress:
@@ -2235,6 +2458,7 @@ components:
           - Expired
           - Refunded
           - Partially refunded
+          - Chargeback
         totalRefunded:
           type: number
           description: The total amount refunded from the checkout in checkout currency.
@@ -2250,10 +2474,11 @@ components:
           enum:
           - PointCheckout
           - Card
+          - Tabby
+          - Careem pay
           - Cash
           - Crypto
           - Solana pay
-          - ZainCash
         customer:
           $ref: '#/components/schemas/CheckoutCustomerResponse'
         billingAddress:
@@ -2350,6 +2575,22 @@ components:
           type: string
           description: Error message
           example: Payment not found for API merchant
+    GetStoredCardErrorResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Whether or not this operation completed successfully.
+          example: false
+        elapsed:
+          type: integer
+          description: Time in milliseconds elapsed at server processing this request.
+          format: int64
+          example: 3
+        error:
+          type: string
+          description: Error message
+          example: Stored card not found for the provided token
     GetSubscriptionErrorResponse:
       type: object
       properties:
@@ -2382,6 +2623,146 @@ components:
           type: string
           description: Error message
           example: Webhook not found for API merchant
+    LocationRequest:
+      required:
+      - currency
+      - name
+      type: object
+      properties:
+        name:
+          type: string
+          description: Branch name.
+          example: Main branch
+        currency:
+          type: string
+          description: "Branch currency code, ISO 4217 Currency Code (3 letter currency\
+            \ code)."
+          example: Main branch
+        description:
+          type: string
+          description: Short description of the branch.
+          example: Main branch
+    LocationResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        currency:
+          type: string
+        description:
+          type: string
+        enabled:
+          type: boolean
+      description: Result Object.
+    LocationResponseWrapper:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Whether or not this operation completed successfully.
+          example: true
+        elapsed:
+          type: integer
+          description: Time in milliseconds elapsed at server processing this request.
+          format: int64
+          example: 12
+        result:
+          $ref: '#/components/schemas/LocationResponse'
+    ModelAndView:
+      type: object
+      properties:
+        view:
+          $ref: '#/components/schemas/View'
+        model:
+          type: object
+          additionalProperties:
+            type: object
+        status:
+          type: string
+          enum:
+          - 100 CONTINUE
+          - 101 SWITCHING_PROTOCOLS
+          - 102 PROCESSING
+          - 103 CHECKPOINT
+          - 200 OK
+          - 201 CREATED
+          - 202 ACCEPTED
+          - 203 NON_AUTHORITATIVE_INFORMATION
+          - 204 NO_CONTENT
+          - 205 RESET_CONTENT
+          - 206 PARTIAL_CONTENT
+          - 207 MULTI_STATUS
+          - 208 ALREADY_REPORTED
+          - 226 IM_USED
+          - 300 MULTIPLE_CHOICES
+          - 301 MOVED_PERMANENTLY
+          - 302 FOUND
+          - 302 MOVED_TEMPORARILY
+          - 303 SEE_OTHER
+          - 304 NOT_MODIFIED
+          - 305 USE_PROXY
+          - 307 TEMPORARY_REDIRECT
+          - 308 PERMANENT_REDIRECT
+          - 400 BAD_REQUEST
+          - 401 UNAUTHORIZED
+          - 402 PAYMENT_REQUIRED
+          - 403 FORBIDDEN
+          - 404 NOT_FOUND
+          - 405 METHOD_NOT_ALLOWED
+          - 406 NOT_ACCEPTABLE
+          - 407 PROXY_AUTHENTICATION_REQUIRED
+          - 408 REQUEST_TIMEOUT
+          - 409 CONFLICT
+          - 410 GONE
+          - 411 LENGTH_REQUIRED
+          - 412 PRECONDITION_FAILED
+          - 413 PAYLOAD_TOO_LARGE
+          - 413 REQUEST_ENTITY_TOO_LARGE
+          - 414 URI_TOO_LONG
+          - 414 REQUEST_URI_TOO_LONG
+          - 415 UNSUPPORTED_MEDIA_TYPE
+          - 416 REQUESTED_RANGE_NOT_SATISFIABLE
+          - 417 EXPECTATION_FAILED
+          - 418 I_AM_A_TEAPOT
+          - 419 INSUFFICIENT_SPACE_ON_RESOURCE
+          - 420 METHOD_FAILURE
+          - 421 DESTINATION_LOCKED
+          - 422 UNPROCESSABLE_ENTITY
+          - 423 LOCKED
+          - 424 FAILED_DEPENDENCY
+          - 425 TOO_EARLY
+          - 426 UPGRADE_REQUIRED
+          - 428 PRECONDITION_REQUIRED
+          - 429 TOO_MANY_REQUESTS
+          - 431 REQUEST_HEADER_FIELDS_TOO_LARGE
+          - 451 UNAVAILABLE_FOR_LEGAL_REASONS
+          - 500 INTERNAL_SERVER_ERROR
+          - 501 NOT_IMPLEMENTED
+          - 502 BAD_GATEWAY
+          - 503 SERVICE_UNAVAILABLE
+          - 504 GATEWAY_TIMEOUT
+          - 505 HTTP_VERSION_NOT_SUPPORTED
+          - 506 VARIANT_ALSO_NEGOTIATES
+          - 507 INSUFFICIENT_STORAGE
+          - 508 LOOP_DETECTED
+          - 509 BANDWIDTH_LIMIT_EXCEEDED
+          - 510 NOT_EXTENDED
+          - 511 NETWORK_AUTHENTICATION_REQUIRED
+        viewName:
+          type: string
+        reference:
+          type: boolean
+        modelMap:
+          type: object
+          properties:
+            empty:
+              type: boolean
+          additionalProperties:
+            type: object
+        empty:
+          type: boolean
     PageResponseCheckoutResponse:
       type: object
       properties:
@@ -2425,6 +2806,49 @@ components:
           example: 12
         result:
           $ref: '#/components/schemas/PageResponseCheckoutResponse'
+    PageResponseStoredCardResponse:
+      type: object
+      properties:
+        page:
+          type: integer
+          description: "Item page number, starting with 0"
+          format: int32
+          example: 0
+        size:
+          type: integer
+          description: Number of items per page
+          format: int32
+          example: 10
+        totalPages:
+          type: integer
+          description: Total pages
+          format: int32
+          example: 1
+        totalElements:
+          type: integer
+          description: Total elements in the current page
+          format: int64
+          example: 7
+        content:
+          type: array
+          description: Page content array
+          items:
+            $ref: '#/components/schemas/StoredCardResponse'
+      description: Result Object.
+    PageResponseStoredCardResponseWrapper:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Whether or not this operation completed successfully.
+          example: true
+        elapsed:
+          type: integer
+          description: Time in milliseconds elapsed at server processing this request.
+          format: int64
+          example: 12
+        result:
+          $ref: '#/components/schemas/PageResponseStoredCardResponse'
     PageResponseSubscriptionPaymentResponse:
       type: object
       properties:
@@ -2540,6 +2964,8 @@ components:
           - PARTIALLY_REVERSED
           - AUTHORIZED
           - CAPTURED
+          - UNSUPPORTED
+          - CHARGEBACK
         redirectUrl:
           type: string
           description: 3D-Secure page URL
@@ -2571,12 +2997,18 @@ components:
       type: object
       properties:
         source:
-          $ref: '#/components/schemas/TokenPaymentSource'
+          oneOf:
+          - $ref: '#/components/schemas/StoredCardPaymentSource'
+          - $ref: '#/components/schemas/TokenPaymentSource'
         checkoutId:
           type: string
           description: Checkout Identifier on Paymennt.com database.
         checkoutDetails:
-          $ref: '#/components/schemas/CheckoutWebPaymentRequest'
+          $ref: '#/components/schemas/CheckoutPaymentRequest'
+        validReturnUrl:
+          type: boolean
+        validBillingAddress:
+          type: boolean
     PaymentResponseSample:
       type: object
       properties:
@@ -2606,6 +3038,8 @@ components:
           - PARTIALLY_REVERSED
           - AUTHORIZED
           - CAPTURED
+          - UNSUPPORTED
+          - CHARGEBACK
         checkoutDetails:
           $ref: '#/components/schemas/ECommerceCheckoutResponse'
         timestamp:
@@ -2627,6 +3061,21 @@ components:
           example: 12
         result:
           $ref: '#/components/schemas/PaymentResponseSample'
+    PaymentSource:
+      required:
+      - type
+      type: object
+      properties:
+        type:
+          type: string
+          description: Payment source type.
+          example: TOKEN
+          enum:
+          - TOKEN
+          - STORED_CARD
+      description: Source of funds for the payment.
+      discriminator:
+        propertyName: type
     PostBranchErrorResponse:
       type: object
       properties:
@@ -2643,6 +3092,94 @@ components:
           type: string
           description: Error message.
           example: A branch already exists with the same name 'Store'
+    StoredCardPaymentSource:
+      required:
+      - shopperInteraction
+      - token
+      - type
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/PaymentSource'
+      - type: object
+        properties:
+          token:
+            type: string
+            description: Stored card token
+            example: ctk_live_325f0f9d609b2e4c64cd3b3938d2d269b8ec6db2767482df5f748c14424be9ef
+          shopperInteraction:
+            type: string
+            description: Shopper interaction type
+            example: ECOMMERCE
+            enum:
+            - ECOMMERCE
+            - UNSCHEDULED
+            - SUBSCRIPTION
+            default: ECOMMERCE
+          shopperIpAddress:
+            type: string
+            description: Shopper IP Address
+          browserInfo:
+            $ref: '#/components/schemas/CheckoutBrowserInfo'
+          cvv:
+            type: string
+            description: "Card verification code (CVV), providing the CVV value when\
+              \ available increases the chance of successful authorization."
+          validBrowserInfo:
+            type: boolean
+          validShopperIpAddress:
+            type: boolean
+    StoredCardResponse:
+      type: object
+      properties:
+        customerReferenceId:
+          type: string
+          description: Customer reference ID at merchant database
+          example: CID12345
+        token:
+          type: string
+          description: Stored card token
+          example: ctk_sandbox_258b62b087ce90825350c9c1d7f16a6f6d7de7f3e238a0b47da9b9ec29308bd4
+        cardBrand:
+          type: string
+          description: Stored card brand
+          example: VISA
+          enum:
+          - VISA
+          - MASTERCARD
+          - AMEX
+          - UNIONPAY
+        cardBin:
+          type: string
+          description: Stored card BIN(Bank Identification Number) code
+          example: "424242"
+        cardLast4:
+          type: string
+          description: Stored card last 4 digits
+          example: "4242"
+        cardHolderName:
+          type: string
+          description: Stored card holder name
+          example: JOHN DOE
+        expiry:
+          type: string
+          description: Expiry date of the stored card details. In ISO8601 format (yyyy-MM-dd)
+          format: date
+          example: 2029-01-22
+      description: Page content array
+    StoredCardResponseWrapper:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Whether or not this operation completed successfully.
+          example: true
+        elapsed:
+          type: integer
+          description: Time in milliseconds elapsed at server processing this request.
+          format: int64
+          example: 12
+        result:
+          $ref: '#/components/schemas/StoredCardResponse'
     SubscriptionPaymentResponse:
       type: object
       properties:
@@ -2812,18 +3349,24 @@ components:
       - token
       - type
       type: object
+      allOf:
+      - $ref: '#/components/schemas/PaymentSource'
+      - type: object
+        properties:
+          token:
+            type: string
+            description: Card token received from the frame integration JavaScript.
+            example: ptk_live_8ec6db2767482df5f748c14424be9ef325f0f9d609b2e4c64cd3b3938d2d269b
+          storeCardDetails:
+            type: boolean
+            description: "Store card details for customer. For this to work, customer.id\
+              \ is required and must be three or more characters long"
+            example: false
+    View:
+      type: object
       properties:
-        type:
+        contentType:
           type: string
-          description: Payment source type.
-          example: TOKEN
-          enum:
-          - TOKEN
-        token:
-          type: string
-          description: Payment token received from the frame integration JavaScript.
-          example: ptk_live_8ec6db2767482df5f748c14424be9ef325f0f9d609b2e4c64cd3b3938d2d269b
-      description: Source of funds for the payment.
     WebhookRequest:
       required:
       - address
@@ -2863,9 +3406,9 @@ components:
   securitySchemes:
     ApiKey:
       type: apiKey
-      name: X-PointCheckout-Api-Key
+      name: X-Paymennt-Api-Key
       in: header
     ApiSecret:
       type: apiKey
-      name: X-PointCheckout-Api-Secret
+      name: X-Paymennt-Api-Secret
       in: header

@@ -124,7 +124,7 @@ module.exports = {
       {
         specs: [
           {
-            spec: "api/paymennt.yml",
+            spec: "api/paymennt.yaml",
             route: "/api",
           },
         ],
