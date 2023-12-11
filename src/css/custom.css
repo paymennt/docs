@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5 {
 
 .menu__list-item {
   font-weight: var(--ifm-font-weight-normal);
-  font-size:
+  /* font-size: */
 }
 
 .menu__link--active {
