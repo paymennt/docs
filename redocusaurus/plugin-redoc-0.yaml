@@ -69,6 +69,10 @@ tags:
     description: API endpoints for webhook management.
     x-sort:
       sort: '400'
+  - name: Terminals
+    description: API endpoints for terminal device management.
+    x-sort:
+      sort: '400'
   - name: Stored Cards
     description: API endpoints for managing stored cards.
     x-sort:
@@ -91,6 +95,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PaymentRequest'
+            exampleSetFlag: false
         required: true
       responses:
         '200':
@@ -99,12 +104,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PaymentRedirectResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/CreateTokenPaymentErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '110'
   /checkout/web:
@@ -118,6 +125,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/CheckoutWebPaymentRequest'
+            exampleSetFlag: false
         required: true
       responses:
         '200':
@@ -126,12 +134,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CheckoutWebPaymentResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '110'
   /payment/{paymentId}/capture:
@@ -154,12 +164,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PaymentResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetPaymentErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '120'
   /checkout/link:
@@ -173,6 +185,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/CheckoutPaymentLinkRequest'
+            exampleSetFlag: false
         required: true
       responses:
         '200':
@@ -181,14 +194,46 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CheckoutLinkResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '120'
+  /checkout/terminal:
+    post:
+      tags:
+        - Checkout
+      summary: Create terminal(POS) checkout
+      operationId: create-terminal-checkout
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CheckoutPosRequest'
+            exampleSetFlag: false
+        required: true
+      responses:
+        '200':
+          description: Checkout details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CheckoutPosResponseWrapper'
+              exampleSetFlag: false
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCheckoutErrorResponse'
+              exampleSetFlag: false
+      x-sort:
+        sort: '130'
   /checkout/qr:
     post:
       tags:
@@ -200,6 +245,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/CheckoutQRRequest'
+            exampleSetFlag: false
         required: true
       responses:
         '200':
@@ -208,12 +254,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CheckoutQRResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '130'
   /checkout/mobile:
@@ -227,6 +275,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/CheckoutMobilePaymentRequest'
+            exampleSetFlag: false
         required: true
       responses:
         '200':
@@ -235,12 +284,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CheckoutMobilePaymentResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '140'
   /checkout:
@@ -261,6 +312,7 @@ paths:
               - WEB
               - MOBILE
               - LINK
+              - TERMINAL
         - name: requestId
           in: query
           description: query by requestId used when submitting checkout
@@ -345,12 +397,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PageResponseCheckoutResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetListErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '200'
   /card/list:
@@ -387,12 +441,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PageResponseStoredCardResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetListErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '200'
   /card/delete:
@@ -415,12 +471,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/StoredCardResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetStoredCardErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '210'
   /payment/{paymentId}:
@@ -443,12 +501,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PaymentResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetPaymentErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '210'
   /checkout/{checkoutId}:
@@ -471,12 +531,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CheckoutResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '210'
   /card:
@@ -499,14 +561,46 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/StoredCardResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetStoredCardErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '210'
+  /checkout/{checkoutId}/resend-to-terminal:
+    post:
+      tags:
+        - Checkout
+      summary: Resend pending checkout to treminal
+      operationId: resend-checkout-to-terminal
+      parameters:
+        - name: checkoutId
+          in: path
+          description: Checkout Id.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Checkout was resent successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CheckoutResponseWrapper'
+              exampleSetFlag: false
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCheckoutErrorResponse'
+              exampleSetFlag: false
+      x-sort:
+        sort: '300'
   /checkout/{checkoutId}/cancel:
     post:
       tags:
@@ -527,12 +621,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CheckoutResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '300'
   /checkout/{checkoutId}/refund:
@@ -580,12 +676,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CheckoutResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetCheckoutErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '310'
   /subscription:
@@ -661,12 +759,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PageResponseSubscriptionResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetListErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '1130'
     post:
@@ -679,6 +779,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/SubscriptionRequest'
+            exampleSetFlag: false
         required: true
       responses:
         '200':
@@ -687,12 +788,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SubscriptionResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetSubscriptionErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '1110'
   /subscription/{subscriptionId}:
@@ -715,12 +818,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SubscriptionResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetSubscriptionErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '1120'
   /subscription/{subscriptionId}/pause:
@@ -743,12 +848,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SubscriptionResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetSubscriptionErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '1140'
   /subscription/{subscriptionId}/resume:
@@ -771,12 +878,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SubscriptionResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetSubscriptionErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '1150'
   /subscription/{subscriptionId}/payment:
@@ -814,12 +923,14 @@ paths:
               schema:
                 $ref: >-
                   #/components/schemas/PageResponseSubscriptionPaymentResponseWrapper
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetListErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '1170'
   /branches/{branchId}:
@@ -842,12 +953,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/LocationResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetBranchErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10010'
   /branches:
@@ -881,12 +994,14 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/LocationResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetListErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10000'
     post:
@@ -899,6 +1014,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LocationRequest'
+            exampleSetFlag: false
         required: true
       responses:
         '200':
@@ -907,12 +1023,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/LocationResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/PostBranchErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10020'
   /branches/{branchId}/disable:
@@ -935,12 +1053,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/LocationResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetBranchErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10030'
   /branches/{branchId}/enable:
@@ -963,14 +1083,57 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/LocationResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetBranchErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10040'
+  /terminals:
+    get:
+      tags:
+        - Terminals
+      summary: List termials
+      description: List all termials associated with the merchant account
+      operationId: list-termials
+      parameters:
+        - name: page
+          in: query
+          description: page number, default is 0
+          required: false
+          schema:
+            minimum: 0
+            type: number
+        - name: size
+          in: query
+          description: page size, default is 20
+          required: false
+          schema:
+            minimum: 1
+            type: number
+      responses:
+        '200':
+          description: List of all termials.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PosAssignmentResponseWrapper'
+              exampleSetFlag: false
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetListErrorResponse'
+              exampleSetFlag: false
+      x-sort:
+        sort: '10050'
   /webhooks/{webhookId}:
     get:
       tags:
@@ -991,12 +1154,44 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/WebhookResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetWebhookErrorResponse'
+              exampleSetFlag: false
+      x-sort:
+        sort: '10060'
+  /terminals/{terminalId}:
+    get:
+      tags:
+        - Terminals
+      summary: Get terminal device by Id
+      operationId: get-terminal-by-id
+      parameters:
+        - name: terminalId
+          in: path
+          description: Terminal Id.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Terminal device details.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PosAssignmentResponseWrapper'
+              exampleSetFlag: false
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetPosAssignmentErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10060'
   /webhooks:
@@ -1030,12 +1225,14 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/WebhookResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetListErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10050'
     post:
@@ -1048,6 +1245,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/WebhookRequest'
+            exampleSetFlag: false
         required: true
       responses:
         '200':
@@ -1056,12 +1254,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/WebhookResponseWrapper'
-        '400':
-          description: Bad Request
-          content:
-            '*/*':
-              schema:
-                $ref: '#/components/schemas/ModelAndView'
+              exampleSetFlag: false
       x-sort:
         sort: '10070'
   /webhooks/{webhookId}/test:
@@ -1085,12 +1278,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/WebhookResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetWebhookErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10080'
   /webhooks/{webhookId}/disable:
@@ -1113,12 +1308,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/WebhookResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetWebhookErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10090'
   /webhooks/{webhookId}/enable:
@@ -1141,12 +1338,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/WebhookResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetWebhookErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10100'
   /webhooks/{webhookId}/delete:
@@ -1169,12 +1368,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/WebhookResponseWrapper'
+              exampleSetFlag: false
         '400':
           description: Bad Request
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/GetWebhookErrorResponse'
+              exampleSetFlag: false
       x-sort:
         sort: '10110'
 components:
@@ -1815,6 +2016,248 @@ components:
             default.
           example: EN
       description: Checkout details, required if checkoutId is not provided.
+    CheckoutPosRequest:
+      required:
+        - amount
+        - currency
+        - orderId
+        - requestId
+        - terminalId
+      type: object
+      properties:
+        requestId:
+          type: string
+          description: >-
+            A unique Identifier for this request, can be used later to query the
+            status on the checkout.
+          example: ORD-1234-r1
+        orderId:
+          type: string
+          description: >-
+            A merchant unique transaction ID for this checkout. This can be the
+            order ID. Must match any reference shown to the user during checkout
+            / order history.
+          example: ORD-1234
+        description:
+          type: string
+          description: Description of the order.
+        currency:
+          type: string
+          description: ISO 4217 Currency Code (3 letter currency code).
+          example: AED
+        amount:
+          minimum: 0
+          exclusiveMinimum: true
+          type: number
+          description: The amount customers must pay.
+          example: 100
+        terminalId:
+          pattern: ^[0-9]+$
+          type: string
+          description: Terminal(POS) device ID at paymennt database.
+        totals:
+          $ref: '#/components/schemas/CheckoutRequestTotals'
+        items:
+          type: array
+          description: An array of the items associated with this order.
+          items:
+            $ref: '#/components/schemas/CheckoutRequestItem'
+        customer:
+          $ref: '#/components/schemas/CheckoutCustomer'
+        billingAddress:
+          $ref: '#/components/schemas/CheckoutAddress'
+        branchId:
+          type: integer
+          description: The paymennt branch ID associated with this checkout.
+          format: int64
+        allowedPaymentMethods:
+          type: array
+          description: >-
+            Array containing payment methods to be available at the payment
+            page. When left empty all available options will show. When provided
+            the payment methods order in the payment page will follow the same
+            order passed in this parameter. 
+          items:
+            type: string
+            description: >-
+              Array containing payment methods to be available at the payment
+              page. When left empty all available options will show. When
+              provided the payment methods order in the payment page will follow
+              the same order passed in this parameter. 
+            enum:
+              - CARD
+              - VISA
+              - MASTERCARD
+              - AMEX
+              - UNIONPAY
+              - TABBY
+              - CAREEM_PAY
+              - POINTCHECKOUT
+        defaultPaymentMethod:
+          type: string
+          description: >-
+            Active payment method when opening the payment page. When left empty
+            the default for your account at paymennt will be used.
+          example: CARD
+          enum:
+            - CARD
+            - VISA
+            - MASTERCARD
+            - AMEX
+            - UNIONPAY
+            - TABBY
+            - CAREEM_PAY
+            - POINTCHECKOUT
+        language:
+          maxLength: 3
+          minLength: 2
+          type: string
+          description: >-
+            2 Letter ISO 639-1 language code, for viewing the payment page. When
+            the language is not supported, the system will revert to the
+            default.
+          example: EN
+        expiresIn:
+          type: integer
+          format: int32
+    CheckoutPosResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Checkout ID at paymennt database.
+          example: '1653241101733169556'
+        displayId:
+          type: string
+          description: >-
+            Checkout human readable short key, serves as an easier reference to
+            the checkout
+          example: QS3IM5
+        checkoutKey:
+          type: string
+          description: >-
+            Checkout key, serves as a unique identifier for the checkout. Used
+            to generate the payment page redirect URL
+          example: 90ed4298f15d46df994fd1cfbbec5aa24390e811295cf8b5
+        requestId:
+          type: string
+          description: Merchant unique reference ID for this payment request.
+          example: ORD-1234-r1
+        orderId:
+          type: string
+          description: Merchant unique reference ID for this checkout.
+          example: ORD-1234
+        currency:
+          type: string
+          description: >-
+            ISO 4217 Currency Code (3 letter currency code) associated with this
+            checkout.
+          example: AED
+        amount:
+          type: number
+          description: >-
+            The grand total of the whole order. This is the amount the customer
+            must pay.
+          example: 100
+        cashAmount:
+          type: number
+          description: Cash amount to be collected from Shopper
+          example: 0
+        status:
+          type: string
+          description: Current checkout status.
+          example: PENDING
+          enum:
+            - Pending
+            - Authorized
+            - Pending confirmation
+            - Paid
+            - Failed
+            - Cancelled
+            - Expired
+            - Refunded
+            - Partially refunded
+            - Chargeback
+        totalRefunded:
+          type: number
+          description: The total amount refunded from the checkout in checkout currency.
+          example: 0
+        redirectUrl:
+          type: string
+          description: 'URL for the customer payment redirect. '
+          example: >-
+            https://pay.test.paymennt.com/checkout/7a3ce540effe3c9a568a577d1f717e5267e73dc503663d4f
+        usedPaymentMethod:
+          type: string
+          description: Payment method used while processing the payment.
+          example: CARD
+          enum:
+            - PointCheckout
+            - Card
+            - Tabby
+            - Careem pay
+            - Cash
+            - Crypto
+            - Solana pay
+        terminalId:
+          type: string
+          description: Terminal(POS) device ID at paymennt database.
+          example: '1784518075805649425'
+        terminalAlias:
+          type: string
+          description: Terminal(POS) device alias.
+          example: Device 01
+        customer:
+          $ref: '#/components/schemas/CheckoutCustomerResponse'
+        billingAddress:
+          $ref: '#/components/schemas/CheckoutAddress'
+        deliveryAddress:
+          $ref: '#/components/schemas/CheckoutAddress'
+        firebaseCollection:
+          type: string
+          description: >-
+            Google firebase collection name, to be used to receive notifications
+            on checkout updates.
+        firebaseDatabase:
+          type: string
+          description: >-
+            Google firebase database name, to be used to receive notifications
+            on checkout updates.
+          example: pc-test-734bc
+        firebaseDocument:
+          type: string
+          description: >-
+            Google firebase document name, to be used to receive notifications
+            on checkout updates.
+        timestamp:
+          type: string
+          description: >-
+            The date time of creating the checkout in ISO8601 format
+            (yyyy-MM-ddTHH:mm:ss.SSSZZ).
+          format: date-time
+        branchId:
+          type: string
+          description: The paymennt branch ID associated with this checkout.
+          example: '1601731695315563241'
+        branchName:
+          type: string
+          description: The paymennt branch name associated with this checkout.
+          example: Test store
+      description: Result Object.
+    CheckoutPosResponseWrapper:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Whether or not this operation completed successfully.
+          example: true
+        elapsed:
+          type: integer
+          description: Time in milliseconds elapsed at server processing this request.
+          format: int64
+          example: 12
+        result:
+          $ref: '#/components/schemas/CheckoutPosResponse'
     CheckoutQRRequest:
       required:
         - amount
@@ -2704,6 +3147,22 @@ components:
           type: string
           description: Error message
           example: Payment not found for API merchant
+    GetPosAssignmentErrorResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Whether or not this operation completed successfully.
+          example: false
+        elapsed:
+          type: integer
+          description: Time in milliseconds elapsed at server processing this request.
+          format: int64
+          example: 3
+        error:
+          type: string
+          description: Error message
+          example: Terminal device not found
     GetStoredCardErrorResponse:
       type: object
       properties:
@@ -2800,99 +3259,6 @@ components:
           example: 12
         result:
           $ref: '#/components/schemas/LocationResponse'
-    ModelAndView:
-      type: object
-      properties:
-        view:
-          $ref: '#/components/schemas/View'
-        model:
-          type: object
-          additionalProperties:
-            type: object
-        status:
-          type: string
-          enum:
-            - 100 CONTINUE
-            - 101 SWITCHING_PROTOCOLS
-            - 102 PROCESSING
-            - 103 CHECKPOINT
-            - 200 OK
-            - 201 CREATED
-            - 202 ACCEPTED
-            - 203 NON_AUTHORITATIVE_INFORMATION
-            - 204 NO_CONTENT
-            - 205 RESET_CONTENT
-            - 206 PARTIAL_CONTENT
-            - 207 MULTI_STATUS
-            - 208 ALREADY_REPORTED
-            - 226 IM_USED
-            - 300 MULTIPLE_CHOICES
-            - 301 MOVED_PERMANENTLY
-            - 302 FOUND
-            - 302 MOVED_TEMPORARILY
-            - 303 SEE_OTHER
-            - 304 NOT_MODIFIED
-            - 305 USE_PROXY
-            - 307 TEMPORARY_REDIRECT
-            - 308 PERMANENT_REDIRECT
-            - 400 BAD_REQUEST
-            - 401 UNAUTHORIZED
-            - 402 PAYMENT_REQUIRED
-            - 403 FORBIDDEN
-            - 404 NOT_FOUND
-            - 405 METHOD_NOT_ALLOWED
-            - 406 NOT_ACCEPTABLE
-            - 407 PROXY_AUTHENTICATION_REQUIRED
-            - 408 REQUEST_TIMEOUT
-            - 409 CONFLICT
-            - 410 GONE
-            - 411 LENGTH_REQUIRED
-            - 412 PRECONDITION_FAILED
-            - 413 PAYLOAD_TOO_LARGE
-            - 413 REQUEST_ENTITY_TOO_LARGE
-            - 414 URI_TOO_LONG
-            - 414 REQUEST_URI_TOO_LONG
-            - 415 UNSUPPORTED_MEDIA_TYPE
-            - 416 REQUESTED_RANGE_NOT_SATISFIABLE
-            - 417 EXPECTATION_FAILED
-            - 418 I_AM_A_TEAPOT
-            - 419 INSUFFICIENT_SPACE_ON_RESOURCE
-            - 420 METHOD_FAILURE
-            - 421 DESTINATION_LOCKED
-            - 422 UNPROCESSABLE_ENTITY
-            - 423 LOCKED
-            - 424 FAILED_DEPENDENCY
-            - 425 TOO_EARLY
-            - 426 UPGRADE_REQUIRED
-            - 428 PRECONDITION_REQUIRED
-            - 429 TOO_MANY_REQUESTS
-            - 431 REQUEST_HEADER_FIELDS_TOO_LARGE
-            - 451 UNAVAILABLE_FOR_LEGAL_REASONS
-            - 500 INTERNAL_SERVER_ERROR
-            - 501 NOT_IMPLEMENTED
-            - 502 BAD_GATEWAY
-            - 503 SERVICE_UNAVAILABLE
-            - 504 GATEWAY_TIMEOUT
-            - 505 HTTP_VERSION_NOT_SUPPORTED
-            - 506 VARIANT_ALSO_NEGOTIATES
-            - 507 INSUFFICIENT_STORAGE
-            - 508 LOOP_DETECTED
-            - 509 BANDWIDTH_LIMIT_EXCEEDED
-            - 510 NOT_EXTENDED
-            - 511 NETWORK_AUTHENTICATION_REQUIRED
-        viewName:
-          type: string
-        reference:
-          type: boolean
-        modelMap:
-          type: object
-          properties:
-            empty:
-              type: boolean
-          additionalProperties:
-            type: object
-        empty:
-          type: boolean
     PageResponseCheckoutResponse:
       type: object
       properties:
@@ -3213,6 +3579,52 @@ components:
       description: Source of funds for the payment.
       discriminator:
         propertyName: type
+    PosAssignmentResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Terminal device ID at paymennt.com database.
+          example: '1784983995871729791'
+        alias:
+          type: string
+          description: Terminal device alias name.
+          example: Device 01
+        deviceType:
+          type: string
+          description: Terminal device type.
+          example: AMS1
+        serialNumber:
+          type: string
+          description: Terminal device serial number.
+          example: AMS1-000168223460132
+        branchId:
+          type: string
+          description: Banch name that the device is assigned to.
+          example: '1784976975118630880'
+        branchName:
+          type: string
+          description: Banch name that the device is assigned to.
+          example: Main branch
+        active:
+          type: boolean
+          description: Indicator if the terminal device is active
+          example: true
+      description: Result Object.
+    PosAssignmentResponseWrapper:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Whether or not this operation completed successfully.
+          example: true
+        elapsed:
+          type: integer
+          description: Time in milliseconds elapsed at server processing this request.
+          format: int64
+          example: 12
+        result:
+          $ref: '#/components/schemas/PosAssignmentResponse'
     PostBranchErrorResponse:
       type: object
       properties:
@@ -3263,9 +3675,9 @@ components:
               description: >-
                 Card verification code (CVV), providing the CVV value when
                 available increases the chance of successful authorization.
-            validBrowserInfo:
-              type: boolean
             validShopperIpAddress:
+              type: boolean
+            validBrowserInfo:
               type: boolean
     StoredCardResponse:
       type: object
@@ -3288,6 +3700,7 @@ components:
             - MASTERCARD
             - AMEX
             - UNIONPAY
+            - MADA
         cardBin:
           type: string
           description: Stored card BIN(Bank Identification Number) code
@@ -3375,6 +3788,10 @@ components:
           example: 1499.99
         customer:
           $ref: '#/components/schemas/CheckoutCustomer'
+        billingAddress:
+          $ref: '#/components/schemas/CheckoutAddress'
+        deliveryAddress:
+          $ref: '#/components/schemas/CheckoutAddress'
         customerId:
           type: integer
           description: Customer id at paymennt database.
@@ -3415,6 +3832,17 @@ components:
             URL to redirect user to after a successful or failed
             payment.(Optional)
           example: https://example.com/subscription/payment-check/
+        cancellationPolicyType:
+          type: string
+          description: One of DEFAULT or CUSTOM
+          example: DEFAULT
+          enum:
+            - Default
+            - Custom
+        customCancellationTerms:
+          type: string
+          description: Custom cancellation terms
+          example: Cancellation allowed only 5 days before next billing date
     SubscriptionResponse:
       type: object
       properties:
@@ -3478,9 +3906,20 @@ components:
           description: The period unit
           example: DAYS
           enum:
-            - DAYS
-            - WEEKS
-            - MONTHS
+            - days
+            - weeks
+            - months
+        cancellationPolicyType:
+          type: string
+          description: One of DEFAULT or CUSTOM
+          example: DEFAULT
+          enum:
+            - Default
+            - Custom
+        customCancellationTerms:
+          type: string
+          description: Custom cancellation terms
+          example: Cancellation allowed only 5 days before next billing date
       description: Result Object.
     SubscriptionResponseWrapper:
       type: object
@@ -3516,11 +3955,6 @@ components:
                 Store card details for customer. For this to work, customer.id
                 is required and must be three or more characters long
               example: false
-    View:
-      type: object
-      properties:
-        contentType:
-          type: string
     WebhookRequest:
       required:
         - address
