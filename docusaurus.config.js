@@ -3,8 +3,8 @@
 const path = require("path");
 
 module.exports = {
-  title: "paymennt documentation",
-  tagline: "build amazing payment experiences with the paymennt platform",
+  title: "Paymennt Documentation",
+  tagline: "Build amazing payment experiences with the paymennt platform",
   url: "https://docs.paymennt.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -23,13 +23,13 @@ module.exports = {
         {
           to: "guides/",
           activeBasePath: "guides",
-          label: "GUIDES",
+          label: "USER GUIDE",
           position: "left",
         },
         {
           to: "docs/",
           activeBasePath: "docs",
-          label: "DEVELOPER",
+          label: "DEVELOPER GUIDE",
           position: "left",
         },
         {
@@ -55,16 +55,15 @@ module.exports = {
             },
           ],
         },
-        {},
         {
           title: "GUIDES",
           items: [
             {
-              label: "account registration",
+              label: "Account Registration",
               to: "/guides/account/start",
             },
             {
-              label: "desktop access",
+              label: "Desktop Access",
               to: "/guides/account/desktop",
             },
           ],
@@ -73,7 +72,7 @@ module.exports = {
           title: "ACCOUNT MANAGEMENT",
           items: [
             {
-              label: "payout bank account",
+              label: "Payout Bank Account",
               to: "/guides/manage/payouts/payout-account",
             },
           ],
@@ -82,15 +81,15 @@ module.exports = {
           title: "ECOMMERCE PLUGINS",
           items: [
             {
-              label: "opencart",
+              label: "OpenCart",
               href: "/docs/payment/ecomm/opencart",
             },
             {
-              label: "woocommerce",
+              label: "WooCommerce",
               href: "/docs/payment/ecomm/woocommerce",
             },
             {
-              label: "shopify",
+              label: "Shopify",
               href: "/docs/payment/ecomm/shopify",
             },
           ],
@@ -104,13 +103,45 @@ module.exports = {
     prism: {
       additionalLanguages: ["swift"],
     },
+    algolia: {
+      // The application ID provided by Algolia
+      appId: 'YOUR_APP_ID',
+
+      // Public API key: it is safe to commit it
+      apiKey: 'YOUR_SEARCH_API_KEY',
+
+      indexName: 'YOUR_INDEX_NAME',
+
+      // Optional: see doc section below
+      contextualSearch: true,
+
+      // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+      externalUrlRegex: 'external\\.com|domain\\.com',
+
+      // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+      replaceSearchResultPathname: {
+        from: '/docs/', // or as RegExp: /\/docs\//
+        to: '/',
+      },
+
+      // Optional: Algolia search parameters
+      searchParameters: {},
+
+      // Optional: path for search page that enabled by default (`false` to disable it)
+      searchPagePath: 'search',
+
+      // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+      insights: false,
+
+      //... other Algolia params
+    },
   },
   presets: [
     [
       "@docusaurus/preset-classic",
       {
         docs: {
-          breadcrumbs: false,
+          breadcrumbs: true,
           sidebarPath: require.resolve("./sidebars.docs.js"),
         },
         blog: false,

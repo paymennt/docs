@@ -8,63 +8,54 @@ import styles from "./styles.module.css";
 
 const features = [
   {
-    title: "product guides",
+    title: "Product Guides",
     target: "/guides",
     imageUrl: "img/home/guides.svg",
     description: (
       <>
-        learn the ins and outs of the <strong>paymennt</strong> platform. Our
-        product guides will show you how to manage your merchant account and
+        Learn the ins and outs of the <strong>paymennt</strong> platform. Our
+        product guide will show you how to manage your merchant account and
         covers topics critical for any business
       </>
     ),
   },
   {
-    title: "accept payments",
+    title: "Accept Payments",
     target: "/docs",
     imageUrl: "img/home/accept.svg",
     description: (
       <>
-        learn about the ins and outs of the **paymennt** platform through boosts
-        an array of tools was designed from the ground up to be easily installed
-        and used to get your website up and running quickly.
+        The <strong>old description</strong> didn't made any sense. Awaiting explaination of the the actual process to fill in th details
       </>
     ),
   },
   {
-    title: "e-commerce plugins",
+    title: "E-commerce Plugins",
     target: "/docs/payment/ecomm",
     imageUrl: "img/home/plugins.svg",
     description: (
       <>
-        connect your e-commerce website to the powerful payment processing
-        capabilities of
-        <strong>paymennt</strong>. choose a quick, reliable, and low-code
-        solution thanks to our flexible plugins
+        Connect your e-commerce website to the powerful payment processing capabilities of <strong>paymennt</strong>. Choose a quick, reliable, and low-code solution thanks to our flexible plugins
       </>
     ),
   },
   {
-    title: "software kits",
+    title: "Software Kits",
     target: "/docs/sdks",
     imageUrl: "img/home/sdks.svg",
     description: (
       <>
-        whether for your server or your mobile app, <strong>paymennt</strong>{" "}
-        provides you with an array of SDKs to make your product development
-        journey simpler
+        Whether for your server or your mobile app, <strong>paymennt</strong> provides you with an array of SDKs to make your product development journey simpler
       </>
     ),
   },
   {
-    title: "api reference",
+    title: "API Reference",
     target: "/api",
     imageUrl: "img/home/api.svg",
     description: (
       <>
-        access our full API reference documentation for complete instructions on
-        how to implement and access the full range of features and tools made
-        available to our merchants
+        Access our full API reference documentation for complete instructions on how to implement and access the full range of features and tools made available to our merchants
       </>
     ),
   },
@@ -117,7 +108,7 @@ export default function Home() {
                   )}
                   to={useBaseUrl("docs/")}
                 >
-                  get started
+                  Get Started
                 </Link>
               </div>
             </div>
