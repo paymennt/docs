@@ -10,24 +10,24 @@
 /* You can override the default Infima variables here. */
 :root {
   /* COLORS */
-  --ifm-color-primary: #6f2277;
-  --ifm-color-primary-dark: #591b5f;
-  --ifm-color-primary-darker: #4e1853;
-  --ifm-color-primary-darkest: #431447;
-  --ifm-color-primary-light: #8c4e92;
-  --ifm-color-primary-lighter: #9a64a0;
-  --ifm-color-primary-lightest: #a97aad;
+  --ifm-color-primary: #300d33;
+  --ifm-color-primary-dark: #2b0c2e;
+  --ifm-color-primary-darker: #290b2b;
+  --ifm-color-primary-darkest: #220924;
+  --ifm-color-primary-light: #350e38;
+  --ifm-color-primary-lighter: #370f3b;
+  --ifm-color-primary-lightest: #3e1142;
 
-  --ifm-color-secondary: #ed1163;
-  --ifm-color-secondary-dark: #be0e4f;
-  --ifm-color-secondary-darker: #a60c45;
-  --ifm-color-secondary-darkest: #8e0a3b;
-  --ifm-color-secondary-light: #f14182;
-  --ifm-color-secondary-lighter: #f25892;
-  --ifm-color-secondary-lightest: #f470a1;
+  --ifm-color-secondary: #dc4f82;
+  --ifm-color-secondary-dark: #d73670;
+  --ifm-color-secondary-darker: #d42a68;
+  --ifm-color-secondary-darkest: #af2355;
+  --ifm-color-secondary-light: #e16894;
+  --ifm-color-secondary-lighter: #e3749d;
+  --ifm-color-secondary-lightest: #eb9ab7;
 
   /* BACKGROUND */
-  --ifm-background-color: #fffff2;
+  --ifm-background-color: #ffffff;
   --ifm-heading-color: var(--ifm-color-primary);
   --ifm-link-color: var(--ifm-color-secondary);
 
@@ -36,11 +36,11 @@
   --ifm-link-hover-decoration: none;
 
   /* FONT */
-  --ifm-font-family-base: 'Poppins', sans-serif;
-  --ifm-font-size-base: 100%;
+  --ifm-font-family-base: 'Calibri';
+  --ifm-font-size-base: 120%;
   --ifm-font-weight-semibold: 500;
   --ifm-code-font-size: 95%;
-  --ifm-heading-font-family: 'harabara', sans-serif;
+  --ifm-heading-font-family: 'Calibri';
 
   /* NAVBAR */
   --ifm-navbar-background-color: var(--ifm-background-color);
