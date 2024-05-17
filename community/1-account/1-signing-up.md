@@ -127,8 +127,6 @@ The Support and Operations team will review your application and verify the appl
 
 :::
 
-.
-
 ## 4. Post-sign-up account setup
 
 Your account should be ready for preliminary use after completing the previous step. However, to access our payment services, follow these steps:
