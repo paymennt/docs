@@ -149,7 +149,7 @@ Your account should be ready for preliminary use after completing the previous s
 6. Specify your default payment settings and press **Next**. Default payment settings include:
    + Transaction Limit
    + Default Link Validity Duration
-   + Payment Methods (to learn more about payment methods, see [Payment Methods](../2-manage/3-payment-methods/index.mdx))
+   + Payment Methods (to learn more about payment methods, see [Payment Methods](../2-account-management/3-payment-methods/index.mdx))
 7. Specify you tax settings and press **Next**. Tax settings include:
    + Tax is Applicable
    + Price is Tax Inclusive

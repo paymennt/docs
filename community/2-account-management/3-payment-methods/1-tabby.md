@@ -1,6 +1,6 @@
 ---
-title: tabby
-sidebar_label: tabby
+title: Tabby
+sidebar_label: Tabby
 slug: /manage/payment-methods/tabby
 ---
 
