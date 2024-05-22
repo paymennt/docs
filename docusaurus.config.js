@@ -5,21 +5,13 @@ const path = require("path");
 module.exports = {
   title: "Paymennt Documentation",
   tagline: "Build amazing payment experiences with the paymennt platform",
-  //url: "https://docs.paymennt.com",
-  //baseUrl: "/",
+  url: "https://docs.paymennt.com",
+  baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  //projectName: "docs",
-  //organizationName: "paymennt",
-
-
-  url: "https://github.com",
-  baseUrl: "/paymennt-docs/",
-  projectName: "paymennt-docs",
-  organizationName: "Hikkigaya",
-  deploymentBranch: "gh-pages",
-
+  projectName: "docs",
+  organizationName: "paymennt",
   trailingSlash: false,
   themeConfig: {
     navbar: {
