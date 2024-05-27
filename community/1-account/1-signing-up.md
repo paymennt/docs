@@ -20,7 +20,17 @@ Learn more about **Know Your Customer (KYC) and Know Your Business (KYB)** in th
 
 In order to sign up, you must download the **Paymennt** mobile application and start the signup process via the app. See, [Mobile App Download](0-mobile.mdx)
 
-:::
+::: 
+
+## Checklist for registration
+To get started, you'll need to have a registered business and the below documents.
+- Valid UAE Trade License
+- Applicant’s Emirates ID
+- Bank account details (IBAN)
+- Shareholders’ passport or national ID
+- Power of Attorney (if registering on behalf of the business owner)
+- Business address and contact details
+- Online profile of the business (such as company website)
 
 ## 1. Set up the account and verify your identity
 
@@ -160,7 +170,7 @@ Once you post sign-up account setup process, you are ready to start transacting 
 
 :::important Account Confirmation
 
-If the Support and Operations team makes the decision that and EDD (Extended Due Diligence) is required for your business, you will receive an email with the details and the team will guide you through the EDD process.
+If the Support and Operations team makes the decision that and EDD (Extended Due Diligence) is required for your business, you will receive an email with the details and the team will guide you through the EDD process. Additional documents that might be required my include a lease contract, invoices, source of fund proof, or bank statement.
 
 :::
 

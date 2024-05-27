@@ -73,7 +73,7 @@ module.exports = {
           items: [
             {
               label: "Payout Bank Account",
-              to: "/guides/manage/payouts/payout-account",
+              to: "/guides/account-management/payouts/payout-account",
             },
           ],
         },
