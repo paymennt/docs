@@ -5,10 +5,14 @@ sidebar_label: Access and Permissions
 
 ## Types of Access Level
 
+Paymennt offers 4 predefined user roles with specific access levels to simplify team management:
+
 - **Owner**: The owner account is suitable for the owners and founders of the company
 - **Company**: The company account is suitable for the leads and executives of the company
 - **Branch**: The company account is suitable for the branch managers of the company
 - **Employee**: The employee account is suitable for the general employee of the company
+
+You can also modify some of the features’ permission of each user.
 
 ## Permission categories
 
@@ -38,4 +42,8 @@ Below are the tables of the permissions for each access level
 | Disputes and tickets  |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
 | Commerce tools        |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| |
 
+:::important
+
 As an owner or company account user, you also have the flexibility to switch on/ off each user's permissions. For example, you can turn off the “Payment acceptance” permission of an employee user.
+
+:::

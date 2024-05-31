@@ -7,13 +7,21 @@ You can easily access and manage your business information using the sidebar nav
 
 Navigate to "My Business (Under “Account”)" > Choose the aspect of your business you'd like to update (e.g. Company Registration, Tax registration…etc)
 
+:::info
+
+You can update your business information as often as needed to ensure that it remains accurate and up-to-date. Whether you have changed your business address, contact details, or other information, you can make adjustments as necessary.
+
+:::
+
 ## Business Profile
 
 Customize your company logo, brand image, company description, and customer support information (email and phone number) on this page.
 
 ## Trade License
 
-Access and update your trade license information effortlessly. Simply tap the "Update Document" button to upload new trade license details.
+You can easily update your trade license by accessing the “Company Registration” page (Navigate from the side menu “My Account -> My Business Info -> Company Registration”.
+
+Simply tap the "Update Document" button to upload new trade license details.
 
 ## Tax Registration
 
@@ -39,7 +47,7 @@ View your company's existing delivery address, which is used for delivering or p
 
 Delete the merchant account permanently.
 
-:::note 
+:::note
 
 All registers must be settled before merchant deletion.
 
