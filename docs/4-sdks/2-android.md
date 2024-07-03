@@ -43,7 +43,7 @@ Include the **paymennt** Android SDK dependency to your project in `your_project
 
 ```jsx
 dependencies {
-  implementation 'com.github.pointcheckout:android-sdk:v1.3'
+  implementation 'com.github.pointcheckout:android-sdk:v1.5'
 }
 ```
 
