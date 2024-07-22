@@ -8,72 +8,82 @@ import styles from "./styles.module.css";
 
 const features = [
   {
-    title: "Product Guides",
-    target: "/guides",
-    imageUrl: "img/home/guides.svg",
+    title: "Joining Paymennt",
+    //target: "/guides",
+    imageUrl: "img/home/joining-paymennt.svg",
     description: (
       <>
-        Learn the ins and outs of the <strong>paymennt</strong> platform. Our
-        product guide will show you how to manage your merchant account and
-        covers topics critical for any business
+        Learn all you need to know about getting started with Paymennt and everything you need to open your account
       </>
     ),
   },
   {
-    title: "Accept Payments",
+    title: "Your Account",
     target: "/docs",
-    imageUrl: "img/home/accept.svg",
+    imageUrl: "img/home/your-account.svg",
     description: (
       <>
-        The <strong>old description</strong> didn't made any sense. Awaiting explaination of the the actual process to fill in th details
+        Configure your Paymennt account settings. Update personal information, manage security, and customize preferences
       </>
     ),
   },
   {
-    title: "E-commerce Plugins",
+    title: "Online Payments",
     target: "/docs/payment/ecomm",
-    imageUrl: "img/home/plugins.svg",
+    imageUrl: "img/home/online-payments.svg",
     description: (
       <>
-        Connect your e-commerce website to the powerful payment processing capabilities of <strong>paymennt</strong>. Choose a quick, reliable, and low-code solution thanks to our flexible plugins
+        Learn how to set up, send and receive online payments securely
       </>
     ),
   },
   {
-    title: "Software Kits",
+    title: "In-person Payments",
     target: "/docs/sdks",
-    imageUrl: "img/home/sdks.svg",
+    imageUrl: "img/home/in-person-payments.svg",
     description: (
       <>
-        Whether for your server or your mobile app, <strong>paymennt</strong> provides you with an array of SDKs to make your product development journey simpler
+        Set up and manage Paymennt POS devices and Tap on Phone transactions
       </>
     ),
   },
   {
-    title: "API Reference",
+    title: "APIs and Plugins",
     target: "/api",
-    imageUrl: "img/home/api.svg",
+    imageUrl: "img/home/api-and-plugins.svg",
     description: (
       <>
-        Access our full API reference documentation for complete instructions on how to implement and access the full range of features and tools made available to our merchants
+        Integrate and configure APIs and plugins to build your Paymennt account the way you want
       </>
     ),
   },
+  {
+      title: "Funds and Payments",
+      target: "/api",
+      imageUrl: "img/home/funds-and-payments.svg",
+      description: (
+        <>
+            Everything you need to know about fees and how your payments are processed
+        </>
+      ),
+    },
 ];
 
 function Feature({ imageUrl, target, title, description }) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
-    <div className={clsx("col col--4", styles.feature)}>
-      {imgUrl && (
-        <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
+    <div className={clsx("col col--5", styles.feature)}>
+        <div className={styles.featuresBoarder}>
+          {imgUrl && (
+            <div className="text--center">
+              <img className={styles.featureImage} src={imgUrl} alt={title} />
+            </div>
+          )}
+          <Link className={clsx(styles.featureHead)} to={useBaseUrl(target)}>
+            {title}
+          </Link>
+          <p>{description}</p>
         </div>
-      )}
-      <Link className={clsx(styles.featureHead)} to={useBaseUrl(target)}>
-        {title}
-      </Link>
-      <p>{description}</p>
     </div>
   );
 }

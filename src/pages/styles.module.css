@@ -30,15 +30,24 @@
   width: 100%;
 }
 
+.featuresBoarder {
+  border: 3px solid;
+  border-radius: 25px;
+  color: lightgrey;
+  padding: 1rem 1rem 1rem 1rem;
+  margin: 20px;
+}
+
 .featureHead {
-  color: var(--ifm-color-secondary);
+  color: var(--ifm-color-primary);
   cursor: pointer;
   letter-spacing: 1.4px;
   font-family: var(--ifm-heading-font-family);
-  font-weight: var(--ifm-font-weight-semibold);
+  font-weight: var(--ifm-font-weight-bold);
   position: relative;
   text-decoration: none;
-  font-size: large;
+  font-size: 2em;
+
 }
 
 .featureHead:hover {
@@ -48,5 +57,6 @@
 
 .featureImage {
   height: 200px;
-  width: 200px;
+  max-width: auto;
+  background-color: white;
 }

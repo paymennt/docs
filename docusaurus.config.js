@@ -3,8 +3,8 @@
 const path = require("path");
 
 module.exports = {
-  title: "Paymennt Documentation",
-  tagline: "Build amazing payment experiences with the paymennt platform",
+  title: "Get answers to everything Paymennt",
+  tagline: "Build amazing payment experiences with Paymennt’s unified platform",
   url: "https://docs.paymennt.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
