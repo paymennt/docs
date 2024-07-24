@@ -41,58 +41,42 @@ module.exports = {
       ],
     },
     footer: {
-      style: "light",
       links: [
         {
-          items: [
-            {
-              html: `
-                <a href="https://www.paymennt.com" target="_blank">
-                  <img src="/img/paymennt-logo.svg" alt="paymennt logo" width="114" height="51" />
+          html: `
+              <div>
+                  <a href="https://www.paymennt.com" target="_blank">
+                    <img src="/img/paymennt-logo-white.svg" alt="paymennt logo" width="114" height="51" />
+                  </a>
+              </div>
+          `,
+        },
+        {
+          label: 'Security',
+          href: 'https://www.google.com/',
+        },
+        {
+          label: 'Privacy',
+          href: 'https://www.google.com/',
+        },
+        {
+          label: 'API Specs',
+          href: 'https://www.google.com/',
+        },
+        {
+          html: `
+            <div class="footer__socials">
+                <a href="https://www.google.com/" target="_blank">
+                    <img src="/img/facebook.svg" alt="paymennt facebook" width="40"/>
                 </a>
-                <p style="font-size: smaller;">Copyright © ${new Date().getFullYear()} PointCheckout, Ltd</p>
-              `,
-            },
-          ],
-        },
-        {
-          title: "GUIDES",
-          items: [
-            {
-              label: "Account Registration",
-              to: "/guides/account/start",
-            },
-            {
-              label: "Desktop Access",
-              to: "/guides/account/desktop",
-            },
-          ],
-        },
-        {
-          title: "ACCOUNT MANAGEMENT",
-          items: [
-            {
-              label: "Payout Bank Account",
-              to: "/guides/account-management/payouts/payout-account",
-            },
-          ],
-        },
-        {
-          title: "ECOMMERCE PLUGINS",
-          items: [
-            {
-              label: "OpenCart",
-              href: "/docs/payment/ecomm/opencart",
-            },
-            {
-              label: "WooCommerce",
-              href: "/docs/payment/ecomm/woocommerce",
-            },
-            {
-              label: "Shopify",
-              href: "/docs/payment/ecomm/shopify",
-            },
-          ],
+                <a href="https://www.google.com/" target="_blank">
+                    <img  src="/img/instagram.svg" alt="paymennt instagram" width="40"/>
+                </a>
+                <a href="https://www.google.com/" target="_blank">
+                    <img  src="/img/linkedin.svg" alt="paymennt linkedin" width="40" />
+                </a>
+            </div>
+          `,
         },
       ],
     },
