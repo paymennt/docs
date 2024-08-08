@@ -1,0 +1,26 @@
+/* src/components/CenteredSearchBar.css */
+.centered-search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100% !important;
+}
+
+.algolia-autocomplete .ds-dropdown-menu {
+  width: 100% !important;
+}
+
+.algolia-autocomplete .ds-dropdown-menu::before {
+  display: none;
+}
+
+.DocSearch-Button-Keys
+{
+    display:none;
+}
+
+.centered-search-container .DocSearch.DocSearch-Button {
+  width: 100% !important; /* Adjust width as needed */
+  height:50px;
+}

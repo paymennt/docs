@@ -49,6 +49,7 @@
   --ifm-navbar-link-hover-color: var(--ifm-color-secondary);
   --ifm-navbar-item-padding-vertical: 0.5rem;
 
+
   /* HERO */
   --ifm-hero-background-color: var(--ifm-background-color);
 
@@ -94,6 +95,10 @@ h1, h2, h3, h4, h5 {
     }
 }
 
+.theme-doc-sidebar-container
+{
+    border-right:0px !important;
+}
 /**
  HOME PAGE OVERRIDES
  */
@@ -260,3 +265,11 @@ h1, h2, h3, h4, h5 {
 .redocusaurus .menu-content li>label {
   font-family: var(--ifm-font-family-base);
 }
+
+
+.redocusaurus .menu-content
+{
+border-right:0px !important;
+}
+
+

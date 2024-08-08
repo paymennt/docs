@@ -5,6 +5,7 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./styles.module.css";
+import CenteredSearchBar from '../components/CenteredSearchBar';
 
 const features = [
   {
@@ -110,9 +111,8 @@ export default function Home() {
           <div className="row">
             <div className="col">
               <div className={styles.buttons}>
-                <Link className={clsx("button button--outline button--secondary button--lg", styles.getStarted)} to={useBaseUrl("guides/")}>
-                  To be replaced with searchbar
-                </Link>
+                <CenteredSearchBar />
+
               </div>
             </div>
           </div>

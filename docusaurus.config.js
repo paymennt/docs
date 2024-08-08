@@ -115,7 +115,7 @@ module.exports = {
       searchPagePath: 'search',
 
       // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
-      insights: false,
+      //insights: false,
 
       //... other Algolia params
     },
@@ -161,8 +161,9 @@ module.exports = {
         path: "community",
         routeBasePath: "guides",
         sidebarPath: require.resolve("./sidebars.guides.js"),
-      },
+      }
     ],
+
     path.resolve(__dirname, "plugins/webpack"),
   ],
 };
