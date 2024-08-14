@@ -28,7 +28,6 @@
     gap: 0px;
     border-radius: 16px;
     justify: space-between;
-    opacity: 0px;
     background: #F7F7F7;
 
 }
@@ -50,7 +49,6 @@ height: 14.58px;
 top: 2.5px;
 left: 2.5px;
 gap: 0px;
-opacity: 0px;
 color: #CCCCCC;
 
 }

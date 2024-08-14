@@ -24,6 +24,7 @@ display:none;
 button.DocSearch.DocSearch-Button
 {
 width:100%;
+    background: #f7f7f7;
 }
 .searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module
 {
