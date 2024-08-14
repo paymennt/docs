@@ -4,12 +4,22 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
+ .hero__title
+ {
+ font-family: var(--ifm-font-family-base);
+ font-size: 40px;
+ font-weight: 700;
+ line-height: 48px;
+ letter-spacing: -0.02em;
+ text-align: left;
+
+ }
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 2rem 0;
   position: relative;
   overflow: hidden;
-  min-height: 400px;
+  min-height: 300px;
   text-align: center;
 }
 
@@ -27,32 +37,41 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 3rem 0;
+  padding: 0rem 0;
   width: 100%;
+
 }
 
 .featuresBoarder {
-  border: 3px solid;
-  border-radius: 25px;
+background: #FFFFFF;
+ border: 3px solid #EBEBEB;
+  border-radius: 32px;
   color: lightgrey;
-  padding: 2rem 1rem 1rem 1rem;
-  margin: 20px;
+  padding: 1rem 1rem 1rem 1rem;
+    margin: 20px auto 50px auto;
+    max-width: 400px;
+    min-height: 360px;
 }
 
 .featuresDescriptionText {
-  color: var(--ifm-color-primary-lightest)
+  color: var(--ifm-color-primary-lightest);
 }
 
 .featureHead {
   color: var(--ifm-color-primary);
   cursor: pointer;
+  /*
   letter-spacing: 1.4px;
   font-family: var(--ifm-heading-font-family);
   font-weight: var(--ifm-font-weight-bold);
   position: relative;
   text-decoration: none;
-  font-size: 2em;
-
+  font-size: 2em; */
+  font-family: var(--ifm-font-family-base);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
 }
 
 .featureHead:hover {
@@ -61,7 +80,7 @@
 }
 
 .featureImage {
-  height: 200px;
+  height: 178px;
   max-width: auto;
   background-color: white;
 }

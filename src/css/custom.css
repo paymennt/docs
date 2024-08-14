@@ -36,12 +36,12 @@
   --ifm-link-hover-decoration: none;
 
   /* FONT */
-  --ifm-font-family-base: 'Calibri';
+  --ifm-font-family-base: 'Urbanist';
   --ifm-font-size-base: 120%;
   --ifm-font-weight-semibold: 500;
   --ifm-font-weight-bold: 700;
   --ifm-code-font-size: 95%;
-  --ifm-heading-font-family: 'Calibri';
+  --ifm-heading-font-family: 'Urbanist';
 
   /* NAVBAR */
   --ifm-navbar-background-color: var(--ifm-background-color);
@@ -272,4 +272,29 @@ h1, h2, h3, h4, h5 {
 border-right:0px !important;
 }
 
+.side-padding {
+    margin-left: 16%;
+    margin-right: 16%;
+}
 
+.main_custom_title
+{
+font-family: var(--ifm-font-family-base);
+font-size: 40px;
+font-weight: 700;
+line-height: 48px;
+letter-spacing: -0.02em;
+color: #1A1A1A;
+margin-bottom: 1.5px;
+}
+
+.main_custom_subtitle
+{
+font-family: var(--ifm-font-family-base);
+font-size: 24px;
+font-weight: 500;
+line-height: 36px;
+text-align: center;
+color: #666666;
+
+}

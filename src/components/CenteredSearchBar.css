@@ -5,6 +5,7 @@
   align-items: center;
   text-align: center;
   width: 100% !important;
+  border-radius: 16px;
 }
 
 .algolia-autocomplete .ds-dropdown-menu {
@@ -23,4 +24,33 @@
 .centered-search-container .DocSearch.DocSearch-Button {
   width: 100% !important; /* Adjust width as needed */
   height:50px;
+    padding: 28px 16px 28px 16px;
+    gap: 0px;
+    border-radius: 16px;
+    justify: space-between;
+    opacity: 0px;
+    background: #F7F7F7;
+
+}
+
+span.DocSearch-Button-Placeholder {
+font-family: var(--ifm-font-family-base);
+font-size: 16px;
+font-weight: 400;
+line-height: 17.5px;
+letter-spacing: 0.3854166269302368px;
+text-align: left;
+color: #999999;
+
+}
+
+svg.DocSearch-Search-Icon {
+width: 14.58px;
+height: 14.58px;
+top: 2.5px;
+left: 2.5px;
+gap: 0px;
+opacity: 0px;
+color: #CCCCCC;
+
 }

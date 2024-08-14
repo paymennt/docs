@@ -9,6 +9,7 @@ import CenteredSearchBar from '../components/CenteredSearchBar';
 
 const features = [
   {
+  id:1,
     title: "Joining Paymennt",
     //target: "/guides",
     imageUrl: "img/home/joining-paymennt.svg",
@@ -19,6 +20,7 @@ const features = [
     ),
   },
   {
+  id:2,
     title: "Your Account",
     target: "/docs",
     imageUrl: "img/home/your-account.svg",
@@ -29,6 +31,7 @@ const features = [
     ),
   },
   {
+   id:3,
     title: "Online Payments",
     target: "/docs/payment/ecomm",
     imageUrl: "img/home/online-payments.svg",
@@ -39,6 +42,7 @@ const features = [
     ),
   },
   {
+   id:4,
     title: "In-person Payments",
     target: "/docs/sdks",
     imageUrl: "img/home/in-person-payments.svg",
@@ -49,6 +53,7 @@ const features = [
     ),
   },
   {
+   id:5,
     title: "APIs and Plugins",
     target: "/api",
     imageUrl: "img/home/api-and-plugins.svg",
@@ -59,6 +64,7 @@ const features = [
     ),
   },
   {
+   id:6,
       title: "Funds and Payments",
       target: "/api",
       imageUrl: "img/home/funds-and-payments.svg",
@@ -70,10 +76,11 @@ const features = [
     },
 ];
 
-function Feature({ imageUrl, target, title, description }) {
+function Feature({ id,imageUrl, target, title, description }) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={clsx("col col--6", styles.feature)}>
+
         <div className={styles.featuresBoarder}>
           {imgUrl && (
             <div className="text--center">
@@ -100,12 +107,12 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col">
-              <h1 className="hero__title">{siteConfig.title}</h1>
+              <h1 className="hero__title main_custom_title">{siteConfig.title}</h1>
             </div>
           </div>
           <div className="row">
             <div className="col">
-              <p className="hero__subtitle">{siteConfig.tagline}</p>
+              <p className="hero__subtitle main_custom_subtitle">{siteConfig.tagline}</p>
             </div>
           </div>
           <div className="row">
@@ -122,9 +129,13 @@ export default function Home() {
         {features && features.length > 0 && (
           <section className={styles.features}>
             <div className="container">
-              <div className="row justify-content-md-center">
+              <div className="row justify-content-md-center side-padding">
                 {features.map((props, idx) => (
-                  <Feature key={idx} {...props} />
+                    <>
+
+                     <Feature key={idx} {...props} />
+</>
+
                 ))}
               </div>
             </div>
