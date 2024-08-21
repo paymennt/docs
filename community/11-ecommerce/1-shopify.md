@@ -1,0 +1,10 @@
+---
+title: Shopify
+sidebar_label: Shopify
+---
+
+# Create a custom app in Shopify
+
+In your Shopify Setting page, go to “Apps and sales channels” setting, and click “Develop App” on the top right corner, and then click “Create App”.
+
+![Alternate Text](img/community/ecommerce/sp-1.png)
