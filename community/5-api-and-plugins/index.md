@@ -1,5 +1,5 @@
 ---
-title: E-commerce Integration
+title: API and Plugins
 ---
 
 **Paymennt** offers a range of plugins for leading technology solutions to give your shoppers the best checkout experience. Our plugins are easy to integrate and come with **paymennt.com** payment platform functionality delivered out of the box.

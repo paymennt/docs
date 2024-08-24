@@ -1,5 +1,5 @@
 ---
-title: Managing your merchant account
+title: Your Account
 ---
 
 Efficiently manage your merchant account business operations with rich features.

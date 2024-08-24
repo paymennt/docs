@@ -1,5 +1,5 @@
 ---
-title: Paymennt Subscription Plan management
+title: Plan Management
 ---
 
 Manage your subscription plan with **paymennt**:

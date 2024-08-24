@@ -26,6 +26,5 @@ Related articles:
 
 * [Payment methods](3-payments-methods.md)
 * [Multicurrency payments](4-multicurrency-payments.md)
-* [Manage my Products and Events](7-products,-collections,-and-events.md)
+* [Manage my Products and Events](7-products-collections-and-events.md)
 * [Manage my Customers](8-customers.md)
-

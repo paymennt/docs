@@ -2,6 +2,7 @@
 title: Online Shop and Paymennt API
 sidebar_label: Online Shop and Paymennt API
 ---
+
 At Paymennt.com, we provide online shop functionality exclusively to merchants with standard and premium plans. With our user-friendly mobile app, editing your online shop layout is a breeze.
 
 If you already have an existing online shop, you can seamlessly integrate it with <ins>Paymennt’s API</ins> for a smooth and efficient transition.

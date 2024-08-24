@@ -1,5 +1,5 @@
 ---
-title: Paymennt User Settings
+title: User Settings
 ---
 
 You can edit your contact information and account settings on the user settings page. The user settings page can be accessed by tapping the “Profile Picture” icon on the top left corner of the side menu

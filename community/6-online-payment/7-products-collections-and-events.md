@@ -2,11 +2,12 @@
 title: Products, Collections, and Events
 sidebar_label: Products, Collections, and Events
 ---
+
 At Paymennt.com, we offer a suite of powerful tools to help you effortlessly set up and manage your business. Our platform allows you to create and organize products, collections, and events, making it simple to integrate them into orders or let customers easily add them to their shopping carts on your online store.
 
 ## Products
 
-Products include goods, digital downloads, services, and gift cards. Adding a product involves inputting details and images. For products with options like size or color, you can create variants for each combination. Variants represent additional options like size or color. Each unique combination forms a variant. 
+Products include goods, digital downloads, services, and gift cards. Adding a product involves inputting details and images. For products with options like size or color, you can create variants for each combination. Variants represent additional options like size or color. Each unique combination forms a variant.
 
 ### Adding products
 
@@ -24,7 +25,7 @@ Products include goods, digital downloads, services, and gift cards. Adding a pr
 
 1. Navigate to "Catalog” (Under Commerce management) -> Products" from the side menu to access your existing products.
 2. Tap on an existing product that you would like to have variants
-3. On the product details page, scroll down and go to the “Variants” section. 
+3. On the product details page, scroll down and go to the “Variants” section.
 4. Tap “Add” on the “Variants” section
 5. Input the variant title, label, unit price, inventory, and any product details override if necessary.
 
@@ -32,12 +33,12 @@ Products include goods, digital downloads, services, and gift cards. Adding a pr
 
 1. Navigate to "Catalog (Under Commerce management) -> Products" from the side menu to access your existing products.
 2. Tap on an existing product that you would like to have variants
-3. On the product details page, scroll down and go to the “Variants” section. 
+3. On the product details page, scroll down and go to the “Variants” section.
 4. Tap on the variant title or variant list to edit the variant title or details respectively
 
 ## Collections
 
-Grouping products into collections organizes items into categories for a better shopping experience. 
+Grouping products into collections organizes items into categories for a better shopping experience.
 
 ### Adding and Updating Collections
 
@@ -54,7 +55,6 @@ You can add a single product to a collection from the “Product details” page
 2. Select the product that you want to add to a collection
 3. Go to the “Collection” section and tap “Add”
 4. You can add the product to multiple collections if necessary
-
 
 ## Events
 

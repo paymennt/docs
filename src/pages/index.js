@@ -11,7 +11,7 @@ const features = [
   {
   id:1,
     title: "Joining Paymennt",
-    //target: "/guides",
+    target: "/guides/account",
     imageUrl: "img/home/joining-paymennt.svg",
     description: (
       <>
@@ -22,7 +22,7 @@ const features = [
   {
   id:2,
     title: "Your Account",
-    target: "/docs",
+    target: "/guides/account-management",
     imageUrl: "img/home/your-account.svg",
     description: (
       <>
@@ -33,7 +33,7 @@ const features = [
   {
    id:3,
     title: "Online Payments",
-    target: "/docs/payment/ecomm",
+    target: "/guides/online-payment",
     imageUrl: "img/home/online-payments.svg",
     description: (
       <>
@@ -55,7 +55,7 @@ const features = [
   {
    id:5,
     title: "APIs and Plugins",
-    target: "/api",
+    target: "/guides/api-and-plugins",
     imageUrl: "img/home/api-and-plugins.svg",
     description: (
       <>

@@ -1,5 +1,5 @@
 ---
-title: Paymennt App Settings
+title: App Settings
 ---
 
 You can access the app settings page by clicking the “Settings” icon on the side menu.

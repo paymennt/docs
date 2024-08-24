@@ -3,6 +3,8 @@ title: FAQ
 sidebar_label: FAQ
 ---
 
+https://docs.google.com/document/d/130dsRje623Tx5yvE6IHhvZ4hvTTXHHSQJ6KH4Cdgz1Q/edit#heading=h.x5jspt1cvv0j 
+
 ## Can I sign up for multiple accounts?
 
 Yes, you can! Simply sign up following the same registration flow.
