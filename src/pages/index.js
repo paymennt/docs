@@ -66,7 +66,7 @@ const features = [
   {
    id:6,
       title: "Funds and Payments",
-      target: "/api",
+      target: "/guides/funds-and-payments",
       imageUrl: "img/home/funds-and-payments.svg",
       description: (
         <>

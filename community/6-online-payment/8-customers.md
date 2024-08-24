@@ -4,6 +4,7 @@ sidebar_label: Customers
 ---
 
 At Paymennt.com, we offer a synced list of customers accessible across all user accounts of your business. This allows your business to effortlessly send payment requests to these customers.
+
 1. Navigate to "Customer (Under Commerce management)" from the side menu to access your existing customers.
 2. Tap “+ Create new customer” to add new customers
 3. Input the customer information
