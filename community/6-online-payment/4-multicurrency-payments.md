@@ -14,9 +14,9 @@ If your plan qualifies for multicurrency payments, you can easily change the cur
 
 ## Multi-currency terms and conditions​
 
-1. **FX rates are calculated at the time of payment**
-
+1. **FX rates are calculated at the time of payment**:
 When using Multi-Currency Processing, the conversion rate for each transaction is determined at the time of payment. If you issue a refund, the conversion rate applied will be the rate at the time of the refund, not the original payment. By initiating a payment or refund, you accept the applicable conversion rate.
+
 2. **Supported currencies vary based on account country**
 
 Supported currencies may vary depending on your account's country, and we reserve the right to adjust the list of supported currencies.
