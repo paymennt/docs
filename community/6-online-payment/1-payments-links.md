@@ -2,6 +2,7 @@
 title: Payment links
 sidebar_label: Payment links
 ---
+
 Sending a payment link is a very useful tool to guarantee client payment when selling through social media, chat, email, or over the phone. With Paymennt, you can easily create and share a payment link with your customers.
 
 ## Create a payment link
@@ -24,7 +25,7 @@ Use the product payment link to generate an invoice from products and events, or
 
 Related articles:
 
-* [Payment methods](3-payments-methods.md)
+* [Payment methods](3-payment-methods.md)
 * [Multicurrency payments](4-multicurrency-payments.md)
 * [Manage my Products and Events](7-products-collections-and-events.md)
 * [Manage my Customers](8-customers.md)

@@ -27,7 +27,7 @@ Easily manage your customer database
 
 ## FAQ
 
-### Payment link
+### [Payment link](10-faq.md#faq-payment-link)
 
 * What is a payment link?
 * How do payment links work?
@@ -40,7 +40,7 @@ Easily manage your customer database
 * Can I send payment links with subscription requests?
 * Can I list my mobile contacts as customers?
 
-### Products
+### [Products](10-faq.md#faq-products)
 
 * Is there a limit on the number of products?
 * How do I create a product for payment links and online shops?
@@ -49,7 +49,7 @@ Easily manage your customer database
 * Can I offer discounts or promotions on products?
 * Is it possible to track sales and revenue from different channels (payment links and online shop)?
 
-### Online Shop
+### [Online Shop](10-faq.md#faq-online-shop)
 
 * Do I have to pay anything for setting up my Shop?
 * Can I use my own custom domain?

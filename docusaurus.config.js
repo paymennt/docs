@@ -45,7 +45,7 @@ module.exports = {
         {
           html: `
               <div>
-                  <a href="https://www.paymennt.com" target="_blank">
+                  <a href="https://www.paymennt.com" target="_blank" class = "custom-paymennt-icon">
                     <img src="/img/paymennt-logo-white.svg" alt="paymennt logo" width="114" height="51" />
                   </a>
               </div>
@@ -54,26 +54,42 @@ module.exports = {
         {
           label: 'Security',
           href: 'https://www.google.com/',
+         className: 'custom-footer-label', // Add a custom class here
         },
         {
           label: 'Privacy',
           href: 'https://www.google.com/',
+          className: 'custom-footer-label', // Add a custom class here
         },
         {
           label: 'API Specs',
           href: 'https://www.google.com/',
+          className: 'custom-footer-label', // Add a custom class here
         },
         {
           html: `
+          
             <div class="footer__socials">
-                <a href="https://www.google.com/" target="_blank">
-                    <img src="/img/facebook.svg" alt="paymennt facebook" width="40"/>
+                <a href="https://www.google.com/" target="_blank" >
+                    <img src="/img/facebook.svg" alt="paymennt facebook" style="
+    width: 24px;
+    height: 24px;
+    margin-right: 2%;
+" />
                 </a>
-                <a href="https://www.google.com/" target="_blank">
-                    <img  src="/img/instagram.svg" alt="paymennt instagram" width="40"/>
+                <a href="https://www.google.com/" target="_blank" >
+                    <img  src="/img/instagram.svg" alt="paymennt instagram" style="
+    width: 24px;
+    height: 24px;
+    margin-right: 2%;
+" />
                 </a>
-                <a href="https://www.google.com/" target="_blank">
-                    <img  src="/img/linkedin.svg" alt="paymennt linkedin" width="40" />
+                <a href="https://www.google.com/" target="_blank"  >
+                    <img  src="/img/linkedin.svg" alt="paymennt linkedin" style="
+        width: 18px;
+    height: 18px;
+    margin-bottom: 3px;
+"  />
                 </a>
             </div>
           `,

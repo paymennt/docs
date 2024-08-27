@@ -3,6 +3,8 @@ title: OpenCart Integration
 sidebar_label: OpenCart
 ---
 
+>View on [GitHub](https://github.com/paymennt/opencart)
+
 From downloading the plugin to requesting your first test payment, learn how to get started with the paymennt for OpenCart plugin.
 
 :::info
@@ -17,7 +19,7 @@ To learn about the OpenCart Plugin integation process in detail, see [GitHub](ht
 
 :::
 
-## Install/Update the plugin​
+## Install/Update the plugin​ using plugin .zip file
 
 1. Log in to your **OpenCart** administrator panel.
 2. Download the latest release **paymennt.ocmod.zip** file from the [releases section](https://github.com/paymennt/opencart/releases/tag/v1.0.1).

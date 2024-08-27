@@ -3,8 +3,9 @@ title: Payment methods
 sidebar_label: Payment methods
 ---
 
-BEFORE YOU START:
-You need to have an “Owner” or “Company” user account to view and manage the all finance related settings
+>BEFORE YOU START:
+>
+>You need to have an “Owner” or “Company” user account to view and manage the all finance related settings
 
 You can manage your payment method by accessing the “Payment Methods” page from the side-bar: “Finance (Under “Account”) -> Payment methods (Under “Settings”)
 

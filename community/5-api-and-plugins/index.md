@@ -6,6 +6,6 @@ title: API and Plugins
 
 In this section:
 
-1. [Woocommerce Integration](/community/5-ecommerce-integration/1-woocommerce.md)
-2. [OpenCart Integration](/community/5-ecommerce-integration/2-opencart.md)
-3. [Shopify Integration](/community/5-ecommerce-integration/3-shopify.md)
+1. [Woocommerce Integration](1-woocommerce.md)
+2. [OpenCart Integration](2-opencart.md)
+3. [Shopify Integration](3-shopify.md)

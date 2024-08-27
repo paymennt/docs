@@ -26,4 +26,4 @@ When a reserved amount is applied, you will receive an email notification from o
 
 ### Related articles
 
-> -  Account Balance
+* [Account Balance](/10-funds-and-payments/1-account-balance.md)

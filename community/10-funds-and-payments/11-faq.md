@@ -3,10 +3,7 @@ title: FAQ
 sidebar_label: FAQ
 ---
 
-
-## FAQ - Finance
-
-## Payout and Settlement
+## Payout and Settlement {#faq-payout-and-settlement}
 
 ### How can I get my payout?
 
@@ -21,10 +18,12 @@ No, payout does not processed on weekends or holidays.
 There is a minimum AED 250 payout limit. For payout request less than this amount, please contact our customer service team.
 
 ### How long is the settlement period?
+
 The settlement period typically varies based on your plan and transaction details. For specific information, please refer to the plan details or contact customer support.
 
 ### Why is there a delay in settlement?
-Settlement delays may occur due to various factors such as transaction verification, compliance checks, or processing times with financial institutions. We strive to minimize delays and ensure timely settlements whenever possible. Check the <ins>Hold Period</ins> section on the Settlement page for more information.
+
+Settlement delays may occur due to various factors such as transaction verification, compliance checks, or processing times with financial institutions. We strive to minimize delays and ensure timely settlements whenever possible. Check the <ins>[Hold Period](4-settlement.md)</ins> section on the Settlement page for more information.
 
 ### Does paymennt offer auto payout?
 
@@ -34,7 +33,7 @@ Yes, we offered free daily auto payout to Standard and Premium plan users. We al
 
 Yes, you can pause the auto payout by turning off the “Enable auto payouts” on the Payout Management page.
 
-## Hold Period
+## Hold Period {#faq-hold-period}
 
 ### What is a hold period?
 
@@ -56,7 +55,7 @@ In some cases, you may be able to request an early release of held funds by prov
 
 If you disagree with a transaction during the hold period, it's essential to gather relevant information and documentation to support your claim. You can reply to the dispute request or contact our customer service team.
 
-## Disputes
+## Disputes {#faq-disputes}
 
 ### What documentation may be required to resolve a dispute?
 
@@ -70,7 +69,7 @@ Funds may be automatically released after the hold period expires if there are n
 
 To prevent disputes and minimize hold periods, it's essential to ensure transparency and clarity in your transactions, provide accurate information and communicate effectively with customers. Additionally, maintaining detailed records and documentation can help expedite the resolution of any disputes that may arise.
 
-## Card on File
+## Card on File {#faq-card-on-file}
 
 ### Will I get charged immediately after submitting my payment card info?
 

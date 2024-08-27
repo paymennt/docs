@@ -4,8 +4,10 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
-@import url('https://fonts.cdnfonts.com/css/harabara');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+/* @import url('https://fonts.cdnfonts.com/css/harabara'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700&display=swap');
+
 
 /* You can override the default Infima variables here. */
 :root {
@@ -36,12 +38,12 @@
   --ifm-link-hover-decoration: none;
 
   /* FONT */
-  --ifm-font-family-base: 'Urbanist';
+  --ifm-font-family-base: 'Urbanist', sans-serif;
   --ifm-font-size-base: 120%;
   --ifm-font-weight-semibold: 500;
   --ifm-font-weight-bold: 700;
   --ifm-code-font-size: 95%;
-  --ifm-heading-font-family: 'Urbanist';
+  --ifm-heading-font-family: 'Urbanist', sans-serif;
 
   /* NAVBAR */
   --ifm-navbar-background-color: var(--ifm-background-color);
@@ -66,6 +68,10 @@
   --ifm-footer-link-color: var(--ifm-color-white);
   --ifm-footer-link-hover-color: var(--ifm-color-primary);
   */
+}
+
+body {
+  font-family: 'Urbanist', sans-serif;
 }
 
 /**
@@ -130,7 +136,7 @@ h1, h2, h3, h4, h5 {
 /* FOOTER                                     */
 /* ****************************************** */
 .footer {
-  padding: calc(var(--ifm-footer-padding-vertical) * 2) var(--ifm-footer-padding-horizontal) var(--ifm-footer-padding-vertical);
+  padding: calc(var(--ifm-footer-padding-vertical) * 1) var(--ifm-footer-padding-horizontal) var(--ifm-footer-padding-vertical);
 }
 
 .footer__logo {
@@ -138,7 +144,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .footer__socials {
-  padding: 2rem 0;
+  padding: 1rem 0 0 0;
 
 }
 
@@ -297,4 +303,59 @@ line-height: 36px;
 text-align: center;
 color: #666666;
 
+}
+
+.custom-footer-label
+{
+  width: 245px;
+  height: 19px;
+  gap: 36px;
+  font-family: var(--ifm-font-family-base);
+font-size: 16px;
+font-weight: 500;
+line-height: 19.2px;
+letter-spacing: -0.02em;
+text-align: left;
+color: #FFFFFFB2;
+
+}
+.custom-footer-social-item
+{
+  /* width: 24px;
+  height: 24px;
+  padding: 2px; */
+
+}
+
+.custom-footer-social-icon-linkedIn
+{
+  /* width: 18px;
+  height: 18px;
+  top: 3px;
+  left: 3px;
+  gap: 0px; */
+
+}
+
+
+
+.custom-footer-social-icon
+{
+  /* width: 20px;
+height: 20px;
+top: 2px;
+left: 2px;
+gap: 0px; */
+
+
+}
+.custom-paymennt-icon
+{
+  width: 120.52px;
+  height: 36px;
+  
+}
+.custom-footer-label svg
+{
+  display: none;
 }

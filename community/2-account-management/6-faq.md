@@ -11,11 +11,11 @@ Yes, you can log in to multiple devices simultaneously using the same credential
 
 ### Are there predefined user roles with specific permissions?
 
-Yes, we offer 4 predefined user roles (Owner, Company Branch, and Employee) with specific access levels to simplify team management. You can also modify some of the features’ permission of each user. Read the <ins>Team setting and permissions,</ins> for more information.
+Yes, we offer 4 predefined user roles (Owner, Company Branch, and Employee) with specific access levels to simplify team management. You can also modify some of the features’ permission of each user. Read the <ins>[Team setting and permissions](2-team-settings/index.md)</ins>, for more information.
 
 ### Can I create custom user roles with unique permissions?
 
-Yes, you have the flexibility to create custom user roles with unique permissions tailored to your organization's needs, such as turning off the “Payment acceptance” permission for an employee user. Read the <ins>Team setting and permissions</ins> for more information. 
+Yes, you have the flexibility to create custom user roles with unique permissions tailored to your organization's needs, such as turning off the “Payment acceptance” permission for an employee user. Read the <ins>[Team setting and permissions](2-team-settings/index.md)</ins> for more information.
 
 ### How often can I update my business information?
 
@@ -27,13 +27,12 @@ You can easily update your trade license by accessing the “Company Registratio
 
 ### How can I update my business information?
 
-You can easily change your business information by navigating to the appropriate settings under the “My Business” from the side menu. Read the Manage Business Information for more information.
+You can easily change your business information by navigating to the appropriate settings under the “My Business” from the side menu. Read the [Manage Business Information](3-business-information.md) for more information.
 
 ### What happens to associated data when a user or merchant account is deleted?
 
-    -  When a user account is deleted, associated data such as settings, and permissions may also be removed from the system.
-    
-    - When a merchant account is deleted, associated data such as transactions, settings, and permissions may also be removed from the system. It's important to review and back up any essential data before proceeding with the deletion to avoid unintended data loss.
+* When a user account is deleted, associated data such as settings, and permissions may also be removed from the system.
+* When a merchant account is deleted, associated data such as transactions, settings, and permissions may also be removed from the system. It's important to review and back up any essential data before proceeding with the deletion to avoid unintended data loss.
 
 ### Will I be refunded if I downgrade to a lower-tier plan?
 

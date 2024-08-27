@@ -3,6 +3,8 @@ title: Woocommerce Integration
 sidebar_label: Woocommerce
 ---
 
+>View on [GitHub](http://www.github.com/pointcheckout/woocommerce)
+
 From installing the plugin to requesting your first test payment, learn how to get started with the paymennt for the WooCommerce plugin.
 
 :::info
