@@ -21,7 +21,7 @@ module.exports = {
       },
       items: [
         {
-          to: "guides/",
+          to: "guides/account/",
           activeBasePath: "guides",
           label: "USER GUIDE",
           position: "left",

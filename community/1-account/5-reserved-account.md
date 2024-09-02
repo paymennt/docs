@@ -18,12 +18,18 @@ A percentage of your transactions is reserved over a set period, adjusting based
 
 A specific, constant amount is reserved, such as $500. This amount remains unchanged regardless of transaction volume.
 
-> **Note:** Reserved amounts will be assigned or adjusted by the compliance team based on your risk level whenever necessary. For more information or assistance, please contact our support team.
+:::note
+
+Reserved amounts will be assigned or adjusted by the compliance team based on your risk level whenever necessary. For more information or assistance, please contact our support team.
+
+:::
 
 ### Notifications and Account Information
 
 When a reserved amount is applied, you will receive an email notification from our operations team. Additionally, the reserved amount will be displayed on your account balance page for your reference.
 
-### Related articles
+***
 
-* [Account Balance](/10-funds-and-payments/1-account-balance.md)
+#### Related Articles
+
+* [<ins>Account Balance</ins>](/10-funds-and-payments/1-account-balance.md)

@@ -16,7 +16,7 @@ Paymmnet.com allows you to create subscriptions which customers authorize automa
 3. To start a new subscription request, you can tap the “+” on the top right corner
 4. You can select either an amount, some products, or some event tickets for the payment request
 5. You would need to name the subscription (such as “Monthly subscription to gym membership”) and input the subscription settings
-6. Finally, you can select customer(s) to share the subscription request with. 
+6. Finally, you can select customer(s) to share the subscription request with.
 
 After creating a subscription request, the payment invoice will be sent to the selected customer by email. Payment will be collected from the customer subsequently according to the billing cycle.
 
@@ -35,3 +35,10 @@ When you need to temporarily halt a subscription, you can use the "Pause" featur
 ### Archive
 
 Alternatively, if you no longer require a subscription, you can choose to "Archive" it. This action moves the record to an "Archive list," ceasing payment collection while maintaining the subscription end date. To reactivate or resume payment collection for an archived subscription, manual intervention is necessary by accessing the Archive list.
+
+***
+
+#### Related articles
+
+* [<ins>Products, Collections, and Events</ins>](7-products-collections-and-events.md)
+* [<ins>Customers</ins>](8-customers.md)

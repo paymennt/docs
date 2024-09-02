@@ -45,7 +45,8 @@ Yes, you can! Paymennt platform allows you to create payment links with recurrin
 
 ## Customers
 
-Can I list my mobile contacts as customers?
+### Can I list my mobile contacts as customers?
+
 Yes, you can list your mobile contacts as customers in your customer database. Kindly accept the authorization request to allow Paymennt mobile app to accept your contact list when opening the customer page.
 
 ## Products {#faq-products}

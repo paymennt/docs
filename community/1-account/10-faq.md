@@ -71,7 +71,7 @@ For businesses with 100% ownership, you're welcome to sign up using your persona
 
 Yes, some industries may be prohibited or restricted from working with Paymennt.com due to factors such as local and international laws, risk level, or requirements of payment partners
 
-<ins>Link to List of restricted business</ins>
+See the [<ins>List of Restricted Business</ins>](https://www.paymennt.com/en/restricted-businesses).
 
 ## What are KYC?
 

@@ -32,7 +32,7 @@ Below documents are collected during the onboarding process for KYC purpose.
   * Lease contract for the business premises
   * Other relevant documents based on the nature of the business and associated risks
 
-## 2. Ongoing Monitoring
+### 2. Ongoing Monitoring
 
 After the initial onboarding, Paymennt maintains an active monitoring system to oversee transactions and ensure ongoing compliance. This includes:
 
@@ -41,7 +41,7 @@ After the initial onboarding, Paymennt maintains an active monitoring system to 
 * **Behavioral Analysis:** Analyzing the behavior of customers and merchants to identify potential red flags that could indicate fraudulent or illicit activities.
 * **Data Security:** Ensuring that all collected KYC data is securely stored and protected against unauthorized access.
 
-## 3. Periodic KYC Reviews
+### 3. Periodic KYC Reviews
 
 To ensure that KYC information remains accurate and up-to-date, Paymennt conducts periodic reviews of KYC documentation. This process involves:
 
@@ -49,6 +49,8 @@ To ensure that KYC information remains accurate and up-to-date, Paymennt conduct
 * **Risk Reassessment:** Reassessing the risk level associated with each customer or merchant based on their updated information and transaction history.
 * **Regulatory Compliance:** Ensuring that the KYC process aligns with current regulatory requirements and industry standards.
 
-## Related articles
+***
 
-* Restricted countries and prohibited businesses
+#### Related Articles
+
+* [<ins>Restricted Countries and Prohibited Businesses</ins>](https://www.paymennt.com/en/restricted-businesses)

@@ -33,31 +33,31 @@ Understand how refund can be processed in Paymennt
 
 ## FAQ
 
-### [Payout and Settlement](11-faq.md#faq-payout-and-settlement)
+### Payout and Settlement
 
-* How can I get my payout?
-* Are payouts processed on weekends or holidays?
-* Is there a minimum payout threshold?
-* How long is the settlement period?
-* Why is there a delay in settlement?
-* Does paymennt offer auto payout?
-* Can I pause auto payout?
+* [<ins>How can I get my payout?</ins>](11-faq.md#how-can-i-get-my-payout)
+* [<ins>Are payouts processed on weekends or holidays?</ins>](11-faq.md#are-payouts-processed-on-weekends-or-holidays)
+* [<ins>Is there a minimum payout threshold?</ins>](11-faq.md#is-there-a-minimum-payout-threshold)
+* [<ins>How long is the settlement period?</ins>](11-faq.md#how-long-is-the-settlement-period)
+* [<ins>Why is there a delay in settlement?</ins>](11-faq.md#why-is-there-a-delay-in-settlement)
+* [<ins>Does paymennt offer auto payout?</ins>](11-faq.md#does-paymennt-offer-auto-payout)
+* [<ins>Can I pause auto payout?</ins>](11-faq.md#can-i-pause-auto-payout)
 
-### [Hold Period](11-faq.md#faq-hold-period)
+### Hold Period
 
-* What is a hold period?
-* Why are funds held during a hold period?
-* How long does a hold period typically last?
-* Can I request an early release of held funds?
-* What should I do if I disagree with a transaction during the hold period?
+* [<ins>What is a hold period?</ins>](11-faq.md#what-is-a-hold-period)
+* [<ins>Why are funds held during a hold period?</ins>](11-faq.md#why-are-funds-held-during-a-hold-period)
+* [<ins>How long does a hold period typically last?</ins>](11-faq.md#how-long-does-a-hold-period-typically-last)
+* [<ins>Can I request an early release of held funds?</ins>](11-faq.md#can-i-request-an-early-release-of-held-funds)
+* [<ins>What should I do if I disagree with a transaction during the hold period?</ins>](11-faq.md#what-should-i-do-if-i-disagree-with-a-transaction-during-the-hold-period)
 
-### [Disputes](11-faq.md#faq-disputes)
+### Disputes
 
-* What documentation may be required to resolve a dispute?
-* Are funds automatically released after the hold period expires?
-* How can I prevent disputes and minimize hold periods?
+* [<ins>What documentation may be required to resolve a dispute?</ins>](11-faq.md#what-documentation-may-be-required-to-resolve-a-dispute)
+* [<ins>Are funds automatically released after the hold period expires?</ins>](11-faq.md#are-funds-automatically-released-after-the-hold-period-expires)
+* [<ins>How can I prevent disputes and minimize hold periods?</ins>](11-faq.md#how-can-i-prevent-disputes-and-minimize-hold-periods)
 
-### [Card on File](11-faq.md#faq-card-on-file)
+### Card on File
 
-* Will I get charged immediately after submitting my payment card info?
-* Can I change my card-on-file information?
+* [<ins>Will I get charged immediately after submitting my payment card info?</ins>](11-faq.md#will-i-get-charged-immediately-after-submitting-my-payment-card-info)
+* [<ins>Can I change my card-on-file information?</ins>](11-faq.md#can-i-change-my-card-on-file-information)
