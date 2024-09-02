@@ -15,3 +15,9 @@ You can also view and edit existing customers following similar steps
 2. Tap an existing customer records
 
 In the existing customer’s record, you can edit the record by tapping “Edit” on the top right corner. You can also request payment, view transaction history and view any active activities from this customer.
+
+***
+
+#### Related Articles
+
+* [<ins>Payment Links</ins>](1-payments-links.md)

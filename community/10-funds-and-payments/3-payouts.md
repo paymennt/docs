@@ -3,9 +3,11 @@ title: Payouts
 sidebar_label: Payouts
 ---
 
->BEFORE YOU START
->
->You need to have an “Owner” or “Company” user account to view and manage all finance-related settings
+:::note Before You Start
+
+You need to have an “Owner” or “Company” user account to view and manage all finance-related settings
+
+:::
 
 Getting your payouts from Paymennt.com is simple - they're directly deposited into your bank account according to the payout frequency. With the Paymennt.com platform, you have full control over your payout frequency and preferences. Whether you prefer automated schedules or manual requests, managing your payouts is effortless. Plus, you can set a minimum transfer amount to minimize transfer fees.
 
@@ -15,13 +17,17 @@ Know more about the payout settings:
 * **[Management auto payout](#management-auto-payout)**
 * **[View and change the payout bank account](#view-and-change-payout-bank-account)**
 
->BEFORE YOU START
->
->You need to have an “Owner” or “Company” user account to view and update the payout bank account.
->
->CHANGES TO PAYOUT SETTINGS
->
->Automatic payouts are generated at 6:00 am on the day before. Any changes made to the payout settings might not have an immediate effect on the next-day transfer.
+:::note Before You Start
+
+You need to have an “Owner” or “Company” user account to view and update the payout bank account.
+
+:::
+
+:::note Changes to Payout Settings
+
+Automatic payouts are generated at 6:00 am on the day before. Any changes made to the payout settings might not have an immediate effect on the next-day transfer.
+
+:::
 
 ## View payout history
 
@@ -35,7 +41,11 @@ Know more about the payout settings:
 1. Navigate to “Finance (Under “Account”) -> Payout Setting (Under “Payouts”)” from the side menu
 2. On the “Payout management” page, you can change the payment “Schedule” to “Daily/ Weekly/ Monthly”
 
->The payout frequency options available may be related to the plan selected.
+:::note
+
+The payout frequency options available may be related to the plan selected.
+
+:::
 
 ### Pause the auto-payouts
 
@@ -62,6 +72,14 @@ Know more about the payout settings:
 6. Upload the bank account proof (e.g. bank statement within 6 months)
 7. Once all the information is filled and checked, tap Save
 
->REMINDER
->
->Updates to the payout bank account will be reviewed by our operation team and will be updated within 24 hours. Additional documents may be requested.
+:::note Reminder
+
+Updates to the payout bank account will be reviewed by our operation team and will be updated within 24 hours. Additional documents may be requested.
+
+:::
+
+***
+
+#### Related Articles
+
+* [<ins>Account Balance</ins>](1-account-balance.md)

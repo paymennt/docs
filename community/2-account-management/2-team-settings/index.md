@@ -1,5 +1,5 @@
 ---
-title: Manage your team's accounts and permissions
+title: Manage Your Team's Accounts and Permissions
 ---
 
 :::note Before You Start
@@ -15,9 +15,9 @@ With **paymennt** you can add, edit, or diable team memeber. You can also manage
 3. [Add team memebers to your merchant account](3-add-team-member.md)
 4. [Edit or disable team members in your merchant account](4-edit-disable-team-member.md) -->
 
-## Access and Permissions
+## Access and permissions
 
-### Types of Access Level
+### Types of access level
 
 Paymennt offers 4 predefined user roles with specific access levels to simplify team management:
 
@@ -62,7 +62,7 @@ As an owner or company account user, you also have the flexibility to switch on/
 
 :::
 
-## Sub-Permissons and Options
+## Sub-permissons and options
 
 For Spend management, Business settings, and Commerce tools permissions categories, we also offered sub-permission options to make it easier for you to manage your team’s access right
 
@@ -118,14 +118,14 @@ For Spend management, Business settings, and Commerce tools permissions categori
 - Scan tickets
   - Scan-only access for event tickets
 
-## Add Team Members
+## Add team members
 
 1. To view existing users and a new user, navigate to "Team (Under “Account”)” from the side menu.
 2. Tap the "+" on the top right corner to add new users.
 3. Input the user information
 4. Select their access level and permissions
 
-## Edit/Disable Team Members
+## Edit/Disable team members
 
 1. To view existing users, navigate to "Team (Under “Account”)” from the side menu.
 2. Tap on a record
@@ -134,6 +134,6 @@ For Spend management, Business settings, and Commerce tools permissions categori
 
 ***
 
-#### Related Articles
+#### Related articles
 
 * [<ins>App and User setting</ins>](/2-account-management/4-app-and-user-settings/index.md)

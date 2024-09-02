@@ -25,7 +25,7 @@ Payment links can be sent to customers via various channels, including email, SM
 
 ### Are there any fees associated with using payment links?
 
-You can send unlimited payment links if you subscribe to our Essential/ Standard and Premium plans. Read the <INS>[Pricing and Plans](https://www.paymennt.com/en/pricing)</INS> details for more information.
+You can send unlimited payment links if you subscribe to our Essential/ Standard and Premium plans. Read the <ins>[Pricing and Plans](https://www.paymennt.com/en/pricing)</ins> details for more information.
 
 ### Can customers make payments using any payment method?
 
@@ -33,7 +33,7 @@ Customers have the flexibility to pay using credit cards, or debit cards to pay 
 
 ### Is there a limit to the number of payment links I can generate?
 
-You can send unlimited payment links if you subscribe to our Essential/ Standard and Premium plans. Read the <INS>[Pricing and Plans](https://www.paymennt.com/en/pricing)</INS> for more information.
+You can send unlimited payment links if you subscribe to our Essential/ Standard and Premium plans. Read the <ins>[Pricing and Plans](https://www.paymennt.com/en/pricing)</ins> for more information.
 
 ### Can I track payments made through payment links?
 
@@ -57,7 +57,7 @@ No, you can add as many products as your business requires.
 
 ### How do I create a product for payment links and online shops?
 
-Read the [Products, Product varients and Events](7-products-collections-and-events.md) for more information.
+Read the <ins>[Products, Product varients and Events](7-products-collections-and-events.md)</ins> for more information.
 
 ### How do I manage inventory and stock levels for my products?
 
@@ -65,12 +65,12 @@ You can go to the “Inventory section” on the product details page, turn on �
 
 ### Can I offer variations of products, such as sizes or colors?
 
-Yes, you can set up variations and specify prices for each option to accommodate customer preferences. Read [Products, Product varients and Events](7-products-collections-and-events.md) for more information
+Yes, you can set up variations and specify prices for each option to accommodate customer preferences. Read <ins>[Products, Product varients and Events](7-products-collections-and-events.md)</ins> for more information
 
 ### Can I offer discounts or promotions on products?
 
 Yes, You can set up percentage or fixed amount discounts, or create promotional codes to incentivize purchases for Online shop. Note that discounts is not applicable to payment links.
-Read [Online Shop](5-online-shop-and-API-integration.md) for more information.
+Read <ins>[Online Shop](5-online-shop-and-API-integration.md)</ins> for more information.
 
 ### Is it possible to track sales and revenue from different channels (payment links and online shop)?
 

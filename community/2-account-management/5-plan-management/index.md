@@ -7,7 +7,7 @@ Manage your subscription plan with **paymennt**:
 <!-- 1. [Upgrade or downgrade your plan](1-update-downgrade-plan.md)
 2. [Cancel your plan](2-cancel-plan.md) -->
 
-## Upgrade/Downgrade Paymennt Subscription Plan
+## Upgrade/Downgrade paymennt subscription plan
 
 1. Navigate to “My Plan” (Under “Account”) from the sub-menu to view your existing plan
 2. Tap the “Upgrade/ Downgrade” button to switch to a new plan
@@ -31,13 +31,13 @@ Refunds are not provided for downgrading to a lower-tier plan. Once committed, y
 
 :::
 
-## Switching Between Monthly/ Yearly plan
+## Switching between monthly/yearly plan
 
 1. Navigate to “My Plan” (Under “Account”) from the sub-menu to view your existing plan
 1. Tap the “Monthly/ Yearly” button to change the payment frequency
 1. Confirm the new payment frequency
 
-## Cancel Paymennt Subscription Plan
+## Cancel paymennt subscription plan
 
 1. Navigate to “My Plan” (Under “Account”) from the sub-menu to view your existing plan
 2. Tap the “Cancel your plan” button at the bottom
@@ -51,6 +51,6 @@ The plan cancellation will be effective in the next billing cycle
 
 ***
 
-#### Related Articles
+#### Related articles
 
 * [<ins>Card-on-File</ins>](/10-funds-and-payments/8-card-on-file.md)

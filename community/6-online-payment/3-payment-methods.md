@@ -1,11 +1,13 @@
 ---
-title: Payment methods
-sidebar_label: Payment methods
+title: Payment Methods
+sidebar_label: Payment Methods
 ---
 
->BEFORE YOU START:
->
->You need to have an “Owner” or “Company” user account to view and manage the all finance related settings
+:::note Before You Start
+
+You need to have an “Owner” or “Company” user account to view and manage the all finance related settings
+
+:::
 
 You can manage your payment method by accessing the “Payment Methods” page from the side-bar: “Finance (Under “Account”) -> Payment methods (Under “Settings”)
 
@@ -27,3 +29,11 @@ You can manage your payment method by accessing the “Payment Methods” page f
 1. Open the Payment Methods screen
 2. Select the payment method you would like to deactivate
 3. Tap the toggle button next to the payment method name
+
+***
+
+#### Related Articles
+
+* [<ins>Payment Links</ins>](1-payments-links.md)
+* [<ins>Subscription</ins>](2-subscriptions.md)
+* [<ins>Team Setting and Permissions</ins>](/2-account-management/2-team-settings/index.md)

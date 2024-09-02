@@ -7,7 +7,7 @@ import Card from "@site/src/components/Card";
 
 Learn about the onboarding process at Paymennt.
 
-## Installing the Paymennt Merchant Application
+## Installing the paymennt merchant application
 
 The paymennt merchant mobile application is essential to your merchant account. With the paymennt merchant application, you can securely register or log in to your paymennt Merchant Account.
 
@@ -78,7 +78,7 @@ Depending on your business category, you may need to provide additional document
 
 ***
 
-#### Related Articles
+#### Related articles
 
 * [<ins>KYC</ins>](4-kyc.md)
 * [<ins>Reserved Account</ins>](5-reserved-account.md)

@@ -74,3 +74,10 @@ Sell tickets effortlessly with Paymennt.com, where you can smoothly manage ticke
 ### To sell tickets for an event
 
 * Your tickets will be visible on the Events tab when creating a payment link. Each ticket serves as a product. You can also check tickets sold by tapping on an event record on the Event tab.
+
+***
+
+#### Related Articles
+
+* [<ins>Payment Links</ins>](1-payments-links.md)
+* [<ins>Subscription</ins>](2-subscriptions.md)

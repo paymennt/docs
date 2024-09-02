@@ -3,16 +3,16 @@ title: FAQ
 sidebar_label: FAQ
 ---
 
-## How to sign up for Paymennt.com?
+## How to sign up for paymennt.com?
 
 Getting started with Paymennt is quick and easy!
 
-### 1-Download the Paymennt App
+### 1-Download the paymennt app
 
 * For iOS: Download from the App Store
 * For Android: Get it on Google Play
 
-### 2-Sign Up in Minutes
+### 2-Sign up in minutes
 
 Open the Paymennt app and follow the on-screen instructions to create your account. Be sure to have your required documents ready to ensure a smooth and efficient registration process.
 
@@ -22,7 +22,7 @@ During the onboarding process, we will also ask for information includes your co
 
 ## What to expect during the sign-up process?
 
-1. Set Up Your Account:
+1. **Set up your account**:
    * Verify Your Phone Number: Receive and input a verification code.
    * Create a Secure PIN: Set up a PIN code for security.
    * Enable Biometric Login: For added convenience, set up fingerprint or facial recognition.
@@ -30,12 +30,12 @@ During the onboarding process, we will also ask for information includes your co
    * Choose Your Referral Source: If applicable, indicate how you heard about us.
    * Submit Personal Information: Enter accurate personal details and upload a clear image of your Emirates ID.
    * Complete Identity Verification: Take a selfie to confirm your identity.
-2. Provide Business Information:
+2. **Provide business information**:
    * Upload Your Trade License: Ensure all related information is accurate.
    * Confirm Shareholders Details: Provide and verify details of all shareholders.
    * Enter Business Information: Include business details and link to your online profile.
    * Add Bank Details: Input your banking information for transactions.
-3. Post-Sign-Up Account Setup:
+3. **Post-sign-up account setup**:
    * Set Up Your Business Profile: Add your business name, logo, and contact details.
    * Choose a Plan: Select the plan that best suits your needs from our available options.
 

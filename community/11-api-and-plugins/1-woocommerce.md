@@ -3,7 +3,7 @@ title: Woocommerce Integration
 sidebar_label: Woocommerce
 ---
 
->View on [GitHub](http://www.github.com/pointcheckout/woocommerce)
+View on [GitHub](http://www.github.com/pointcheckout/woocommerce)
 
 From installing the plugin to requesting your first test payment, learn how to get started with the paymennt for the WooCommerce plugin.
 
@@ -27,7 +27,7 @@ If you are using the Pointcheckout plugin/ Paymennt.com plugin older than versio
 2. In the left menu, click **Plugins > Installed Plugins**.
 3. Search for **PointCheckout** using the search box at the top. If you find one, click **Delete**, or click **Deactivate** and then **Delete**.
 
-![Remove Plugin](/img/guides/ecommerce-integration/e-commerce-wocommerce-remove-older-plugin-if-present.png)
+<!-- ![Remove Plugin](/img/guides/ecommerce-integration/e-commerce-wocommerce-remove-older-plugin-if-present.png) -->
 
 ## Install the plugin​ from the WordPress marketplace
 
@@ -37,7 +37,7 @@ If you are using the Pointcheckout plugin/ Paymennt.com plugin older than versio
 2. In the left menu, click **Plugins > Add New**.
 3. On the **Add Plugins** page, search for **Paymennt** in right search bar and the Paymennt plugin will appear.
 
-![Install Plugin](/img/guides/ecommerce-integration/e-commerce-wocommerce-install-the-plugin.png)
+<!-- ![Install Plugin](/img/guides/ecommerce-integration/e-commerce-wocommerce-install-the-plugin.png) -->
 
 4. Click **Install Now**.
 5. Once the plugin installation is complete, click **Activate**.
@@ -49,20 +49,20 @@ If you are using the Pointcheckout plugin/ Paymennt.com plugin older than versio
 2. In the left menu, click **WooCommerce > Settings > Payments**.
 3. Find the Paymennt method and click on **Manage**.
 
-![Configure Plugin - Manage](/img/guides/ecommerce-integration/e-commerce-wocommerce-configure-the-plugin-manage.png)
+<!-- ![Configure Plugin - Manage](/img/guides/ecommerce-integration/e-commerce-wocommerce-configure-the-plugin-manage.png) -->
 
 4. Tick **Enable card payments via Paymennt**.
 5. Choose the payment **Title** and **Description**. This will be displayed to customers on your checkout page.
 6. Set the **Mode** to **Testing**.
 7. Enter your **API Key**, **API Secret** and **Public Key** as provided by your account manager.
 
-![Congiure Plugin - Keys](/img/guides/ecommerce-integration/e-commerce-wocommerce-configure-the-plugin-api-key.png)
+<!-- ![Congiure Plugin - Keys](/img/guides/ecommerce-integration/e-commerce-wocommerce-configure-the-plugin-api-key.png) -->
 
 8. Select the type of payment you need:
     * Select **Drop-In Frames** if you want an embedded payment frame on checkout page itself.
     * Select **Hosted Checkout** if you want user to enter payment details on a separate page.
 
-![Cofigure Plugin - Hosted Checkout](/img/guides/ecommerce-integration/e-commerce-wocommerce-configure-the-plugin-self-hosted-checkout.png)
+<!-- ![Cofigure Plugin - Hosted Checkout](/img/guides/ecommerce-integration/e-commerce-wocommerce-configure-the-plugin-self-hosted-checkout.png) -->
 
 9. Click **Save changes**.
 

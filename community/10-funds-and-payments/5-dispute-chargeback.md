@@ -13,3 +13,9 @@ If funds related to a chargeback cannot be recovered, the merchant is obligated 
 
 1. Navigate to “My Account -> Finance -> Disputes” from the side menu
 2. View the disputes and click on a record to view the details
+
+***
+
+#### Related Articles
+
+* [<ins>Refunds</ins>](9-refunds.mdx)

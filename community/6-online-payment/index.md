@@ -5,24 +5,24 @@ sidebar_label: Online Payments
 
 At Payment.com, we offer a diverse range of payment methods tailored to meet various business requirements.
 
-1. [**Payment links:**](1-payments-links.md)
+1. [<ins>**Payment links:**</ins>](1-payments-links.md)
 Generate payment links for one-time transactions
-2. [**Recurring payments:**](2-recurring-payments.md)
+2. [<ins>**Subscription:**</ins>](2-subscriptions.md)
 Setting up recurring payments to collect payment periodically
-3. [**Payment methods:**](3-payment-methods.md)
+3. [<ins>**Payment methods:**</ins>](3-payment-methods.md)
 Choose from a variety of payment methods to offer your customers.
-4. [**Multicurrency payments:**](4-multicurrency-payments.md)
+4. [<ins>**Multicurrency payments:**</ins>](4-multicurrency-payments.md)
 Accept payments in different currencies to cater to a global customer base.
-5. [**Online Shop and API integration:**](5-online-shop-and-API-integration.md)
+5. [<ins>**Online Shop and API integration:**</ins>](5-online-shop-and-API-integration.md)
 Seamlessly integrate our payment solutions into your existing systems through our APIs.
-6. [**Transaction limits:**](6-transaction-limits.md)
+6. [<ins>**Transaction limits:**</ins>](6-transaction-limits.md)
 View your checkout limit and request an update if necessary
 
 Additionally, we provide tools for customer and product management to facilitate quick payment requests
 
-7. [**Products, Collections, and Events:**](7-products-collections-and-events.md)
+7. [<ins>**Products, Collections, and Events:**</ins>](7-products-collections-and-events.md)
 Efficiently handle your product, collections, and event listings
-8. [**Customers:**](8-customers.md)
+8. [<ins>**Customers:**</ins>](8-customers.md)
 Easily manage your customer database
 
 ## FAQ

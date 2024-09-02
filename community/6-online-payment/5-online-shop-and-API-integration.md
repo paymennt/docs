@@ -9,18 +9,22 @@ If you already have an existing online shop, you can seamlessly integrate it wit
 
 Here are the customization options available for your online shop:
 
-1. [Personalized banner on the homepage](#personalize-banner-on-the-homepage)
-2. [Customized theme](#customize-theme)
-3. [Adjusted product thumbnail size](#adjust-product-thumbnail-size)
-4. [Add shipping rule](#add-shipping-rules)
-5. [Add discounts](#add-discounts)
-6. [Add social media links](#add-social-links)
+1. [<ins>Personalized banner on the homepage</ins>](#personalize-banner-on-the-homepage)
+2. [<ins>Customized theme</ins>](#customize-theme)
+3. [<ins>Adjusted product thumbnail size</ins>](#adjust-product-thumbnail-size)
+4. [<ins>Add shipping rule</ins>](#add-shipping-rules)
+5. [<ins>Add discounts</ins>](#add-discounts)
+6. [<ins>Add social media links</ins>](#add-social-links)
 
 ## View shop orders
 
 You can also view or shop orders easily by navigating to the “Shop (Under the “Earn” section)” page from the side menu
 
->The products shown on the online shop will be the same as the products in the product list for other payment methods (e.g. Payment links). To edit the product list, refer to the <ins>**“Product Management”**</ins> flow
+:::note
+
+The products shown on the online shop will be the same as the products in the product list for other payment methods (e.g. Payment links). To edit the product list, refer to the <ins>**"Product Management"**</ins> flow
+
+:::
 
 ## Personalize banner on the homepage
 
@@ -91,3 +95,9 @@ Fill in the information required.
 Remember to check the <ins>Website Go-live checklist</ins> before submitting your request
 
 For detailed information on our API specifications, you can refer to our API spec at: https://docs.paymennt.com/api.
+
+***
+
+#### Related Articles
+
+* [<ins>eCommerce</ins>](5-api-and-plugins/index.md)

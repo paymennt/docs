@@ -19,16 +19,18 @@ In Paymennt, we might place a hold on the funds for a few days to confirm that e
 
 ## View settlement history
 
-You can check your account balance by navigating to the “Account Balance” page using the side menu “Finance (Under “My Plan”) -> Account Balance (Under “Your money”)”. On the “Account Balance” page, you can view all the settled and unsettled transactions.
+You can check your account balance by navigating to the "Account Balance" page using the side menu "Finance (Under "My Plan") -> Account Balance (Under "Your money")". On the "Account Balance" page, you can view all the settled and unsettled transactions.
 Note: The available balance on the landing page only counts the settled transactions.
 
 ## View Monthly statement
 
-You can also check your monthly statements by navigating to the “Monthly Statement” page using the side menu “Finance (Under “My Plan”) -> Monthly statements (Under “Your money”)”. 
+You can also check your monthly statements by navigating to the "Monthly Statement" page using the side menu "Finance (Under "My Plan") -> Monthly statements (Under "Your money")".
 
->Related articles:
->
->* [Account Balance](1-account-balance.md)
->* [Payout](3-payouts.md)
->* [Disputes](5-dispute-chargeback.md)
->* [Reserved Account](/community/1-account/5-reserved-account.md)
+***
+
+#### Related articles:
+
+* [<ins>Account Balance</ins>](1-account-balance.md)
+* [<ins>Payout</ins>](3-payouts.md)
+* [<ins>Disputes</ins>](5-dispute-chargeback.md)
+* [<ins>Reserved Account</ins>](/community/1-account/5-reserved-account.md)

@@ -8,9 +8,11 @@ Our mobile app's dashboard offers a convenient overview of your sales and accoun
 For detailed finance information, simply navigate to:
 "My Account -> Finance ->" and select the type of finance details you require.
 
-## BEFORE YOU START
+:::note Before You Start
 
 You need to have an “Owner” or “Company” user account to view and manage all finance-related settings (Except Dispute management)
+
+:::
 
 1. **[Account Balance](1-account-balance.md)**:
 Review your account balance breakdown, including processing amount, payout amount, and on-hold balance. Access your transaction history for further details.

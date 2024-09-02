@@ -16,3 +16,9 @@ Your monthly statement contains a comprehensive summary of your account activity
 * **Statement Dates:** The start and end dates of the monthly statement.
 * **Sales, Fees, Payouts, and Chargebacks:** A detailed breakdown of sales revenue, fees charged, payouts made to your bank or payment card, and any chargebacks.
 * **Total Transactions:** The total number and value of all transactions processed during the month.
+
+***
+
+#### Related Articles
+
+* [<ins>Account Balance</ins>](1-account-balance.md)
