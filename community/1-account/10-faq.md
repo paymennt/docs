@@ -16,9 +16,9 @@ Getting started with Paymennt is quick and easy!
 
 Open the Paymennt app and follow the on-screen instructions to create your account. Be sure to have your required documents ready to ensure a smooth and efficient registration process.
 
-## What information are required to sign up?
+## What information is required to sign up?
 
-During the onboarding process, we will also ask for information includes your company’s online presence, such as your Instagram handle and website, as well as your business details, including name and business address. We will also request general details about your business, including an estimate of your monthly revenue.
+During the onboarding process, we will also ask for information that includes your company’s online presence, such as your Instagram handle and website, as well as your business details, including name and business address. We will also request general details about your business, including an estimate of your monthly revenue.
 
 ## What to expect during the sign-up process?
 
@@ -33,7 +33,7 @@ During the onboarding process, we will also ask for information includes your co
 2. **Provide business information**:
    * Upload Your Trade License: Ensure all related information is accurate.
    * Confirm Shareholders Details: Provide and verify details of all shareholders.
-   * Enter Business Information: Include business details and link to your online profile.
+   * Enter Business Information: Include business details and a link to your online profile.
    * Add Bank Details: Input your banking information for transactions.
 3. **Post-sign-up account setup**:
    * Set Up Your Business Profile: Add your business name, logo, and contact details.
@@ -71,13 +71,13 @@ For businesses with 100% ownership, you're welcome to sign up using your persona
 
 Yes, some industries may be prohibited or restricted from working with Paymennt.com due to factors such as local and international laws, risk level, or requirements of payment partners
 
-See the [<ins>List of Restricted Business</ins>](https://www.paymennt.com/en/restricted-businesses).
+See the [<ins>List of Restricted Businesses</ins>](https://www.paymennt.com/en/restricted-businesses).
 
-## What are KYC?
+## What is KYC?
 
 KYC is the process that is used to verify the identity of our customers. It involves collecting information such as government-issued ID, address proof, and other relevant documents to confirm the identity of an individual. KYC helps to prevent fraud, money laundering, and other illicit activities by ensuring that we are dealing with legitimate customers.
 
-You can find more information in the <ins>[KYC](4-kyc.md)</ins> page
+You can find more information on the <ins>[KYC](4-kyc.md)</ins> page.
 
 ## Is providing a card-on-file mandatory?
 

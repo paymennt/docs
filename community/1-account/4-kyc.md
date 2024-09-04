@@ -7,7 +7,7 @@ Learn about the KYC process in Paymennt.
 
 ## What is KYC?
 
-Know Your Customer (KYC) refers to the process of a financial service provider, such as a bank or a payment service provide like us, verifying the identity of its clients. This is a key component of Anti-Money Laundering (AML) regulations, which are designed to combat financial crimes. KYC helps us understand our merchant customers and their financial behaviors to mitigate risks associated with fraud and illegal activities.
+Know Your Customer (KYC) refers to the process of a financial service provider, such as a bank or a payment service provider like us, verifying the identity of its clients. This is a key component of Anti-Money Laundering (AML) regulations, which are designed to combat financial crimes. KYC helps us understand our merchant customers and their financial behaviors to mitigate risks associated with fraud and illegal activities.
 
 ## KYC in paymennt
 
@@ -17,7 +17,7 @@ Paymennt implements a comprehensive Know Your Customer (KYC) process to maintain
 
 During the onboarding phase, Paymennt collects and verifies a variety of documents and information to establish the identity and legitimacy of its applicants and shareholders.
 
-Below documents are collected during the onboarding process for KYC purpose.
+The below documents are collected during the onboarding process for KYC purposes.
 
 * **Identification documents:**
   * **For applicants:** Applicants must provide Emirates ID to verify their identities.
@@ -26,8 +26,8 @@ Below documents are collected during the onboarding process for KYC purpose.
   * Business trade license
   * Proof of online presence (e.g., website, social media profiles)
   * Power of Attorney (if applicable)
-  * Memorandum of Association (MoA) (For company with 2 or more shareholders)
-  * Bank account proof such as Bank statement within 6 months
+  * Memorandum of Association (MoA) (For a company with 2 or more shareholders)
+  * Bank account proof such as a Bank statement within 6 months
 * **Additional documents:** Depending on the merchant’s category and risk level, additional documentation may be requested, such as:
   * Lease contract for the business premises
   * Other relevant documents based on the nature of the business and associated risks

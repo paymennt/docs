@@ -35,7 +35,7 @@ sidebar_label: Shopify
 
 To complete this integration, you must first login to the paymennt web console
 
-### Shopify Configuration
+### Shopify configuration
 
 From the side menu, Select "Integrations" -> "Shopify Integration" as shown in the image below
 
@@ -47,7 +47,7 @@ From the side menu, Select "Integrations" -> "Shopify Integration" as shown in t
     * Token: the Admin API access token copied from Step 5 in creating the custom app
 3. Copy the HTML code shown on the confirmation page. We will use this in the next steps.
 
-## Shopify Additional Scripts
+## Shopify additional scripts
 
 1. Go back to Shopify.
 2. Select Settings then click on Checkout
@@ -59,7 +59,7 @@ From the side menu, Select "Integrations" -> "Shopify Integration" as shown in t
 
 <!-- ![Save](/img/guides/ecommerce-integration/e-commerce-shopify-additional-script-save.png) -->
 
-## Manual Payment method
+## Manual payment method
 
 1. Go back to Shopify. Select Settings then click on Payments.
 

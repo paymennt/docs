@@ -4,13 +4,13 @@ title: Your Account
 
 Efficiently manage your business operations with Paymennt
 
-1. [Login to Paymennt web portal](1-desktop-login.md)
+1. [<ins>Login to Paymennt web portal</ins>](1-desktop-login.md):
 Login to Paymennt web portal seamlessly on desktop.
-2. [Team setting and permissions](2-team-settings/index.md)
+2. [<ins>Team setting and permissions</ins>](2-team-settings/index.md):
 Customize team settings and permissions to streamline workflow.
-3. [Change My business info](3-business-information.md)
+3. [<ins>Change My business info</ins>](3-business-information.md):
 Update business information as needed.
-4. [Delete user and merchant account](4-app-and-user-settings/index.md)
+4. [<ins>Delete user and merchant accounts</ins>](4-app-and-user-settings/index.md):
 Easily delete users or merchant accounts for efficient account management.
 
 ## FAQ

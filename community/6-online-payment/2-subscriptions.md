@@ -3,7 +3,7 @@ title: Subscriptions
 sidebar_label: Subscriptions
 ---
 
-Paymmnet.com allows you to create subscriptions which customers authorize automatic, periodic payments for your goods or services. Once set up, payments occur at regular intervals, providing a consistent revenue stream for your business.
+Paymmnet.com allows you to create subscriptions in which customers authorize automatic, periodic payments for your goods or services. Once set up, payments occur at regular intervals, providing a consistent revenue stream for your business.
 
 :::note
 

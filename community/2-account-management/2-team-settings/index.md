@@ -4,11 +4,11 @@ title: Manage Your Team's Accounts and Permissions
 
 :::note Before You Start
 
-You can manage your team members as well as their permissions by accessing the “Team” page from side menu (My business -> My Team)
+You can manage your team members as well as their permissions by accessing the "Team" page from the side menu (My business -> My Team)
 
 :::
 
-With **paymennt** you can add, edit, or diable team memeber. You can also manage the accounts of your team memeber, their permissions, and sub-permissions.
+With **paymennt** you can add, edit, or disable team member. You can also manage the accounts of your team member, their permissions, and sub-permissions.
 
 <!-- 1. [paymennt access and permissions for team memeber](1-access-and-permissions.md)
 2. [Sub-permission in paymennt](2-sub-permissions.md)
@@ -43,7 +43,7 @@ In Paymennt.com, we have 6 different permission categories
 5. **Disputes and tickets**:
     Resolve, respond, and submit evidence for disputes and support tickets.
 6. **Commerce tools**:
-    Manage the shop and events. Includes managing customers, shipping zones, discounts and listings.
+    Manage the shop and events. Includes managing customers, shipping zones, discounts, and listings.
 
 Below are the tables of the permissions for each access level
 
@@ -62,7 +62,7 @@ As an owner or company account user, you also have the flexibility to switch on/
 
 :::
 
-## Sub-permissons and options
+## Sub-permissions and options
 
 For Spend management, Business settings, and Commerce tools permissions categories, we also offered sub-permission options to make it easier for you to manage your team’s access right
 
@@ -77,16 +77,16 @@ For Spend management, Business settings, and Commerce tools permissions categori
 
 ### Business settings
 
-- View Statement
+- View statement
   - View and download monthly financial statements
 - View balances
   - View available balance, fund holds, payouts, and the ledger
 - Payout accounts
   - Add or update external bank accounts
 - Business management
-  - Update business logo, customer support information, company persons and legal documents
+  - Update business logo, customer support information, company persons, and legal documents
 - Manage finance settings
-  - Manage payment methods, external bank accounts, tax settings and maximum checkout value
+  - Manage payment methods, external bank accounts, tax settings, and maximum checkout value
 - Manage integrations
   - Request and manage API keys
 - In-person payment
@@ -108,7 +108,7 @@ For Spend management, Business settings, and Commerce tools permissions categori
 - Manage shop settings
   - Manage shop theme, support information, shipping zones, and discounts
 
-#### Catalogue
+#### Catalog
 
 - Manage listings and collections
   - Add, archive product and event listings and manage collections
