@@ -36,4 +36,4 @@ You can manage your payment method by accessing the “Payment Methods” page f
 
 * [<ins>Payment Links</ins>](1-payments-links.md)
 * [<ins>Subscription</ins>](2-subscriptions.md)
-* [<ins>Team Setting and Permissions</ins>](/2-account-management/2-team-settings/index.md)
+* [<ins>Team Setting and Permissions</ins>](/2-account-management/3-team-settings/index.md)

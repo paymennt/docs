@@ -15,23 +15,23 @@ You need to have an “Owner” or “Company” user account to view and manage
 
 :::
 
-1. **[Account Balance](1-account-balance.md)**:
+1. **[<ins>Account Balance</ins>](1-account-balance.md)**:
 Review your account balance breakdown, including processing amount, payout amount, and on-hold balance. Access your transaction history for further details.
-2. **[Monthly Statement](2-monthly-statement.md)**:
+2. **[<ins>Monthly Statement</ins>](2-monthly-statement.md)**:
 Easily access and view all available monthly statements for your account.
-3. **[Payouts](3-payouts.md)**:
+3. **[<ins>Payouts</ins>](3-payouts.md)**:
 View your payout history and manage your payout setting, including payout bank account and payout frequency.
-4. **[Settlement](4-settlement.md)**:
+4. **[<ins>Settlement</ins>](4-settlement.md)**:
 View the settlement history and monthly statement of your Paymennt account.
-5. **[Disputes](5-dispute-chargeback.md)**:
+5. **[<ins>Disputes</ins>](5-dispute-chargeback.md)**:
 Access and review all dispute records.
-6. **[Payment methods](6-payment-methods/index.mdx)**:
+6. **[<ins>Payment methods</ins>](6-payment-methods/index.mdx)**:
 Control the payment methods available for your customers to use.
-7. **[Tax settings](7-tax-settings.md)**:
+7. **[<ins>Tax settings</ins>](7-tax-settings.md)**:
 Manage tax settings for your products.
-8. **[Card-on-file](8-card-on-file.md)**:
+8. **[<ins>Card-on-file</ins>](8-card-on-file.md)**:
 Manage your “Card-on-file” for paying your plans or subscription.
-9. **[Refund](9-refunds.mdx)**:
+9. **[<ins>Refund</ins>](9-refunds.mdx)**:
 Understand how refund can be processed in Paymennt.
 
 ## FAQ

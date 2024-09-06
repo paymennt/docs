@@ -31,4 +31,4 @@ OR
 
 #### Related articles
 
-* [<ins>Plan Management</ins>](/2-account-management/5-plan-management/index.md)
+* [<ins>Plan Management</ins>](/2-account-management/1-plan-management/index.md)

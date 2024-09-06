@@ -3,6 +3,8 @@ title: FAQ
 sidebar_label: FAQ
 ---
 
+<details><summary>How to sign up for paymennt.com?</summary>
+
 ## How to sign up for paymennt.com?
 
 Getting started with **Paymennt** is quick and easy!
@@ -15,10 +17,17 @@ Getting started with **Paymennt** is quick and easy!
 ### 2-Sign up in minutes
 
 Open the **Paymennt** app and follow the on-screen instructions to create your account. Be sure to have your required documents ready to ensure a smooth and efficient registration process.
+</details>
+
+<details><summary>What information is required to sign up?</summary>
 
 ## What information is required to sign up?
 
 During the onboarding process, we will also ask for information that includes your company’s online presence, such as your Instagram handle and website, as well as your business details, including name and business address. We will also request general details about your business, including an estimate of your monthly revenue.
+
+</details>
+
+<details><summary>What to expect during the sign-up process?</summary>
 
 ## What to expect during the sign-up process?
 
@@ -39,6 +48,10 @@ During the onboarding process, we will also ask for information that includes yo
    * Set Up Your Business Profile — Add your business name, logo, and contact details
    * Choose a Plan — Select the plan that best suits your needs from our available options
 
+</details>
+
+<details><summary>Which documents are required to sign up?</summary>
+
 ## Which documents are required to sign up?
 
 To get started, you'll need to have a registered business and the below documents
@@ -51,21 +64,41 @@ To get started, you'll need to have a registered business and the below document
 * Power of Attorney (For applicant registering on behalf of the business owner)
 * Memorandum of Association, MoA (For company with 2 or more shareholders)
 
+</details>
+
+<details><summary>Can I sign up for multiple accounts?</summary>
+
 ## Can I sign up for multiple accounts?
 
 Yes, you can! Please contact your account manager or our customer service team if you are an existing merchant who would like to set up another account on **Paymennt**.
+
+</details>
+
+<details><summary>How long does it take to open an account?</summary>
 
 ## How long does it take to open an account?
 
 Once we receive all the required documents, we’ll typically approve and activate your account within 1-2 business days. To help us speed things along, please double-check your documents before sending them. If anything is missing or outdated, it might take up to 5 business days to complete the process.
 
+</details>
+
+<details><summary>Do I need to sign a physical contract?</summary>
+
 ## Do I need to sign a physical contract?
 
 No physical contact is required if you register via the [<ins>Paymennt.com</ins>](https://www.paymennt.com/) mobile app. During registration, you'll digitally agree to our [<ins>Plans and Pricing</ins>](https://www.paymennt.com/en/pricing), Terms and Conditions, and [<ins>Privacy Notice</ins>](https://www.paymennt.com/en/legal). It's all done seamlessly within the app!
 
+</details>
+
+<details><summary>Can I sign up with a personal bank account?</summary>
+
 ## Can I sign up with a personal bank account?
 
 For businesses with 100% ownership, you're welcome to sign up using your personal bank account. However, if your business has multiple owners or stakeholders, you'll need to use a business bank account for sign-up.
+
+</details>
+
+<details><summary>Is there any restriction on business types?</summary>
 
 ## Is there any restriction on business types?
 
@@ -73,12 +106,22 @@ Yes, some industries may be prohibited or restricted from working with [<ins>Pay
 
 See the [<ins>List of Restricted Businesses</ins>](https://www.paymennt.com/en/restricted-businesses).
 
+</details>
+
+<details><summary>What is KYC?</summary>
+
 ## What is KYC?
 
 KYC is the process that is used to verify the identity of our customers. It involves collecting information such as government-issued ID, address proof, and other relevant documents to confirm the identity of an individual. KYC helps to prevent fraud, money laundering, and other illicit activities by ensuring that we are dealing with legitimate customers.
 
 You can find more information on the <ins>[KYC](4-kyc.md)</ins> page.
 
+</details>
+
+<details><summary>Is providing a card-on-file mandatory?</summary>
+
 ## Is providing a card-on-file mandatory?
 
 Yes, providing a Card-on-file is mandatory to ensure you have sufficient funds to use our service and to prevent account freezing. Fees will only be deducted from your payment card if the account balance is insufficient to cover the plan fee and payment device subscription fee.
+
+</details>

@@ -22,7 +22,7 @@ Your change will take effect in the next billing cycle.
 
 :::
 
-:::warning
+:::note
 
 Refunds are not provided for downgrading to a lower-tier plan. Once committed, you are expected to fulfill the terms of the plan for its entirety. However, you will continue to have access to the features and benefits of the higher-tier plan for the remainder of your current billing cycle.
 

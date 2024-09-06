@@ -101,4 +101,4 @@ For detailed information on our API specifications, you can refer to our API spe
 
 #### Related Articles
 
-* [<ins>eCommerce</ins>](5-api-and-plugins/index.md)
+* [<ins>eCommerce</ins>](11-api-and-plugins/index.md)

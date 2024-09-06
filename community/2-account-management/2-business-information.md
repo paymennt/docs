@@ -19,7 +19,7 @@ Customize your company logo, brand image, company description, and customer supp
 
 ## My team
 
-Add/remove any team members as well as manage their permissions. Refer to [<ins>Team setting and permissions</ins>](/2-account-management/2-team-settings/index.md) for more information.
+Add/remove any team members as well as manage their permissions. Refer to [<ins>Team setting and permissions</ins>](/2-account-management/3-team-settings/index.md) for more information.
 
 ## My documents
 

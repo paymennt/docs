@@ -51,7 +51,7 @@ Below are the tables of the permissions for each access level:
 | Disputes and tickets  |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
 | Commerce tools        |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:| |
 
-:::important
+:::note
 
 As an owner or company account user, you also have the flexibility to switch on/ off each user's permissions. For example, you can turn off the “Payment acceptance” permission of an employee user.
 

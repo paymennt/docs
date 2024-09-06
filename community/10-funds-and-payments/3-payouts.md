@@ -13,9 +13,9 @@ Getting your payouts from Paymennt.com is simple - they're directly deposited in
 
 Know more about the payout settings:
 
-* **[View payout history](#view-payout-history)**
-* **[Management auto payout](#management-auto-payout)**
-* **[View and change the payout bank account](#view-and-change-payout-bank-account)**
+* **[<ins>View payout history</ins>](#view-payout-history)**
+* **[<ins>Management auto payout</ins>](#management-auto-payout)**
+* **[<ins>View and change the payout bank account</ins>](#view-and-change-payout-bank-account)**
 
 :::note Before You Start
 
