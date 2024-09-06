@@ -3,18 +3,18 @@ title: Online Payments
 sidebar_label: Online Payments
 ---
 
-At Payment.com, we offer a diverse range of payment methods tailored to meet various business requirements.
+At [<ins>Payment.com</ins>](https://www.paymennt.com/), we offer a diverse range of payment methods tailored to meet various business requirements.
 
 1. [<ins>**Payment links:**</ins>](1-payments-links.md)
 Generate payment links for one-time transactions
 2. [<ins>**Subscription:**</ins>](2-subscriptions.md)
 Setting up recurring payments to collect payment periodically
 3. [<ins>**Payment methods:**</ins>](3-payment-methods.md)
-Choose from a variety of payment methods to offer your customers.
+Choose from a variety of payment methods to offer your customers
 4. [<ins>**Multicurrency payments:**</ins>](4-multicurrency-payments.md)
-Accept payments in different currencies to cater to a global customer base.
+Accept payments in different currencies to cater to a global customer base
 5. [<ins>**Online Shop and API integration:**</ins>](5-online-shop-and-API-integration.md)
-Seamlessly integrate our payment solutions into your existing systems through our APIs.
+Seamlessly integrate our payment solutions into your existing systems through our APIs
 6. [<ins>**Transaction limits:**</ins>](6-transaction-limits.md)
 View your checkout limit and request an update if necessary
 
@@ -54,12 +54,12 @@ Easily manage your customer database
 
 ### Online Shop
 
-* [<ins>Do I have to pay anything for setting up my Shop?</ins>](10-faq.md#do-i-have-to-pay-anything-for-setting-up-my-shop)
+* [<ins>Do I have to pay anything to set up my Shop?</ins>](10-faq.md#do-i-have-to-pay-anything-for-setting-up-my-shop)
 * [<ins>Can I use my own custom domain?</ins>](10-faq.md#can-i-use-my-own-custom-domain)
 * [<ins>Is using the Paymennt Shops secure?</ins>](10-faq.md#is-using-the-paymennt-shops-secure)
 * [<ins>Could I share my item links also for payment?</ins>](10-faq.md#could-i-share-my-item-links-also-for-payment)
 * [<ins>Do I need a Paymennt account to enable Shops?</ins>](10-faq.md#do-i-need-a-paymennt-account-to-enable-shops)
-* [<ins>What payment methods is available in the Shops?</ins>](10-faq.md#what-payment-methods-is-available-in-the-shops)
+* [<ins>What payment methods are available in the Shops?</ins>](10-faq.md#what-payment-methods-is-available-in-the-shops)
 * [<ins>Can I manage my Shop from the desktop?</ins>](10-faq.md#can-i-manage-my-shop-from-the-desktop)
 * [<ins>How are shipping costs calculated?</ins>](10-faq.md#how-are-shipping-costs-calculated)
 * [<ins>Do you have cash-on-delivery enabled in Shops?</ins>](10-faq.md#do-you-have-cash-on-delivery-enabled-in-shops)

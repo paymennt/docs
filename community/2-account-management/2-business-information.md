@@ -3,9 +3,9 @@ title: Manage Business Information
 sidebar_label: Business Information
 ---
 
-You can easily access and manage your business information using the sidebar navigation:
+You can easily access and manage your business information using the sidebar navigation.
 
-Navigate to "My Business (Under “Account”)" > Choose the aspect of your business you'd like to update (e.g. Company Registration, Tax registration…etc)
+Navigate to "My Business (Under “Account”)" -> Choose the aspect of your business you'd like to update (e.g. Company Registration, Tax registration…etc)
 
 :::note
 
@@ -19,7 +19,7 @@ Customize your company logo, brand image, company description, and customer supp
 
 ## My team
 
-Add/ remove any team members as well as manage their permissions. Refer to [<ins>Team setting and permissions</ins>](/2-account-management/2-team-settings/index.md) for more information.
+Add/remove any team members as well as manage their permissions. Refer to [<ins>Team setting and permissions</ins>](/2-account-management/2-team-settings/index.md) for more information.
 
 ## My documents
 
@@ -29,7 +29,7 @@ Check your current trade license status and upload a new one if the existing lic
 
 ### MoA (Memorandum of Association)
 
-Upload tbe MoA if there are 2 or more shareholders in the company
+Upload tbe MoA if there are 2 or more shareholders in the company.
 
 ### Tax registration
 
@@ -47,19 +47,9 @@ View shareholder details and manage them efficiently.
 
 Review and update billing details displayed on payment receipts for your customers by tapping "Update" on the billing contact page.
 
-<!-- ## Delivery Address
-
-View your company's existing delivery address, which is used for delivering or picking up POS devices when needed, on this page. -->
-
 ## Delete account
 
 Delete the merchant account permanently.
-
-<!-- :::note
-
-All registers must be settled before merchant deletion.
-
-::: -->
 
 :::note
 

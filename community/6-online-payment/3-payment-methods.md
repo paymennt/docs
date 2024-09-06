@@ -5,7 +5,7 @@ sidebar_label: Payment Methods
 
 :::note Before You Start
 
-You need to have an “Owner” or “Company” user account to view and manage the all finance related settings
+You need to have an “Owner” or “Company” user account to view and manage all finance-related settings.
 
 :::
 

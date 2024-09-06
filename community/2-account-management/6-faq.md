@@ -25,7 +25,7 @@ You can easily update your trade license by accessing the “Company Registratio
 
 ## How can I update my business information?
 
-You can easily change your business information by navigating to the appropriate settings under the “My Business” from the side menu. Read the <ins>[Manage Business Information](3-business-information.md)</ins> for more information.
+You can easily change your business information by navigating to the appropriate settings under "My Business" from the side menu. Read the <ins>[Manage Business Information](3-business-information.md)</ins> for more information.
 
 ## What happens to associated data when a user or merchant account is deleted?
 
@@ -39,8 +39,9 @@ No, refunds are not provided for downgrading to a lower-tier plan. However, you 
 ## When will the change of plan become effective?
 
 For downgrades, the change of plan will become effective at the start of your next billing cycle.
+
 For upgrades, the change of plan will become effective immediately, and you will be charged the pro-rata fee for the remaining billing cycle.
 
 ## Can I get a refund for the yearly plan?
 
-Unfortunately, refunds are not available during your yearly plan. Once committed, you are expected to fulfill the terms of the plan for its entirety."
+Unfortunately, refunds are not available during your yearly plan. Once committed, you are expected to fulfill the terms of the plan for its entirety.

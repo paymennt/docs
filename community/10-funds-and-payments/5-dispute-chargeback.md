@@ -7,7 +7,7 @@ Disputes, also known as chargebacks, can arise in payment transactions due to va
 
 Chargebacks can occur for several reasons, including customer disputes, unauthorized transactions, non-compliance with payment network rules, or suspicious activity. Merchants are immediately liable to Paymennt.com for the full amount of the chargeback, along with any associated fees, fines, or penalties.
 
-If funds related to a chargeback cannot be recovered, the merchant is obligated to reimburse the payment processor promptly. Additionally, if there's a likelihood of a chargeback, Payment.com may withhold funds from the merchant's payments until the dispute is resolved, expired, or determined not to result in a chargeback.
+If funds related to a chargeback cannot be recovered, the merchant is obligated to reimburse the payment processor promptly. Additionally, if there's a likelihood of a chargeback, [<ins>Paymennt.com</ins>](https://www.paymennt.com/) may withhold funds from the merchant's payments until the dispute is resolved, expired, or determined not to result in a chargeback.
 
 ## View Disputes history
 

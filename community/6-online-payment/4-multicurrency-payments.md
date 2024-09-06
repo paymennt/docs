@@ -3,13 +3,13 @@ title: Multicurrency Payments
 sidebar_label: Multicurrency Payments
 ---
 
-Paymennt offers the flexibility to accept payments in currencies other than your account's settlement currency through Multi-Currency Processing. This allows you to display prices in your customer's native currency, reducing conversion costs and simplifying payments.
+**Paymennt** offers the flexibility to accept payments in currencies other than your account's settlement currency through Multi-Currency Processing. This allows you to display prices in your customer's native currency, reducing conversion costs and simplifying payments.
 
 Supported currencies include AED, USD, GBP, EUR, and all GCC currencies.
 
 :::note Before You Start
 
-Remember to check if your plan includes multi-currency processing
+Remember to check if your plan includes multi-currency processing.
 
 :::
 

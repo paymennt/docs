@@ -41,17 +41,17 @@ const features = [
       </>
     ),
   },
-  {
-   id:4,
-    title: "In-person Payments",
-    target: "/docs/sdks",
-    imageUrl: "img/home/in-person-payments.svg",
-    description: (
-      <>
-        Set up and manage Paymennt POS devices and Tap on Phone transactions
-      </>
-    ),
-  },
+  // {
+  //  id:4,
+  //   title: "In-person Payments",
+  //   target: "/docs/sdks",
+  //   imageUrl: "img/home/in-person-payments.svg",
+  //   description: (
+  //     <>
+  //       Set up and manage Paymennt POS devices and Tap on Phone transactions
+  //     </>
+  //   ),
+  // },
   {
    id:5,
     title: "APIs and Plugins",

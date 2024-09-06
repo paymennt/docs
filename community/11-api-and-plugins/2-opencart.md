@@ -7,15 +7,15 @@ View on [GitHub](https://github.com/paymennt/opencart)
 
 From downloading the plugin to requesting your first test payment, learn how to get started with the paymennt for OpenCart plugin.
 
-:::info
+:::note
 
 This guide assumes that you have already [set up OpenCart](https://docs.opencart.com/en-gb/installation/).
 
 :::
 
-:::tip
+:::note
 
-To learn about the OpenCart Plugin integation process in detail, see [GitHub](https://github.com/paymennt/opencart).
+To learn about the OpenCart Plugin integration process in detail, see [GitHub](https://github.com/paymennt/opencart).
 
 :::
 
@@ -23,31 +23,19 @@ To learn about the OpenCart Plugin integation process in detail, see [GitHub](ht
 
 1. Log in to your **OpenCart** administrator panel.
 2. Download the latest release **paymennt.ocmod.zip** file from the [releases section](https://github.com/paymennt/opencart/releases/tag/v1.0.1).
-3. In the admin page of your store, go to **extensions->installer->upload**.
-
-<!-- ![Install - Update Plugin](/img/guides/ecommerce-integration/e-commerce-opencart-install-update-plugin.png) -->
-
+3. On the admin page of your store, go to **extensions->installer->upload**.
 4. Choose the downloaded **paymennt.ocmod.zip** file.
 
 ## Configure the plugin​
 
 1. Log in to **OpenCart** administrator panel.
 2. From the side menu, choose **Extensions** and from the Extension type select, **choose Payments**.
-
-<!-- ![Choose Payments](/img/guides/ecommerce-integration/e-commerce-opencart-configure-plugin-choose-payment.png) -->
-
 3. From the extension list, install the extension named **Paymennt.com**. After installation, press **edit** to configure the payment extension.
-
-<!-- ![Payment Extension](/img/guides/ecommerce-integration/e-commerce-opencart-configure-plugin-payment-extension.png) -->
-
 4. Toggle the **Status** to **enabled**.
 5. Set the **Mode** to **Testing**.
 6. Enter your **API Key** and **API Secret** as provided by your account manager.
 7. Enter the **Public key** as provided.
 8. Select your **Payment type**.
-
-<!-- ![Payment Type](/img/guides/ecommerce-integration/e-commerce-opencart-configure-plugin-payment-type.png) -->
-
 9. Review and update the remaining configuration required.
 10. Click on the **Save** icon on the top of the settings edit page.
 

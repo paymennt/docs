@@ -11,11 +11,11 @@ Currently, we offer free transfers to local bank accounts with frequency accordi
 
 ### Are payouts processed on weekends or holidays?
 
-No, payout does not processed on weekends or holidays.
+No, payout is not processed on weekends or holidays.
 
 ### Is there a minimum payout threshold?
 
-There is a minimum AED 250 payout limit. For payout request less than this amount, please contact our customer service team.
+There is a minimum AED 250 payout limit. For payout requests less than this amount, please contact our customer service team.
 
 ### How long is the settlement period?
 

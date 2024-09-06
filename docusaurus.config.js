@@ -161,8 +161,9 @@ module.exports = {
         ],
         theme: {
           primaryColor: "#25405d",
+          disableSearch: true,
+          hideDownloadButton: true,
           redocOptions: {
-            disableSearch: true,
             hideDownloadButton: true,
           },
         },

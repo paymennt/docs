@@ -2,10 +2,10 @@
 title: Your Account
 ---
 
-Efficiently manage your business operations with Paymennt
+Efficiently manage your business operations with **Paymennt**.
 
 1. [<ins>Login to Paymennt web portal</ins>](1-desktop-login.md):
-Login to Paymennt web portal seamlessly on desktop.
+Login to **Paymennt** web portal seamlessly on desktop.
 2. [<ins>Team setting and permissions</ins>](2-team-settings/index.md):
 Customize team settings and permissions to streamline workflow.
 3. [<ins>Change My business info</ins>](3-business-information.md):

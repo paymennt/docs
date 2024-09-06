@@ -2,7 +2,7 @@
 title: API and Plugins
 ---
 
-**Paymennt** offers a range of plugins for leading technology solutions to give your shoppers the best checkout experience. Our plugins are easy to integrate and come with **paymennt.com** payment platform functionality delivered out of the box.
+**Paymennt** offers a range of plugins for leading technology solutions to give your shoppers the best checkout experience. Our plugins are easy to integrate and come with [<ins>Paymennt.com</ins>](https://www.paymennt.com/) payment platform functionality delivered out of the box.
 
 In this section:
 

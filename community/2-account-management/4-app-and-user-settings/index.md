@@ -30,12 +30,6 @@ You can edit your contact information and account settings on the user settings 
 
 The account will then be deleted and you will be redirected to the login page.
 
-<!-- :::info
-
-If you are the business owner and would like to disable your employee’s user account, you can refer to “Team setting - disable user account” **[Need to Add Link]** for details.
-
-::: -->
-
 ***
 
 #### Related articles

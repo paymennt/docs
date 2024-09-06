@@ -8,29 +8,24 @@ You can manage your team members as well as their permissions by accessing the "
 
 :::
 
-With **paymennt** you can add, edit, or disable team member. You can also manage the accounts of your team member, their permissions, and sub-permissions.
-
-<!-- 1. [paymennt access and permissions for team memeber](1-access-and-permissions.md)
-2. [Sub-permission in paymennt](2-sub-permissions.md)
-3. [Add team memebers to your merchant account](3-add-team-member.md)
-4. [Edit or disable team members in your merchant account](4-edit-disable-team-member.md) -->
+With **Paymennt** you can add, edit, or disable team member. You can also manage the accounts of your team member, their permissions, and sub-permissions.
 
 ## Access and permissions
 
 ### Types of access level
 
-Paymennt offers 4 predefined user roles with specific access levels to simplify team management:
+**Paymennt** offers 4 predefined user roles with specific access levels to simplify team management.
 
-- **Owner**: The owner account is suitable for the owners and founders of the company
-- **Company**: The company account is suitable for the leads and executives of the company
-- **Branch**: The company account is suitable for the branch managers of the company
-- **Employee**: The employee account is suitable for the general employee of the company
+- **Owner**: The owner account is suitable for the owners and founders of the company.
+- **Company**: The company account is suitable for the leads and executives of the company.
+- **Branch**: The company account is suitable for the branch managers of the company.
+- **Employee**: The employee account is suitable for the general employee of the company.
 
 You can also modify some of the features’ permission of each user.
 
 ### Permission categories
 
-In Paymennt.com, we have 6 different permission categories
+In [<ins>Paymennt.com</ins>](https://www.paymennt.com/), we have 6 different permission categories.
 
 1. **Payment acceptance**:
     Create, edit, and manage orders. Includes canceling orders and extending the payment expiry date.
@@ -45,7 +40,7 @@ In Paymennt.com, we have 6 different permission categories
 6. **Commerce tools**:
     Manage the shop and events. Includes managing customers, shipping zones, discounts, and listings.
 
-Below are the tables of the permissions for each access level
+Below are the tables of the permissions for each access level:
 
 |                       | Owner | Company | Branch | Employee |
 |-----------------------|-------|---------|--------|----------|
@@ -68,54 +63,54 @@ For Spend management, Business settings, and Commerce tools permissions categori
 
 ### Spend management
 
-- Pay bills
+- **Pay bills**
   - Use the available balance to pay bills
-- Manage balance
+- **Manage balance**
   - Top up or withdraw from the available balance
-- Manage digital cards
+- **Manage digital cards**
   - Users can change the settings for cards issued to themselves and users of the same access level
 
 ### Business settings
 
-- View statement
+- **View statement**
   - View and download monthly financial statements
-- View balances
+- **View balances**
   - View available balance, fund holds, payouts, and the ledger
-- Payout accounts
+- **Payout accounts**
   - Add or update external bank accounts
-- Business management
+- **Business management**
   - Update business logo, customer support information, company persons, and legal documents
-- Manage finance settings
+- **Manage finance settings**
   - Manage payment methods, external bank accounts, tax settings, and maximum checkout value
-- Manage integrations
+- **Manage integrations**
   - Request and manage API keys
-- In-person payment
+- **In-person payment**
   - Manage POS and Tap on Phone devices
-- Manage add-ons
+- **Manage add-ons**
   - Enable and disable premium add-ons
 
 ### Commerce tools
 
 #### Customers
 
-- Manage customers
+- **Manage customers**
   - Add or archive customers
 
 #### Online shop
 
-- Manage shop orders
+- **Manage shop orders**
   - Mark orders as complete
-- Manage shop settings
+- **Manage shop settings**
   - Manage shop theme, support information, shipping zones, and discounts
 
 #### Catalog
 
-- Manage listings and collections
+- **Manage listings and collections**
   - Add, archive product and event listings and manage collections
 
 #### Events
 
-- Scan tickets
+- **Scan tickets**
   - Scan-only access for event tickets
 
 ## Add team members

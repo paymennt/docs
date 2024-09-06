@@ -6,11 +6,12 @@ sidebar_label: Funds and Payments
 Our mobile app's dashboard offers a convenient overview of your sales and account balance, providing quick access to vital statistics.
 
 For detailed finance information, simply navigate to:
+
 "My Account -> Finance ->" and select the type of finance details you require.
 
 :::note Before You Start
 
-You need to have an “Owner” or “Company” user account to view and manage all finance-related settings (Except Dispute management)
+You need to have an “Owner” or “Company” user account to view and manage all finance-related settings (Except Dispute management).
 
 :::
 
@@ -19,19 +20,19 @@ Review your account balance breakdown, including processing amount, payout amoun
 2. **[Monthly Statement](2-monthly-statement.md)**:
 Easily access and view all available monthly statements for your account.
 3. **[Payouts](3-payouts.md)**:
-View your payout history and manage your payout setting, including payout bank account and payout frequency
+View your payout history and manage your payout setting, including payout bank account and payout frequency.
 4. **[Settlement](4-settlement.md)**:
-View settlement history and monthly statement of your Paymennt account.
+View the settlement history and monthly statement of your Paymennt account.
 5. **[Disputes](5-dispute-chargeback.md)**:
-Access and review all dispute records
+Access and review all dispute records.
 6. **[Payment methods](6-payment-methods/index.mdx)**:
-Control the payment methods available for your customers to use
+Control the payment methods available for your customers to use.
 7. **[Tax settings](7-tax-settings.md)**:
-Manage tax settings for your products
+Manage tax settings for your products.
 8. **[Card-on-file](8-card-on-file.md)**:
-Manage your “Card-on-file” for paying your plans or subscription
+Manage your “Card-on-file” for paying your plans or subscription.
 9. **[Refund](9-refunds.mdx)**:
-Understand how refund can be processed in Paymennt
+Understand how refund can be processed in Paymennt.
 
 ## FAQ
 
