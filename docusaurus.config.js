@@ -105,12 +105,12 @@ module.exports = {
     },
     algolia: {
       // The application ID provided by Algolia
-      appId: 'YOUR_APP_ID',
+      appId: 'LTT5YM30FP',
 
       // Public API key: it is safe to commit it
-      apiKey: 'YOUR_SEARCH_API_KEY',
+      apiKey: 'b65796a965c5dbfa70790646ec8f3dbd',
 
-      indexName: 'YOUR_INDEX_NAME',
+      indexName: 'paymennt',
 
       // Optional: see doc section below
       contextualSearch: true,

@@ -39,18 +39,22 @@
   align-items: center;
   padding: 0rem 0;
   width: 100%;
-
 }
 
 .featuresBoarder {
-background: #FFFFFF;
- border: 3px solid #EBEBEB;
+  background: #FFFFFF;
+  border: 3px solid #EBEBEB;
   border-radius: 32px;
   color: lightgrey;
   padding: 1rem 1rem 1rem 1rem;
-    margin: 20px auto 50px auto;
-    max-width: 400px;
-    min-height: 360px;
+  margin: 20px auto 50px auto;
+  max-width: 400px;
+  min-height: 420px;
+  transition: background 0.5s;
+}
+
+.featuresBoarder:hover {
+  background: var(--ifm-color-secondary);
 }
 
 .featuresDescriptionText {
@@ -75,12 +79,11 @@ background: #FFFFFF;
 }
 
 .featureHead:hover {
-  color: var(--ifm-color-secondary-lighter);
+  color: var(--ifm-color-primary-darkest);
   text-decoration: none;
 }
 
 .featureImage {
   height: 178px;
   max-width: auto;
-  background-color: white;
 }

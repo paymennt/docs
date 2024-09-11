@@ -3,7 +3,7 @@ title: Online Payments
 sidebar_label: Online Payments
 ---
 
-At [<ins>Payment.com</ins>](https://www.paymennt.com/), we offer a diverse range of payment methods tailored to meet various business requirements.
+At [<ins>Paymennt.com</ins>](https://www.paymennt.com/), we offer a diverse range of payment methods tailored to meet various business requirements.
 
 1. [<ins>**Payment links:**</ins>](1-payments-links.md)
 Generate payment links for one-time transactions

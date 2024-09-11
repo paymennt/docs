@@ -22,9 +22,9 @@
 }
 
 .centered-search-container .DocSearch.DocSearch-Button {
-  width: 100% !important; /* Adjust width as needed */
+  width: 70% !important; /* Adjust width as needed */
   height:50px;
-    padding: 28px 16px 28px 16px;
+    padding: 28px 40px 28px 40px;
     gap: 0px;
     border-radius: 16px;
     justify: space-between;
@@ -40,6 +40,7 @@ line-height: 17.5px;
 letter-spacing: 0.3854166269302368px;
 text-align: left;
 color: #999999;
+padding: 0rem 1rem;
 
 }
 

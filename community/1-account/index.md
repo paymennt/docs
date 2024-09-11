@@ -19,20 +19,14 @@ You must download the **Paymennt** Merchant App to sign up for a merchant accoun
 
 <div class="row">
   <div class="col col--4 col--offset-2">
-    <Card
-      image="/img/guides/registration/install-android.png"
-      link="https://play.google.com/store/apps/details?id=com.pointcheckout.terminal&hl=en"
-      action="Download"
-    >
-    </Card>
+    <a href="https://play.google.com/store/apps/details?id=com.pointcheckout.terminal&hl=en">
+      <img src="/img/guides/registration/install-android.png"></img>
+    </a>
   </div>
   <div class="col col--4">
-    <Card
-      image="/img/guides/registration/install-ios.png"
-      link="https://apps.apple.com/jo/app/pointcheckout-terminal/id1505434910"
-      action="Download"
-    >
-    </Card>
+    <a href="https://apps.apple.com/jo/app/pointcheckout-terminal/id1505434910">
+      <img src="/img/guides/registration/install-ios.png"></img>
+    </a>
   </div>
 </div>
 
