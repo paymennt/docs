@@ -4,30 +4,32 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
-@import url('https://fonts.cdnfonts.com/css/harabara');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+/* @import url('https://fonts.cdnfonts.com/css/harabara'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700&display=swap');
+
 
 /* You can override the default Infima variables here. */
 :root {
   /* COLORS */
-  --ifm-color-primary: #6f2277;
-  --ifm-color-primary-dark: #591b5f;
-  --ifm-color-primary-darker: #4e1853;
-  --ifm-color-primary-darkest: #431447;
-  --ifm-color-primary-light: #8c4e92;
-  --ifm-color-primary-lighter: #9a64a0;
-  --ifm-color-primary-lightest: #a97aad;
+  --ifm-color-primary: #300d33;
+  --ifm-color-primary-dark: #2b0c2e;
+  --ifm-color-primary-darker: #290b2b;
+  --ifm-color-primary-darkest: #220924;
+  --ifm-color-primary-light: #350e38;
+  --ifm-color-primary-lighter: #370f3b;
+  --ifm-color-primary-lightest: #3e1142;
 
-  --ifm-color-secondary: #ed1163;
-  --ifm-color-secondary-dark: #be0e4f;
-  --ifm-color-secondary-darker: #a60c45;
-  --ifm-color-secondary-darkest: #8e0a3b;
-  --ifm-color-secondary-light: #f14182;
-  --ifm-color-secondary-lighter: #f25892;
-  --ifm-color-secondary-lightest: #f470a1;
+  --ifm-color-secondary: #dc4f82;
+  --ifm-color-secondary-dark: #d73670;
+  --ifm-color-secondary-darker: #d42a68;
+  --ifm-color-secondary-darkest: #af2355;
+  --ifm-color-secondary-light: #e16894;
+  --ifm-color-secondary-lighter: #e3749d;
+  --ifm-color-secondary-lightest: #eb9ab7;
 
   /* BACKGROUND */
-  --ifm-background-color: #fffff2;
+  --ifm-background-color: #ffffff;
   --ifm-heading-color: var(--ifm-color-primary);
   --ifm-link-color: var(--ifm-color-secondary);
 
@@ -36,11 +38,12 @@
   --ifm-link-hover-decoration: none;
 
   /* FONT */
-  --ifm-font-family-base: 'Poppins', sans-serif;
-  --ifm-font-size-base: 100%;
+  --ifm-font-family-base: 'Urbanist', sans-serif;
+  --ifm-font-size-base: 120%;
   --ifm-font-weight-semibold: 500;
+  --ifm-font-weight-bold: 700;
   --ifm-code-font-size: 95%;
-  --ifm-heading-font-family: 'harabara', sans-serif;
+  --ifm-heading-font-family: 'Urbanist', sans-serif;
 
   /* NAVBAR */
   --ifm-navbar-background-color: var(--ifm-background-color);
@@ -48,11 +51,12 @@
   --ifm-navbar-link-hover-color: var(--ifm-color-secondary);
   --ifm-navbar-item-padding-vertical: 0.5rem;
 
+
   /* HERO */
   --ifm-hero-background-color: var(--ifm-background-color);
 
   /* FOOTER */
-  --ifm-footer-background-color: var(--ifm-background-color);
+  --ifm-footer-background-color: #3D1241;
   --ifm-footer-link-hover-color: var(--ifm-link-color);
 
   /* TABS */
@@ -64,6 +68,10 @@
   --ifm-footer-link-color: var(--ifm-color-white);
   --ifm-footer-link-hover-color: var(--ifm-color-primary);
   */
+}
+
+body {
+  font-family: 'Urbanist', sans-serif;
 }
 
 /**
@@ -93,6 +101,10 @@ h1, h2, h3, h4, h5 {
     }
 }
 
+.theme-doc-sidebar-container
+{
+    border-right:0px !important;
+}
 /**
  HOME PAGE OVERRIDES
  */
@@ -124,11 +136,16 @@ h1, h2, h3, h4, h5 {
 /* FOOTER                                     */
 /* ****************************************** */
 .footer {
-  padding: calc(var(--ifm-footer-padding-vertical) * 2) var(--ifm-footer-padding-horizontal) var(--ifm-footer-padding-vertical);
+  padding: calc(var(--ifm-footer-padding-vertical) * 1) var(--ifm-footer-padding-horizontal) var(--ifm-footer-padding-vertical);
 }
 
 .footer__logo {
   margin-top: 0;
+}
+
+.footer__socials {
+  padding: 1rem 0 0 0;
+
 }
 
 /* ****************************************** */
@@ -253,4 +270,93 @@ h1, h2, h3, h4, h5 {
 
 .redocusaurus .menu-content li>label {
   font-family: var(--ifm-font-family-base);
+}
+
+
+.redocusaurus .menu-content
+{
+border-right:0px !important;
+}
+
+.side-padding {
+    margin-left: 16%;
+    margin-right: 16%;
+}
+
+.main_custom_title
+{
+font-family: var(--ifm-font-family-base);
+font-size: 40px;
+font-weight: 700;
+line-height: 48px;
+letter-spacing: -0.02em;
+color: #1A1A1A;
+margin-bottom: 1.5px;
+}
+
+.main_custom_subtitle
+{
+font-family: var(--ifm-font-family-base);
+font-size: 24px;
+font-weight: 500;
+line-height: 36px;
+text-align: center;
+color: #666666;
+margin-bottom: 50px;
+
+}
+
+.custom-footer-label
+{
+  width: 245px;
+  height: 19px;
+  gap: 36px;
+  font-family: var(--ifm-font-family-base);
+font-size: 16px;
+font-weight: 500;
+line-height: 19.2px;
+letter-spacing: -0.02em;
+text-align: left;
+color: #FFFFFFB2;
+
+}
+.custom-footer-social-item
+{
+  /* width: 24px;
+  height: 24px;
+  padding: 2px; */
+
+}
+
+.custom-footer-social-icon-linkedIn
+{
+  /* width: 18px;
+  height: 18px;
+  top: 3px;
+  left: 3px;
+  gap: 0px; */
+
+}
+
+
+
+.custom-footer-social-icon
+{
+  /* width: 20px;
+height: 20px;
+top: 2px;
+left: 2px;
+gap: 0px; */
+
+
+}
+.custom-paymennt-icon
+{
+  width: 120.52px;
+  height: 36px;
+  
+}
+.custom-footer-label svg
+{
+  display: none;
 }

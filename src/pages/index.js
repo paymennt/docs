@@ -5,84 +5,96 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./styles.module.css";
+import CenteredSearchBar from '../components/CenteredSearchBar';
 
 const features = [
   {
-    title: "product guides",
-    target: "/guides",
-    imageUrl: "img/home/guides.svg",
+  id:1,
+    title: "Joining Paymennt",
+    target: "/guides/account",
+    imageUrl: "img/home/joining-paymennt.svg",
     description: (
       <>
-        learn the ins and outs of the <strong>paymennt</strong> platform. Our
-        product guides will show you how to manage your merchant account and
-        covers topics critical for any business
+        Learn all you need to know about getting started with Paymennt and everything you need to open your account
       </>
     ),
   },
   {
-    title: "accept payments",
-    target: "/docs",
-    imageUrl: "img/home/accept.svg",
+  id:2,
+    title: "Your Account",
+    target: "/guides/account-management",
+    imageUrl: "img/home/your-account.svg",
     description: (
       <>
-        learn about the ins and outs of the **paymennt** platform through boosts
-        an array of tools was designed from the ground up to be easily installed
-        and used to get your website up and running quickly.
+        Configure your Paymennt account settings. Update personal information, manage security, and customize preferences
       </>
     ),
   },
   {
-    title: "e-commerce plugins",
-    target: "/docs/payment/ecomm",
-    imageUrl: "img/home/plugins.svg",
+   id:3,
+    title: "Online Payments",
+    target: "/guides/online-payment",
+    imageUrl: "img/home/online-payments.svg",
     description: (
       <>
-        connect your e-commerce website to the powerful payment processing
-        capabilities of
-        <strong>paymennt</strong>. choose a quick, reliable, and low-code
-        solution thanks to our flexible plugins
+        Learn how to set up, send and receive online payments securely
+      </>
+    ),
+  },
+  // {
+  //  id:4,
+  //   title: "In-person Payments",
+  //   target: "/docs/sdks",
+  //   imageUrl: "img/home/in-person-payments.svg",
+  //   description: (
+  //     <>
+  //       Set up and manage Paymennt POS devices and Tap on Phone transactions
+  //     </>
+  //   ),
+  // },
+  {
+   id:5,
+    title: "APIs and Plugins",
+    target: "/guides/api-and-plugins",
+    imageUrl: "img/home/api-and-plugins.svg",
+    description: (
+      <>
+        Integrate and configure APIs and plugins to build your Paymennt account the way you want
       </>
     ),
   },
   {
-    title: "software kits",
-    target: "/docs/sdks",
-    imageUrl: "img/home/sdks.svg",
-    description: (
-      <>
-        whether for your server or your mobile app, <strong>paymennt</strong>{" "}
-        provides you with an array of SDKs to make your product development
-        journey simpler
-      </>
-    ),
-  },
-  {
-    title: "api reference",
-    target: "/api",
-    imageUrl: "img/home/api.svg",
-    description: (
-      <>
-        access our full API reference documentation for complete instructions on
-        how to implement and access the full range of features and tools made
-        available to our merchants
-      </>
-    ),
-  },
+   id:6,
+      title: "Funds and Payments",
+      target: "/guides/funds-and-payments",
+      imageUrl: "img/home/funds-and-payments.svg",
+      description: (
+        <>
+            Everything you need to know about fees and how your payments are processed
+        </>
+      ),
+    },
 ];
 
-function Feature({ imageUrl, target, title, description }) {
+function Feature({ id,imageUrl, target, title, description }) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
-    <div className={clsx("col col--4", styles.feature)}>
-      {imgUrl && (
-        <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
+    <div className={clsx("col col--6", styles.feature)}>
+      <Link to={useBaseUrl(target)}>
+        <div className={styles.featuresBoarder}>
+          {imgUrl && (
+            <div className="text--center">
+              <img className={styles.featureImage} src={imgUrl} alt={title} />
+            </div>
+          )}
+          <Link className={clsx(styles.featureHead)} to={useBaseUrl(target)}>
+            {title}
+          </Link>
+          <div className={styles.featuresDescriptionText}>
+            <p>{description}</p>
+          </div>
         </div>
-      )}
-      <Link className={clsx(styles.featureHead)} to={useBaseUrl(target)}>
-        {title}
       </Link>
-      <p>{description}</p>
     </div>
   );
 }
@@ -91,34 +103,24 @@ export default function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   return (
-    <Layout
-      title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
+    <Layout title={`${siteConfig.title}`} description="Description will go into a meta tag in <head />">
       <header className={clsx("hero", styles.heroBanner)}>
         <div className="container">
           <div className="row">
-            <div className="col col--8">
-              <h1 className="hero__title">{siteConfig.title}</h1>
+            <div className="col">
+              <h1 className="hero__title main_custom_title">{siteConfig.title}</h1>
             </div>
           </div>
           <div className="row">
-            <div className="col col--8">
-              <p className="hero__subtitle">{siteConfig.tagline}</p>
+            <div className="col">
+              <p className="hero__subtitle main_custom_subtitle">{siteConfig.tagline}</p>
             </div>
           </div>
           <div className="row">
-            <div className="col col--8">
+            <div className="col">
               <div className={styles.buttons}>
-                <Link
-                  className={clsx(
-                    "button button--outline button--secondary button--lg",
-                    styles.getStarted
-                  )}
-                  to={useBaseUrl("docs/")}
-                >
-                  get started
-                </Link>
+                <CenteredSearchBar />
+
               </div>
             </div>
           </div>
@@ -128,9 +130,13 @@ export default function Home() {
         {features && features.length > 0 && (
           <section className={styles.features}>
             <div className="container">
-              <div className="row">
+              <div className="row justify-content-md-center side-padding">
                 {features.map((props, idx) => (
-                  <Feature key={idx} {...props} />
+                    <>
+
+                     <Feature key={idx} {...props} />
+</>
+
                 ))}
               </div>
             </div>

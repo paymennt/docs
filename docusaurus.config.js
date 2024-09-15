@@ -3,8 +3,8 @@
 const path = require("path");
 
 module.exports = {
-  title: "paymennt documentation",
-  tagline: "build amazing payment experiences with the paymennt platform",
+  title: "Get answers to everything Paymennt",
+  tagline: "Build amazing payment experiences with Paymennt’s unified platform",
   url: "https://docs.paymennt.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -21,15 +21,15 @@ module.exports = {
       },
       items: [
         {
-          to: "guides/",
+          to: "guides/account/",
           activeBasePath: "guides",
-          label: "GUIDES",
+          label: "USER GUIDE",
           position: "left",
         },
         {
           to: "docs/",
           activeBasePath: "docs",
-          label: "DEVELOPER",
+          label: "DEVELOPER GUIDE",
           position: "left",
         },
         {
@@ -41,59 +41,58 @@ module.exports = {
       ],
     },
     footer: {
-      style: "light",
       links: [
         {
-          items: [
-            {
-              html: `
-                <a href="https://www.paymennt.com" target="_blank">
-                  <img src="/img/paymennt-logo.svg" alt="paymennt logo" width="114" height="51" />
+          html: `
+              <div>
+                  <a href="https://www.paymennt.com" target="_blank" class = "custom-paymennt-icon">
+                    <img src="/img/paymennt-logo-white.svg" alt="paymennt logo" width="114" height="51" />
+                  </a>
+              </div>
+          `,
+        },
+        {
+          label: 'Security',
+          href: 'https://www.google.com/',
+         className: 'custom-footer-label', // Add a custom class here
+        },
+        {
+          label: 'Privacy',
+          href: 'https://www.google.com/',
+          className: 'custom-footer-label', // Add a custom class here
+        },
+        {
+          label: 'API Specs',
+          href: 'https://www.google.com/',
+          className: 'custom-footer-label', // Add a custom class here
+        },
+        {
+          html: `
+          
+            <div class="footer__socials">
+                <a href="https://www.google.com/" target="_blank" >
+                    <img src="/img/facebook.svg" alt="paymennt facebook" style="
+    width: 24px;
+    height: 24px;
+    margin-right: 2%;
+" />
                 </a>
-                <p style="font-size: smaller;">Copyright © ${new Date().getFullYear()} PointCheckout, Ltd</p>
-              `,
-            },
-          ],
-        },
-        {},
-        {
-          title: "GUIDES",
-          items: [
-            {
-              label: "account registration",
-              to: "/guides/account/start",
-            },
-            {
-              label: "desktop access",
-              to: "/guides/account/desktop",
-            },
-          ],
-        },
-        {
-          title: "ACCOUNT MANAGEMENT",
-          items: [
-            {
-              label: "payout bank account",
-              to: "/guides/manage/payouts/payout-account",
-            },
-          ],
-        },
-        {
-          title: "ECOMMERCE PLUGINS",
-          items: [
-            {
-              label: "opencart",
-              href: "/docs/payment/ecomm/opencart",
-            },
-            {
-              label: "woocommerce",
-              href: "/docs/payment/ecomm/woocommerce",
-            },
-            {
-              label: "shopify",
-              href: "/docs/payment/ecomm/shopify",
-            },
-          ],
+                <a href="https://www.google.com/" target="_blank" >
+                    <img  src="/img/instagram.svg" alt="paymennt instagram" style="
+    width: 24px;
+    height: 24px;
+    margin-right: 2%;
+" />
+                </a>
+                <a href="https://www.google.com/" target="_blank"  >
+                    <img  src="/img/linkedin.svg" alt="paymennt linkedin" style="
+        width: 18px;
+    height: 18px;
+    margin-bottom: 3px;
+"  />
+                </a>
+            </div>
+          `,
         },
       ],
     },
@@ -104,13 +103,45 @@ module.exports = {
     prism: {
       additionalLanguages: ["swift"],
     },
+    algolia: {
+      // The application ID provided by Algolia
+      appId: 'LTT5YM30FP',
+
+      // Public API key: it is safe to commit it
+      apiKey: 'b65796a965c5dbfa70790646ec8f3dbd',
+
+      indexName: 'paymennt',
+
+      // Optional: see doc section below
+      contextualSearch: true,
+
+      // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+      externalUrlRegex: 'external\\.com|domain\\.com',
+
+      // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+      replaceSearchResultPathname: {
+        from: '/docs/', // or as RegExp: /\/docs\//
+        to: '/',
+      },
+
+      // Optional: Algolia search parameters
+      searchParameters: {},
+
+      // Optional: path for search page that enabled by default (`false` to disable it)
+      searchPagePath: 'search',
+
+      // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+      //insights: false,
+
+      //... other Algolia params
+    },
   },
   presets: [
     [
       "@docusaurus/preset-classic",
       {
         docs: {
-          breadcrumbs: false,
+          breadcrumbs: true,
           sidebarPath: require.resolve("./sidebars.docs.js"),
         },
         blog: false,
@@ -130,8 +161,9 @@ module.exports = {
         ],
         theme: {
           primaryColor: "#25405d",
+          disableSearch: true,
+          hideDownloadButton: true,
           redocOptions: {
-            disableSearch: true,
             hideDownloadButton: true,
           },
         },
@@ -146,8 +178,9 @@ module.exports = {
         path: "community",
         routeBasePath: "guides",
         sidebarPath: require.resolve("./sidebars.guides.js"),
-      },
+      }
     ],
+
     path.resolve(__dirname, "plugins/webpack"),
   ],
 };

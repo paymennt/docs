@@ -35,7 +35,7 @@ pod 'PointCheckoutSdk', :git => 'https://github.com/pointcheckout/ios-sdk.git', 
 
 :::note
 replace ${version} with the latest version of the SDK, you can check all available versions [here](https://github.com/pointcheckout/merchant-ios-sdk/releases). Example: <br />
-`pod 'PointCheckoutSdk', :git => 'https://github.com/pointcheckout/ios-sdk.git', :tag=> 'v1.4'`
+`pod 'PointCheckoutSdk', :git => 'https://github.com/pointcheckout/ios-sdk.git', :tag=> 'v1.3'`
 :::
 
 2. Execute `pod install` inside the project directory.
