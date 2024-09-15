@@ -80,8 +80,8 @@ function Feature({ id,imageUrl, target, title, description }) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={clsx("col col--6", styles.feature)}>
-      <Link to={useBaseUrl(target)}>
         <div className={styles.featuresBoarder}>
+        <Link to={useBaseUrl(target)}>
           {imgUrl && (
             <div className="text--center">
               <img className={styles.featureImage} src={imgUrl} alt={title} />
@@ -93,8 +93,8 @@ function Feature({ id,imageUrl, target, title, description }) {
           <div className={styles.featuresDescriptionText}>
             <p>{description}</p>
           </div>
+          </Link>
         </div>
-      </Link>
     </div>
   );
 }
@@ -119,8 +119,7 @@ export default function Home() {
           <div className="row">
             <div className="col">
               <div className={styles.buttons}>
-                <CenteredSearchBar />
-
+                <CenteredSearchBar/>
               </div>
             </div>
           </div>
@@ -133,10 +132,8 @@ export default function Home() {
               <div className="row justify-content-md-center side-padding">
                 {features.map((props, idx) => (
                     <>
-
                      <Feature key={idx} {...props} />
-</>
-
+                    </>
                 ))}
               </div>
             </div>

@@ -7,7 +7,7 @@ You can easily access and manage your business information using the sidebar nav
 
 Navigate to "My Business (Under “Account”)" -> Choose the aspect of your business you'd like to update (e.g. Company Registration, Tax registration…etc)
 
-:::note
+:::tip
 
 You can update your business information as often as needed to ensure that it remains accurate and up-to-date. Whether you have changed your business address, contact details, or other information, you can make adjustments as necessary.
 

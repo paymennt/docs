@@ -68,6 +68,7 @@
   --ifm-footer-link-color: var(--ifm-color-white);
   --ifm-footer-link-hover-color: var(--ifm-color-primary);
   */
+
 }
 
 body {
@@ -283,6 +284,13 @@ border-right:0px !important;
     margin-right: 16%;
 }
 
+@media screen and (max-width: 966px) {
+  .side-padding {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+
 .main_custom_title
 {
 font-family: var(--ifm-font-family-base);
@@ -359,4 +367,29 @@ gap: 0px; */
 .custom-footer-label svg
 {
   display: none;
+}
+
+.theme-admonition.theme-admonition-note.alert.alert--secondary.admonition_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-styles-module
+{
+  background-color: #F7F7F7;
+  border: none;
+}
+
+.theme-admonition.theme-admonition-tip.alert.alert--success.admonition_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-styles-module
+{
+  background-color: #F7F7F7;
+  border: none;
+}
+
+.theme-admonition.theme-admonition-info.alert.alert--info.admonition_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-styles-module
+{
+  background-color: #E7F4FA;
+  border: none;
+}
+
+.theme-admonition.theme-admonition-warning.alert.alert--danger.admonition_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-styles-module
+{
+  background-color: #FEF4E9;
+  ;
+  border: none;
 }

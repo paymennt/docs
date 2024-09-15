@@ -3,9 +3,9 @@ title: Payment Methods
 sidebar_label: Payment Methods
 ---
 
-:::note Before You Start
+:::warning Warning
 
-You need to have an “Owner” or “Company” user account to view and manage all finance-related settings.
+**Before you start**: You need to have an “Owner” or “Company” user account to view and manage all finance-related settings.
 
 :::
 
