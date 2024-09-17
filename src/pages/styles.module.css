@@ -41,18 +41,18 @@
 
 .featuresBoarder {
   background: #FFFFFF;
-  border: 3px solid #EBEBEB;
+  border: 2px solid #EBEBEB;
   border-radius: 32px;
   color: lightgrey;
   padding: 1rem 1rem 1rem 1rem;
   margin: auto auto 50px auto;
   max-width: 400px;
   min-height: 420px;
-  transition: background 0.5s;
+  transition: border 0.3s;
 }
 
 .featuresBoarder:hover {
-  background: var(--ifm-color-secondary);
+  border-color: var(--ifm-color-primary-lightest);
 }
 
 .featuresDescriptionText {

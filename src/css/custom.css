@@ -369,13 +369,13 @@ gap: 0px; */
   display: none;
 }
 
+/* Custom Overides for Admonitions*/
+
 .theme-admonition.theme-admonition-note.alert.alert--secondary
 {
   background-color: #F7F7F7;
   border: none;
 }
-
-theme-admonition theme-admonition-note alert alert--secondary admonition_LlT9
 
 .theme-admonition.theme-admonition-tip.alert.alert--success
 {
@@ -394,4 +394,20 @@ theme-admonition theme-admonition-note alert alert--secondary admonition_LlT9
   background-color: #FEF4E9;
   ;
   border: none;
+}
+
+/* Custom Overides for Drop Down List currently only used in FAQ sections */
+
+.alert--info
+{
+  --ifm-alert-background-color: white;
+  --ifm-alert-border-color: #DBDCE1;
+  --docusaurus-details-decoration-color: #651E6C !important ;
+  border: 2px solid var(--ifm-alert-border-color) !important;
+}
+
+.alert--info summary
+{
+  color: #651E6C;
+  font-weight: var(--ifm-font-weight-semibold);
 }
