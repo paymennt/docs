@@ -114,7 +114,7 @@ See the [<ins>List of Restricted Businesses</ins>](https://www.paymennt.com/en/r
 
 Know Your Customer (KYC) refers to the process of a financial service provider, such as a bank or a payment service provider like us in identification and verification of customers before initiating any business transactions.This is a key component of Anti-Money Laundering (AML) regulations, which are designed to combat financial crimes. KYC helps us understand our merchant customers and their financial behaviors to mitigate risks associated with fraud and illegal activities.
 
-You can find more information on the <ins>[KYC](./kyc)</ins> page.
+You can find more information on the [<ins>KYC</ins>](./kyc) page.
 
 </details>
 

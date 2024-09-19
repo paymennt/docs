@@ -15,7 +15,7 @@ Yes, you can log in to multiple devices simultaneously using the same credential
 
 ## Are there predefined user roles with specific permissions?
 
-Yes, we offer 4 predefined user roles (Owner, Company Branch, and Employee) with specific access levels to simplify team management. You can also modify some of the features’ permission of each user. Read the <ins>[Team Setting and Permissions](./team-settings)</ins>, for more information.
+Yes, we offer 4 predefined user roles (Owner, Company Branch, and Employee) with specific access levels to simplify team management. You can also modify some of the features’ permission of each user. Read the [<ins>Team Setting and Permissions</ins>](./team-settings), for more information.
 
 </details>
 
@@ -23,7 +23,7 @@ Yes, we offer 4 predefined user roles (Owner, Company Branch, and Employee) with
 
 ## Can I create custom user roles with unique permissions?
 
-Yes, you have the flexibility to create custom user roles with unique permissions tailored to your organization's needs, such as turning off the “Payment acceptance” permission for an employee user. Read the <ins>[Team Setting and Permissions](./team-settings)</ins> for more information.
+Yes, you have the flexibility to create custom user roles with unique permissions tailored to your organization's needs, such as turning off the “Payment acceptance” permission for an employee user. Read the [<ins>Team Setting and Permissions</ins>](./team-settings) for more information.
 
 </details>
 
@@ -47,7 +47,7 @@ You can easily update your trade license by accessing the “Company Registratio
 
 ## How can I update my business information?
 
-You can easily change your business information by navigating to the appropriate settings under "My Business" from the side menu. Read the <ins>[Manage Business Information](./business-information)</ins> for more information.
+You can easily change your business information by navigating to the appropriate settings under "My Business" from the side menu. Read the [<ins>Manage Business Information</ins>](./business-information) for more information.
 
 </details>
 

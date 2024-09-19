@@ -342,6 +342,11 @@ color: #FFFFFFB2;
 
 /* Custom Overides for Admonitions*/
 
+.theme-admonition
+{
+  --ifm-link-color: #dc4f82;
+}
+
 .theme-admonition.theme-admonition-note.alert.alert--secondary
 {
   background-color: #F7F7F7;
@@ -357,13 +362,12 @@ color: #FFFFFFB2;
 .theme-admonition.theme-admonition-info.alert.alert--info
 {
   background-color: #E7F4FA;
-  border: none;
+  border: none !important;
 }
 
 .theme-admonition.theme-admonition-warning.alert.alert--danger
 {
   background-color: #FEF4E9;
-  ;
   border: none;
 }
 
@@ -375,6 +379,7 @@ color: #FFFFFFB2;
   --ifm-alert-border-color: #DBDCE1;
   --docusaurus-details-decoration-color: #651E6C !important ;
   border: 2px solid var(--ifm-alert-border-color) !important;
+  --ifm-link-color: #dc4f82;
 }
 
 .alert--info summary
@@ -389,3 +394,4 @@ color: #FFFFFFB2;
 {
   box-shadow: none;
 }
+

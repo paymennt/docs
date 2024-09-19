@@ -41,7 +41,7 @@ The settlement period typically varies based on your plan and transaction detail
 
 ### Why is there a delay in settlement?
 
-Settlement delays may occur due to various factors such as transaction verification, compliance checks, or processing times with financial institutions. We strive to minimize delays and ensure timely settlements whenever possible. Check the <ins>[Hold Period](./settlement)</ins> section on the Settlement page for more information.
+Settlement delays may occur due to various factors such as transaction verification, compliance checks, or processing times with financial institutions. We strive to minimize delays and ensure timely settlements whenever possible. Check the [<ins>Hold Period</ins>](./settlement) section on the Settlement page for more information.
 
 </details>
 
