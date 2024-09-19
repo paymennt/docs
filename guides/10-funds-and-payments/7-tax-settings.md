@@ -9,7 +9,7 @@ sidebar_label: Tax Settings
 
 You have to register your tax information before setting up taxes on your products.
 
-Read [Manage Business Information](/community/2-account-management/2-business-information.md) for more details
+Read [Manage Business Information](../your-account/business-information) for more details
 
 :::
 
@@ -21,5 +21,5 @@ On the tax settings page, you can enable or disable tax on your products. If tax
 
 #### Related Articles
 
-* [<ins>Products, Collections, and Events</ins>](/community/6-online-payment/7-products-collections-and-events.md)
-* [<ins>Manage Business Information</ins>](/community/2-account-management/2-business-information.md)
+* [<ins>Products, Collections, and Events</ins>](../online-payment/products-collections-and-events)
+* [<ins>Manage Business Information</ins>](../your-account/business-information)

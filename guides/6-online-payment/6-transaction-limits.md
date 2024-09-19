@@ -17,4 +17,4 @@ This limit applies to payment links for amounts, products, or events and affects
 
 #### Related Articles
 
-* [<ins>Payment Links</ins>](1-payments-links.md)
+* [<ins>Payment Links</ins>](./payments-links)

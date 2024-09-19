@@ -3,9 +3,9 @@ title: Settlement
 sidebar_label: Settlement
 ---
 
-Transactions on [<ins>Paymennt.com</ins>](https://www.paymennt.com/) are typically settled within 1-5 working days, depending on the selected plan. Extended "Hold Periods" may occur in certain cases, dictated by transaction compliance risks. [<ins>Paymennt.com</ins>](https://www.paymennt.com/) may also utilize <ins>[Reserved Amount](/community/1-account/5-reserved-account.md)</ins> like Rolling Reserve and Fixed Reserve, tailored to merchant categories and risk levels, guaranteeing funds availability for addressing potential liabilities or contingencies.
+Transactions on [<ins>Paymennt.com</ins>](https://www.paymennt.com/) are typically settled within 1-5 working days, depending on the selected plan. Extended "Hold Periods" may occur in certain cases, dictated by transaction compliance risks. [<ins>Paymennt.com</ins>](https://www.paymennt.com/) may also utilize [<ins>Reserved Amount</ins>](../getting-started/reserved-account) like Rolling Reserve and Fixed Reserve, tailored to merchant categories and risk levels, guaranteeing funds availability for addressing potential liabilities or contingencies.
 
-Once the fund is settled, the fund will go to your available balance and you can get your fund through <ins>[payouts](3-payouts.md)</ins>.
+Once the fund is settled, the fund will go to your available balance and you can get your fund through <ins>[payouts](./payouts)</ins>.
 
 ## Hold Periods
 
@@ -35,7 +35,7 @@ You can also check your monthly statements by navigating to the "Monthly Stateme
 
 #### Related Articles:
 
-* [<ins>Account Balance</ins>](1-account-balance.md)
-* [<ins>Payout</ins>](3-payouts.md)
-* [<ins>Disputes</ins>](5-dispute-chargeback.md)
-* [<ins>Reserved Account</ins>](/community/1-account/5-reserved-account.md)
+* [<ins>Account Balance</ins>](./account-balance)
+* [<ins>Payout</ins>](./payouts)
+* [<ins>Disputes</ins>](./dispute-chargeback)
+* [<ins>Reserved Account</ins>](../getting-started/reserved-account)

@@ -21,4 +21,4 @@ Your monthly statement contains a comprehensive summary of your account activity
 
 #### Related Articles
 
-* [<ins>Account Balance</ins>](1-account-balance.md)
+* [<ins>Account Balance</ins>](./account-balance)

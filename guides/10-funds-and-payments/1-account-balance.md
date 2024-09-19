@@ -15,7 +15,7 @@ On the account balance page, you will see a breakdown of your transactions, incl
 * **Processing Amount:** The total amount from transactions that are currently being processed.
 * **Payout Amount:** The amount that has been paid out to your bank or payment card.
 * **On-Hold Balance:** The total amount from transactions that are on hold.
-* **Reserved - rolling / Reserved - fixed Amount:** The amount that is reserved by Paymennt until reaching the reserved limit. For more information, please refer to the <ins>[Reserved Amount](/community/1-account/5-reserved-account.md)</ins> page.
+* **Reserved - rolling / Reserved - fixed Amount:** The amount that is reserved by Paymennt until reaching the reserved limit. For more information, please refer to the [<ins>Reserved Amount</ins>](../getting-started/reserved-account) page.
 * **Outstanding Amount:** The negative balance due to unpaid plan fee or other Paymennt service fee.
 
 ## Total Balance vs. Available Balance
@@ -31,7 +31,7 @@ To view your transaction history, go to the "Account Balance" page and select th
 
 #### Related Articles
 
-* [<ins>Settlement</ins>](4-settlement.md)
-* [<ins>Payout</ins>](3-payouts.md)
-* [<ins>Disputes</ins>](5-dispute-chargeback.md)
-* [<ins>Reserved Account</ins>](/community/1-account/5-reserved-account.md)
+* [<ins>Settlement</ins>](./settlement)
+* [<ins>Payout</ins>](./payouts)
+* [<ins>Disputes</ins>](./dispute-chargeback)
+* [<ins>Reserved Account</ins>](../getting-started/reserved-account)

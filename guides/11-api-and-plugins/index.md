@@ -7,6 +7,6 @@ sidebar_label: API and Plugins
 
 In this section:
 
-1. [<ins>Woocommerce Integration</ins>](1-woocommerce.md)
-2. [<ins>OpenCart Integration</ins>](2-opencart.md)
-3. [<ins>Shopify Integration</ins>](3-shopify.md)
+1. [<ins>Woocommerce Integration</ins>](./api-and-plugins/woocommerce)
+2. [<ins>OpenCart Integration</ins>](./api-and-plugins/opencart)
+3. [<ins>Shopify Integration</ins>](./api-and-plugins/shopify)

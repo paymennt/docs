@@ -79,5 +79,5 @@ Your tickets will be visible on the Events tab when creating a payment link. Eac
 
 #### Related Articles
 
-* [<ins>Payment Links</ins>](1-payments-links.md)
-* [<ins>Subscription</ins>](2-subscriptions.md)
+* [<ins>Payment Links</ins>](./payments-links)
+* [<ins>Subscription</ins>](./subscriptions)

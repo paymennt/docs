@@ -18,4 +18,4 @@ If funds related to a chargeback cannot be recovered, the merchant is obligated 
 
 #### Related Articles
 
-* [<ins>Refunds</ins>](9-refunds.mdx)
+* [<ins>Refunds</ins>](./refunds)

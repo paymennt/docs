@@ -82,4 +82,4 @@ Updates to the payout bank account will be reviewed by our operation team and wi
 
 #### Related Articles
 
-* [<ins>Account Balance</ins>](1-account-balance.md)
+* [<ins>Account Balance</ins>](./account-balance)

@@ -20,4 +20,4 @@ In the existing customer’s record, you can edit the record by tapping “Edit�
 
 #### Related Articles
 
-* [<ins>Payment Links</ins>](1-payments-links.md)
+* [<ins>Payment Links</ins>](./payments-links)

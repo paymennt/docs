@@ -22,7 +22,7 @@ You can also view or shop orders easily by navigating to the “Shop (Under the 
 
 :::note
 
-The products shown on the online shop will be the same as the products in the product list for other payment methods (e.g. Payment links). To edit the product list, refer to the [<ins>Product Management</ins>](/guides/online-payment/products-collections-and-events) flow.
+The products shown on the online shop will be the same as the products in the product list for other payment methods (e.g. Payment links). To edit the product list, refer to the [<ins>Product Management</ins>](./products-collections-and-events) flow.
 
 :::
 
@@ -101,4 +101,4 @@ For detailed information on our API specifications, you can refer to our API spe
 
 #### Related Articles
 
-* [<ins>eCommerce</ins>](11-api-and-plugins/index.md)
+* [<ins>eCommerce</ins>](../api-and-plugins)

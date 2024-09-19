@@ -103,7 +103,7 @@ No, you can add as many products as your business requires.
 
 ### How do I create a product for payment links and online shops?
 
-Read the <ins>[Products, Product varients and Events](7-products-collections-and-events.md)</ins> for more information.
+Read the <ins>[Products, Product varients and Events](./products-collections-and-events)</ins> for more information.
 
 </details>
 
@@ -119,7 +119,7 @@ You can go to the “Inventory section” on the product details page, turn on �
 
 ### Can I offer variations of products, such as sizes or colors?
 
-Yes, you can set up variations and specify prices for each option to accommodate customer preferences. Read <ins>[Products, Product varients and Events](7-products-collections-and-events.md)</ins> for more information.
+Yes, you can set up variations and specify prices for each option to accommodate customer preferences. Read <ins>[Products, Product varients and Events](./products-collections-and-events)</ins> for more information.
 
 </details>
 
@@ -128,7 +128,7 @@ Yes, you can set up variations and specify prices for each option to accommodate
 ### Can I offer discounts or promotions on products?
 
 Yes, You can set up a percentage or fixed-amount discounts, or create promotional codes to incentivize purchases for Online shops. Note that discounts is not applicable to payment links.
-Read <ins>[Online Shop](5-online-shop-and-API-integration.md)</ins> for more information.
+Read <ins>[Online Shop](./online-shop-and-API-integration)</ins> for more information.
 
 </details>
 

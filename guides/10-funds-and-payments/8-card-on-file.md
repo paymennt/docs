@@ -21,4 +21,4 @@ Authorization is needed when you add a new payment card.
 
 #### Related Articles
 
-* [<ins>Plan Management</ins>](/community/2-account-management/1-plan-management/index.md)
+* [<ins>Plan Management</ins>](../your-account/plan-management)
