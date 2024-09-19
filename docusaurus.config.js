@@ -21,7 +21,7 @@ module.exports = {
       },
       items: [
         {
-          to: "guides/account/",
+          to: "guides/getting-started/",
           activeBasePath: "guides",
           label: "USER GUIDE",
           position: "left",
@@ -175,7 +175,7 @@ module.exports = {
       "@docusaurus/plugin-content-docs",
       {
         id: "guides",
-        path: "community",
+        path: "guides",
         routeBasePath: "guides",
         sidebarPath: require.resolve("./sidebars.guides.js"),
       }

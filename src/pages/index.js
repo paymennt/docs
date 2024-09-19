@@ -11,7 +11,7 @@ const features = [
   {
   id:1,
     title: "Joining Paymennt",
-    target: "/guides/account",
+    target: "/guides/getting-started",
     imageUrl: "img/home/joining-paymennt.svg",
     description: (
       <>
@@ -22,7 +22,7 @@ const features = [
   {
   id:2,
     title: "Your Account",
-    target: "/guides/account-management",
+    target: "/guides/your-account",
     imageUrl: "img/home/your-account.svg",
     description: (
       <>
