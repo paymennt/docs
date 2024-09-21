@@ -35,7 +35,7 @@ During the onboarding process, we will also ask for information that includes yo
    * Verify Your Phone Number — Receive and input a verification code
    * Create a Secure PIN — Set up a PIN code for security
    * Enable Biometric Login — For added convenience, set up fingerprint or facial recognition
-   * Agree to Terms — Review and accept our [<ins>Plans and Pricing</ins>](https://www.paymennt.com/en/pricing), Terms and Conditions, and [<ins>Privacy Notice</ins>](https://www.paymennt.com/en/legal)
+   * Agree to Terms — Review and accept our [<ins>Plans and Pricing</ins>](https://www.paymennt.com/en/pricing), [<ins>Terms and Conditions</ins>](https://www.paymennt.com/legal/merchants/), and [<ins>Privacy Notice</ins>](https://www.paymennt.com/en/legal)
    * Choose Your Referral Source — If applicable, indicate how you heard about us
    * Submit Personal Information — Enter accurate personal details and upload a clear image of your Emirates ID
    * Complete Identity Verification — Take a selfie to confirm your identity
@@ -86,7 +86,7 @@ Once we receive all the required documents, we’ll typically approve and activa
 
 ## Do I need to sign a physical contract?
 
-No physical contact is required if you register via the [<ins>Paymennt.com</ins>](https://www.paymennt.com/) mobile app. During registration, you'll digitally agree to our [<ins>Plans and Pricing</ins>](https://www.paymennt.com/en/pricing), Terms and Conditions, and [<ins>Privacy Notice</ins>](https://www.paymennt.com/en/legal). It's all done seamlessly within the app!
+No physical contact is required if you register via the [<ins>Paymennt.com</ins>](https://www.paymennt.com/) mobile app. During registration, you'll digitally agree to our [<ins>Plans and Pricing</ins>](https://www.paymennt.com/en/pricing), [<ins>Terms and Conditions</ins>](https://www.paymennt.com/legal/merchants/), and [<ins>Privacy Notice</ins>](https://www.paymennt.com/en/legal). It's all done seamlessly within the app!
 
 </details>
 

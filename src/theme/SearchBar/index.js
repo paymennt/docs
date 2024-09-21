@@ -11,9 +11,9 @@ function SearchBar() {
   return (
     <div className="custom-search-bar">
       <DocSearch
-        appId="YOUR_ALGOLIA_APP_ID"
-        apiKey="YOUR_ALGOLIA_API_KEY"
-        indexName="YOUR_ALGOLIA_INDEX_NAME"
+        appId="LTT5YM30FP"
+        apiKey="b65796a965c5dbfa70790646ec8f3dbd"
+        indexName="paymennt"
         placeholder="Search the docs..."
         onSelect={({ item, event }) => {
           if (event.type === 'click') {

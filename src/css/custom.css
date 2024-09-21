@@ -395,3 +395,8 @@ color: #FFFFFFB2;
   box-shadow: none;
 }
 
+.plugin-pages.plugin-id-default .custom-search-bar 
+{
+  display: none;
+  visibility: hidden;
+}
