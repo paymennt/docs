@@ -400,3 +400,63 @@ color: #FFFFFFB2;
   display: none;
   visibility: hidden;
 }
+
+/* Matching UI to existing seachbar */
+
+.plugin-pages.plugin-id-default .DocSearch-Container
+{
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.plugin-pages.plugin-id-default .DocSearch-Modal
+{
+  margin: 257px auto auto !important;
+  max-width: 790px;
+  background: none;
+  box-shadow: none;
+}
+
+@media screen and (max-width: 966px) {
+  .plugin-pages.plugin-id-default .DocSearch-Modal
+  {
+    margin: 0px auto auto !important;
+  }
+  .plugin-pages.plugin-id-default .DocSearch-SearchBar
+  {
+    padding: 5px;
+    background: white;
+  }
+}
+
+.plugin-pages.plugin-id-default .DocSearch-Form
+{
+  background: none;
+  box-shadow: none;
+  
+}
+
+.plugin-pages.plugin-id-default .DocSearch-SearchBar
+{
+  padding: 5px;
+}
+
+.plugin-pages.plugin-id-default .DocSearch-Dropdown
+{
+  background: #F7F7F7;
+  box-shadow: var(--docsearch-modal-shadow);
+  margin: 10px;
+}
+
+.plugin-pages.plugin-id-default .DocSearch-MagnifierLabel
+{
+  display: none;
+}
+
+.plugin-pages.plugin-id-default .DocSearch-Footer
+{
+  display: none;
+}
+
+.plugin-pages.plugin-id-default .DocSearch-Input {
+  text-align: center;
+}
