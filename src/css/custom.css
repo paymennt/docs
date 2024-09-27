@@ -68,6 +68,7 @@
   --ifm-footer-link-color: var(--ifm-color-white);
   --ifm-footer-link-hover-color: var(--ifm-color-primary);
   */
+
 }
 
 body {
@@ -283,6 +284,13 @@ border-right:0px !important;
     margin-right: 16%;
 }
 
+@media screen and (max-width: 966px) {
+  .side-padding {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+
 .main_custom_title
 {
 font-family: var(--ifm-font-family-base);
@@ -320,36 +328,7 @@ text-align: left;
 color: #FFFFFFB2;
 
 }
-.custom-footer-social-item
-{
-  /* width: 24px;
-  height: 24px;
-  padding: 2px; */
 
-}
-
-.custom-footer-social-icon-linkedIn
-{
-  /* width: 18px;
-  height: 18px;
-  top: 3px;
-  left: 3px;
-  gap: 0px; */
-
-}
-
-
-
-.custom-footer-social-icon
-{
-  /* width: 20px;
-height: 20px;
-top: 2px;
-left: 2px;
-gap: 0px; */
-
-
-}
 .custom-paymennt-icon
 {
   width: 120.52px;
@@ -359,4 +338,125 @@ gap: 0px; */
 .custom-footer-label svg
 {
   display: none;
+}
+
+/* Custom Overides for Admonitions*/
+
+.theme-admonition
+{
+  --ifm-link-color: #dc4f82;
+}
+
+.theme-admonition.theme-admonition-note.alert.alert--secondary
+{
+  background-color: #F7F7F7;
+  border: none;
+}
+
+.theme-admonition.theme-admonition-tip.alert.alert--success
+{
+  background-color: #F7F7F7;
+  border: none;
+}
+
+.theme-admonition.theme-admonition-info.alert.alert--info
+{
+  background-color: #E7F4FA;
+  border: none !important;
+}
+
+.theme-admonition.theme-admonition-warning.alert.alert--danger
+{
+  background-color: #FEF4E9;
+  border: none;
+}
+
+/* Custom Overides for Drop Down List currently only used in FAQ sections */
+
+.alert--info
+{
+  --ifm-alert-background-color: white;
+  --ifm-alert-border-color: #DBDCE1;
+  --docusaurus-details-decoration-color: #651E6C !important ;
+  border: 2px solid var(--ifm-alert-border-color) !important;
+  --ifm-link-color: #dc4f82;
+}
+
+.alert--info summary
+{
+  color: #651E6C;
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+/* Custom Overide to remove shadow from around the images */
+
+.markdown img
+{
+  box-shadow: none;
+}
+
+.plugin-pages.plugin-id-default .custom-search-bar 
+{
+  display: none;
+  visibility: hidden;
+}
+
+/* Matching UI to existing seachbar */
+
+.plugin-pages.plugin-id-default .DocSearch-Container
+{
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.plugin-pages.plugin-id-default .DocSearch-Modal
+{
+  margin: 257px auto auto !important;
+  max-width: 790px;
+  background: none;
+  box-shadow: none;
+}
+
+@media screen and (max-width: 966px) {
+  .plugin-pages.plugin-id-default .DocSearch-Modal
+  {
+    margin: 0px auto auto !important;
+  }
+  .plugin-pages.plugin-id-default .DocSearch-SearchBar
+  {
+    padding: 5px;
+    background: white;
+  }
+}
+
+.plugin-pages.plugin-id-default .DocSearch-Form
+{
+  background: none;
+  box-shadow: none;
+  
+}
+
+.plugin-pages.plugin-id-default .DocSearch-SearchBar
+{
+  padding: 5px;
+}
+
+.plugin-pages.plugin-id-default .DocSearch-Dropdown
+{
+  background: #F7F7F7;
+  box-shadow: var(--docsearch-modal-shadow);
+  margin: 10px;
+}
+
+.plugin-pages.plugin-id-default .DocSearch-MagnifierLabel
+{
+  display: none;
+}
+
+.plugin-pages.plugin-id-default .DocSearch-Footer
+{
+  display: none;
+}
+
+.plugin-pages.plugin-id-default .DocSearch-Input {
+  text-align: center;
 }

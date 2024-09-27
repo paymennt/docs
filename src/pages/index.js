@@ -11,7 +11,7 @@ const features = [
   {
   id:1,
     title: "Joining Paymennt",
-    target: "/guides/account",
+    target: "/guides/getting-started",
     imageUrl: "img/home/joining-paymennt.svg",
     description: (
       <>
@@ -22,7 +22,7 @@ const features = [
   {
   id:2,
     title: "Your Account",
-    target: "/guides/account-management",
+    target: "/guides/your-account",
     imageUrl: "img/home/your-account.svg",
     description: (
       <>
@@ -41,17 +41,6 @@ const features = [
       </>
     ),
   },
-  // {
-  //  id:4,
-  //   title: "In-person Payments",
-  //   target: "/docs/sdks",
-  //   imageUrl: "img/home/in-person-payments.svg",
-  //   description: (
-  //     <>
-  //       Set up and manage Paymennt POS devices and Tap on Phone transactions
-  //     </>
-  //   ),
-  // },
   {
    id:5,
     title: "APIs and Plugins",
@@ -80,8 +69,8 @@ function Feature({ id,imageUrl, target, title, description }) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={clsx("col col--6", styles.feature)}>
-      <Link to={useBaseUrl(target)}>
         <div className={styles.featuresBoarder}>
+        <Link to={useBaseUrl(target)}>
           {imgUrl && (
             <div className="text--center">
               <img className={styles.featureImage} src={imgUrl} alt={title} />
@@ -93,8 +82,8 @@ function Feature({ id,imageUrl, target, title, description }) {
           <div className={styles.featuresDescriptionText}>
             <p>{description}</p>
           </div>
+          </Link>
         </div>
-      </Link>
     </div>
   );
 }
@@ -119,8 +108,7 @@ export default function Home() {
           <div className="row">
             <div className="col">
               <div className={styles.buttons}>
-                <CenteredSearchBar />
-
+                <CenteredSearchBar/>
               </div>
             </div>
           </div>
@@ -133,10 +121,8 @@ export default function Home() {
               <div className="row justify-content-md-center side-padding">
                 {features.map((props, idx) => (
                     <>
-
                      <Feature key={idx} {...props} />
-</>
-
+                    </>
                 ))}
               </div>
             </div>

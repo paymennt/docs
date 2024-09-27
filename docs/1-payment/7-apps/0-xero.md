@@ -13,7 +13,7 @@ Your user account must have Administrator permission to access this service
 
 ## Logging in to the paymennt Web Console
 
-To complete this integration, you must first login to the [paymennt Web Console](/guides/account-management/desktop-login)
+To complete this integration, you must first login to the [paymennt Web Console](/guides/your-account/desktop-login)
 
 ## Access Xero Integration configuration
 

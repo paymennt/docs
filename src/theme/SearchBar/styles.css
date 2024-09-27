@@ -21,17 +21,22 @@ display:none;
 .navbar__items.navbar__items--right {
     width: 18%;
 }
+
 button.DocSearch.DocSearch-Button
 {
-width:100%;
-    background: #f7f7f7;
-}
-.searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module
-{
-width:100%;
+  width:100%;
+  background: #f7f7f7;
 }
 
-.centered-search-container .DocSearch.DocSearch-Button {
- /* width: 100% !important;*/ /* Adjust width as needed */
- /* height:50px;*/
+.searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module
+{
+  width:100%;
 }
+
+@media screen and (max-width: 966px) {
+  .searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module
+  {
+    width:25%;
+  }
+}
+

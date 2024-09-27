@@ -21,7 +21,7 @@ module.exports = {
       },
       items: [
         {
-          to: "guides/account/",
+          to: "guides/getting-started/",
           activeBasePath: "guides",
           label: "USER GUIDE",
           position: "left",
@@ -53,43 +53,43 @@ module.exports = {
         },
         {
           label: 'Security',
-          href: 'https://www.google.com/',
+          href: 'https://www.paymennt.com/legal/data-safety/',
          className: 'custom-footer-label', // Add a custom class here
         },
         {
           label: 'Privacy',
-          href: 'https://www.google.com/',
+          href: 'https://www.paymennt.com/legal/privacy-policy/',
           className: 'custom-footer-label', // Add a custom class here
         },
         {
           label: 'API Specs',
-          href: 'https://www.google.com/',
+          href: '/api',
           className: 'custom-footer-label', // Add a custom class here
         },
         {
           html: `
           
             <div class="footer__socials">
-                <a href="https://www.google.com/" target="_blank" >
+                <a href="https://www.facebook.com/paymennt" target="_blank" >
                     <img src="/img/facebook.svg" alt="paymennt facebook" style="
-    width: 24px;
-    height: 24px;
-    margin-right: 2%;
-" />
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 2%;
+                    "/>
                 </a>
-                <a href="https://www.google.com/" target="_blank" >
+                <a href="https://www.instagram.com/paymennt/" target="_blank" >
                     <img  src="/img/instagram.svg" alt="paymennt instagram" style="
-    width: 24px;
-    height: 24px;
-    margin-right: 2%;
-" />
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 2%;
+                    "/>
                 </a>
-                <a href="https://www.google.com/" target="_blank"  >
+                <a href="https://www.linkedin.com/company/paymenntcom/" target="_blank"  >
                     <img  src="/img/linkedin.svg" alt="paymennt linkedin" style="
-        width: 18px;
-    height: 18px;
-    margin-bottom: 3px;
-"  />
+                        width: 18px;
+                        height: 18px;
+                        margin-bottom: 3px;
+                    "/>
                 </a>
             </div>
           `,
@@ -175,7 +175,7 @@ module.exports = {
       "@docusaurus/plugin-content-docs",
       {
         id: "guides",
-        path: "community",
+        path: "guides",
         routeBasePath: "guides",
         sidebarPath: require.resolve("./sidebars.guides.js"),
       }
