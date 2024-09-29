@@ -23,11 +23,7 @@
   text-align: center;
 }
 
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
+
 
 .buttons {
   display: center;
@@ -85,3 +81,5 @@
   height: 178px;
   max-width: auto;
 }
+
+

@@ -22,20 +22,24 @@
 }
 
 .centered-search-container .DocSearch.DocSearch-Button {
-  width: 70% !important; /* Adjust width as needed */
+  width: 100% !important; /* Adjust width as needed */
   height:50px;
-    padding: 28px 40px 28px 40px;
-    gap: 0px;
-    border-radius: 16px;
-    justify: space-between;
-    background: #F7F7F7;
+  padding: 28px 40px 28px 40px;
+  gap: 0px;
+  border-radius: 16px;
+  background: #F7F7F7;
 
 }
 
 @media screen and (max-width: 966px) {
   .centered-search-container .DocSearch.DocSearch-Button {
     width: 100% !important;
+    margin: 0;
   }
+}
+
+.centered-search-container .DocSearch.DocSearch-Button {
+  margin: 0;
 }
 
 span.DocSearch-Button-Placeholder {

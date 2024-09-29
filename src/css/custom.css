@@ -406,6 +406,7 @@ color: #FFFFFFB2;
 .plugin-pages.plugin-id-default .DocSearch-Container
 {
   background-color: rgba(255, 255, 255, 0) !important;
+  position: absolute;
 }
 
 .plugin-pages.plugin-id-default .DocSearch-Modal
@@ -414,6 +415,12 @@ color: #FFFFFFB2;
   max-width: 790px;
   background: none;
   box-shadow: none;
+}
+
+@media screen and (max-width: 1440px) {
+  .plugin-pages.plugin-id-default .DocSearch-Modal {
+    margin: 275px auto auto !important;
+  }
 }
 
 @media screen and (max-width: 966px) {
@@ -445,6 +452,7 @@ color: #FFFFFFB2;
   background: #F7F7F7;
   box-shadow: var(--docsearch-modal-shadow);
   margin: 10px;
+  border-radius: 16px;
 }
 
 .plugin-pages.plugin-id-default .DocSearch-MagnifierLabel
@@ -458,5 +466,10 @@ color: #FFFFFFB2;
 }
 
 .plugin-pages.plugin-id-default .DocSearch-Input {
-  text-align: center;
+  text-align: left;
+  padding-left: 8%;
+}
+
+.plugin-pages.plugin-id-default .DocSearch--active .DocSearch-Button-Container {
+  display: none;
 }

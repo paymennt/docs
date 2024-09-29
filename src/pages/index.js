@@ -95,17 +95,17 @@ export default function Home() {
     <Layout title={`${siteConfig.title}`} description="Description will go into a meta tag in <head />">
       <header className={clsx("hero", styles.heroBanner)}>
         <div className="container">
-          <div className="row">
+          <div className="row side-padding">
             <div className="col">
               <h1 className="hero__title main_custom_title">{siteConfig.title}</h1>
             </div>
           </div>
-          <div className="row">
+          <div className="row side-padding">
             <div className="col">
               <p className="hero__subtitle main_custom_subtitle">{siteConfig.tagline}</p>
             </div>
           </div>
-          <div className="row">
+          <div className="row side-padding">
             <div className="col">
               <div className={styles.buttons}>
                 <CenteredSearchBar/>
