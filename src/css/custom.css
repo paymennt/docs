@@ -421,6 +421,20 @@ color: #FFFFFFB2;
   .plugin-pages.plugin-id-default .DocSearch-Modal {
     margin: 275px auto auto !important;
   }
+
+  .plugin-pages.plugin-id-default .DocSearch-Input {
+    padding-left: 10% !important;
+  }
+}
+
+@media screen and (max-width: 1036px) {
+  .plugin-pages.plugin-id-default .DocSearch-Modal {
+    margin: 325px auto auto !important;
+  }
+
+  .plugin-pages.plugin-id-default .DocSearch-Input {
+    padding-left: 15% !important;
+  }
 }
 
 @media screen and (max-width: 966px) {
@@ -467,7 +481,7 @@ color: #FFFFFFB2;
 
 .plugin-pages.plugin-id-default .DocSearch-Input {
   text-align: left;
-  padding-left: 8%;
+  padding-left: 2%;
 }
 
 .plugin-pages.plugin-id-default .DocSearch--active .DocSearch-Button-Container {
