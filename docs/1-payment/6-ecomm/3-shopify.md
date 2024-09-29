@@ -29,7 +29,7 @@ This guide assumes that you already have a paid [Shopify account](https://www.sh
 
 ### paymennt web console
 
-To complete this integration, you must first login to the [**paymennt** web console](/guides/account/desktop)
+To complete this integration, you must first login to the [**paymennt** web console](/guides/your-account/desktop-login)
 
 ### Shopify Configuration
 
