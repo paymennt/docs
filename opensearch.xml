@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Get answers to everything Paymennt</ShortName>
+  <Description>Search Get answers to everything Paymennt</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/x-icon">https://docs.paymennt.com/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://docs.paymennt.com/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://docs.paymennt.com/opensearch.xml" />
+  <moz:SearchForm>https://docs.paymennt.com/</moz:SearchForm>
+</OpenSearchDescription>
