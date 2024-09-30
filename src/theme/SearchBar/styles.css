@@ -1,0 +1,42 @@
+:root {
+  --docsearch-primary-color: var(--ifm-color-primary);
+  --docsearch-text-color: var(--ifm-font-color-base);
+}
+
+.DocSearch-Button {
+  margin: 10;
+  transition: all var(--ifm-transition-fast)
+    var(--ifm-transition-timing-default);
+}
+
+.DocSearch-Container {
+  z-index: calc(var(--ifm-z-index-fixed) + 1);
+}
+
+
+.DocSearch-Button-Keys
+{
+display:none;
+}
+.navbar__items.navbar__items--right {
+    width: 18%;
+}
+
+button.DocSearch.DocSearch-Button
+{
+  width:100%;
+  background: #f7f7f7;
+}
+
+.searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module
+{
+  width:100%;
+}
+
+@media screen and (max-width: 966px) {
+  .searchBox_node_modules-\@docusaurus-theme-classic-lib-theme-Navbar-Search-styles-module
+  {
+    width:25%;
+  }
+}
+

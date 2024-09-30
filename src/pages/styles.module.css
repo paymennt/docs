@@ -4,12 +4,23 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
+ .hero__title
+ {
+ font-family: var(--ifm-font-family-base);
+ font-size: 40px;
+ font-weight: 700;
+ line-height: 48px;
+ letter-spacing: -0.02em;
+ text-align: left;
+
+ }
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 2rem 0;
   position: relative;
   overflow: hidden;
-  min-height: 400px;
+  min-height: 300px;
+  text-align: center;
 }
 
 @media screen and (max-width: 966px) {
@@ -19,34 +30,58 @@
 }
 
 .buttons {
-  display: flex;
+  display: center;
   align-items: center;
 }
 
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+}
+
+.featuresBoarder {
+  background: #FFFFFF;
+  border: 2px solid #EBEBEB;
+  border-radius: 32px;
+  color: lightgrey;
+  padding: 1rem 1rem 1rem 1rem;
+  margin: auto auto 50px auto;
+  max-width: 400px;
+  min-height: 420px;
+  transition: border 0.3s;
+}
+
+.featuresBoarder:hover {
+  border-color: var(--ifm-color-primary-lightest);
+}
+
+.featuresDescriptionText {
+  color: var(--ifm-color-primary-lightest);
 }
 
 .featureHead {
-  color: var(--ifm-color-secondary);
+  color: var(--ifm-color-primary);
   cursor: pointer;
+  /*
   letter-spacing: 1.4px;
   font-family: var(--ifm-heading-font-family);
-  font-weight: var(--ifm-font-weight-semibold);
+  font-weight: var(--ifm-font-weight-bold);
   position: relative;
   text-decoration: none;
-  font-size: large;
+  font-size: 2em; */
+  font-family: var(--ifm-font-family-base);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
 }
 
 .featureHead:hover {
-  color: var(--ifm-color-secondary-lighter);
+  color: var(--ifm-color-primary-darkest);
   text-decoration: none;
 }
 
 .featureImage {
-  height: 200px;
-  width: 200px;
+  height: 178px;
+  max-width: auto;
 }
