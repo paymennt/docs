@@ -8,7 +8,7 @@ hide_table_of_contents: false
 
 ## how it works
 
-On this page we describe the steps required to manage customer subscriptions, a customer subscription is a recurring payment link that is sent to a customer based on a specific schedule.
+On this page we describe the steps required to manage customer subscriptions. A customer subscription is a recurring payment link that is sent to a customer based on a specific schedule.
 
 ## create a new subscription
 
@@ -53,7 +53,9 @@ curl -L -X POST "https://api.test.paymennt.com/mer/v2.0/subscription" \
 this subscription will be sent to the customer every three months starting from 2021-08-28, so for this example the second payment link will be sent on 2021-11-28 and so on.
 
 :::danger PAST SUBSCRIPTION
+
 If you create a subscription with a start date in the past, the first payment link will be **SENT IMMEDIATELY** once you create teh subscription,
+
 :::
 
 ## Pause/Resume subscription
