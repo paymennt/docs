@@ -44,7 +44,7 @@ const features = [
   {
    id:5,
     title: "APIs and Plugins",
-    target: "/guides/api-and-plugins",
+    target: "/docs/payment/ecomm",
     imageUrl: "img/home/api-and-plugins.svg",
     description: (
       <>

@@ -101,4 +101,4 @@ For detailed information on our API specifications, you can refer to our API spe
 
 #### Related Articles
 
-* [<ins>eCommerce</ins>](../api-and-plugins)
+* [<ins>eCommerce Platforms</ins>](/docs/payment/ecomm)
