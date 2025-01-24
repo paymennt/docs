@@ -10,7 +10,7 @@ Before setting up the Paymennt.com Shopify App on your store, please make sure t
 
 ## Accpeting payments with Paymennt.com on your Shopify website
 
-1. Click on this **[link](https://apps.shopify.com/paymennt-com)** to access our Paymennt.com page on the Shopify App Store.
+1. Click on this **[link](https://apps.shopify.com/paymennt)** to access our Paymennt.com page on the Shopify App Store.
 
 2. Click on **Install** to begin the process of adding the Paymennt.com payment App to your Shopify store.
 
