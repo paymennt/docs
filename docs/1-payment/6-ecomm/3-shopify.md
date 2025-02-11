@@ -2,13 +2,13 @@
 title: shopify
 ---
 
-This page will guides you through the process to start accepting payments on your Shopify website with Paymennt.com.
+This page will guide you through the process to start accepting payments on your Shopify website with Paymennt.com.
 
 :::info BEFORE YOU START
 Before setting up the Paymennt.com Shopify App on your store, please make sure that your website complies with the our website **[go-live checklist](/docs/golive/checklist)**
 :::
 
-## Accpeting payments with Paymennt.com on your Shopify website
+## Accepting payments with Paymennt.com on your Shopify website
 
 1. Click on this **[link](https://apps.shopify.com/paymennt)** to access our Paymennt.com page on the Shopify App Store.
 
