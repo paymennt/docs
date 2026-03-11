@@ -5,7 +5,8 @@ sidebar_label: FAQ
 
 ## Payment link {#faq-payment-link}
 
-<details><summary>What is a payment link?</summary>
+<details>
+<summary>What is a payment link?</summary>
 
 ### What is a payment link?
 
@@ -13,7 +14,8 @@ A payment link is a secure URL that allows you to accept payments online. You ca
 
 </details>
 
-<details><summary>How do payment links work?</summary>
+<details>
+<summary>How do payment links work?</summary>
 
 ### How do payment links work?
 
@@ -21,7 +23,8 @@ When you generate a payment link, it is associated with a specific amount and de
 
 </details>
 
-<details><summary>Are payment links secure?</summary>
+<details>
+<summary>Are payment links secure?</summary>
 
 ### Are payment links secure?
 
@@ -29,7 +32,8 @@ Yes, payment links use secure encryption protocols to protect sensitive informat
 
 </details>
 
-<details><summary>Can I customize payment links?</summary>
+<details>
+<summary>Can I customize payment links?</summary>
 
 ### Can I customize payment links?
 
@@ -39,7 +43,8 @@ Payment links can be sent to customers via various channels, including email, SM
 
 </details>
 
-<details><summary>Are there any fees associated with using payment links?</summary>
+<details>
+<summary>Are there any fees associated with using payment links?</summary>
 
 ### Are there any fees associated with using payment links?
 
@@ -47,7 +52,8 @@ You can send unlimited payment links if you subscribe to our Essential/Standard 
 
 </details>
 
-<details><summary>Can customers make payments using any payment method?</summary>
+<details>
+<summary>Can customers make payments using any payment method?</summary>
 
 ### Can customers make payments using any payment method?
 
@@ -55,7 +61,8 @@ Customers have the flexibility to pay using credit cards, or debit cards to pay 
 
 </details>
 
-<details><summary>Is there a limit to the number of payment links I can generate?</summary>
+<details>
+<summary>Is there a limit to the number of payment links I can generate?</summary>
 
 ### Is there a limit to the number of payment links I can generate?
 
@@ -63,7 +70,8 @@ You can send unlimited payment links if you subscribe to our Essential/Standard 
 
 </details>
 
-<details><summary>Can I track payments made through payment links?</summary>
+<details>
+<summary>Can I track payments made through payment links?</summary>
 
 ### Can I track payments made through payment links?
 
@@ -71,7 +79,8 @@ Yes, payment providers often offer comprehensive reporting and analytics tools t
 
 </details>
 
-<details><summary>Can I send payment links with subscription requests?</summary>
+<details>
+<summary>Can I send payment links with subscription requests?</summary>
 
 ### Can I send payment links with subscription requests?
 
@@ -81,7 +90,8 @@ Yes, you can! Paymennt platform allows you to create payment links with recurrin
 
 ## Customers
 
-<details><summary>Can I list my mobile contacts as customers?</summary>
+<details>
+<summary>Can I list my mobile contacts as customers?</summary>
 
 ### Can I list my mobile contacts as customers?
 
@@ -91,7 +101,8 @@ Yes, you can list your mobile contacts as customers in your customer database. K
 
 ## Products {#faq-products}
 
-<details><summary>Is there a limit on the number of products?</summary>
+<details>
+<summary>Is there a limit on the number of products?</summary>
 
 ### Is there a limit on the number of products?
 
@@ -99,7 +110,8 @@ No, you can add as many products as your business requires.
 
 </details>
 
-<details><summary>How do I create a product for payment links and online shops?</summary>
+<details>
+<summary>How do I create a product for payment links and online shops?</summary>
 
 ### How do I create a product for payment links and online shops?
 
@@ -107,7 +119,8 @@ Read the [<ins>Products, Product varients and Events</ins>](./products-collectio
 
 </details>
 
-<details><summary>How do I manage inventory and stock levels for my products?</summary>
+<details>
+<summary>How do I manage inventory and stock levels for my products?</summary>
 
 ### How do I manage inventory and stock levels for my products?
 
@@ -115,7 +128,8 @@ You can go to the “Inventory section” on the product details page, turn on �
 
 </details>
 
-<details><summary>Can I offer variations of products, such as sizes or colors?</summary>
+<details>
+<summary>Can I offer variations of products, such as sizes or colors?</summary>
 
 ### Can I offer variations of products, such as sizes or colors?
 
@@ -123,7 +137,8 @@ Yes, you can set up variations and specify prices for each option to accommodate
 
 </details>
 
-<details><summary>Can I offer discounts or promotions on products?</summary>
+<details>
+<summary>Can I offer discounts or promotions on products?</summary>
 
 ### Can I offer discounts or promotions on products?
 
@@ -132,7 +147,8 @@ Read [<ins>Online Shop</ins>](./online-shop-and-API-integration) for more inform
 
 </details>
 
-<details><summary>Is it possible to track sales and revenue from different channels (payment links and online shop)?</summary>
+<details>
+<summary>Is it possible to track sales and revenue from different channels (payment links and online shop)?</summary>
 
 ### Is it possible to track sales and revenue from different channels (payment links and online shop)?
 
@@ -142,7 +158,8 @@ Yes, we provided detailed payment/ order history which allows you to track sales
 
 ## Online Shop {#faq-online-shop}
 
-<details><summary>Do I have to pay anything for setting up my Shop?</summary>
+<details>
+<summary>Do I have to pay anything for setting up my Shop?</summary>
 
 ### Do I have to pay anything for setting up my Shop?
 
@@ -150,7 +167,8 @@ Absolutely not! setting up the Shop is free with no monthly or setup fees. You o
 
 </details>
 
-<details><summary>Can I use my own custom domain?</summary>
+<details>
+<summary>Can I use my own custom domain?</summary>
 
 ### Can I use my own custom domain?
 
@@ -158,7 +176,8 @@ Yes. Publishing Paymennt stores to a custom domain is available in our Business 
 
 </details>
 
-<details><summary>Is using the Paymennt Shops secure?</summary>
+<details>
+<summary>Is using the Paymennt Shops secure?</summary>
 
 ### Is using the Paymennt Shops secure?
 
@@ -166,7 +185,8 @@ We have the same level of security across all our platforms, and we will never c
 
 </details>
 
-<details><summary>Could I share my item links also for payment?</summary>
+<details>
+<summary>Could I share my item links also for payment?</summary>
 
 ### Could I share my item links also for payment?
 
@@ -174,7 +194,8 @@ Yes. Each product and item has its own unique link which you can share with your
 
 </details>
 
-<details><summary>Do I need a Paymennt account to enable Shops?</summary>
+<details>
+<summary>Do I need a Paymennt account to enable Shops?</summary>
 
 ### Do I need a Paymennt account to enable Shops?
 
@@ -182,7 +203,8 @@ Paymennt Shops are integrated into your Paymennt account. You must have an accou
 
 </details>
 
-<details><summary>What payment methods is available in the Shops?</summary>
+<details>
+<summary>What payment methods is available in the Shops?</summary>
 
 ### What payment methods is available in the Shops?
 
@@ -190,7 +212,8 @@ Paymennt Shops support the same payment methods available to your Paymennt accou
 
 </details>
 
-<details><summary>Can I manage my Shop from the desktop?</summary>
+<details>
+<summary>Can I manage my Shop from the desktop?</summary>
 
 ### Can I manage my Shop from the desktop?
 
@@ -198,7 +221,8 @@ Not yet. We are working on supporting managing your online shop from the desktop
 
 </details>
 
-<details><summary>How are shipping costs calculated?</summary>
+<details>
+<summary>How are shipping costs calculated?</summary>
 
 ### How are shipping costs calculated?
 
@@ -206,7 +230,8 @@ You can control and define your own shipping rates based on your own cost. You c
 
 </details>
 
-<details><summary>Do you have cash-on-delivery enabled in Shops?</summary>
+<details>
+<summary>Do you have cash-on-delivery enabled in Shops?</summary>
 
 ### Do you have cash-on-delivery enabled in Shops?
 
@@ -214,7 +239,8 @@ No. We only support online payment. We are helping you go cashless and remote, a
 
 </details>
 
-<details><summary>Are there any shipping services included?</summary>
+<details>
+<summary>Are there any shipping services included?</summary>
 
 ### Are there any shipping services included?
 
@@ -222,7 +248,8 @@ Not at this time. Once an order is placed, you need to arrange with your shippin
 
 </details>
 
-<details><summary>How is VAT managed in my Shop?</summary>
+<details>
+<summary>How is VAT managed in my Shop?</summary>
 
 ### How is VAT managed in my Shop?
 
@@ -230,7 +257,8 @@ You can control how VAT is calculated or added to your products, whether include
 
 </details>
 
-<details><summary>Will I get notified when there is an order?</summary>
+<details>
+<summary>Will I get notified when there is an order?</summary>
 
 ### Will I get notified when there is an order?
 
@@ -238,7 +266,8 @@ You will receive both an email and a push notification to your mobile device whe
 
 </details>
 
-<details><summary>Could I use Paymennt Shops with another payment gateway?</summary>
+<details>
+<summary>Could I use Paymennt Shops with another payment gateway?</summary>
 
 ### Could I use Paymennt Shops with another payment gateway?
 

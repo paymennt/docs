@@ -30,11 +30,11 @@ We support CocoaPods. To install the **paymennt** iOS SDK:
 1. Add PointCheckoutSdk to your project by adding the following line to your `Podfile`
 
 ```
-pod 'PointCheckoutSdk', :git => 'https://github.com/pointcheckout/ios-sdk.git', :tag=> v${version}
+pod 'PointCheckoutSdk', :git => 'https://github.com/pointcheckout/ios-sdk.git', :tag=> v$\{version}
 ```
 
 :::note
-replace ${version} with the latest version of the SDK, you can check all available versions [here](https://github.com/pointcheckout/merchant-ios-sdk/releases). Example: <br />
+replace $\{version} with the latest version of the SDK, you can check all available versions [here](https://github.com/pointcheckout/merchant-ios-sdk/releases). Example: <br />
 `pod 'PointCheckoutSdk', :git => 'https://github.com/pointcheckout/ios-sdk.git', :tag=> 'v1.3'`
 :::
 
@@ -46,7 +46,7 @@ replace ${version} with the latest version of the SDK, you can check all availab
 
 ### Device Checkout request
 
-Send new checkout request to [**paymennt**'s API](/api/#operation/create-web-checkout), check the [documentation](/docs/payment/mobile) for more details.
+Send new checkout request to [**paymennt**'s API](pathname:///api#tag/checkout/POST/checkout/web), check the [documentation](/docs/payment/mobile) for more details.
 
 :::danger SERVER API CALL
 API calls made to the **paymennt** API endpoints should be made from your server. You should **NEVER** include your API keys in your mobile application. A mallicious user can gain access to your account if those keys are exposed.
@@ -111,7 +111,7 @@ class ViewController: UIViewController, PointCheckoutPaymentDelegate{
 
 ### Retrieve Checkout Status
 
-Retrieve checkout details from [**paymennt**'s API](/api/#operation/get-checkout), check the [documentation](/docs/payment/mobile) for more details.
+Retrieve checkout details from [**paymennt**'s API](pathname:///api#tag/checkout/GET/checkout/{checkoutId}), check the [documentation](/docs/payment/mobile) for more details.
 
 :::danger SERVER API CALL
 API calls made to the **paymennt** API endpoints should be made from your server. You should **NEVER** include your API keys in your mobile application. A mallicious user can gain access to your account if those keys are exposed.
@@ -121,8 +121,8 @@ API calls made to the **paymennt** API endpoints should be made from your server
 
 **1. New Device Checkout**
 
-[**Instructions**](/api/#operation/get-checkout) / [**API Details**](/api/#operation/get-checkout)
+[**Instructions**](pathname:///api#tag/checkout/GET/checkout/{checkoutId}) / [**API Details**](pathname:///api#tag/checkout/GET/checkout/{checkoutId})
 
 **2. Get Checkout Details**
 
-[**Instructions**](/api/#operation/get-checkout) / [**API Details**](/api/#operation/get-checkout)
+[**Instructions**](pathname:///api#tag/checkout/GET/checkout/{checkoutId}) / [**API Details**](pathname:///api#tag/checkout/GET/checkout/{checkoutId})

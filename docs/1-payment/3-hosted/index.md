@@ -9,11 +9,11 @@ Make getting paid faster and easier than ever! **paymennt** APIs provide an easy
 
 1. When a customer is ready to pay for their order/shopping cart on your website, a new payment method “Pay using Cards” is presented.
    - The button label can be anything of your choice, .
-2. On submitting the payment method selection page with “Pay using Card” option is selected, Your site backend system processes the order and makes the [Create web checkout](/api/#operation/create-web-checkout) API call to **paymennt** and obtains a checkout ID and a redirect URL.
+2. On submitting the payment method selection page with “Pay using Card” option is selected, Your site backend system processes the order and makes the [Create web checkout](pathname:///api#tag/checkout/POST/checkout/web) API call to **paymennt** and obtains a checkout ID and a redirect URL.
 3. On successfully obtaining the redirect URL from **paymennt** in the previous step, your system then redirects the customer to the obtained redirect URL.
-4. In any of the cases in the previous step, the customer is finally redirected back to your website using the parameter `returnUrl` specified in the [Create web checkout](/api/#operation/create-web-checkout) API call.
-5. Once the customer has been redirected back to your website from **paymennt**, make the [Get Checkout](/api/#operation/get-checkout) API call to retrieve the status.
-6. Based on the status of payment retrieved from the [Get Checkout](/api/#operation/get-checkout) API call, you should update your order status on your backend system.
+4. In any of the cases in the previous step, the customer is finally redirected back to your website using the parameter `returnUrl` specified in the [Create web checkout](pathname:///api#tag/checkout/POST/checkout/web) API call.
+5. Once the customer has been redirected back to your website from **paymennt**, make the [Get Checkout](pathname:///api#tag/checkout/GET/checkout/{checkoutId}) API call to retrieve the status.
+6. Based on the status of payment retrieved from the [Get Checkout](pathname:///api#tag/checkout/GET/checkout/{checkoutId}) API call, you should update your order status on your backend system.
 
 ![Website integration flow](/img/docs/integrate/merchant-api/web-payment-flow.png)
 

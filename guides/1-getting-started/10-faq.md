@@ -3,7 +3,8 @@ title: FAQ
 sidebar_label: FAQ
 ---
 
-<details><summary>How to sign up for paymennt.com?</summary>
+<details>
+<summary>How to sign up for paymennt.com?</summary>
 
 ## How to sign up for paymennt.com?
 
@@ -19,7 +20,8 @@ Getting started with **Paymennt** is quick and easy!
 Open the **Paymennt** app and follow the on-screen instructions to create your account. Be sure to have your required documents ready to ensure a smooth and efficient registration process.
 </details>
 
-<details><summary>What information is required to sign up?</summary>
+<details>
+<summary>What information is required to sign up?</summary>
 
 ## What information is required to sign up?
 
@@ -27,7 +29,8 @@ During the onboarding process, we will also ask for information that includes yo
 
 </details>
 
-<details><summary>What to expect during the sign-up process?</summary>
+<details>
+<summary>What to expect during the sign-up process?</summary>
 
 ## What to expect during the sign-up process?
 
@@ -50,7 +53,8 @@ During the onboarding process, we will also ask for information that includes yo
 
 </details>
 
-<details><summary>Which documents are required to sign up?</summary>
+<details>
+<summary>Which documents are required to sign up?</summary>
 
 ## Which documents are required to sign up?
 
@@ -66,7 +70,8 @@ To get started, you'll need to have a registered business and the below document
 
 </details>
 
-<details><summary>Can I sign up for multiple accounts?</summary>
+<details>
+<summary>Can I sign up for multiple accounts?</summary>
 
 ## Can I sign up for multiple accounts?
 
@@ -74,7 +79,8 @@ Yes, you can! Please contact your account manager or our customer service team i
 
 </details>
 
-<details><summary>How long does it take to open an account?</summary>
+<details>
+<summary>How long does it take to open an account?</summary>
 
 ## How long does it take to open an account?
 
@@ -82,7 +88,8 @@ Once we receive all the required documents, we’ll typically approve and activa
 
 </details>
 
-<details><summary>Do I need to sign a physical contract?</summary>
+<details>
+<summary>Do I need to sign a physical contract?</summary>
 
 ## Do I need to sign a physical contract?
 
@@ -90,7 +97,8 @@ No physical contact is required if you register via the [<ins>Paymennt.com</ins>
 
 </details>
 
-<details><summary>Can I sign up with a personal bank account?</summary>
+<details>
+<summary>Can I sign up with a personal bank account?</summary>
 
 ## Can I sign up with a personal bank account?
 
@@ -98,7 +106,8 @@ For businesses with 100% ownership, you're welcome to sign up using your persona
 
 </details>
 
-<details><summary>Is there any restriction on business types?</summary>
+<details>
+<summary>Is there any restriction on business types?</summary>
 
 ## Is there any restriction on business types?
 
@@ -108,7 +117,8 @@ See the [<ins>List of Restricted Businesses</ins>](https://www.paymennt.com/en/r
 
 </details>
 
-<details><summary>What is KYC?</summary>
+<details>
+<summary>What is KYC?</summary>
 
 ## What is KYC?
 
@@ -118,7 +128,8 @@ You can find more information on the [<ins>KYC</ins>](./kyc) page.
 
 </details>
 
-<details><summary>What does "Card on File" mean?</summary>
+<details>
+<summary>What does "Card on File" mean?</summary>
 
 ## What does "Card on File" mean?
 
@@ -126,7 +137,8 @@ You can find more information on the [<ins>KYC</ins>](./kyc) page.
 
 </details>
 
-<details><summary>Is providing a card-on-file mandatory?</summary>
+<details>
+<summary>Is providing a card-on-file mandatory?</summary>
 
 ## Is providing a card-on-file mandatory?
 

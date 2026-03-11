@@ -5,7 +5,8 @@ sidebar_label: FAQ
 
 ## Payout and Settlement {#faq-payout-and-settlement}
 
-<details><summary>How can I get my payout?</summary>
+<details>
+<summary>How can I get my payout?</summary>
 
 ### How can I get my payout?
 
@@ -13,7 +14,8 @@ Currently, we offer free transfers to local bank accounts with frequency accordi
 
 </details>
 
-<details><summary>Are payouts processed on weekends or holidays?</summary>
+<details>
+<summary>Are payouts processed on weekends or holidays?</summary>
 
 ### Are payouts processed on weekends or holidays?
 
@@ -21,7 +23,8 @@ No, payout is not processed on weekends or holidays.
 
 </details>
 
-<details><summary>Is there a minimum payout threshold?</summary>
+<details>
+<summary>Is there a minimum payout threshold?</summary>
 
 ### Is there a minimum payout threshold?
 
@@ -29,7 +32,8 @@ There is a minimum AED 250 payout limit. For payout requests less than this amou
 
 </details>
 
-<details><summary>How long is the settlement period?</summary>
+<details>
+<summary>How long is the settlement period?</summary>
 
 ### How long is the settlement period?
 
@@ -37,7 +41,8 @@ The settlement period typically varies based on your plan and transaction detail
 
 </details>
 
-<details><summary>Why is there a delay in settlement?</summary>
+<details>
+<summary>Why is there a delay in settlement?</summary>
 
 ### Why is there a delay in settlement?
 
@@ -45,7 +50,8 @@ Settlement delays may occur due to various factors such as transaction verificat
 
 </details>
 
-<details><summary>Does paymennt offer auto payout?</summary>
+<details>
+<summary>Does paymennt offer auto payout?</summary>
 
 ### Does paymennt offer auto payout?
 
@@ -53,7 +59,8 @@ Yes, we offered free daily auto payout to Standard and Premium plan users. We al
 
 </details>
 
-<details><summary>Can I pause auto payout?</summary>
+<details>
+<summary>Can I pause auto payout?</summary>
 
 ### Can I pause auto payout?
 
@@ -63,7 +70,8 @@ Yes, you can pause the auto payout by turning off the “Enable auto payouts” 
 
 ## Hold Period {#faq-hold-period}
 
-<details><summary>What is a hold period?</summary>
+<details>
+<summary>What is a hold period?</summary>
 
 ### What is a hold period?
 
@@ -71,7 +79,8 @@ A hold period refers to a designated duration during which funds from a transact
 
 </details>
 
-<details><summary>Why are funds held during a hold period?</summary>
+<details>
+<summary>Why are funds held during a hold period?</summary>
 
 ### Why are funds held during a hold period?
 
@@ -79,7 +88,8 @@ Funds may be held during a hold period as a precautionary measure to mitigate ri
 
 </details>
 
-<details><summary>How long does a hold period typically last?</summary>
+<details>
+<summary>How long does a hold period typically last?</summary>
 
 ### How long does a hold period typically last?
 
@@ -87,7 +97,8 @@ The duration of a hold period can vary depending on various factors, including t
 
 </details>
 
-<details><summary>Can I request an early release of held funds?</summary>
+<details>
+<summary>Can I request an early release of held funds?</summary>
 
 ### Can I request an early release of held funds?
 
@@ -95,7 +106,8 @@ In some cases, you may be able to request an early release of held funds by prov
 
 </details>
 
-<details><summary>What should I do if I disagree with a transaction during the hold period?</summary>
+<details>
+<summary>What should I do if I disagree with a transaction during the hold period?</summary>
 
 ### What should I do if I disagree with a transaction during the hold period?
 
@@ -105,7 +117,8 @@ If you disagree with a transaction during the hold period, it's essential to gat
 
 ## Disputes {#faq-disputes}
 
-<details><summary>What documentation may be required to resolve a dispute?</summary>
+<details>
+<summary>What documentation may be required to resolve a dispute?</summary>
 
 ### What documentation may be required to resolve a dispute?
 
@@ -113,7 +126,8 @@ Documentation required to resolve a dispute may vary depending on the nature of 
 
 </details>
 
-<details><summary>Are funds automatically released after the hold period expires?</summary>
+<details>
+<summary>Are funds automatically released after the hold period expires?</summary>
 
 ### Are funds automatically released after the hold period expires?
 
@@ -121,7 +135,8 @@ Funds may be automatically released after the hold period expires if there are n
 
 </details>
 
-<details><summary>How can I prevent disputes and minimize hold periods?</summary>
+<details>
+<summary>How can I prevent disputes and minimize hold periods?</summary>
 
 ### How can I prevent disputes and minimize hold periods?
 
@@ -131,7 +146,8 @@ To prevent disputes and minimize hold periods, it's essential to ensure transpar
 
 ## Card on File {#faq-card-on-file}
 
-<details><summary>Will I get charged immediately after submitting my payment card info?</summary>
+<details>
+<summary>Will I get charged immediately after submitting my payment card info?</summary>
 
 ### Will I get charged immediately after submitting my payment card info?
 
@@ -139,7 +155,8 @@ We will only charge the payment plan subscription fee from your card-on-file if 
 
 </details>
 
-<details><summary>Can I change my card-on-file information?</summary>
+<details>
+<summary>Can I change my card-on-file information?</summary>
 
 ### Can I change my card-on-file information?
 

@@ -8,12 +8,12 @@ slug: details
 API calls made to the **paymennt** API endpoints should be made from your server. You should NEVER include your API keys in your mobile application. A mallicious user can gain access to your account if those keys are exposed.
 :::
 
-To retrieve the details and status of a checkout , make an API call from your server to <a href="/api/#operation/get_checkout" target="_blank">`GET /checkout/{checkoutId}`</a>. The `checkoutId` is the ID received during the craetion of the checkout.
+To retrieve the details and status of a checkout , make an API call from your server to [`GET /checkout/{checkoutId}`](pathname:///api#tag/checkout/GET/checkout/{checkoutId}). The `checkoutId` is the ID received during the craetion of the checkout.
 
 Here's an example of how you can query the status of checkout with id `1653241101733169556`:
 
 ```bash title="curl"
-curl -L -X GET "https://api.test.paymennt.com/mer/v2.0/checkout/1653241101733169556" \
+curl -L -X GET "https:/pathname:///api.test.paymennt.com/mer/v2.0/checkout/1653241101733169556" \
 -H "X-POINTCHECKOUT-KEY: YOUR_X-POINTCHECKOUT-KEY" \
 -H "X-POINTCHECKOUT-SECRET: YOUR_X-POINTCHECKOUT-SECRET" \
 -H 'Content-Type: application/json'

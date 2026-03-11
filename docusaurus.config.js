@@ -8,7 +8,11 @@ module.exports = {
   url: "https://docs.paymennt.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
+  },
   favicon: "img/favicon.ico",
   projectName: "docs",
   organizationName: "paymennt",
@@ -150,27 +154,30 @@ module.exports = {
         },
       },
     ],
+  ],
+  plugins: [
     [
-      "redocusaurus",
+      "@scalar/docusaurus",
       {
-        specs: [
-          {
-            spec: "api/paymennt.yaml",
-            route: "/api",
-          },
-        ],
-        theme: {
-          primaryColor: "#25405d",
-          disableSearch: true,
-          hideDownloadButton: true,
-          redocOptions: {
-            hideDownloadButton: true,
-          },
+        label: "API SPECS",
+        route: "/api",
+        showNavLink: false,
+        configuration: {
+          url: "/openapi/paymennt.yaml",
+          customCss: `
+            .scalar-mcp-layer {
+              display: none !important;
+            }
+            .darklight-reference .flex.items-center:has(a[href*="scalar.com"]) {
+              display: none !important;
+            }
+            a[href*="scalar.com"][target="_blank"] {
+              display: none !important;
+            }
+          `,
         },
       },
     ],
-  ],
-  plugins: [
     [
       "@docusaurus/plugin-content-docs",
       {

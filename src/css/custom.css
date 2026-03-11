@@ -8,7 +8,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700&display=swap');
 
-
 /* You can override the default Infima variables here. */
 :root {
   /* COLORS */
@@ -39,11 +38,13 @@
 
   /* FONT */
   --ifm-font-family-base: 'Urbanist', sans-serif;
-  --ifm-font-size-base: 120%;
+  --ifm-font-size-base: 110%;
   --ifm-font-weight-semibold: 500;
   --ifm-font-weight-bold: 700;
   --ifm-code-font-size: 95%;
   --ifm-heading-font-family: 'Urbanist', sans-serif;
+
+  --ifm-h1-font-size: 1 rem;
 
   /* NAVBAR */
   --ifm-navbar-background-color: var(--ifm-background-color);
@@ -68,7 +69,6 @@
   --ifm-footer-link-color: var(--ifm-color-white);
   --ifm-footer-link-hover-color: var(--ifm-color-primary);
   */
-
 }
 
 body {
@@ -80,6 +80,19 @@ body {
 h1, h2, h3, h4, h5 {
   letter-spacing: 1.4px;
 }
+
+.markdown h1:first-child {
+  --ifm-h1-font-size: 2.5rem;
+}
+
+.markdown > h2 {
+  --ifm-h2-font-size: 1.8rem;
+}
+
+.markdown > h3 {
+  --ifm-h3-font-size: 1.5rem;
+}
+
 
 .markdown h2, .markdown h3 {
   color: var(--ifm-color-primary-light);
@@ -104,7 +117,7 @@ h1, h2, h3, h4, h5 {
 
 .theme-doc-sidebar-container
 {
-    border-right:0px !important;
+    border-right:0 !important;
 }
 /**
  HOME PAGE OVERRIDES
@@ -158,7 +171,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .markdown .alert .admonition-heading h5 {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .markdown .alert h5 {
@@ -231,54 +244,6 @@ h1, h2, h3, h4, h5 {
     height: 100%;
 }
 
-/* ****************************************** */
-/* REDOCUSAURUS                               */
-/* ****************************************** */
-
-/* show redocusaurus categories menu*/
-.redocusaurus .menu-content div.scrollbar-container {
-  display: block !important;
-}
-
-/* redocusaurus side menu background */
-.redocusaurus .menu-content.ednbLy {
-  background-color: #f1f1ce;
-}
-
-.redocusaurus .menu-content.ednbLy li > label.active {
-  background-color: #e1e1b7;
-}
-
-.redocusaurus .menu-content.ednbLy li>label:hover {
-  background-color: #e1e1b7;
-}
-
-
-
-.redocusaurus .menu-conent,
-.redocusaurus .menu-content li>label, 
-.redocusaurus .eViuht, .redocusaurus .ldwGXb, .redocusaurus .bktutv {
-  background-color: var(--ifm-background-color);
-}
-
-.redocusaurus .menu-content li>label.active {
-  background-color: #e1e1b7;
-}
-
-.redocusaurus .menu-content li>label:hover {
-  background-color: #e1e1b7;
-}
-
-.redocusaurus .menu-content li>label {
-  font-family: var(--ifm-font-family-base);
-}
-
-
-.redocusaurus .menu-content
-{
-border-right:0px !important;
-}
-
 .side-padding {
     margin-left: 16%;
     margin-right: 16%;
@@ -286,8 +251,8 @@ border-right:0px !important;
 
 @media screen and (max-width: 966px) {
   .side-padding {
-    margin-left: 0%;
-    margin-right: 0%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 

@@ -3,7 +3,8 @@ title: FAQ
 sidebar_label: FAQ
 ---
 
-<details><summary>Can I log in to multiple devices simultaneously?</summary>
+<details>
+<summary>Can I log in to multiple devices simultaneously?</summary>
 
 ## Can I log in to multiple devices simultaneously?
 
@@ -11,7 +12,8 @@ Yes, you can log in to multiple devices simultaneously using the same credential
 
 </details>
 
-<details><summary>Are there predefined user roles with specific permissions?</summary>
+<details>
+<summary>Are there predefined user roles with specific permissions?</summary>
 
 ## Are there predefined user roles with specific permissions?
 
@@ -19,7 +21,8 @@ Yes, we offer 4 predefined user roles (Owner, Company Branch, and Employee) with
 
 </details>
 
-<details><summary>Can I create custom user roles with unique permissions?</summary>
+<details>
+<summary>Can I create custom user roles with unique permissions?</summary>
 
 ## Can I create custom user roles with unique permissions?
 
@@ -27,7 +30,8 @@ Yes, you have the flexibility to create custom user roles with unique permission
 
 </details>
 
-<details><summary>How often can I update my business information?</summary>
+<details>
+<summary>How often can I update my business information?</summary>
 
 ## How often can I update my business information?
 
@@ -35,7 +39,8 @@ You can update your business information as often as needed to ensure that it re
 
 </details>
 
-<details><summary>My trade license is expiring soon. How can I update my new trade license?</summary>
+<details>
+<summary>My trade license is expiring soon. How can I update my new trade license?</summary>
 
 ## My trade license is expiring soon. How can I update my new trade license?
 
@@ -43,7 +48,8 @@ You can easily update your trade license by accessing the “Company Registratio
 
 </details>
 
-<details><summary>How can I update my business information?</summary>
+<details>
+<summary>How can I update my business information?</summary>
 
 ## How can I update my business information?
 
@@ -51,7 +57,8 @@ You can easily change your business information by navigating to the appropriate
 
 </details>
 
-<details><summary>Will I be refunded if I downgrade to a lower-tier plan?</summary>
+<details>
+<summary>Will I be refunded if I downgrade to a lower-tier plan?</summary>
 
 ## Will I be refunded if I downgrade to a lower-tier plan?
 
@@ -59,7 +66,8 @@ No, refunds are not provided for downgrading to a lower-tier plan. However, you 
 
 </details>
 
-<details><summary>When will the change of plan become effective?</summary>
+<details>
+<summary>When will the change of plan become effective?</summary>
 
 ## When will the change of plan become effective?
 
@@ -69,7 +77,8 @@ For upgrades, the change of plan will become effective immediately, and you will
 
 </details>
 
-<details><summary>Can I get a refund for the yearly plan?</summary>
+<details>
+<summary>Can I get a refund for the yearly plan?</summary>
 
 ## Can I get a refund for the yearly plan?
 

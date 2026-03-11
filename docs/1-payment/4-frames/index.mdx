@@ -20,13 +20,13 @@ so you can request a payment.
 3. We process the customer's sensitive information and return a token representing those details.
    This process is called tokenization.
 4. Your site backend system gathers the **order details** and the received ** payment token** in a request
-   to make the [Create token payment](/api#tag/Payment/operation/create-payment) API call to **paymennt**
+   to make the [Create token payment](pathname:///api#tag/payment/POST/payment/debit) API call to **paymennt**
    and obtains the payment response with status and payment ID. Depending on the status-
 
    - **CAPTURED**: the payment has been successfully processed (without 3D-Secure redirect).
      You should update your order status on your backend system.
    - **REDIRECT**: the payment needs 3D-Secure to be processed, for this the customer should be
-     redirected to the `redirectUrl` present in the response of [Create token payment](/api#tag/Payment/operation/create-payment)
+     redirected to the `redirectUrl` present in the response of [Create token payment](pathname:///api#tag/payment/POST/payment/debit)
      API call.
 
    - **any other status**: they imply that the payment could not be processed. You may ask the customer
@@ -35,10 +35,10 @@ so you can request a payment.
 5. For **CAPTURED** status, you should update order status on your backend system and lead the customer
    to desired confirmation page.
 6. For **REDIRECT** status, once the customer has been redirected back to your website, make the
-   [Get payment](/api/#operation/get-payment) API call using the payment ID received in step 4,
+   [Get payment](pathname:///api#tag/payment/GET/payment/{paymentId}) API call using the payment ID received in step 4,
    to retrieve the status. If status is **CAPTURED** the payment has succeeded, you should confirm order status on your backend system,
    for other statuses the payment has failed and you may follow checkout flow again.
-7. For any other status, the customer is finally redirected back to your website using the parameter `returnUrl` specified in the [Create token payment](/api/#operation/create-token-payment) API call.
+7. For any other status, the customer is finally redirected back to your website using the parameter `returnUrl` specified in the [Create token payment](pathname:///api#tag/payment/POST/payment/debit) API call.
 
    ![Website integration flow](/img/docs/integrate/merchant-api/web-payment-frames-flow.png)
 
