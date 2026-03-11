@@ -620,7 +620,7 @@ paths:
         example: 1686414183718160542
       - name: amount
         in: query
-        description: Refun amount.
+        description: Refund amount.
         required: true
         schema:
           exclusiveMinimum: true
@@ -642,6 +642,13 @@ paths:
         schema:
           type: string
         example: Out of stock
+      - name: referenceId
+        in: query
+        description: Refund Reference ID.
+        required: false
+        schema:
+          type: string
+        example: REF-123456789
       responses:
         "200":
           description: Get Checkout by ID
