@@ -13,7 +13,7 @@ QR Payments are especially useful when the customer is trying to make an in-stor
 3. Once you retrieve the QR image, you should present it to the customer ( On a mobile device, POS System, Web Page, or any kind of applicable display).
 4. Once the customer scans the QR and completes the payment, call the [Get Checkout](pathname:///api#tag/checkout/GET/checkout/{checkoutId}) API call to retrieve the status.
 5. Based on the status of payment retrieved from the [Get Checkout](pathname:///api#tag/checkout/GET/checkout/{checkoutId}) API call, you should update your order status on your system.
-6. You can automate updating your system by either registering a Webhook (see [Webhooks API](pathname:///api#tag/webhooks))
+6. You can automate updating your system by configuring a [Webhook endpoint](../../5-track/0-webhooks.md).
 7. Alternatively, each checkout is associated with a Google firebase document, the required firebase collection, database, and document names are included in the [Create QR checkout](pathname:///api#tag/checkout/POST/checkout/qr) API call response. see [Get realtime updates with Cloud Firestore](https://firebase.google.com/docs/firestore/query-data/listen) for more details.
 
 ![QR integration flow](/img/docs/integrate/merchant-api/qr-payment-flow.png)
