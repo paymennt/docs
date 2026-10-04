@@ -1,6 +1,6 @@
 ---
 title: using qr codes to accept payments
-sidebar_label: qr codes
+sidebar_label: QR Codes
 ---
 
 Make getting paid faster and easier than ever! **paymennt** APIs provide an easy way to let your customers pay for their orders easily and securely.
@@ -8,13 +8,13 @@ QR Payments are especially useful when the customer is trying to make an in-stor
 
 ## Integration flow
 
-1. When a customer is ready to pay for their order, ٌYour system sends a [Create QR checkout](pathname:///api#tag/checkout/POST/checkout/qr) API call to **paymennt** API with the order details.
+1. When a customer is ready to pay for their order, ٌYour system sends a [Create QR checkout](https://docs.paymennt.com/api#tag/checkout/POST/checkout/qr) API call to **paymennt** API with the order details.
 2. The response from the API call includes the `base64QR` which is Base64 encoded QR code PNG image data. This QR Code contains the URL for the checkout payment page.
 3. Once you retrieve the QR image, you should present it to the customer ( On a mobile device, POS System, Web Page, or any kind of applicable display).
-4. Once the customer scans the QR and completes the payment, call the [Get Checkout](pathname:///api#tag/checkout/GET/checkout/{checkoutId}) API call to retrieve the status.
-5. Based on the status of payment retrieved from the [Get Checkout](pathname:///api#tag/checkout/GET/checkout/{checkoutId}) API call, you should update your order status on your system.
+4. Once the customer scans the QR and completes the payment, call the [Get Checkout](https://docs.paymennt.com/api#tag/checkout/GET/checkout/{checkoutId}) API call to retrieve the status.
+5. Based on the status of payment retrieved from the [Get Checkout](https://docs.paymennt.com/api#tag/checkout/GET/checkout/{checkoutId}) API call, you should update your order status on your system.
 6. You can automate updating your system by configuring a [Webhook endpoint](../../5-track/0-webhooks.md).
-7. Alternatively, each checkout is associated with a Google firebase document, the required firebase collection, database, and document names are included in the [Create QR checkout](pathname:///api#tag/checkout/POST/checkout/qr) API call response. see [Get realtime updates with Cloud Firestore](https://firebase.google.com/docs/firestore/query-data/listen) for more details.
+7. Alternatively, each checkout is associated with a Google firebase document, the required firebase collection, database, and document names are included in the [Create QR checkout](https://docs.paymennt.com/api#tag/checkout/POST/checkout/qr) API call response. see [Get realtime updates with Cloud Firestore](https://firebase.google.com/docs/firestore/query-data/listen) for more details.
 
 ![QR integration flow](/img/docs/integrate/merchant-api/qr-payment-flow.png)
 

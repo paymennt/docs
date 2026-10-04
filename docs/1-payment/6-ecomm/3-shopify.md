@@ -1,5 +1,6 @@
 ---
 title: shopify
+sidebar_label: Shopify
 ---
 
 This page will guide you through the process to start accepting payments on your Shopify website with Paymennt.com.

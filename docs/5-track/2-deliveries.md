@@ -1,5 +1,6 @@
 ---
 title: Deliveries and replays
+sidebar_label: Deliveries and Replays
 ---
 
 Use **Developer → Webhooks → Messages** to inspect events that Paymennt has published.

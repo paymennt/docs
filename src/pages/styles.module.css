@@ -1,87 +1,23 @@
 /* stylelint-disable docusaurus/copyright-header */
-
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
- .hero__title
- {
- font-family: var(--ifm-font-family-base);
- font-size: 40px;
- font-weight: 700;
- line-height: 48px;
- letter-spacing: -0.02em;
- text-align: left;
-
- }
-
-.heroBanner {
-  padding: 2rem 0;
-  position: relative;
-  overflow: hidden;
-  min-height: 300px;
-  text-align: center;
-}
-
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
-
-.buttons {
-  display: center;
-  align-items: center;
-}
-
-.features {
-  display: flex;
-  align-items: center;
-}
-
-.featuresBoarder {
-  background: #FFFFFF;
-  border: 2px solid #EBEBEB;
-  border-radius: 32px;
-  color: lightgrey;
-  padding: 1rem 1rem 1rem 1rem;
-  margin: auto auto 50px auto;
-  max-width: 400px;
-  min-height: 420px;
-  transition: border 0.3s;
-}
-
-.featuresBoarder:hover {
-  border-color: var(--ifm-color-primary-lightest);
-}
-
-.featuresDescriptionText {
-  color: var(--ifm-color-primary-lightest);
-}
-
-.featureHead {
-  color: var(--ifm-color-primary);
-  cursor: pointer;
-  /*
-  letter-spacing: 1.4px;
-  font-family: var(--ifm-heading-font-family);
-  font-weight: var(--ifm-font-weight-bold);
-  position: relative;
-  text-decoration: none;
-  font-size: 2em; */
-  font-family: var(--ifm-font-family-base);
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
-  text-align: left;
-}
-
-.featureHead:hover {
-  color: var(--ifm-color-primary-darkest);
-  text-decoration: none;
-}
-
-.featureImage {
-  height: 178px;
-  max-width: auto;
-}
+.heroBanner { padding: 4.5rem 0 3.5rem; background: var(--home-hero-background, #fbf8fb); border-bottom: 1px solid var(--home-border, #eee7ef); }
+.heroContent { max-width: 760px; margin: 0 auto; text-align: center; }
+.buttons { display: flex; justify-content: center; }
+.paths { padding: 3.5rem 0 2.5rem; }
+.features { padding: 1.5rem 0 5rem; }
+.paths h2, .sectionHeading h2 { margin: 0; color: var(--home-heading, var(--ifm-color-primary)); font-size: clamp(1.55rem, 2vw, 2rem); letter-spacing: -0.02em; }
+.pathGrid, .featureGrid { display: grid; gap: 1rem; margin-top: 1.25rem; }
+.pathGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.featureGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.path { display: grid; gap: .55rem; min-height: 176px; padding: 1.5rem; color: var(--home-copy, #5e4c60); background: var(--home-card-background, #fff); border: 1px solid var(--home-border, #e5dce6); border-radius: 14px; box-shadow: 0 12px 28px rgba(48, 13, 51, .06); transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+.path:hover, .feature:hover { color: inherit; border-color: #bca9be; box-shadow: 0 16px 30px rgba(48, 13, 51, .12); text-decoration: none; transform: translateY(-2px); }
+.pathTitle, .featureHead { color: var(--home-heading, var(--ifm-color-primary)); font-size: 1.1rem; font-weight: 700; line-height: 1.25; }
+.pathAction, .featureAction { align-self: end; color: #a7285c; font-size: .9rem; font-weight: 700; }
+.sectionHeading { max-width: 620px; }
+.sectionHeading p { margin: .35rem 0 0; color: var(--home-copy, #6f6071); }
+.feature { display: flex; align-items: flex-start; gap: 1rem; min-height: 180px; padding: 1.25rem; color: var(--home-copy, #655566); background: var(--home-card-background, #fff); border: 1px solid var(--home-border, #e8e1e9); border-radius: 14px; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+.featureImage { width: 52px; height: 52px; object-fit: contain; flex: 0 0 auto; }
+.featureContent { display: grid; gap: .6rem; height: 100%; }
+.featuresDescriptionText { line-height: 1.45; }
+[data-theme='dark'] { --home-hero-background: #211622; --home-border: #49384b; --home-copy: #ddcddd; --home-heading: #fff7ff; --home-card-background: #211622; }
+@media screen and (max-width: 996px) { .heroBanner { padding: 3.5rem 1.25rem 2.75rem; } .paths, .features { padding-left: 1.25rem; padding-right: 1.25rem; } .featureGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media screen and (max-width: 640px) { .heroBanner { padding: 2.5rem 1.25rem 2rem; } .pathGrid, .featureGrid { grid-template-columns: 1fr; } .paths { padding-top: 2.25rem; padding-bottom: 1.5rem; } .features { padding-top: 1rem; padding-bottom: 3rem; } .path, .feature { min-height: auto; } }

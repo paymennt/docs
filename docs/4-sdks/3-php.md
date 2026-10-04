@@ -1,7 +1,8 @@
 ---
 title: php sdk
+sidebar_label: PHP SDK
 ---
 
-<a className="button button--primary button--large" href="https://github.com/paymennt/paymennt-php">
-  View on GitHub
-</a>
+import GitHubLink from '@site/src/components/GitHubLink';
+
+<GitHubLink href="https://github.com/paymennt/paymennt-php" />

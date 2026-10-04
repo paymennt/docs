@@ -12,11 +12,10 @@ function CenteredSearchBar() {
         appId="LTT5YM30FP"
         apiKey="b65796a965c5dbfa70790646ec8f3dbd"
         indexName="paymennt"
-        placeholder=""
+        placeholder="Search guides, APIs, and webhooks"
       />
     </div>
   );
 }
 
 export default CenteredSearchBar;
-

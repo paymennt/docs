@@ -1,5 +1,6 @@
 ---
 title: Configure a webhook endpoint
+sidebar_label: Configure a Webhook Endpoint
 ---
 
 Webhook endpoints are managed in the Merchant Portal.

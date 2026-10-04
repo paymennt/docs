@@ -1,5 +1,6 @@
 ---
 title: Event payloads
+sidebar_label: Event Payloads
 ---
 
 Each webhook message contains an event type and a JSON object representing the checkout state when the event was published.
