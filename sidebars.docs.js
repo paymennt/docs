@@ -41,6 +41,7 @@ module.exports = {
           items: [
             'track/webhooks',
             'track/configure-endpoint',
+            'track/signature-verification',
             'track/deliveries',
             'track/events',
           ],

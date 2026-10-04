@@ -17,7 +17,7 @@ Open an individual attempt to inspect its destination, trigger, HTTP status, and
 
 ## Delivery retries
 
-Paymennt retries failed submission to Svix before Svix performs endpoint delivery and its own delivery retries. A failed attempt can therefore be followed by a later successful delivery. Use the message's delivery history rather than a single attempt to determine its current state.
+Paymennt retries failed deliveries. A failed attempt can therefore be followed by a later successful delivery. Use the message's delivery history rather than a single attempt to determine its current state.
 
 ## Replay a message
 

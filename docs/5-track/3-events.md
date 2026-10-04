@@ -54,6 +54,6 @@ Do not assume optional fields are populated. Build receivers to tolerate new fie
 
 ## Event identity and retention
 
-Paymennt assigns every published event a stable ID. Use it as the idempotency key for your processing. Message payloads are retained in Svix for a configured retention period; do not rely on the portal as your system of record for long-term event storage.
+Paymennt assigns every published event a stable ID. Use it as the idempotency key for your processing. Message payloads are retained in the Merchant Portal for a configured retention period; do not rely on the portal as your system of record for long-term event storage.
 
 The Event catalog currently does not display formal JSON schemas or example payloads for individual event types. This page is the published payload reference until those schemas are added to the catalog.
