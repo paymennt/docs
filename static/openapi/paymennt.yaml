@@ -39,10 +39,6 @@ tags:
   description: API endpoints for branch management.
   x-sort:
     sort: "300"
-- name: Webhooks
-  description: API endpoints for webhook management.
-  x-sort:
-    sort: "400"
 - name: Terminals
   description: API endpoints for terminal device management.
   x-sort:
@@ -55,8 +51,6 @@ tags:
   description: API endpoints for Customer subscription management.
   x-sort:
     sort: "900"
-- name: Webhooks
-  description: API endpoints for webhook management.
 paths:
   /payment/debit:
     post:
@@ -1112,36 +1106,6 @@ paths:
               exampleSetFlag: false
       x-sort:
         sort: "10050"
-  /webhooks/{webhookId}:
-    get:
-      tags:
-      - Webhooks
-      summary: Get webhook by Id
-      operationId: get-webhook-by-id
-      parameters:
-      - name: webhookId
-        in: path
-        description: Webhook Id.
-        required: true
-        schema:
-          type: string
-      responses:
-        "200":
-          description: Webhook details.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/WebhookResponseWrapper'
-              exampleSetFlag: false
-        "400":
-          description: Bad Request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GetWebhookErrorResponse'
-              exampleSetFlag: false
-      x-sort:
-        sort: "10060"
   /terminals/{terminalId}:
     get:
       tags:
@@ -1172,190 +1136,6 @@ paths:
               exampleSetFlag: false
       x-sort:
         sort: "10060"
-  /webhooks:
-    get:
-      tags:
-      - Webhooks
-      summary: List webhooks
-      description: List all webhooks associated with merchant
-      operationId: list-webhooks
-      parameters:
-      - name: page
-        in: query
-        description: "page number, default is 0"
-        required: false
-        schema:
-          minimum: 0
-          type: number
-      - name: size
-        in: query
-        description: "page size, default is 20"
-        required: false
-        schema:
-          minimum: 1
-          type: number
-      responses:
-        "400":
-          description: Bad Request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GetListErrorResponse'
-              exampleSetFlag: false
-        "200":
-          description: List of all webhooks.
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/WebhookResponseWrapper'
-              exampleSetFlag: false
-      x-sort:
-        sort: "10050"
-    post:
-      tags:
-      - Webhooks
-      summary: Create new webhook
-      operationId: create-webhook
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/WebhookRequest'
-            exampleSetFlag: false
-        required: true
-      responses:
-        "200":
-          description: Webhook details.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/WebhookResponseWrapper'
-              exampleSetFlag: false
-      x-sort:
-        sort: "10070"
-  /webhooks/{webhookId}/test:
-    post:
-      tags:
-      - Webhooks
-      summary: Test webhook
-      description: Make a test call for the address associated with the webhook.
-      operationId: test-webhook
-      parameters:
-      - name: webhookId
-        in: path
-        description: Webhook Id.
-        required: true
-        schema:
-          type: string
-      responses:
-        "200":
-          description: Webhook details.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/WebhookResponseWrapper'
-              exampleSetFlag: false
-        "400":
-          description: Bad Request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GetWebhookErrorResponse'
-              exampleSetFlag: false
-      x-sort:
-        sort: "10080"
-  /webhooks/{webhookId}/disable:
-    post:
-      tags:
-      - Webhooks
-      summary: Disable webhook.
-      operationId: disable-webhook
-      parameters:
-      - name: webhookId
-        in: path
-        description: Webhook Id.
-        required: true
-        schema:
-          type: string
-      responses:
-        "200":
-          description: Webhook details.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/WebhookResponseWrapper'
-              exampleSetFlag: false
-        "400":
-          description: Bad Request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GetWebhookErrorResponse'
-              exampleSetFlag: false
-      x-sort:
-        sort: "10090"
-  /webhooks/{webhookId}/enable:
-    post:
-      tags:
-      - Webhooks
-      summary: Enable webhook.
-      operationId: enable-webhook
-      parameters:
-      - name: webhookId
-        in: path
-        description: Webhook Id.
-        required: true
-        schema:
-          type: string
-      responses:
-        "200":
-          description: Webhook details.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/WebhookResponseWrapper'
-              exampleSetFlag: false
-        "400":
-          description: Bad Request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GetWebhookErrorResponse'
-              exampleSetFlag: false
-      x-sort:
-        sort: "10100"
-  /webhooks/{webhookId}/delete:
-    post:
-      tags:
-      - Webhooks
-      summary: Delete webhook.
-      operationId: delete-webhook
-      parameters:
-      - name: webhookId
-        in: path
-        description: Webhook Id.
-        required: true
-        schema:
-          type: string
-      responses:
-        "200":
-          description: Webhook details.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/WebhookResponseWrapper'
-              exampleSetFlag: false
-        "400":
-          description: Bad Request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GetWebhookErrorResponse'
-              exampleSetFlag: false
-      x-sort:
-        sort: "10110"
 components:
   schemas:
     CheckoutAddress:
