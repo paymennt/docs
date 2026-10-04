@@ -1,13 +1,11 @@
 ---
 title: android sdk
+sidebar_label: Android SDK
 ---
 
-<a className="button button--primary button--large" href="http://www.github.com/pointcheckout/android-sdk">
-  View on GitHub
-</a>
+import GitHubLink from '@site/src/components/GitHubLink';
 
-<br/>
-<br/>
+<GitHubLink href="https://github.com/pointcheckout/android-sdk" />
 
 This documentation highlights the requirements for using the **paymennt** Android SDK. Throughout this document, we aassume that you are using Android Studio for your Android development.
 
@@ -76,7 +74,7 @@ mobile SDK
 
 ### Create a new mobile checkout request
 
-Send new checkout request to [Create mobile checkout](pathname:///api#tag/checkout/POST/checkout/mobile) API. Check [mobile payment integration guide](/docs/payment/mobile) for more details.
+Send new checkout request to [Create mobile checkout](https://docs.paymennt.com/api#tag/checkout/POST/checkout/mobile) API. Check [mobile payment integration guide](/docs/payment/mobile) for more details.
 
 :::danger SERVER API CALL
 API calls made to the **paymennt** API endpoints should be made from your server. You should **NEVER** include your API keys in your mobile application. A malicious user can gain access to your account if those keys are exposed.
@@ -116,7 +114,7 @@ Invoke the `initialize` method when the app starts as it requires 2-3 seconds to
 To commence the payment process, you must call the static `pay` method of the `PointCheckoutClient`. This method accepts 3 parameters:
 
 - **`context`** which refers to the current activity context
-- **`checkoutKey`** received in the [Create mobile checkout](pathname:///api#tag/checkout/POST/checkout/mobile) API call.
+- **`checkoutKey`** received in the [Create mobile checkout](https://docs.paymennt.com/api#tag/checkout/POST/checkout/mobile) API call.
 - **`listener`** that will be called on payment update or cancellation
 
 ```jsx
@@ -144,7 +142,7 @@ The `PointCheckoutEventListener` event listener has two callbacks:
 
 ### Retrieve Checkout Status
 
-Retrieve checkout status and details using the [Get checkout](pathname:///api#tag/checkout/GET/checkout/{checkoutId}) API call. Check [mobile payment integration guide](/docs/payment/mobile) for more details.
+Retrieve checkout status and details using the [Get checkout](https://docs.paymennt.com/api#tag/checkout/GET/checkout/{checkoutId}) API call. Check [mobile payment integration guide](/docs/payment/mobile) for more details.
 
 :::danger SERVER API CALL
 API calls made to the **paymennt** API endpoints should be made from your server. You should **NEVER** include your API keys in your mobile application. A malicious user can gain access to your account if those keys are exposed.
@@ -154,8 +152,8 @@ API calls made to the **paymennt** API endpoints should be made from your server
 
 ### New Mobile Checkout
 
-[**Instructions**](/docs/payment/mobile) / [**API Details**](pathname:///api#tag/checkout/POST/checkout/mobile)
+[**Instructions**](/docs/payment/mobile) / [**API Details**](https://docs.paymennt.com/api#tag/checkout/POST/checkout/mobile)
 
 ### Get Checkout Details
 
-[**API Details**](pathname:///api#tag/checkout/GET/checkout/{checkoutId})
+[**API Details**](https://docs.paymennt.com/api#tag/checkout/GET/checkout/{checkoutId})

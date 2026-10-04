@@ -65,26 +65,17 @@ const features = [
     },
 ];
 
-function Feature({ id,imageUrl, target, title, description }) {
+function Feature({ imageUrl, target, title, description }) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
-    <div className={clsx("col col--6", styles.feature)}>
-        <div className={styles.featuresBoarder}>
-        <Link to={useBaseUrl(target)}>
-          {imgUrl && (
-            <div className="text--center">
-              <img className={styles.featureImage} src={imgUrl} alt={title} />
-            </div>
-          )}
-          <Link className={clsx(styles.featureHead)} to={useBaseUrl(target)}>
-            {title}
-          </Link>
-          <div className={styles.featuresDescriptionText}>
-            <p>{description}</p>
-          </div>
-          </Link>
-        </div>
-    </div>
+    <Link className={styles.feature} to={useBaseUrl(target)}>
+      {imgUrl && <img className={styles.featureImage} src={imgUrl} alt="" />}
+      <span className={styles.featureContent}>
+        <span className={styles.featureHead}>{title}</span>
+        <span className={styles.featuresDescriptionText}>{description}</span>
+        <span className={styles.featureAction}>Explore <span aria-hidden="true">→</span></span>
+      </span>
+    </Link>
   );
 }
 
@@ -95,35 +86,42 @@ export default function Home() {
     <Layout title={`${siteConfig.title}`} description="Description will go into a meta tag in <head />">
       <header className={clsx("hero", styles.heroBanner)}>
         <div className="container">
-          <div className="row">
-            <div className="col">
-              <h1 className="hero__title main_custom_title">{siteConfig.title}</h1>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col">
-              <p className="hero__subtitle main_custom_subtitle">{siteConfig.tagline}</p>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col">
-              <div className={styles.buttons}>
-                <CenteredSearchBar/>
-              </div>
+          <div className={styles.heroContent}>
+            <h1 className="hero__title main_custom_title">{siteConfig.title}</h1>
+            <p className="hero__subtitle main_custom_subtitle">{siteConfig.tagline}</p>
+            <div className={styles.buttons}>
+              <CenteredSearchBar />
             </div>
           </div>
         </div>
       </header>
       <main>
+        <section className={styles.paths} aria-labelledby="paths-heading">
+          <div className="container">
+            <h2 id="paths-heading">Start with your goal</h2>
+            <div className={styles.pathGrid}>
+              <Link className={styles.path} to={useBaseUrl("/guides/getting-started")}>
+                <span className={styles.pathTitle}>Manage your Paymennt account</span>
+                <span>Open your account, configure settings, and understand how payments move.</span>
+                <span className={styles.pathAction}>Go to user guides <span aria-hidden="true">→</span></span>
+              </Link>
+              <Link className={styles.path} to={useBaseUrl("/docs/payment/ecomm")}>
+                <span className={styles.pathTitle}>Build an integration</span>
+                <span>Connect APIs, plugins, payment flows, and technical references.</span>
+                <span className={styles.pathAction}>Go to developer guides <span aria-hidden="true">→</span></span>
+              </Link>
+            </div>
+          </div>
+        </section>
         {features && features.length > 0 && (
           <section className={styles.features}>
             <div className="container">
-              <div className="row justify-content-md-center side-padding">
-                {features.map((props, idx) => (
-                    <>
-                     <Feature key={idx} {...props} />
-                    </>
-                ))}
+              <div className={styles.sectionHeading}>
+                <h2>Browse the documentation</h2>
+                <p>Choose a topic, or use search to get straight to an answer.</p>
+              </div>
+              <div className={styles.featureGrid}>
+                {features.map((props) => <Feature key={props.id} {...props} />)}
               </div>
             </div>
           </section>

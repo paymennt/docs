@@ -1,13 +1,11 @@
 ---
 title: woocommerce
+sidebar_label: WooCommerce
 ---
 
-<a className="button button--primary button--large" href="http://www.github.com/pointcheckout/woocommerce">
-  View on GitHub
-</a>
+import GitHubLink from '@site/src/components/GitHubLink';
 
-<br />
-<br />
+<GitHubLink href="https://github.com/pointcheckout/woocommerce" />
 
 From installing the plugin to requesting your first test payment, learn how to get started with the **paymennt** for WooCommerce plugin.
 
@@ -69,7 +67,7 @@ Paymennt plugin is an approved wordpress plugin, available in wordpress marketpl
 
 That's it! You're ready to start testing.
 
-## test the plugin
+## Test the plugin
 
 1. Go to your shop's public URL and add a product to your cart.
 2. Go to your cart then proceed

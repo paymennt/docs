@@ -27,19 +27,19 @@ module.exports = {
         {
           to: "guides/getting-started/",
           activeBasePath: "guides",
-          label: "USER GUIDE",
+          label: "Guides",
           position: "left",
         },
         {
           to: "docs/",
           activeBasePath: "docs",
-          label: "DEVELOPER GUIDE",
+          label: "Developers",
           position: "left",
         },
         {
           to: "api/",
           activeBasePath: "api",
-          label: "API SPECS",
+          label: "API reference",
           position: "left",
         },
       ],
@@ -66,7 +66,7 @@ module.exports = {
           className: 'custom-footer-label', // Add a custom class here
         },
         {
-          label: 'API Specs',
+          label: 'API Reference',
           href: '/api',
           className: 'custom-footer-label', // Add a custom class here
         },
@@ -102,7 +102,8 @@ module.exports = {
     },
     colorMode: {
       defaultMode: "light",
-      disableSwitch: true,
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
     },
     prism: {
       additionalLanguages: ["swift"],

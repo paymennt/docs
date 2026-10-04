@@ -1,13 +1,11 @@
 ---
 title: ios sdk
+sidebar_label: iOS SDK
 ---
 
-<a className="button button--primary button--large" href="http://www.github.com/pointcheckout/ios-sdk">
-  View on GitHub
-</a>
+import GitHubLink from '@site/src/components/GitHubLink';
 
-<br />
-<br />
+<GitHubLink href="https://github.com/pointcheckout/ios-sdk" />
 
 This shows the steps requires to use the **paymennt** iOS SDK for accepting card payments via the **paymennt.com** payment gateway in your iOS mobile application.
 
@@ -46,7 +44,7 @@ replace $\{version} with the latest version of the SDK, you can check all availa
 
 ### Device Checkout request
 
-Send new checkout request to [**paymennt**'s API](pathname:///api#tag/checkout/POST/checkout/web), check the [documentation](/docs/payment/mobile) for more details.
+Send new checkout request to [**paymennt**'s API](https://docs.paymennt.com/api#tag/checkout/POST/checkout/web), check the [documentation](/docs/payment/mobile) for more details.
 
 :::danger SERVER API CALL
 API calls made to the **paymennt** API endpoints should be made from your server. You should **NEVER** include your API keys in your mobile application. A mallicious user can gain access to your account if those keys are exposed.
@@ -111,7 +109,7 @@ class ViewController: UIViewController, PointCheckoutPaymentDelegate{
 
 ### Retrieve Checkout Status
 
-Retrieve checkout details from [**paymennt**'s API](pathname:///api#tag/checkout/GET/checkout/{checkoutId}), check the [documentation](/docs/payment/mobile) for more details.
+Retrieve checkout details from [**paymennt**'s API](https://docs.paymennt.com/api#tag/checkout/GET/checkout/{checkoutId}), check the [documentation](/docs/payment/mobile) for more details.
 
 :::danger SERVER API CALL
 API calls made to the **paymennt** API endpoints should be made from your server. You should **NEVER** include your API keys in your mobile application. A mallicious user can gain access to your account if those keys are exposed.
@@ -121,8 +119,8 @@ API calls made to the **paymennt** API endpoints should be made from your server
 
 **1. New Device Checkout**
 
-[**Instructions**](pathname:///api#tag/checkout/GET/checkout/{checkoutId}) / [**API Details**](pathname:///api#tag/checkout/GET/checkout/{checkoutId})
+[**Instructions**](https://docs.paymennt.com/api#tag/checkout/GET/checkout/{checkoutId}) / [**API Details**](https://docs.paymennt.com/api#tag/checkout/GET/checkout/{checkoutId})
 
 **2. Get Checkout Details**
 
-[**Instructions**](pathname:///api#tag/checkout/GET/checkout/{checkoutId}) / [**API Details**](pathname:///api#tag/checkout/GET/checkout/{checkoutId})
+[**Instructions**](https://docs.paymennt.com/api#tag/checkout/GET/checkout/{checkoutId}) / [**API Details**](https://docs.paymennt.com/api#tag/checkout/GET/checkout/{checkoutId})

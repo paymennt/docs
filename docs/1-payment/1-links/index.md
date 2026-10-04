@@ -1,17 +1,17 @@
 ---
 title: payment links
-sidebar_label: payment links
+sidebar_label: Payment Links
 ---
 
 Make getting paid faster and easier than ever! Our APIs provide an easy way to let your customers pay for their orders easily and securely.
 
 ## Integration flow
 
-1. When a customer is ready to pay for their order/service, ٌYour system sends a [Create payment link checkout](pathname:///api#tag/checkout/POST/checkout/link) API call to **paymennt** API with the order details.
+1. When a customer is ready to pay for their order/service, ٌYour system sends a [Create payment link checkout](https://docs.paymennt.com/api#tag/checkout/POST/checkout/link) API call to **paymennt** API with the order details.
 2. In the request you can either provide customer phone/email within the billing address and set the `sendSms` and/or `sendEmail` request parameters to `true` so that **paymennt** will send the payment link to the customer contact phone/email or you can get the payment redirect link from the response and share it with your customer.
-3. In your backend system, you can either listen to Google Firestort notifications for the document related to the checkout ( see the response from the [Create payment link checkout](pathname:///api#tag/checkout/POST/checkout/link) API call), for more details on how to listen to Firebase messages in your system see [Get realtime updates with Cloud Firestore](https://firebase.google.com/docs/firestore/query-data/listen). Alternatively, configure a portal-managed endpoint to receive checkout updates through [Webhooks](../../5-track/0-webhooks.md).
-4. Once your system is notified of a payment update, you should call the [Get Checkout](pathname:///api#tag/checkout/GET/checkout/{checkoutId}) API call to retrieve the status.
-5. Based on the status of payment retrieved from the [Get Checkout](pathname:///api#tag/checkout/GET/checkout/{checkoutId}) API call, you should update your order status on your system and provide the service to your customer if payment was complete.
+3. In your backend system, you can listen to Google Firestore notifications for the document related to the checkout (see the response from the [Create payment link checkout](https://docs.paymennt.com/api#tag/checkout/POST/checkout/link) API call). For more details, see [Get realtime updates with Cloud Firestore](https://firebase.google.com/docs/firestore/query-data/listen). Alternatively, configure a portal-managed endpoint to receive checkout updates through [Webhooks](../../5-track/0-webhooks.md).
+4. Once your system is notified of a payment update, you should call the [Get Checkout](https://docs.paymennt.com/api#tag/checkout/GET/checkout/{checkoutId}) API call to retrieve the status.
+5. Based on the status of payment retrieved from the [Get Checkout](https://docs.paymennt.com/api#tag/checkout/GET/checkout/{checkoutId}) API call, you should update your order status on your system and provide the service to your customer if payment was complete.
 
 ![Payment link integration flow](/img/docs/integrate/merchant-api/link-payment-flow.png)
 

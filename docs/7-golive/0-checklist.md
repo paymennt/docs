@@ -1,11 +1,11 @@
 ---
 title: website go-live checklist
-sidebar_label: website checklist
+sidebar_label: Website Checklist
 ---
 
 Use this checklist to make sure your website conforms with card network standards and best practices for internet commerce.
 
-This checklist contains a list of the common elements—such as product descriptions, clear policies, and proper security features—that each business using **paymennt** should address on its website. Following those recommendations reduces the risks of customer confusin and disputed. It also helps you meet **paymennt**'s standards and the standards set by the credit card networks.
+This checklist contains a list of the common elements—such as product descriptions, clear policies, and proper security features—that each business using **paymennt** should address on its website. Following those recommendations reduces the risk of customer confusion and disputes. It also helps you meet **paymennt**'s standards and the standards set by the credit card networks.
 
 ## Website Go-Live Checklist
 

@@ -12,7 +12,7 @@ On this page we describe the steps required to manage customer subscriptions. A 
 
 ## Creating a new subscription
 
-When your customer subscribes for a recurring payment option, create a new subscription by making a call from your server to [`POST /subscription`](pathname:///api#tag/customer-subscription/POST/subscription). In your request, you must include the following required parameters:
+When your customer subscribes for a recurring payment option, create a new subscription by making a call from your server to [`POST /subscription`](https://docs.paymennt.com/api#tag/customer-subscription/POST/subscription). In your request, you must include the following required parameters:
 
 | **Parameter**  | **Description**                                                                                                                                                                                                                                   |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -28,7 +28,7 @@ When your customer subscribes for a recurring payment option, create a new subsc
 Below is an example of how you would create a new subscription for **100.00 AED**:
 
 ```bash title="curl"
-curl -L -X POST "https:/pathname:///api.test.paymennt.com/mer/v2.0/subscription" \
+curl -L -X POST "https://api.test.paymennt.com/mer/v2.0/subscription" \
 -H "X-POINTCHECKOUT-KEY: YOUR_X-POINTCHECKOUT-KEY" \
 -H "X-POINTCHECKOUT-SECRET: YOUR_X-POINTCHECKOUT-SECRET" \
 -H "content-type: application/json" \

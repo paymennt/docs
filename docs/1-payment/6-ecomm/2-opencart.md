@@ -1,11 +1,11 @@
 ---
 title: opencart
+sidebar_label: OpenCart
 ---
 
-<a className="button button--primary button--large" href="https://github.com/paymennt/opencart"> View on GitHub </a>
+import GitHubLink from '@site/src/components/GitHubLink';
 
-<br />
-<br />
+<GitHubLink href="https://github.com/paymennt/opencart" />
 
 From downloading the plugin to requesting your first test payment, learn how to get started with the **paymennt** for OpenCart plugin.
 
@@ -41,7 +41,7 @@ This guide assumes that you have already [set up OpenCart](https://docs.opencart
 
 That's it! You're ready to start testing.
 
-## test the plugin
+## Test the plugin
 
 1. Go to your shop's public URL and add a product to your cart.
 2. Go to your cart then proceed

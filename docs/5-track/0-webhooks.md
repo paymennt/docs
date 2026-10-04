@@ -1,5 +1,6 @@
 ---
 title: Webhooks
+sidebar_label: Webhooks
 slug: webhooks
 ---
 
