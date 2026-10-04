@@ -8,7 +8,7 @@ Use webhooks to receive checkout events in your application. Webhook endpoints a
 
 ## How webhooks work
 
-Paymennt publishes checkout events to Svix. Each merchant has its own webhook application, and each event is delivered to the active endpoints configured for that merchant.
+Paymennt publishes checkout events to the active endpoints configured for your merchant.
 
 You can manage endpoints and inspect activity from **Developer → Webhooks** in the Merchant Portal:
 
@@ -18,7 +18,7 @@ You can manage endpoints and inspect activity from **Developer → Webhooks** in
 
 ![Webhook endpoints in the Merchant Portal](/img/docs/webhooks/endpoints.png)
 
-Each event has a unique event ID. Your receiver must tolerate duplicate deliveries and process the event idempotently.
+Each event has a unique event ID. Your receiver must tolerate duplicate deliveries and process the event idempotently. Return a `2xx` response only after your receiver has safely accepted the event.
 
 ## Available checkout events
 
@@ -31,7 +31,7 @@ The current event catalog contains:
 - `checkout.expired`
 - `checkout.refunded`
 
-See [Configure an endpoint](./1-configure-endpoint.md) to subscribe to events, [Deliveries and replays](./2-deliveries.md) to troubleshoot delivery, and [Event payloads](./3-events.md) for the payload contract.
+See [Configure an endpoint](./1-configure-endpoint.md) to subscribe to events, [Verify signatures](./2-signature-verification.md) to authenticate incoming requests, [Deliveries and replays](./2-deliveries.md) to troubleshoot delivery, and [Event payloads](./3-events.md) for the payload contract.
 
 ## Migration from legacy webhooks
 

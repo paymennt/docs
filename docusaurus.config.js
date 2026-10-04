@@ -106,7 +106,7 @@ module.exports = {
       respectPrefersColorScheme: true,
     },
     prism: {
-      additionalLanguages: ["swift"],
+      additionalLanguages: ["swift", "java", "php"],
     },
     algolia: {
       // The application ID provided by Algolia

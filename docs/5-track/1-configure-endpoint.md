@@ -32,15 +32,9 @@ Treat the signing secret as a credential. Store it only in your server-side secr
 
 ## Verify incoming webhooks
 
-Verify every incoming request before processing its payload. Configure your receiver with the endpoint's signing secret and use the Svix verification procedure appropriate to your server framework.
+Verify every incoming request before processing its payload. Configure your receiver with the endpoint's signing secret, preserve the unmodified raw request body, and validate the signing headers before JSON parsing.
 
-Paymennt sends the Svix signing headers with the `message-` prefix:
-
-- `message-id`
-- `message-timestamp`
-- `message-signature`
-
-When using a Svix helper library, supply these header values using the library's normal message ID, timestamp, and signature inputs. Verify the unmodified raw request body before JSON parsing. Do not accept a webhook merely because it originates from a known IP address or has a familiar event type.
+See [Verify webhook signatures](./2-signature-verification.md) for the header contract, a manual HMAC verification example, timestamp validation, and common failure modes. Do not accept a webhook merely because it originates from a known IP address or has a familiar event type.
 
 ## Receiver requirements
 

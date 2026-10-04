@@ -304,6 +304,53 @@ h1, h2, h3, h4, h5 {
     color: #fff !important;
 }
 
+/* Code-language selectors read as one control connected to their code sample. */
+.tabs-container:has(> .webhook-code-tabs) {
+  margin-top: 1.5rem;
+}
+
+.tabs-container:has(> .webhook-code-tabs) > .webhook-code-tabs {
+  border-bottom: 1px solid var(--pmnt-border);
+  gap: .25rem;
+  margin: 0;
+  padding: 0 .5rem;
+}
+
+.tabs-container:has(> .webhook-code-tabs) .tabs__item {
+  border: 1px solid transparent;
+  border-bottom: 0;
+  border-radius: .5rem .5rem 0 0;
+  font-size: .875rem;
+  line-height: 1.25;
+  margin: 0;
+  padding: .625rem .875rem;
+}
+
+.tabs-container:has(> .webhook-code-tabs) .tabs__item--active {
+  background: var(--ifm-code-background) !important;
+  border-color: var(--pmnt-border);
+  color: var(--pmnt-ink) !important;
+  margin-bottom: -1px;
+}
+
+.tabs-container:has(> .webhook-code-tabs) .tabs__item:not(.tabs__item--active):hover {
+  background: var(--pmnt-surface);
+  color: var(--pmnt-ink);
+}
+
+.tabs-container:has(> .webhook-code-tabs) > .margin-top--md {
+  margin-top: 0 !important;
+}
+
+.tabs-container:has(> .webhook-code-tabs) .theme-code-block {
+  border-radius: 0 0 12px 12px;
+  margin-top: 0;
+}
+
+[data-theme='dark'] .tabs-container:has(> .webhook-code-tabs) .tabs__item--active {
+  background: #2b2d42 !important;
+}
+
 /* ****************************************** */
 /* COMPONENTS                                 */
 /* ****************************************** */
