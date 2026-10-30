@@ -3,15 +3,7 @@ title: Google Pay™ on hosted checkout
 sidebar_label: Google Pay™
 ---
 
-**Google Pay™** lets your customers pay with the cards saved in their Google Account, without typing in their card details. When Google Pay™ is enabled on your account, **paymennt** shows the Google Pay™ button on the [Hosted Checkout](../3-hosted/index.md) payment page automatically.
-
-**paymennt** is the payment processor for Google Pay™: we build the Google Pay™ payment request (including the `gateway` and `gatewayMerchantId` tokenization values), receive the encrypted payment token, decrypt it and process the payment. You don't need to integrate with the Google Pay™ API, register with the Google Pay & Wallet Console or get a Google merchant ID.
-
-## Enable Google Pay™
-
-1. Contact **paymennt** support to enable Google Pay™ for your merchant account.
-2. Once enabled, the Google Pay™ button is shown on the hosted checkout page to customers whose browser and device support Google Pay™ and who have an eligible card saved in their Google Account.
-3. No changes are needed in your [Hosted Checkout](../3-hosted/index.md) integration. Payments made with Google Pay™ follow the same checkout flow and [checkout statuses](../3-hosted/index.md#checkout-statuses) as card payments.
+**Google Pay™** is available on the **paymennt** [Hosted Checkout](../3-hosted/index.md) payment page. **paymennt** handles the Google Pay™ integration and processes the payment, so no changes are needed in your integration.
 
 :::warning Adhere to Google policies
 
@@ -21,11 +13,7 @@ All merchants are required to follow the [Google Pay and Wallet API's Acceptable
 
 ## Supported cards
 
-Google Pay™ payments are accepted for the following card networks, based on the card payment methods enabled for your account:
-
-- Visa
-- Mastercard
-- American Express
+Visa, Mastercard and American Express.
 
 ## Authentication methods
 
@@ -45,16 +33,6 @@ The Google Pay™ payment sheet collects the following details from the customer
 
 These details are added to the checkout, the same way as for a card payment.
 
-## Limitations
+## Brand guidelines
 
-- Google Pay™ is available on the hosted checkout page only. It is not available in [Drop-in Frames](../4-frames/index.mdx) or the mobile SDKs.
-- Google Pay™ is not offered for subscription checkouts.
-- Google Pay™ is not shown if the checkout amount is above the Google Pay™ limit configured for your account.
-
-## Learn more
-
-- [Google Pay™ Web developer documentation](https://developers.google.com/pay/api/web/overview)
-- [Google Pay™ Web integration checklist](https://developers.google.com/pay/api/web/guides/test-and-deploy/integration-checklist)
-- [Google Pay™ Web brand guidelines](https://developers.google.com/pay/api/web/guides/brand-guidelines)
-
-If your website mentions Google Pay™ or shows the Google Pay™ logo, use only the approved assets and follow the [Google Pay™ Web brand guidelines](https://developers.google.com/pay/api/web/guides/brand-guidelines).
+See the [Google Pay™ Web brand guidelines](https://developers.google.com/pay/api/web/guides/brand-guidelines).
