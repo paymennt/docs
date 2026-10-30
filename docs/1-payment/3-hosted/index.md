@@ -18,6 +18,7 @@ Make getting paid faster and easier than ever! **paymennt** APIs provide an easy
 ![Website integration flow](/img/docs/integrate/merchant-api/web-payment-flow.png)
 
 - Make sure to check the [Website Checklist](/docs/golive/checklist) before going live.
+- Wallets enabled for your account, such as [Google Pay™](../8-google-pay/index.md), are shown on the hosted checkout page automatically, with no changes to this integration.
 
 That's it! You're ready to start testing.
 
