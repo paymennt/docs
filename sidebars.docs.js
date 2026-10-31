@@ -11,6 +11,7 @@ module.exports = {
         'payment/hosted/index',
         'payment/frames/index',
         'payment/mobile/index',
+        'payment/google-pay/index',
       ],
     },
     {
